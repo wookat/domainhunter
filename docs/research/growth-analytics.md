@@ -133,6 +133,8 @@ KV 写量评估：Cloudflare KV 免费额度 1,000 写/天（[limits](https://de
 
 ## 7. 需老板操作（一次性，缺口不阻塞：未配置时站点行为与现状完全一致）
 
+> **单一事实源：[`docs/owner-actions.md`](../owner-actions.md)**（R490 起所有老板待办及其当前状态只在那里维护；本节保留为调研证据，不再更新）。
+
 1. **Google Search Console**（https://search.google.com/search-console）：
    - 若 `zalize.com` Domain property 已存在（根域已有 3 条 google-site-verification TXT）→ 直接在该资产下看 `hunt.zalize.com` 数据，**无需任何操作**；
    - 否则「添加资产 → 网域 → zalize.com」，把给出的 TXT 记录加到 Cloudflare DNS（zalize.com zone，Type TXT，Name `@`）；

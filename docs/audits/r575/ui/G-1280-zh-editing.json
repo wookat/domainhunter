@@ -1,0 +1,49 @@
+{
+  "badge": "已配置",
+  "masked": null,
+  "controls": [
+    {
+      "tag": "SPAN",
+      "id": "",
+      "text": "已配置",
+      "width": 45,
+      "height": 20.5,
+      "disabled": null
+    },
+    {
+      "tag": "INPUT",
+      "id": "monitor-webhook-input",
+      "text": "",
+      "width": 422,
+      "height": 40,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "保存",
+      "width": 82,
+      "height": 40,
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "发送测试",
+      "width": 104,
+      "height": 40,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "取消",
+      "width": 54,
+      "height": 40,
+      "disabled": false
+    }
+  ],
+  "docW": 1280,
+  "innerWidth": 1280,
+  "prefilledMatches": true
+}

@@ -378,6 +378,18 @@ check("A9 resolveFallbackUpstream：空串 base/model 归一为 undefined（走�
 }
 
 // ---------- E. worker /api/ai-search 端到端 ----------
+// R487：usage 按 isolate 分片写 usage:{day}:<shard>，读侧深合并旧键 + 分片（mock KV 无 list，这里直接扫 Map）
+const mergeCounts = (into, from) => {
+  for (const [k, v] of Object.entries(from ?? {})) {
+    if (typeof v === "number") into[k] = (into[k] ?? 0) + v;
+    else if (v && typeof v === "object" && !Array.isArray(v)) into[k] = mergeCounts(into[k] ?? {}, v);
+  }
+  return into;
+};
+const readUsage = (kv, day) => {
+  const keys = [...kv.keys()].filter((k) => k === `usage:${day}` || k.startsWith(`usage:${day}:`));
+  return keys.length ? keys.reduce((acc, k) => mergeCounts(acc, JSON.parse(kv.get(k))), {}) : null;
+};
 const makeKv = () => {
   const kv = new Map();
   return {
@@ -453,7 +465,7 @@ const runAiSearch = async (env, llm) => {
     check("E4 主轮与 understanding 都经备用：备用 Authorization 用备用 key", calls.filter((c) => c.who === "fallback").every((c) => c.auth === `Bearer ${FALLBACK_KEY}`) && calls.filter((c) => c.who === "fallback").length === 2, true);
     check("E4b 主轮流式（stream:true）经备用重发时仍为流式", calls.filter((c) => c.who === "fallback" && c.stream).length, 1);
     const day = new Date().toISOString().slice(0, 10);
-    const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
+    const usage = readUsage(kv, day);
     check("E5 usage.llmProvider={fallback:1}，searches 仍为 1", [usage?.llmProvider, usage?.searches], [{ fallback: 1 }, 1]);
     check("E6 warn 含 failover 记录且不含任何 key", warns.some((l) => l.startsWith("llm-failover")) && warns.every((l) => !l.includes(PRIMARY_KEY) && !l.includes(FALLBACK_KEY)), true);
     check("E6b 事件流中不含任何 key", JSON.stringify(events).includes("SECRET"), false);
@@ -471,7 +483,7 @@ const runAiSearch = async (env, llm) => {
     );
     const summary = events.find((e) => e.type === "proposed" && e.items.length === 0);
     const day = new Date().toISOString().slice(0, 10);
-    const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
+    const usage = readUsage(kv, day);
     check("E7 未配置备用：provider=primary、llmProvider={primary:1}、0 次备用请求、无 error", [summary.provider, usage?.llmProvider, calls.filter((c) => c.who === "fallback").length, events.some((e) => e.type === "error")], ["primary", { primary: 1 }, 0, false]);
   } finally {
     restore();
@@ -489,7 +501,7 @@ const runAiSearch = async (env, llm) => {
     const err = events.find((e) => e.type === "error");
     const fb = events.find((e) => e.type === "fallback");
     const day = new Date().toISOString().slice(0, 10);
-    const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
+    const usage = readUsage(kv, day);
     check("E8 未配置备用 + 主 quota：无 error 事件、fallback.reason=quota（R471），llmProvider 不计数，aiErrors.quota=1", [err, fb?.reason, usage?.llmProvider, usage?.aiErrors], [undefined, "quota", undefined, { quota: 1 }]);
     check("E8b 事件流不含 key / 响应体", [JSON.stringify(events).includes(PRIMARY_KEY), JSON.stringify(events).includes("apikey_quota_exhausted")], [false, false]);
   } finally {

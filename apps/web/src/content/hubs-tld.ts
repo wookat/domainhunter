@@ -27,7 +27,7 @@ export const TLD_HUB_META = {
     kicker: "TLD guides",
     title: `All TLD Registration Guides: How to Choose Among ${TLD_LIST.length} Suffixes`,
     desc: `Index of registration guides for ${TLD_LIST.length} popular TLDs, grouped by purpose — general, tech, creative, industry and regional. One-line positioning for each suffix, with live pricing and naming tips.`,
-    intro: `Suffixes differ wildly in vibe and price: .com is safe but sold out, .io is geeky but pricey, new gTLDs are cheap but less recognized. Browse all ${TLD_LIST.length} TLD guides grouped by purpose — a one-liner for each, then dive in for audience, pricing and naming tips. Unsure about cost? Start with the`,
+    intro: `Suffixes differ wildly in vibe and price: .com is safe but sold out, .io is geeky but pricey, new gTLDs are cheap but less recognized. Browse all ${TLD_LIST.length} TLD guides grouped by purpose — a one-liner for each, then dive in for audience, pricing and naming tips. Unsure about cost? Start with the `,
     pricesLink: "price overview",
   },
 } as const;

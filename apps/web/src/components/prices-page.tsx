@@ -39,6 +39,13 @@ function buildRows(prices: ReturnType<typeof usePrices>): PriceRow[] {
   });
 }
 
+/** 精确等于查询的后缀恒在首位（`io` → `.io` 不被 `.studio/.bio` 按价格挤到后面），其余保持传入顺序 */
+export function rankExactTld<T extends { tld: string }>(rows: T[], q: string): T[] {
+  if (!q) return rows;
+  const exact = rows.filter((r) => r.tld === q);
+  return exact.length ? [...exact, ...rows.filter((r) => r.tld !== q)] : rows;
+}
+
 export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -53,7 +60,7 @@ export function PricesPage() {
     const list = buildRows(prices).filter((r) => !q || r.tld.includes(q));
     if (sort === "tld") list.sort((a, b) => a.tld.localeCompare(b.tld));
     else list.sort((a, b) => (sort === "reg" ? a.reg - b.reg : a.renew - b.renew));
-    return desc ? list.reverse() : list;
+    return rankExactTld(desc ? list.reverse() : list, q);
   }, [prices, sort, desc, filter]);
 
   // 再点同一列切换升/降序，切换列时重置为升序
@@ -66,7 +73,7 @@ export function PricesPage() {
           setDesc(false);
         }
       }}
-      className={cn("flex min-h-[32px] items-center gap-1 text-xs font-semibold", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
+      className={cn("flex min-h-[44px] items-center gap-1 text-xs font-semibold sm:min-h-[32px]", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
     >
       {label}
       {sort === k ? (desc ? <ArrowDown className="h-3 w-3" /> : <ArrowUp className="h-3 w-3" />) : <ArrowUpDown className="h-3 w-3" />}
@@ -82,7 +89,7 @@ export function PricesPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
 
-      <HubFilter placeholder={t("prices.filter")} value={filter} onChange={setFilter} shown={rows.length} total={TLD_LIST.length} />
+      <HubFilter id="prices-filter" placeholder={t("prices.filter")} value={filter} onChange={setFilter} shown={rows.length} total={TLD_LIST.length} />
 
       {rows.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setFilter("")} />}
       <div className={cn("mt-4 overflow-hidden rounded-xl border border-line", rows.length === 0 && "hidden")}>
@@ -118,13 +125,13 @@ export function PricesPage() {
               {r.live ? "" : "≈"}${r.reg}
               <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{r.cnyReg ?? toCny(r.reg)}</span>
             </span>
-            <span className="tnum flex items-center gap-1.5 font-mono text-sm text-txt1">
-              <span>
+            <span className="tnum flex flex-wrap items-center gap-x-1.5 gap-y-0 font-mono text-sm text-txt1">
+              <span className="whitespace-nowrap">
                 {r.live ? "" : "≈"}${r.renew}
                 <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{r.cnyRenew ?? toCny(r.renew)}</span>
               </span>
               {r.renew >= r.reg * 3 && r.reg > 0 && (
-                <span title={t("prices.trapTip")} className="rounded bg-amber-500/15 px-1 py-0.5 font-sans text-[10px] font-semibold text-amber-500">
+                <span title={t("prices.trapTip")} className="whitespace-nowrap rounded bg-amber2-dim px-1 py-0.5 font-sans text-[10px] font-semibold text-amber2">
                   {t("prices.trap")}
                 </span>
               )}
@@ -155,7 +162,7 @@ export function PricesPage() {
       <div className="mt-3 space-y-2">
         {buildPricesFaq(lang).map((item) => (
           <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
-            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+            <summary className="tap-target flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
             <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>

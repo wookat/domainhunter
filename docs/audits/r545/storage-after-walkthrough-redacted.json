@@ -1,0 +1,11 @@
+{
+  "local": {
+    "dh:myShares:v1": "[{\"id\":\"TeQM0fv62Q\",\"url\":\"https://hunt.zalize.com/s/TeQM0fv62Q\",\"createdAt\":1788702811862,\"count\":12,\"token\":\"<redacted-share-token>\"},{\"id\":\"gSISSiQ0Df\",\"url\":\"https://hunt.zalize.com/s/gSISSiQ0Df\",\"createdAt\":1788702497340,\"count\":8,\"token\":\"<redacted-share-token>\"}]",
+    "domainhunter:lang": "zh",
+    "domainhunter:monitor": "[]",
+    "domainhunter:shortlist": "[{\"domain\":\"chaxiang.com\",\"label\":\"chaxiang\",\"tld\":\"com\",\"status\":\"taken\",\"expiresAt\":\"2027-05-13T18:26:54.000Z\",\"addedAt\":1788701620048},{\"domain\":\"chaxiang.cn\",\"label\":\"chaxiang\",\"tld\":\"cn\",\"status\":\"taken\",\"expiresAt\":\"2026-12-11T16:06:44.000Z\",\"addedAt\":1788701620321},{\"domain\":\"mingqiancha.cn\",\"label\":\"mingqiancha\",\"tld\":\"cn\",\"status\":\"available\",\"addedAt\":1788701641754},{\"domain\":\"stackpilot.io\",\"label\":\"stackpilot\",\"tld\":\"io\",\"status\":\"taken\",\"expiresAt\":\"2029-02-02T09:23:25.000Z\",\"addedAt\":1788702015243},{\"domain\":\"stackpilot.ai\",\"label\":\"stackpilot\",\"tld\":\"ai\",\"status\":\"taken\",\"expiresAt\":\"2027-07-31T22:44:26.000Z\",\"addedAt\":1788702015521},{\"domain\":\"lingxicha.ai\",\"label\":\"lingxicha\",\"tld\":\"ai\",\"status\":\"available\",\"addedAt\":1788702465903},{\"domain\":\"lingxicha.io\",\"label\":\"lingxicha\",\"tld\":\"io\",\"status\":\"available\",\"addedAt\":1788702466159,\"note\":\"给合伙人看\"},{\"domain\":\"lingxicha.net\",\"label\":\"lingxicha\",\"tld\":\"net\",\"status\":\"available\",\"addedAt\":1788702466416},{\"domain\":\"mochamo.com\",\"label\":\"mochamo\",\"tld\":\"com\",\"status\":\"taken\",\"expiresAt\":\"2027-08-24T04:00:00.000Z\",\"addedAt\":1788702568329},{\"domain\":\"lingxicha.com\",\"label\":\"lingxicha\",\"tld\":\"com\",\"status\":\"available\",\"addedAt\":1788702722589,\"note\":\"给合伙人看（手机）\"},{\"domain\":\"lingxicha.cn\",\"label\":\"lingxicha\",\"tld\":\"cn\",\"status\":\"available\",\"addedAt\":1788702724238},{\"domain\":\"yunqiji.com\",\"label\":\"yunqiji\",\"tld\":\"com\",\"status\":\"available\",\"addedAt\":1788702725888}]",
+    "domainhunter:sync:code": "XXXXXXXX",
+    "domainhunter:theme": "dark"
+  },
+  "session": {}
+}

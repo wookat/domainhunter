@@ -1,0 +1,5 @@
+200 https://hunt.zalize.com/guide/fleamarket
+200 https://hunt.zalize.com/vs/vin-vs-wine
+200 https://hunt.zalize.com/vs/photo-vs-photography
+200 https://hunt.zalize.com/guide/karaoke
+200 https://hunt.zalize.com/vs/paris-vs-london

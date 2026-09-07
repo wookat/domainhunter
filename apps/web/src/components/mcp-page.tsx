@@ -108,7 +108,10 @@ function CodeBlock({ code, copyLabel, copiedLabel }: { code: string; copyLabel: 
   const [copied, setCopied] = useState(false);
   return (
     <div className="relative mt-3">
-      <pre className="overflow-x-auto rounded-xl border border-line bg-bg1 p-4 text-[12.5px] leading-relaxed text-txt1">
+      <pre
+        tabIndex={0}
+        className="overflow-x-auto rounded-xl border border-line bg-bg1 p-4 text-[12.5px] leading-relaxed text-txt1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      >
         <code>{code}</code>
       </pre>
       <button
@@ -118,7 +121,7 @@ function CodeBlock({ code, copyLabel, copiedLabel }: { code: string; copyLabel: 
             window.setTimeout(() => setCopied(false), 1500);
           });
         }}
-        className="absolute right-2 top-2 inline-flex h-8 items-center gap-1 rounded-md border border-line bg-bg0 px-2 text-xs text-txt1 hover:text-txt0"
+        className="absolute right-2 top-2 inline-flex h-8 items-center gap-1 rounded-md border border-line bg-bg0 px-2 text-xs text-txt1 hover:text-txt0 before:absolute before:inset-x-0 before:-inset-y-2 before:content-['']"
       >
         {copied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
         {copied ? copiedLabel : copyLabel}

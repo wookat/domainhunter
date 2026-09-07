@@ -481,8 +481,10 @@ const runBoth = async (content, opts, { deltaSeed = 11, byteSeed = 5 } = {}) => 
   check("F6 LLM 主轮调用 1 次（round 1 即达标 target=3 → 无第二轮）", llmCalls, 1);
   check("F6b 主轮请求 stream:true，understanding 请求非流式", llmBodies.map((b) => b.stream === true).sort(), [false, true]);
   const day = new Date().toISOString().slice(0, 10);
-  const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
-  check("F7 usage 只计 1 次搜索", [usage?.searches, usage?.fast], [1, 1]);
+  // R487：usage 按 isolate 分片写 usage:{day}:<shard>，这里对旧键 + 全部分片求和（mock KV 无 list）
+  const usageKeys = [...kv.keys()].filter((k) => k === `usage:${day}` || k.startsWith(`usage:${day}:`));
+  const usage = usageKeys.length ? usageKeys.map((k) => JSON.parse(kv.get(k))).reduce((a, u) => ({ searches: (a.searches ?? 0) + (u.searches ?? 0), fast: (a.fast ?? 0) + (u.fast ?? 0) }), {}) : null;
+  check("F7 usage 只计 1 次搜索（旧键 + 分片求和）", [usage?.searches, usage?.fast], [1, 1]);
   check("F7b stats:checked = 核验域名数 6", kv.get("stats:checked"), "6");
   check("F8 无 error 事件", events.some((e) => e.type === "error"), false);
 }

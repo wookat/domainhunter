@@ -12,6 +12,9 @@ function routeModule(): Promise<unknown> | null {
   if (/^\/guide\/[a-z0-9-]{2,24}$/i.test(p)) return Promise.all([import("./components/guide-page"), ensureInjectedContent("guide", p.slice(7))]);
   if (/^\/vs\/[a-z0-9-]{2,48}$/i.test(p)) return Promise.all([import("./components/compare-page"), ensureInjectedContent("vs", p.slice(4))]);
   if (p === "/") return import("./components/home-page-loader").then((m) => m.loadHomePage());
+  if (p === "/why") return import("./components/why-page");
+  if (p === "/advanced") return import("./components/advanced-page");
+  if (p === "/mcp") return import("./components/mcp-page");
   return null;
 }
 

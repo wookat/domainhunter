@@ -1,0 +1,41 @@
+{
+  "badge": "已配置",
+  "masked": "https://webhook.site/…7d2a",
+  "controls": [
+    {
+      "tag": "SPAN",
+      "id": "",
+      "text": "已配置",
+      "width": 45,
+      "height": 20.5,
+      "disabled": null
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "发送测试",
+      "width": 104,
+      "height": 44,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "修改",
+      "width": 76,
+      "height": 44,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "清除",
+      "width": 130.59375,
+      "height": 44,
+      "disabled": false
+    }
+  ],
+  "docW": 375,
+  "innerWidth": 375,
+  "prefilledMatches": null
+}

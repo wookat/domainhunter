@@ -1,0 +1,133 @@
+[
+ {
+  "file": "desktop_advanced.json",
+  "url": "https://hunt.zalize.com/advanced",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_guide.json",
+  "url": "https://hunt.zalize.com/guide",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_home.json",
+  "url": "https://hunt.zalize.com/",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_mcp.json",
+  "url": "https://hunt.zalize.com/mcp",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 96,
+  "failing": {
+   "inspector-issues": "Issues were logged in the `Issues` panel in Chrome Devtools"
+  }
+ },
+ {
+  "file": "desktop_prices.json",
+  "url": "https://hunt.zalize.com/prices",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_tld.json",
+  "url": "https://hunt.zalize.com/tld",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_tld_de.json",
+  "url": "https://hunt.zalize.com/tld/de",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_vs.json",
+  "url": "https://hunt.zalize.com/vs",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_vs_uk-vs-com.json",
+  "url": "https://hunt.zalize.com/vs/uk-vs-com",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {}
+ },
+ {
+  "file": "desktop_why.json",
+  "url": "https://hunt.zalize.com/why",
+  "lh": "12.8.2",
+  "form": "desktop",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 100,
+  "failing": {
+   "td-has-header": "`<td>` elements in a large `<table>` do not have table headers."
+  }
+ },
+ {
+  "file": "mobile_prices.json",
+  "url": "https://hunt.zalize.com/prices",
+  "lh": "12.8.2",
+  "form": "mobile",
+  "accessibility": 100,
+  "seo": 100,
+  "best-practices": 96,
+  "performance": 93,
+  "CLS": 0,
+  "LCP_ms": 3048,
+  "TBT_ms": 46,
+  "failing": {
+   "inspector-issues": "Issues were logged in the `Issues` panel in Chrome Devtools"
+  }
+ },
+ {
+  "file": "mobile_prices_en.json",
+  "url": "https://hunt.zalize.com/prices?lang=en",
+  "lh": "12.8.2",
+  "form": "mobile",
+  "performance": 92,
+  "CLS": 0,
+  "LCP_ms": 3159,
+  "TBT_ms": 15,
+  "failing": {}
+ }
+]

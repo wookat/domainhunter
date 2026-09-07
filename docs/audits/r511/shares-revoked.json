@@ -1,0 +1,39 @@
+[
+ {
+  "id": "rFzsKspQGT",
+  "url": "https://hunt.zalize.com/s/rFzsKspQGT",
+  "kind": "status-all-available",
+  "revoked": true
+ },
+ {
+  "id": "ObIdBmpGGJ",
+  "url": "https://hunt.zalize.com/s/ObIdBmpGGJ",
+  "kind": "no-status",
+  "revoked": true
+ },
+ {
+  "id": "UYttuUJzhu",
+  "url": "https://hunt.zalize.com/s/UYttuUJzhu",
+  "kind": "mixed-status",
+  "revoked": true
+ },
+ {
+  "id": "DaowdfzrI1",
+  "url": "https://hunt.zalize.com/s/DaowdfzrI1",
+  "kind": "token-check",
+  "revoked": true
+ },
+ {
+  "id": "rhWlK999Ge",
+  "url": "https://hunt.zalize.com/s/rhWlK999Ge",
+  "revoked": true,
+  "api_get_status": 410
+ },
+ {
+  "id": "n15sBAuOSW",
+  "url": "https://hunt.zalize.com/s/n15sBAuOSW",
+  "revoked": true,
+  "legacy": true,
+  "api_get_status": 410
+ }
+]

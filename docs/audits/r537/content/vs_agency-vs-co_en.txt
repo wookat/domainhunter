@@ -1,0 +1,51 @@
+Home
+TLD comparisons
+.agency vs .co
+.agency vs .co: Self-Describing Suffix or Sleek Company Shorthand
+Which to pick
+The classic dilemma for service firms: explanatory power or brevity. .agency introduces you by itself — design studios, marketing teams, PR and recruiting firms on name.agency need no tagline, freeing the root to be bold and abstract; the cost is a six-character suffix that must be spoken carefully. .co is two characters, reads as shorthand for company, and feels closest to .com; the cost is permanent leak risk — users who type the missing "m" land on whoever owns the .com, so check that owner before committing. On price, .co registers around $10 but renews notably higher than .com ($25–35 at many registrars); .agency runs cheap promos then renews around $20–25 — long-term costs end up similar. Inventory strongly favors .agency: nearly any word style is still available. The test: if clients come via search and referrals and you want the suffix to explain the business → .agency; if your brand word is distinctive and you want business-card sleekness → .co. The registries could hardly differ more. .agency is a generic TLD delegated in January 2014 to Binky Moon, LLC and run on Identity Digital's platform under an ICANN registry agreement with no eligibility rules. .co is Colombia's country code, delegated in December 1991, overseen by the Colombian ICT ministry (MinTIC) with day-to-day operations run by a commercial operator it appoints; it is marketed globally and open to anyone, but its rules are ccTLD policy, not an ICANN contract, and restricted names such as .gov.co or .edu.co must go through a local Colombian registrar. For an agency that means .agency's future tracks a large US registry portfolio, while .co's tracks a national concession — different kinds of predictability, neither obviously worse. The more practical divergence is typing: .co is one keystroke away from .com, so a share of your traffic will leak to whoever owns name.com unless you also hold it; .agency has no such neighbour, and its length makes accidental typos rarer. Use-case split: a creative shop that bills by project, a PR or influencer agency, a recruitment firm, a real-estate agency, a talent agency — anything where clients need to know the kind of service before they click → .agency; a firm that will grow into a product company, a consultancy with a coined one-word name, a brand that wants to read as a company rather than a vendor, a startup for whom the .com is gone → .co, ideally alongside the matching .com.
+Pricing & 5-year cost of ownership
+.agency vs .co: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.agency$3.6¥26$25.23¥182$104.52¥753
+.co$15.76¥113$31.2¥225$140.56¥1012
+Difference (.agency − .co)−$12.16−¥87−$5.97−¥43−$36.04−¥259
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.agency
+Porkbun live: $3.6 1st yr (≈¥26) · renews $25.23/yr (¥ est. at 7.2)
+.agency is a self-introducing TLD: design studios, marketing and growth teams, PR firms, recruiting agencies, travel agencies — if your business is an agency, the suffix does half the positioning for you.
+Pick .agency when
+Design/marketing/PR and other agencies
+Let the suffix explain the business, keep roots bold
+Need wide inventory and root freedom
+Portfolio-style firm sites (name.agency)
+Clients who need the service type before they click
+.co
+Porkbun live: $15.76 1st yr (≈¥113) · renews $31.2/yr (¥ est. at 7.2)
+.co is Colombia's country code, rebranded globally as shorthand for company/corporation — the most respectable stand-in for .com.
+Pick .co when
+Distinctive brand words wanting sleekness
+Two-character suffix — spoken & card friendly
+General company positioning, not strictly an agency
+The matching .com has no active competitor
+Coined one-word names that will outgrow the agency phase
+FAQ
+.agency vs .co: which should I choose?
+.agency writes your business type into the suffix; .co is the most respectable .com stand-in. See “Which to pick” on this page for the full verdict.
+When should I pick a .agency domain?
+The top case for .agency — Design/marketing/PR and other agencies. The other 4 .agency cases are listed under “Pick .agency when” on this page.
+When should I pick a .co domain?
+The top case for .co — Distinctive brand words wanting sleekness. The other 4 .co cases are listed under “Pick .co when” on this page.
+Hunt names on .agency and .co at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+Digital marketingE-commerceFintechPet brands
+Related comparisons
+.group vs .agency.org vs .co.services vs .agency.marketing vs .agency.ltd vs .co.co vs .me
+More TLD comparisons
+.com vs .net.co vs .me.net vs .org.com vs .xyz.xyz vs .top.shop vs .store.pro vs .co.shop vs .com.com vs .me.online vs .site.store vs .online.info vs .org.com vs .org.com vs .co.info vs .net.group vs .agency.company vs .group.site vs .com.store vs .com.team vs .com.click vs .link.icu vs .xyz.org vs .co.com vs .topView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

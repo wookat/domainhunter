@@ -1,0 +1,115 @@
+== start 2026-09-07T12:34:10Z
+== sitemap
+total 1270 unique 1270
+{'static:/': 1, 'static:/prices': 1, 'static:/why': 1, 'static:/mcp': 1, 'static:/advanced': 1, 'static:/tld': 1, 'static:/guide': 1, 'static:/vs': 1, 'tld': 408, 'guide': 410, 'vs': 444}
+alt links 3810 hreflang en 1270 lang=en in loc 0
+== content-counts.json
+{'tld': 408, 'guide': 410, 'vs': 444}
+== 404 shell
+  Accept:text/html -> 404 text/html; charset=utf-8 5021
+  Accept:application/json -> 404 text/html; charset=utf-8 5021
+  Accept:image/png -> 404 text/html; charset=utf-8 5021
+grep: http/nf_text_html.html: No such file or directory
+  en 404 -> 404
+<html lang="en"
+<title>Page not found | DomainHunter</title>
+<meta name="robots" content="noindex" />
+  /api/nope:
+  404 ct= size=0
+  /s/invalid:
+  404
+<title>分享不存在或已过期 | DomainHunter</title>
+<meta name="robots" content="noindex" />
+  /s/unknown:
+  404
+<title>分享不存在或已过期 | DomainHunter</title>
+<meta name="robots" content="noindex" />
+== share lifecycle
+create 200
+id=u5QFymuLnu token_len=24
+api GET 200
+{"items":[{"domain":"r575-audit-probe-qz7.com","label":"r575-audit-probe-qz7","tld":"com","status":"available"},{"domain":"google.com","label":"google","tld":"com","status":"taken"},{"domain":"r575-audit-probe-qz7.ai","label":"r575-audit-probe-qz7","tld":"ai","status":"unknown"}],"createdAt":1788784451077}
+shell GET 200 5374B
+<html lang="zh-CN"
+<title>3 个候选域名 | DomainHunter</title>
+<meta property="og:locale" content="zh_CN"
+shell GET en 200
+<html lang="en"
+<title>3 domain candidates | DomainHunter</title>
+<meta property="og:locale" content="en_US"
+DELETE wrong-token (live) 403
+{"error":"forbidden"}
+DELETE no-token (live) 400
+{"error":"token_required"}
+api GET still live 200
+DELETE 200
+{"ok":true}
+api GET after 410
+{"error":"revoked"}
+shell GET after 410
+<title>分享已撤销 | DomainHunter</title>
+<meta name="robots" content="noindex" />
+shell GET after en 410
+<title>This share has been revoked | DomainHunter</title>
+<meta name="robots" content="noindex" />
+== MCP
+mcp_initialize 200 0.066294s
+mcp_tools_list 200 0.065785s
+mcp_check_domains 200 1.534746s
+mcp_tld_prices 200 0.066354s
+mcp_suggest_variants 200 1.386863s
+initialize: {'name': 'domainhunter', 'version': '1.0.0'} 2025-03-26
+tools: ['check_domains', 'tld_prices', 'suggest_variants']
+check_domains: {'results': [{'domain': 'google.com', 'status': 'taken', 'expiresAt': '2028-09-14T04:00:00.000Z', 'expiringSoon': False}, {'domain': 'baidu.cn', 'status': 'taken', 'expiresAt': '2029-03-17T12:48:36.000Z', 'expiringSoon': False}, {'domain': 'r575-audit-probe-qz7.com', 'status': 'available'}]}
+tld_prices: n= 408 tldCount= 408 com= {'registration': 11.08, 'renewal': 11.08} cn= {'registration': 4.58, 'renewal': 5.28, 'approx': True} keys ['currency', 'usdToCny', 'fetchedAt', 'tldCount', 'liveCount', 'staticCount']
+suggest_variants keys ['results'] {'results': [{'domain': 'r575audithq.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r575auditapp.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r575auditlabs.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r575auditapp.com', 'status': 'available', 'firstYearPriceUSD': 11.08}, {'domain': 'r575auditlabs.com', 'status': 'available', 'fi
+== /api/search 3 domains (non-AI)
+api/search 3 200 ct=application/x-ndjson; charset=utf-8 0.069330s
+{"domain":"google.com","status":"taken","method":"rdap","expiresAt":"2028-09-14T04:00:00.000Z","cached":true}
+{"domain":"r575-audit-probe-qz7.com","status":"available","method":"rdap","cached":true}
+{"domain":"baidu.cn","status":"taken","method":"whois","expiresAt":"2029-03-17T12:48:36.000Z","cached":true}
+== /api/check refresh=1 (1 of budget 10)
+api/check refresh 200 1.500871s
+{"domain":"r575-audit-probe-qz7.com","status":"available","method":"rdap"}
+== /api/prices
+prices 200
+{'prices': 351, 'currency': 'USD', 'usdToCny': 7.2, 'fetchedAt': 1788739268731, 'tldCount': 351}
+cn None com.cn None com {'registration': 11.08, 'renewal': 11.08}
+== /api/monitor/list + changes
+monitor/list 200
+{"entries":[],"monitored":2,"limit":500}
+monitor/changes 200
+{"changes":[]}
+== webhook-test validation (no delivery: invalid scheme / host)
+webhook-test http:// 400
+{"ok":false,"error":"invalid_webhook"}
+webhook-test ftp:// 400
+{"ok":false,"error":"invalid_webhook"}
+webhook-test garbage 400
+{"ok":false,"error":"invalid_webhook"}
+webhook-test missing 400
+{"ok":false,"error":"invalid_webhook"}
+== /api/stats /api/registrars
+{"totalChecked":34278} stats 200
+{"affiliate":{}} registrars 200
+== robots / llms
+robots 200
+User-agent: *
+Allow: /
+
+# AI crawlers welcome — curated site guide at /llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://hunt.zalize.com/sitemap.xml
+llms 200 134045B
+# DomainHunter
+
+> Free, open-source AI domain name hunter: describe your idea in natural language, the AI agent brainstorms names in rounds, verifies availability live via RDAP/DNS/WHOIS, and only surfaces domains you can actually register. Bilingual (English/Chinese), no login required.
+== end 2026-09-07T12:34:18Z

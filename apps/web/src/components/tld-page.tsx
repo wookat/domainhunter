@@ -1,30 +1,34 @@
 import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react";
 
-import { buildTldFaq } from "@/content/tld-faq";
+import { buildTldFaq, TLD_NAMING_ANCHOR } from "@/content/tld-faq";
+import { VIEW_ALL_LABEL, tldGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
 import { relatedTlds } from "@/content/tld-groups";
-import { TLD_LIST } from "@/content/tld-list";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
+import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
+import { pickPrices, priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
-import { cn } from "@/lib/utils";
 
 export function TldPage({ tld }: { tld: string }) {
   const { t, lang } = useI18n();
-  const prices = usePrices();
+  const fetched = usePrices();
   const content = readInjectedContent("tld", tld);
   const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
   if (!content || !guide) return <NotFoundPage />;
 
+  const prices = pickPrices(content.prices, fetched);
+
   const loc = guide[lang];
   const live = prices?.[tld];
   const relatedGuides = content.relatedGuides;
   const relatedCompares = content.relatedCompares.slice(0, 6);
   const groupTlds = relatedTlds(tld);
+  const others = tldGroupChips(tld);
   const faq = buildTldFaq(tld, loc, lang);
 
   return (
@@ -69,7 +73,7 @@ export function TldPage({ tld }: { tld: string }) {
         ))}
       </ul>
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+      <h2 id={TLD_NAMING_ANCHOR} className="mt-8 flex items-center gap-2 text-base font-bold scroll-mt-20">
         <Lightbulb className="h-4 w-4 text-gold" />
         {t("tld.naming")}
       </h2>
@@ -90,10 +94,12 @@ export function TldPage({ tld }: { tld: string }) {
       <div className="mt-3 space-y-2">
         {faq.map((item) => (
           <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
-            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+            <summary className="tap-target flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>
@@ -111,23 +117,25 @@ export function TldPage({ tld }: { tld: string }) {
         </a>
       </div>
 
-      {/* 其他 TLD 指南互链 */}
+      {/* 其他 TLD 指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts）；只渲染后缀名，价格在目标页首屏 */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("tld.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {TLD_LIST.map((other) => (
+          {others.chips.map((other) => (
             <a
               key={other}
               href={`/tld/${other}?lang=${lang}`}
-              className={cn(
-                "inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0",
-                other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
-              )}
+              className="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand"
             >
               .{other}
-              {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
             </a>
           ))}
+          <a
+            href={viewAllHref("tld", others.anchor, lang)}
+            className="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim"
+          >
+            {VIEW_ALL_LABEL.tld[lang]}
+          </a>
         </div>
       </div>
 
@@ -185,6 +193,7 @@ export function TldPage({ tld }: { tld: string }) {
           </div>
         </div>
       )}
+      <SiteLinks />
     </main>
   );
 }

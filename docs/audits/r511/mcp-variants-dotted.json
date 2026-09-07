@@ -1,0 +1,1 @@
+{"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"invalid name: \"zalize.com\" contains a dot — pass a bare label without TLD (e.g. \"zalize\", not \"zalize.com\"); to check a full domain use check_domains. 名字里不能带「.」：请传不含后缀的名字（如 \"zalize\"，而不是 \"zalize.com\"）；要核验完整域名请用 check_domains。"}],"isError":true}}

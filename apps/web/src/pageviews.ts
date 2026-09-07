@@ -5,6 +5,9 @@
 // 分片（R482）：KV 非原子，多 isolate 对同一键读改写会互相覆盖（生产实测 1s 内 3 页只入账 2 页）；
 // 因此每个 isolate 只写自己的分片键 pv:YYYY-MM-DD:<shard>（单写者，无竞争），读侧 list 前缀求和，
 // 并兼容分片前的旧日键 pv:YYYY-MM-DD。isolate 生命周期以小时计，一天分片数通常在几十到几百量级。
+// R487 起分片/合并写/读侧聚合的通用实现在 sharded-counter.ts（usage:* 同用），本文件只保留 pv 的结构与归类。
+
+import { dayKey, dayShardKey, dayShardPrefix, newShardId as newShardIdGeneric, readShardedDay, ShardedDayCounter, type DayCodec, type ShardKv, type ShardedCounterOptions } from "./sharded-counter";
 
 export const PV_CATEGORIES = ["home", "results", "tld", "guide", "vs", "prices", "other"] as const;
 export type PvCategory = (typeof PV_CATEGORIES)[number];
@@ -19,10 +22,10 @@ export interface DayPageviews {
 }
 
 export const PV_KEY_PREFIX = "pv:";
-export const pvKey = (date: string) => `${PV_KEY_PREFIX}${date}`;
-export const pvShardPrefix = (date: string) => `${PV_KEY_PREFIX}${date}:`;
-export const pvShardKey = (date: string, shard: string) => `${pvShardPrefix(date)}${shard}`;
-export const newShardId = () => Math.random().toString(36).slice(2, 10) || "0";
+export const pvKey = (date: string) => dayKey(PV_KEY_PREFIX, date);
+export const pvShardPrefix = (date: string) => dayShardPrefix(PV_KEY_PREFIX, date);
+export const pvShardKey = (date: string, shard: string) => dayShardKey(PV_KEY_PREFIX, date, shard);
+export const newShardId = newShardIdGeneric;
 export const emptyDayPageviews = (): DayPageviews => ({ pageviews: {}, bots: 0, botsBy: {} });
 
 /** 路由类别：results = 分享结果页 /s/:id（首页搜索→结果是同一文档内的状态切换，由 usage.searches 计） */
@@ -90,104 +93,30 @@ export function normalizeDay(raw: Partial<DayPageviews> | null | undefined): Day
   };
 }
 
-export interface PvKv {
-  get<T = unknown>(key: string, type: "json"): Promise<T | null>;
-  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
-  list?(options: { prefix: string; cursor?: string }): Promise<{ keys: { name: string }[]; list_complete: boolean; cursor?: string }>;
-}
+export type PvKv = ShardKv;
+
+export const PV_CODEC: DayCodec<DayPageviews> = {
+  keyPrefix: PV_KEY_PREFIX,
+  empty: emptyDayPageviews,
+  normalize: normalizeDay,
+  merge: mergeDay,
+};
 
 /** 读侧汇总：旧日键 + 全部分片键求和；任一读失败按空处理（下界近似，不抛） */
-export async function readDayPageviews(kv: PvKv, date: string, maxPages = 5): Promise<DayPageviews | null> {
-  const legacy = await kv.get<DayPageviews>(pvKey(date), "json").catch(() => null);
-  const shardKeys: string[] = [];
-  if (kv.list) {
-    let cursor: string | undefined;
-    for (let page = 0; page < maxPages; page++) {
-      const res = await kv.list({ prefix: pvShardPrefix(date), cursor }).catch(() => null);
-      if (!res) break;
-      for (const k of res.keys) shardKeys.push(k.name);
-      if (res.list_complete || !res.cursor) break;
-      cursor = res.cursor;
-    }
-  }
-  if (!legacy && shardKeys.length === 0) return null;
-  const shards = await Promise.all(shardKeys.map((k) => kv.get<DayPageviews>(k, "json").catch(() => null)));
-  const total = normalizeDay(legacy);
-  for (const s of shards) if (s) mergeDay(total, normalizeDay(s));
-  return total;
-}
+export const readDayPageviews = (kv: PvKv, date: string, maxPages = 5): Promise<DayPageviews | null> => readShardedDay(kv, PV_CODEC, date, maxPages);
 
-export interface PageviewCounterOptions {
-  /** 合并窗口；Workers 的 waitUntil 上限 30s，默认 5s */
-  flushDelayMs?: number;
-  /** 日键保留秒数，与 usage:* 一致（45 天） */
-  ttlSeconds?: number;
-  /** 分片 id，默认每个 counter 实例（= isolate）随机一个 */
-  shardId?: string;
-  now?: () => number;
-  sleep?: (ms: number) => Promise<void>;
-}
+export type PageviewCounterOptions = ShardedCounterOptions;
 
-const defaultSleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
-
-export class PageviewCounter {
-  private pending = new Map<string, DayPageviews>();
-  private scheduled: Promise<void> | null = null;
-  private readonly flushDelayMs: number;
-  private readonly ttlSeconds: number;
-  readonly shardId: string;
-  private readonly now: () => number;
-  private readonly sleep: (ms: number) => Promise<void>;
-  /** 累计成功落盘次数（测试/诊断用） */
-  flushes = 0;
-
-  constructor(
-    private readonly kv: PvKv | undefined,
-    opts: PageviewCounterOptions = {},
-  ) {
-    this.flushDelayMs = opts.flushDelayMs ?? 5000;
-    this.ttlSeconds = opts.ttlSeconds ?? 45 * 86400;
-    this.shardId = opts.shardId ?? newShardId();
-    this.now = opts.now ?? Date.now;
-    this.sleep = opts.sleep ?? defaultSleep;
+/** 每 isolate 一个实例；合并窗口默认 5s（吸收爬虫扫全站的写洪峰） */
+export class PageviewCounter extends ShardedDayCounter<DayPageviews> {
+  constructor(kv: PvKv | undefined, opts: PageviewCounterOptions = {}) {
+    super(kv, PV_CODEC, { flushDelayMs: 5000, ...opts });
   }
 
   /** 记一次 HTML 文档请求；返回应交给 waitUntil 的落盘 Promise（无 KV 时立即 resolve） */
   record(pathname: string, ua: string | null | undefined): Promise<void> {
-    if (!this.kv) return Promise.resolve();
-    const date = new Date(this.now()).toISOString().slice(0, 10);
-    const day = this.pending.get(date) ?? emptyDayPageviews();
-    this.pending.set(date, bumpDay(day, pathname, ua));
-    if (!this.scheduled) {
-      this.scheduled = this.sleep(this.flushDelayMs)
-        .then(() => this.flush())
-        .finally(() => {
-          this.scheduled = null;
-        });
-    }
-    return this.scheduled;
-  }
-
-  /** 立即把 pending 合并写入 KV；失败的日键回滚到 pending，等下一窗口重试 */
-  async flush(): Promise<void> {
-    if (!this.kv) return;
-    const batch = this.pending;
-    this.pending = new Map();
-    for (const [date, delta] of batch) {
-      try {
-        const key = pvShardKey(date, this.shardId);
-        const cur = normalizeDay(await this.kv.get<DayPageviews>(key, "json"));
-        await this.kv.put(key, JSON.stringify(mergeDay(cur, delta)), { expirationTtl: this.ttlSeconds });
-        this.flushes += 1;
-      } catch {
-        const back = this.pending.get(date);
-        this.pending.set(date, back ? mergeDay(back, delta) : delta);
-      }
-    }
-  }
-
-  /** 测试/诊断：当前未落盘的快照 */
-  pendingSnapshot(): Record<string, DayPageviews> {
-    return Object.fromEntries(this.pending);
+    return this.add((day) => {
+      bumpDay(day, pathname, ua);
+    });
   }
 }

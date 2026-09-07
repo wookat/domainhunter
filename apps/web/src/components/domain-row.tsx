@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
+import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, RotateCw, ThumbsDown, X } from "lucide-react";
 
 import { BrandCard, BrandDot, BrandSwatch, type BrandVariant } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { RegistrarAnchor } from "@/components/registrar-link";
 import { ScoreBars } from "@/components/score-bars";
+import { isRetryableUnknown, unknownReason, unknownReasonKey } from "@/lib/check-client";
+import { copyText } from "@/lib/clipboard";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { registrarsFor, tldOf } from "@/lib/registrars";
@@ -49,22 +51,37 @@ export function ExpiryNote({ iso, className }: { iso: string; className?: string
   );
 }
 
+/** taken 域名缺到期日（DNS-only 结果，注册局 RDAP 未返回）时的「到期日待查」chip；首页 quick-check、Results、/advanced 同源 */
+export function ExpiryUnknownChip({ className }: { className?: string }) {
+  const { t } = useI18n();
+  return (
+    <i title={t("expiry.unknownChipTip")} className={cn("not-italic font-sans text-[10px] text-txt2", className)} data-expiry="unknown">
+      {t("expiry.unknownChip")}
+    </i>
+  );
+}
+
 const WATCH_CONFIRM_TIMEOUT_MS = 5000;
 
-/** 临期 taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中点击两步确认就地取消，旁边小图标跳 /monitors 管理 */
+/**
+ * taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中点击两步确认就地取消，旁边小图标跳 /monitors 管理。
+ * 默认只在 90 天内到期时出现（「监控释放」）；`always` 时任何 taken 行都显示（「开监控」，与清单页 R548 语义一致）
+ */
 export function WatchCta({
   domain,
   expiresAt,
   onAddShortlist,
   variant = "row",
   compact = false,
+  always = false,
 }: {
   domain: string;
-  expiresAt: string;
+  expiresAt?: string;
   onAddShortlist: () => void;
   variant?: "row" | "chip";
   /** 紧凑行密度（仅桌面）：按钮高度收到 24px */
   compact?: boolean;
+  always?: boolean;
 }) {
   const { t } = useI18n();
   const { isMonitored, toggle } = useMonitor();
@@ -83,7 +100,8 @@ export function WatchCta({
     [],
   );
 
-  if (!isExpiringSoon(expiresAt)) return null;
+  const soon = Boolean(expiresAt && isExpiringSoon(expiresAt));
+  if (!soon && !always) return null;
   const watched = isMonitored(domain);
 
   function clearConfirm() {
@@ -147,7 +165,7 @@ export function WatchCta({
             "inline-flex items-center gap-1 font-sans text-[11px] font-medium transition-colors",
             compact ? "h-6" : "h-11",
             confirming ? "text-destructive" : "text-brand hover:opacity-80",
-            chip ? "px-3 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", !compact && "sm:h-8"),
+            chip ? "min-w-[44px] justify-center px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", !compact && "min-w-11 sm:h-8 sm:min-w-0"),
           )}
         >
           {pending ? (
@@ -173,8 +191,8 @@ export function WatchCta({
           title={t("watch.manageTitle")}
           aria-label={t("watch.manageTitle")}
           className={cn(
-            "inline-flex w-8 items-center justify-center text-txt2 transition-colors hover:text-txt0",
-            compact ? "h-6" : "h-11",
+            "inline-flex items-center justify-center text-txt2 transition-colors hover:text-txt0",
+            compact ? "h-6 w-8" : "h-11 w-11 sm:w-8",
             !chip && cn("rounded-md hover:bg-bg3", !compact && "sm:h-8"),
           )}
         >
@@ -187,21 +205,62 @@ export function WatchCta({
     <button
       onClick={() => void start()}
       disabled={pending}
-      title={error ? t(error === "full" ? "monitor.full" : "monitor.failed") : t("watch.ctaTitle")}
-      aria-label={t("watch.ctaTitle")}
+      title={error ? t(error === "full" ? "monitor.full" : "monitor.failed") : t(soon ? "watch.ctaTitle" : "shortlist.monitorCtaTitle")}
+      aria-label={t(soon ? "watch.ctaTitle" : "shortlist.monitorCtaTitle")}
       className={cn(
         "inline-flex shrink-0 items-center gap-1 font-sans text-[11px] font-medium transition-colors",
-        error ? "text-destructive" : "text-amber2 hover:text-txt0",
-        chip ? "border-l border-line/70 px-3 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 sm:h-8"),
+        error ? "text-destructive" : soon ? "text-amber2 hover:text-txt0" : "text-txt1 hover:text-txt0",
+        chip ? "min-w-[44px] justify-center border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 min-w-11 sm:h-8 sm:min-w-0"),
       )}
     >
       {pending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Bell className="h-3.5 w-3.5" />}
-      <span className="hidden sm:inline">{error ? t(error === "full" ? "watch.full" : "watch.failed") : t("watch.cta")}</span>
+      <span className="hidden sm:inline">{error ? t(error === "full" ? "watch.full" : "watch.failed") : t(soon ? "watch.cta" : "row.monitorCta")}</span>
+    </button>
+  );
+}
+
+/** 单行「重新核验」：44px 触点（桌面 32px），键盘可达；走 POST /api/check?refresh=1 穿透缓存 */
+export function RecheckButton({
+  domain,
+  onRecheck,
+  rechecking = false,
+  compact = false,
+  variant = "row",
+  withLabel = true,
+  className,
+}: {
+  domain: string;
+  onRecheck: (domain: string) => void;
+  rechecking?: boolean;
+  compact?: boolean;
+  variant?: "row" | "chip";
+  withLabel?: boolean;
+  className?: string;
+}) {
+  const { t } = useI18n();
+  const chip = variant === "chip";
+  return (
+    <button
+      type="button"
+      data-recheck={domain}
+      onClick={() => onRecheck(domain)}
+      disabled={rechecking}
+      title={t("row.recheckTitle", { domain })}
+      aria-label={t("row.recheckTitle", { domain })}
+      className={cn(
+        "inline-flex shrink-0 items-center justify-center gap-1 font-sans text-[11px] font-medium text-txt1 transition-colors hover:text-txt0 disabled:opacity-60",
+        chip ? "min-w-[44px] border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 min-w-11 sm:h-8 sm:min-w-0"),
+        className,
+      )}
+    >
+      <RotateCw className={cn("h-3.5 w-3.5", rechecking && "animate-spin")} />
+      {withLabel && <span className="hidden sm:inline">{rechecking ? t("row.rechecking") : t("row.recheck")}</span>}
     </button>
   );
 }
 
 export function RegisterMenu({ domain, children }: { domain: string; children: React.ReactNode }) {
+  const { t } = useI18n();
   const prices = usePrices();
   const tld = tldOf(domain);
   return (
@@ -216,6 +275,7 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
                 <span className="flex items-center gap-2">
                   {r.name}
                   {live && <span className="tnum font-mono text-[11px] text-brand">${live.registration}</span>}
+                  {r.id === "dynadot" && <span className="text-[11px] text-txt2">{t("registrar.hint.dynadot")}</span>}
                 </span>
                 <ExternalLink className="h-3.5 w-3.5 text-txt2" />
               </RegistrarAnchor>
@@ -229,18 +289,18 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
 
 export function CopyButton({ domain, className }: { domain: string; className?: string }) {
   const { t, lang } = useI18n();
-  const [copied, setCopied] = useState(false);
+  const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
   return (
     <button
-      title={t("common.copy")}
+      title={state === "failed" ? t("results.copyFailed") : t("common.copy")}
       className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-md text-txt2 transition-colors hover:bg-bg3 hover:text-txt0", className)}
       onClick={async () => {
-        await navigator.clipboard.writeText(domain);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1200);
+        const ok = await copyText(domain);
+        setState(ok ? "copied" : "failed");
+        setTimeout(() => setState("idle"), ok ? 1200 : 2500);
       }}
     >
-      {copied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
+      {state === "copied" ? <Check className="h-3.5 w-3.5 text-brand" /> : state === "failed" ? <X className="h-3.5 w-3.5 text-destructive" /> : <Copy className="h-3.5 w-3.5" />}
     </button>
   );
 }
@@ -257,6 +317,8 @@ export function DomainRow({
   onToggleFavorite,
   disliked,
   onToggleDislike,
+  onRecheck,
+  rechecking = false,
 }: {
   row: Row;
   selected?: boolean;
@@ -271,6 +333,9 @@ export function DomainRow({
   onToggleFavorite?: (row: Row) => void;
   disliked?: boolean;
   onToggleDislike?: (label: string) => void;
+  /** unknown / taken 行的单行「重新核验」（POST /api/check?refresh=1）；不传则不渲染按钮 */
+  onRecheck?: (domain: string) => void;
+  rechecking?: boolean;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -286,21 +351,37 @@ export function DomainRow({
 
   if (row.status === "taken") {
     return (
-      <div data-domain={row.domain} className={cn("flex items-center gap-3 px-4 opacity-60", rowH, compact && "gap-2 px-3")}>
-        <span className={cn("tnum shrink-0 rounded-md bg-taken-dim text-center font-mono text-taken", badgeCls)}>—</span>
-        <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "text-[15px]")}>{row.domain}</span>
-        <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
-        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="shrink truncate" />}
-        {row.expiresAt && onToggleFavorite && (
-          <WatchCta
-            domain={row.domain}
-            expiresAt={row.expiresAt}
-            compact={compact}
-            onAddShortlist={() => {
-              if (!favorite) onToggleFavorite(row);
-            }}
-          />
+      <div
+        data-domain={row.domain}
+        className={cn(
+          "flex items-center gap-3 px-4 opacity-60",
+          compact ? cn(rowH, "gap-2 px-3") : "min-h-12 flex-wrap gap-y-0 py-1.5 sm:h-12 sm:flex-nowrap sm:py-0",
         )}
+      >
+        <span className={cn("tnum shrink-0 rounded-md bg-taken-dim text-center font-mono text-taken", badgeCls)}>—</span>
+        {/* flex-wrap 下 item 先换行再收缩，域名要 basis-0（flex-1）才会在首行内截断而不是把收藏挤到下一行 */}
+        <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "flex-1 text-[15px] sm:flex-none")}>{row.domain}</span>
+        <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
+        {/* <sm 且非紧凑：到期日/待查 chip + 开监控 + 重新核验 换到第二行（对齐域名），域名不再被挤成 `google…`；≥sm `contents` 让包装消失、行内顺序不变 */}
+        <span data-taken-meta="" className={cn("flex min-w-0 items-center", compact ? "gap-2" : "order-last basis-full gap-3 pl-11 sm:contents")}>
+          {row.expiresAt ? (
+            <ExpiryNote iso={row.expiresAt} className={compact ? "shrink truncate" : "min-w-0 shrink truncate sm:shrink-0"} />
+          ) : (
+            <ExpiryUnknownChip className="min-w-0 shrink truncate whitespace-nowrap" />
+          )}
+          {onToggleFavorite && (
+            <WatchCta
+              domain={row.domain}
+              expiresAt={row.expiresAt}
+              compact={compact}
+              always
+              onAddShortlist={() => {
+                if (!favorite) onToggleFavorite(row);
+              }}
+            />
+          )}
+          {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />}
+        </span>
         {onToggleFavorite && (
           <button
             title={favorite ? t("results.favRemove") : t("results.favAdd")}
@@ -336,7 +417,13 @@ export function DomainRow({
 
   return (
     <div data-domain={row.domain} className={cn("group", animate && "fade-up", selected && "bg-bg2 shadow-[inset_2px_0_0_var(--brand)]")}>
-    <div className={cn("flex items-center px-4", rowH, compact ? "gap-2 px-3" : "gap-2 sm:gap-3")}>
+    <div
+      className={cn(
+        "flex items-center px-4",
+        compact ? cn(rowH, "gap-2 px-3") : "gap-2 sm:gap-3",
+        !compact && (isUnknown ? "min-h-12 flex-wrap gap-y-0 py-1.5 sm:h-12 sm:flex-nowrap sm:py-0" : rowH),
+      )}
+    >
       {row.scores && score !== undefined ? (
         <button
           title={scoreTitle}
@@ -361,10 +448,25 @@ export function DomainRow({
         </button>
       )}
       {compact && <BrandDot label={row.label} variant={variant} />}
-      <DomainName row={row} compact={compact} />
+      <DomainName row={row} compact={compact} className={cn(!compact && isUnknown && "flex-1 sm:flex-none")} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
-        <span className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.unknown")}</span>
+        <span title={t("home.quickUnknownTip")} className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>
+          {t(row.detail === "reserved" ? "status.reserved" : "status.unknown")}
+        </span>
+      )}
+      {isUnknown && (
+        <span
+          data-unknown-meta=""
+          className={cn("min-w-0 items-center", compact ? "contents" : "order-last flex basis-full gap-2 pl-10 sm:contents")}
+        >
+          <span data-unknown-reason={unknownReason(row.detail)} className={cn("min-w-0 truncate text-txt2", compact ? "text-[11px]" : "flex-1 text-xs sm:flex-none")}>
+            {t(unknownReasonKey(row.detail))}
+          </span>
+          {onRecheck && isRetryableUnknown(row.detail) && (
+            <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} className="order-last" />
+          )}
+        </span>
       )}
       {compact ? (
         <button
@@ -384,7 +486,7 @@ export function DomainRow({
         <span title={row.meaning} className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning && <MeaningText text={row.meaning} />}</span>
       )}
       <span className="ml-auto sm:ml-0" />
-      {priceShort(row.tld, lang, prices) && (
+      {!isUnknown && priceShort(row.tld, lang, prices) && (
         <span title={priceFull(row.tld, lang, prices)} className={cn("tnum hidden shrink-0 font-mono text-txt2 md:block", compact ? "text-[11px]" : "text-xs")}>
           {priceShort(row.tld, lang, prices)}
         </span>
@@ -434,16 +536,18 @@ export function DomainRow({
           {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
         </button>
       )}
-      <RegisterMenu domain={row.domain}>
-        <button
-          className={cn(
-            "shrink-0 rounded-md bg-brand-dim font-semibold text-brand transition-opacity hover:opacity-80",
-            compact ? "h-5 px-2 text-[11px]" : "h-11 px-3 text-xs sm:h-8",
-          )}
-        >
-          {t("common.register")}
-        </button>
-      </RegisterMenu>
+      {!isUnknown && (
+        <RegisterMenu domain={row.domain}>
+          <button
+            className={cn(
+              "shrink-0 rounded-md bg-brand-dim font-semibold text-brand transition-opacity hover:opacity-80",
+              compact ? "h-5 px-2 text-[11px]" : "h-11 px-3 text-xs sm:h-8",
+            )}
+          >
+            {t("common.register")}
+          </button>
+        </RegisterMenu>
+      )}
     </div>
     {/* 移动端寓意行：桌面寓意在行内，窄屏否则完全不可见（紧凑模式仅桌面，无需此行） */}
     {!compact && row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden"><MeaningText text={row.meaning} /></p>}

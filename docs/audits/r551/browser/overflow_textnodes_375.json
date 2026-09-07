@@ -1,0 +1,214 @@
+{
+ "/tld/nz": {
+  "metrics": {
+   "scrollWidth": 625,
+   "bodyScrollWidth": 625
+  },
+  "text_overflows": [
+   {
+    "tag": "p",
+    "cls": "mt-6 text-[15px] leading-relaxed text-txt1",
+    "maxRight": 625,
+    "inScroller": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "InternetNZ 是 IANA 记录的 .nz 管理者（委托日期 1987 年 1 月 19 日），日常监管由其子公司 Domain Name Commission Ltd（DNCL）执行，规则文本是《.nz Rules》——2025 年 7 月 1 日生效的 3.1 版和 2026 年 3 月 17 日的 3.2"
+   }
+  ]
+ },
+ "/tld/sa": {
+  "metrics": {
+   "scrollWidth": 569,
+   "bodyScrollWidth": 569
+  },
+  "text_overflows": [
+   {
+    "tag": "p",
+    "cls": "mt-6 text-[15px] leading-relaxed text-txt1",
+    "maxRight": 569,
+    "inScroller": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".sa 是本组里资格条款写得最具体的后缀之一。SaudiNIC 发布的《沙特域名注册条例》第 4-1 条列举了唯一可获服务的几类申请人：4-1-1 在沙特阿拉伯境内有实体存在的机构；4-1-2 具有沙特国籍或高级居留（Premium Residency）的自然人；4-1-3 持有沙特主管机关签发的登记或许可的实体；4-"
+   }
+  ]
+ },
+ "/vs/clinic-vs-care": {
+  "metrics": {
+   "scrollWidth": 489,
+   "bodyScrollWidth": 489
+  },
+  "text_overflows": [
+   {
+    "tag": "p",
+    "cls": "mt-2.5 text-[15px] leading-relaxed text-txt1",
+    "maxRight": 489,
+    "inScroller": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "同在大健康赛道，一个说「这里是诊所」，一个说「我们在乎你」。.clinic 是场所——口腔、眼科、皮肤、医美、理疗、宠物诊所这类「门诊制」业务用 name.clinic，读出来就是一家诊所，连锁门诊归拢多城市站点也顺；英语里 clinic 还有「诊断式服务」的引申义，SEO clinic、resume clinic 式"
+   },
+   {
+    "tag": "th",
+    "cls": "px-3 py-2 text-right font-medium",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "5 年持有成本"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$218.85"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1576"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$153.96"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1109"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "+$64.89"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 400,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "+¥467"
+   }
+  ]
+ },
+ "/vs/technology-vs-tech": {
+  "metrics": {
+   "scrollWidth": 380,
+   "bodyScrollWidth": 380
+  },
+  "text_overflows": [
+   {
+    "tag": "th",
+    "cls": "px-3 py-2 text-right font-medium",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "5 年持有成本"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$102.46"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥738"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$210.91"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1519"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "−$108.45"
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "maxRight": 444,
+    "inScroller": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "−¥781"
+   },
+   {
+    "tag": "caption",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "maxRight": 429,
+    "inScroller": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".technology vs .tech 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算）"
+   }
+  ]
+ }
+}

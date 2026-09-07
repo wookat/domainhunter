@@ -23,6 +23,7 @@ describe("registrars: 未配置返佣 = 原纯搜索链接", () => {
     aliyun: (d) => `https://wanwang.aliyun.com/domain/searchresult/#/?keyword=${encodeURIComponent(d)}`,
     tencent: (d) => `https://buy.cloud.tencent.com/domain?domain=${encodeURIComponent(d)}`,
     namecheap: (d) => `https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(d)}`,
+    dynadot: (d) => `https://www.dynadot.com/domain/search?domain=${encodeURIComponent(d)}`,
     cloudflare: (d) => `https://domains.cloudflare.com/?domain=${encodeURIComponent(d)}`,
   };
 
@@ -69,6 +70,17 @@ describe("registrars: 配置返佣后 = 带参数链接", () => {
     expect(link.sponsored).toBe(true);
   });
 
+  it("Dynadot（R503）：query 与 redirect 两种占位都能接，未配置时保持纯搜索链接", () => {
+    const dyn = byId("dynadot");
+    expect(registrarLink(dyn, "kuaixue.cn", undefined).href).toBe("https://www.dynadot.com/domain/search?domain=kuaixue.cn");
+    const q = registrarLink(dyn, "kuaixue.cn", { dynadot: { query: { rc: "AMB123" } } });
+    expect(q.href).toBe("https://www.dynadot.com/domain/search?domain=kuaixue.cn&rc=AMB123");
+    expect(q.sponsored).toBe(true);
+    const r = registrarLink(dyn, "kuaixue.com.cn", { dynadot: { redirect: "https://www.anrdoezrs.net/click-1-2?url={url}" } });
+    expect(r.href).toBe(`https://www.anrdoezrs.net/click-1-2?url=${encodeURIComponent("https://www.dynadot.com/domain/search?domain=kuaixue.com.cn")}`);
+    expect(r.sponsored).toBe(true);
+  });
+
   it("query + redirect 同时给出：先拼 query 再套 redirect", () => {
     const out = applyAffiliate("https://example.com/search?q=a", { query: { aff: "9" }, redirect: "https://go.example/?u={url}" });
     expect(out).toBe(`https://go.example/?u=${encodeURIComponent("https://example.com/search?q=a&aff=9")}`);
@@ -82,17 +94,17 @@ describe("registrars: 配置返佣后 = 带参数链接", () => {
 });
 
 describe("registrars: 排序规则", () => {
-  it(".cn / .com.cn / .net.cn 优先阿里云、腾讯云；Porkbun/Cloudflare 不售 .cn 被隐藏", () => {
-    expect(ids("kuaixue.cn")).toEqual(["aliyun", "tencent", "namecheap"]);
-    expect(ids("kuaixue.com.cn")).toEqual(["aliyun", "tencent", "namecheap"]);
-    expect(ids("kuaixue.net.cn")).toEqual(["aliyun", "tencent", "namecheap"]);
+  it(".cn / .com.cn / .net.cn 优先阿里云、腾讯云，海外备选只剩 Dynadot；Porkbun/Namecheap/Cloudflare 不售 .cn 被隐藏", () => {
+    expect(ids("kuaixue.cn")).toEqual(["aliyun", "tencent", "dynadot"]);
+    expect(ids("kuaixue.com.cn")).toEqual(["aliyun", "tencent", "dynadot"]);
+    expect(ids("kuaixue.net.cn")).toEqual(["aliyun", "tencent", "dynadot"]);
     expect(primaryRegistrar("kuaixue.cn").id).toBe("aliyun");
   });
 
-  it("其他后缀优先 Porkbun、Namecheap（再 Cloudflare），阿里云/腾讯云跟随", () => {
-    expect(ids("kuaixue.com")).toEqual(["porkbun", "namecheap", "cloudflare", "aliyun", "tencent"]);
-    expect(ids("kuaixue.io")).toEqual(["porkbun", "namecheap", "cloudflare", "aliyun", "tencent"]);
-    expect(ids("kuaixue.co.uk")).toEqual(["porkbun", "namecheap", "cloudflare", "aliyun", "tencent"]);
+  it("其他后缀优先 Porkbun、Namecheap（再 Dynadot、Cloudflare），阿里云/腾讯云跟随", () => {
+    expect(ids("kuaixue.com")).toEqual(["porkbun", "namecheap", "dynadot", "cloudflare", "aliyun", "tencent"]);
+    expect(ids("kuaixue.io")).toEqual(["porkbun", "namecheap", "dynadot", "cloudflare", "aliyun", "tencent"]);
+    expect(ids("kuaixue.co.uk")).toEqual(["porkbun", "namecheap", "dynadot", "cloudflare", "aliyun", "tencent"]);
     expect(primaryRegistrar("kuaixue.com").id).toBe("porkbun");
   });
 
@@ -128,6 +140,7 @@ describe("parseAffiliateConfig / parseAffiliateJson", () => {
       JSON.stringify({
         aliyun: { query: { userCode: "abc", bad: 1, "": "x" } },
         namecheap: { redirect: "https://namecheap.pxf.io/c/1/2/3?u={url}", query: {} },
+        dynadot: { query: { rc: "AMB123" } },
         porkbun: { redirect: "http://insecure.example/{url}" },
         tencent: { redirect: "https://no-placeholder.example/" },
         godaddy: { query: { isc: "x" } },
@@ -137,6 +150,7 @@ describe("parseAffiliateConfig / parseAffiliateJson", () => {
     expect(cfg).toEqual({
       aliyun: { query: { userCode: "abc" } },
       namecheap: { redirect: "https://namecheap.pxf.io/c/1/2/3?u={url}" },
+      dynadot: { query: { rc: "AMB123" } },
     });
   });
 });

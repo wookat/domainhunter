@@ -1,0 +1,173 @@
+{
+  "utc": "2026-09-07T13:05:14.003Z",
+  "url": "https://hunt.zalize.com/?lang=en&cb=r574-replayed",
+  "lang": "en",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "—\nchaxiang.com\nTaken\nexpires 2027-05-13\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 523.3125,
+        "y": 340.5,
+        "width": 84.453125,
+        "height": 32,
+        "top": 340.5,
+        "right": 607.765625,
+        "bottom": 372.5,
+        "left": 523.3125
+      },
+      "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 549.3125,
+          "y": 348.25,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 348.25,
+          "right": 599.765625,
+          "bottom": 364.75,
+          "left": 549.3125
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "nic.cn",
+      "rowText": "—\nnic.cn\nTaken\nexpiry pending\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 441.71875,
+        "y": 389,
+        "width": 84.453125,
+        "height": 32,
+        "top": 389,
+        "right": 526.171875,
+        "bottom": 421,
+        "left": 441.71875
+      },
+      "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 467.71875,
+          "y": 396.75,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 396.75,
+          "right": 518.171875,
+          "bottom": 413.25,
+          "left": 467.71875
+        }
+      },
+      "expiry": {
+        "text": "expiry pending",
+        "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+        "display": "block",
+        "rect": {
+          "x": 272.6875,
+          "y": 397.5,
+          "width": 70.421875,
+          "height": 15,
+          "top": 397.5,
+          "right": 343.109375,
+          "bottom": 412.5,
+          "left": 272.6875
+        }
+      }
+    },
+    {
+      "domain": "google.de",
+      "rowText": "—\ngoogle.de\nTaken\nexpiry pending\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 458.734375,
+        "y": 437,
+        "width": 84.453125,
+        "height": 32,
+        "top": 437,
+        "right": 543.1875,
+        "bottom": 469,
+        "left": 458.734375
+      },
+      "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check google.de (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 484.734375,
+          "y": 444.75,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 444.75,
+          "right": 535.1875,
+          "bottom": 461.25,
+          "left": 484.734375
+        }
+      },
+      "expiry": {
+        "text": "expiry pending",
+        "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+        "display": "block",
+        "rect": {
+          "x": 289.703125,
+          "y": 445.5,
+          "width": 70.421875,
+          "height": 15,
+          "top": 445.5,
+          "right": 360.125,
+          "bottom": 460.5,
+          "left": 289.703125
+        }
+      }
+    },
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\nTaken\nexpires 2028-09-14\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 505.3125,
+        "y": 485,
+        "width": 84.453125,
+        "height": 32,
+        "top": 485,
+        "right": 589.765625,
+        "bottom": 517,
+        "left": 505.3125
+      },
+      "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 531.3125,
+          "y": 492.75,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 492.75,
+          "right": 581.765625,
+          "bottom": 509.25,
+          "left": 531.3125
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

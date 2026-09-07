@@ -1,0 +1,9 @@
+identical to backup: False
+{
+ "domainhunter:lang": "zh",
+ "dh:myShares:v1": "[]",
+ "domainhunter:monitor": "[]",
+ "domainhunter:shortlist": "[]",
+ "domainhunter:theme": "dark",
+ "domainhunter:shortlist:checkedAt": "1788718030369"
+}

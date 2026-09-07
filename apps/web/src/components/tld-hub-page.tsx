@@ -3,13 +3,14 @@ import { TLD_HUB_META, tldHubGroups, tldOneLiner } from "@/content/hubs-tld";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
-import { BackToTop, HubAnchorNav, hubAnchorId } from "./hub-nav";
+import { BackToTop, HubAnchorNav, hubAnchorId, useHubHashScroll } from "./hub-nav";
 
 /** /tld 索引 hub：全部 TLD 注册指南，按用途分组。DOM 与 worker 的 tldHubBlocks 骨架逐字一致。 */
 export function TldHubPage() {
   const { lang } = useI18n();
   const meta = TLD_HUB_META[lang];
   usePageTitle(meta.title);
+  useHubHashScroll();
   const [query, setQuery] = useState("");
   const groups = useMemo(() => tldHubGroups(), []);
   const total = useMemo(() => groups.reduce((n, g) => n + g.tlds.length, 0), [groups]);
@@ -33,7 +34,7 @@ export function TldHubPage() {
         </a>
         {lang === "zh" ? "。" : "."}
       </p>
-      <HubFilter placeholder={lang === "zh" ? "筛选后缀…" : "Filter TLDs…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      <HubFilter id="tld-filter" placeholder={lang === "zh" ? "筛选后缀…" : "Filter TLDs…"} value={query} onChange={setQuery} shown={shown} total={total} />
       <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.id, label: g[lang], count: g.tlds.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (

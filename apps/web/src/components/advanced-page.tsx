@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DomainRow } from "@/components/domain-row";
-import { useI18n } from "@/lib/i18n";
+import { parseCheckLine, recheckDomains, recheckFailureDetail } from "@/lib/check-client";
+import { useI18n, type TFunc } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { formatExpiry, friendlyError, friendlyHttpError } from "@/lib/utils";
@@ -29,10 +30,41 @@ function expandBulk(input: string, tlds: string[]): string[] {
   return [...out].slice(0, MAX_BULK);
 }
 
+export interface BulkProgress {
+  /** 已收到的核验结果行数 */
+  done: number;
+  /** 请求时已知的总数；组合器路径由服务端展开，前端不知 total */
+  total?: number;
+  /** 进度区唯一的完成判定：末条结果到达（done ≥ total）或流结束时置位，与请求是否仍在进行无关 */
+  finished: boolean;
+}
+
+/** 进度文案：有 total 时 `x/N`，没有时只报已核验数；结束后改为「已完成」 */
+export function bulkProgressLabel(p: Pick<BulkProgress, "done" | "total">, running: boolean, t: TFunc): string {
+  if (p.total === undefined) return t(running ? "adv.progressOpen" : "adv.progressDoneOpen", { done: p.done });
+  return t(running ? "adv.progress" : "adv.progressDone", { done: p.done, total: p.total });
+}
+
+export function startBulkProgress(total?: number): BulkProgress {
+  return { done: 0, total, finished: false };
+}
+
+/** 收到 `received` 条结果：累加 done，凑齐 total 的那条同一次更新里直接置 finished，不等流结束 */
+export function advanceBulkProgress(prev: BulkProgress | null, received: number): BulkProgress {
+  const done = (prev?.done ?? 0) + received;
+  const total = prev?.total;
+  return { done, total, finished: total !== undefined && done >= total };
+}
+
+/** 流结束（含未知 total 的组合器路径、提前断流）：未完成的进度补置 finished，已完成的原样返回不触发重渲染 */
+export function finishBulkProgress(prev: BulkProgress | null): BulkProgress | null {
+  return prev === null || prev.finished ? prev : { ...prev, finished: true };
+}
+
 export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void } }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const { copied: availCopied, failed: availCopyFailed, copy: copyAvailable } = useCopyAvailable();
   const [roots, setRoots] = useState("");
   const [prefixes, setPrefixes] = useState("");
   const [suffixes, setSuffixes] = useState("");
@@ -40,8 +72,30 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
   const [bulk, setBulk] = useState("");
   const [rows, setRows] = useState<Row[]>([]);
   const [running, setRunning] = useState(false);
+  const [progress, setProgress] = useState<BulkProgress | null>(null);
   const [error, setError] = useState("");
+  const [rechecking, setRechecking] = useState<Set<string>>(() => new Set());
   const abortRef = useRef<AbortController | null>(null);
+
+  // 单行重新核验：unknown / taken 行走 POST /api/check?refresh=1 穿透缓存，就地替换该行状态，不影响其余结果
+  async function recheck(domain: string) {
+    if (rechecking.has(domain)) return;
+    setRechecking((prev) => new Set(prev).add(domain));
+    try {
+      await recheckDomains([domain], (r) => {
+        if (r.domain !== domain) return;
+        setRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: r.status, expiresAt: r.expiresAt, detail: r.detail } : row)));
+      });
+    } catch (err) {
+      setRows((prev) => prev.map((row) => (row.domain === domain && row.status === "unknown" ? { ...row, detail: recheckFailureDetail(err, row.detail) } : row)));
+    } finally {
+      setRechecking((prev) => {
+        const next = new Set(prev);
+        next.delete(domain);
+        return next;
+      });
+    }
+  }
 
   async function run(payload?: { domains: string[] }) {
     abortRef.current?.abort();
@@ -49,6 +103,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
     abortRef.current = ac;
     setRows([]);
     setError("");
+    setProgress(startBulkProgress(payload?.domains.length));
     setRunning(true);
     try {
       const res = await fetch("/api/search", {
@@ -68,61 +123,54 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         const lines = buf.split("\n");
         buf = lines.pop()!;
         const rs = lines
-          .filter(Boolean)
-          .map((l) => JSON.parse(l) as { domain: string; status: Status; expiresAt?: string; type?: string })
-          .filter((r) => !r.type && r.domain)
+          .map(parseCheckLine)
+          .filter((r): r is NonNullable<typeof r> => r !== null)
           .map((r): Row => {
             const dot = r.domain.indexOf(".");
-            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status: r.status, round: 1, expiresAt: r.expiresAt };
+            const status: Status = r.status;
+            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status, round: 1, expiresAt: r.expiresAt, detail: r.detail };
           });
-        if (rs.length) setRows((prev) => [...prev, ...rs]);
+        if (rs.length) {
+          setRows((prev) => [...prev, ...rs]);
+          setProgress((prev) => advanceBulkProgress(prev, rs.length));
+        }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
+      if ((e as Error).name !== "AbortError") {
+        setError(friendlyError(e as Error, t));
+        setProgress(null);
+      }
     } finally {
-      setRunning(false);
+      if (abortRef.current === ac) {
+        setProgress(finishBulkProgress);
+        setRunning(false);
+      }
     }
   }
 
   const available = rows.filter((r) => r.status === "available");
   const rest = rows.filter((r) => r.status !== "available");
-  const bulkDomains = expandBulk(bulk, split(tlds).length > 0 ? split(tlds) : ["com"]);
+  const effectiveTlds = split(tlds).length > 0 ? split(tlds) : ["com"];
+  const bulkDomains = expandBulk(bulk, effectiveTlds);
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight md:text-2xl">{t("adv.title")}</h1>
       <p className="mt-1 text-sm text-txt1">{t("adv.subtitle")}</p>
 
+      {/* 批量粘贴核验是本页主路径，放首屏；组合生成器降为高级选项放其后 */}
       <Card className="mt-5 p-4 md:p-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { label: t("adv.roots"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
-            { label: t("adv.prefixes"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
-            { label: t("adv.suffixes"), value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
-            { label: "TLD", value: tlds, set: setTlds, placeholder: "com, cn" },
-          ].map((f) => (
-            <div key={f.label}>
-              <label className="text-sm font-medium">{f.label}</label>
-              <Input className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
-            </div>
-          ))}
-        </div>
-        <Button className="mt-5 w-full sm:w-auto" size="lg" disabled={running || split(roots).length === 0} onClick={() => void run()}>
-          {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-          {running ? t("adv.running") : t("adv.start")}
-        </Button>
-      </Card>
-
-      {/* 批量粘贴核验：现成名单直接查，不消耗 AI 次数 */}
-      <Card className="mt-4 p-4 md:p-6">
         <p className="flex items-center gap-1.5 text-sm font-semibold">
           <ClipboardList className="h-4 w-4 text-brand" />
           {t("adv.bulkTitle")}
         </p>
-        <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK })}</p>
+        <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK, tlds: effectiveTlds.join(", ") })}</p>
         <textarea
+          id="advanced-bulk"
+          name="bulk"
           value={bulk}
           onChange={(e) => setBulk(e.target.value)}
+          aria-label={t("adv.bulkAria")}
           placeholder={t("adv.bulkPlaceholder")}
           rows={5}
           className="mt-3 w-full rounded-lg border border-line bg-bg2 px-3 py-2.5 font-mono text-sm text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
@@ -136,17 +184,65 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         </div>
       </Card>
 
+      <Card className="mt-4 p-4 md:p-6">
+        <p className="flex items-center gap-1.5 text-sm font-semibold">
+          <Search className="h-4 w-4 text-brand" />
+          {t("adv.comboTitle")}
+        </p>
+        <p className="mt-1 text-xs text-txt1">{t("adv.comboHint")}</p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { id: "advanced-roots", name: "roots", label: t("adv.roots"), aria: t("adv.rootsAria"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
+            { id: "advanced-prefixes", name: "prefixes", label: t("adv.prefixes"), aria: t("adv.prefixesAria"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
+            { id: "advanced-suffixes", name: "suffixes", label: t("adv.suffixes"), aria: t("adv.suffixesAria"), value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
+            { id: "advanced-tlds", name: "tlds", label: "TLD", aria: t("adv.tldsAria"), value: tlds, set: setTlds, placeholder: "com, cn" },
+          ].map((f) => (
+            <div key={f.id}>
+              <label htmlFor={f.id} className="text-sm font-medium">
+                {f.label}
+              </label>
+              <Input id={f.id} name={f.name} aria-label={f.aria} className="mt-2 h-11 sm:h-10" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
+            </div>
+          ))}
+        </div>
+        <Button className="mt-5 w-full sm:w-auto" size="lg" disabled={running || split(roots).length === 0} onClick={() => void run()}>
+          {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
+          {running ? t("adv.running") : t("adv.start")}
+        </Button>
+      </Card>
+
+      {progress && (
+        <div className="mt-4 rounded-lg border border-line bg-bg1 px-4 py-2.5" data-testid="bulk-progress">
+          <p role="status" aria-live="polite" className="flex items-center gap-2 font-mono text-xs text-txt1">
+            {progress.finished ? <Check className="h-3.5 w-3.5 text-brand" /> : <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" />}
+            {bulkProgressLabel(progress, !progress.finished, t)}
+          </p>
+          {progress.total !== undefined && progress.total > 0 && (
+            <div
+              role="progressbar"
+              aria-label={t("adv.progressAria")}
+              aria-valuemin={0}
+              aria-valuemax={progress.total}
+              aria-valuenow={Math.min(progress.done, progress.total)}
+              className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-bg2"
+            >
+              <div className="h-full rounded-full bg-brand transition-[width] duration-300" style={{ width: `${Math.min(100, Math.round((progress.done / progress.total) * 100))}%` }} />
+            </div>
+          )}
+        </div>
+      )}
+
       {error && <p className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
 
       {rows.length > 0 && (
         <div className="mt-6 flex flex-wrap items-center gap-2">
           {available.length >= 2 && (
             <button
-              onClick={() => copyAvailable(available.map((r) => r.domain))}
+              onClick={() => void copyAvailable(available)}
               className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
             >
               {availCopied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
-              {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: available.length })}
+              {availCopied ? t("results.copiedAvail") : availCopyFailed ? t("results.copyFailed") : t("results.copyAvailBtn", { n: available.length })}
             </button>
           )}
           <button
@@ -182,7 +278,14 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
           <h2 className="mt-6 text-sm font-semibold text-txt1">{t("adv.rest", { n: rest.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {rest.map((r) => (
-              <DomainRow key={r.domain} row={r} favorite={shortlist.has(r.domain)} onToggleFavorite={shortlist.toggle} />
+              <DomainRow
+                key={r.domain}
+                row={r}
+                favorite={shortlist.has(r.domain)}
+                onToggleFavorite={shortlist.toggle}
+                onRecheck={(d) => void recheck(d)}
+                rechecking={rechecking.has(r.domain)}
+              />
             ))}
           </div>
         </>

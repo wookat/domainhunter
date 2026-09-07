@@ -1,0 +1,355 @@
+{
+  "A_wechat": {
+    "/": {
+      "status": 200,
+      "ms": 41,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "og:title": "DomainHunter — 中文创业者的域名猎手",
+      "og:image": "https://hunt.zalize.com/og.png",
+      "og:description": "用中文说寓意，拼音/英文/混搭多路构思，RDAP + WHOIS 实时核验——只给你真正可注册的 .cn / .com 好域名。",
+      "twitter:card": "summary_large_image",
+      "h1": [
+        "用中文说出寓意，<br class=\"md:hidden\"><span class=\"whitespace-nowrap\">猎到真正可注册的</span><wbr><span class=\"whitespace-nowrap\">.cn / .com 好域名</span>"
+      ],
+      "vary": "Accept-Language",
+      "html_lang": "zh-CN"
+    },
+    "/tld/cn": {
+      "status": 200,
+      "ms": 63,
+      "title": ".cn 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "og:title": ".cn 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "og:image": "https://hunt.zalize.com/og.png",
+      "og:description": ".cn 是中国国家域名，价格亲民、面向国内业务合规友好。查看 .cn 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cn 域名。",
+      "twitter:card": "summary_large_image",
+      "h1": [
+        ".cn 域名注册指南：适合谁、多少钱、怎么起名"
+      ],
+      "vary": "Accept-Language",
+      "html_lang": "zh-CN"
+    },
+    "/s/2v_F9ouT_X": {
+      "status": 200,
+      "ms": 158,
+      "title": "3 个可注册域名候选 | DomainHunter",
+      "og:title": "3 个可注册域名候选 | DomainHunter",
+      "og:image": "https://hunt.zalize.com/og.png",
+      "og:description": "zalizepetwan.com、zalizepetwan.cn、zalize.com —— 来自 DomainHunter 的候选清单，注册前请重新核验",
+      "twitter:card": "summary_large_image",
+      "h1": [],
+      "vary": "Accept-Language",
+      "html_lang": "zh-CN"
+    },
+    "/guide/cn-realname": {
+      "status": 200,
+      "ms": 62,
+      "title": ".cn 域名实名认证全流程：材料、时限与审核 | DomainHunter",
+      "og:title": ".cn 域名实名认证全流程：材料、时限与审核 | DomainHunter",
+      "og:image": "https://hunt.zalize.com/og.png",
+      "og:description": ".cn 域名实名认证要交什么材料、审核要多久、不做会怎样。按 CNNIC 细则与阿里云、腾讯云、西部数码官方帮助整理个人、企业、港澳台居民、外国人的材料清单，对",
+      "twitter:card": "summary_large_image",
+      "h1": [
+        ".cn 域名实名认证全流程：材料、时限与审核"
+      ],
+      "vary": "Accept-Language",
+      "html_lang": "zh-CN"
+    },
+    "/wx-share.png": {
+      "status": 200,
+      "content-type": "image/png",
+      "bytes": 26062,
+      "cache-control": "public, max-age=0, must-revalidate"
+    }
+  },
+  "B_head_injection": {
+    "status": 200,
+    "baidu-site-verification": false,
+    "google-site-verification": false,
+    "msvalidate.01": false,
+    "cf_beacon": false,
+    "security_headers": {
+      "content-security-policy": null,
+      "x-content-type-options": null,
+      "referrer-policy": null,
+      "x-frame-options": null,
+      "strict-transport-security": null,
+      "permissions-policy": null
+    },
+    "cache-control": "public, max-age=600",
+    "vary": "Accept-Language",
+    "cf-cache-status": null,
+    "asset_js": [
+      "assets/index-Bo0jz93y.js"
+    ],
+    "asset_css": [
+      "assets/index-DXS_JNRA.css"
+    ],
+    "ssr_anchor_count": 26,
+    "ssr_internal_anchor_count": 25,
+    "h1": [
+      "用中文说出寓意，<br class=\"md:hidden\"><span class=\"whitespace-nowrap\">猎到真正可注册的</span><wbr><span class=\"whitespace-nowrap\">.cn / .com 好域名</span>"
+    ]
+  },
+  "C_nonhtml": {
+    "/api/usage": {
+      "status": 200,
+      "vary": null,
+      "content-type": "application/json",
+      "cache-control": "public, max-age=300",
+      "bytes": 722
+    },
+    "/api/registrars": {
+      "status": 200,
+      "vary": null,
+      "content-type": "application/json",
+      "cache-control": "public, max-age=300",
+      "bytes": 16,
+      "body": "{\"affiliate\":{}}"
+    },
+    "/sitemap.xml": {
+      "status": 200,
+      "vary": null,
+      "content-type": "application/xml; charset=utf-8",
+      "cache-control": "public, max-age=86400",
+      "bytes": 510867,
+      "urls": 1270,
+      "dupes": 0,
+      "byKind": {
+        "tld": 408,
+        "guide": 410,
+        "vs": 444,
+        "core": 8
+      },
+      "lastmod_sample": [
+        "2026-08-10"
+      ],
+      "xhtml_links": 3810
+    },
+    "/llms.txt": {
+      "status": 200,
+      "vary": null,
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "public, max-age=86400",
+      "bytes": 133979,
+      "tld_links": 408,
+      "guide_links": 410,
+      "vs_links": 444
+    },
+    "/robots.txt": {
+      "status": 200,
+      "vary": null,
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "public, max-age=86400",
+      "bytes": 222,
+      "sitemap": [
+        "https://hunt.zalize.com/sitemap.xml"
+      ],
+      "agents": [
+        "*",
+        "GPTBot",
+        "PerplexityBot",
+        "ClaudeBot"
+      ],
+      "disallow": []
+    }
+  },
+  "D_404": {
+    "/no-such-page-r502": {
+      "status": 404,
+      "noindex": true,
+      "branded": true,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "bytes": 4175,
+      "cache-control": "public, max-age=600"
+    },
+    "/tld/zzznotatld": {
+      "status": 404,
+      "noindex": true,
+      "branded": true,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "bytes": 4175,
+      "cache-control": "public, max-age=600"
+    },
+    "/guide/zzz-none": {
+      "status": 404,
+      "noindex": true,
+      "branded": true,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "bytes": 4175,
+      "cache-control": "public, max-age=600"
+    },
+    "/vs/zzz-vs-yyy": {
+      "status": 404,
+      "noindex": true,
+      "branded": true,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "bytes": 4175,
+      "cache-control": "public, max-age=600"
+    },
+    "/s/zzz-unknown-r502": {
+      "status": 200,
+      "noindex": false,
+      "branded": true,
+      "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+      "bytes": 4324,
+      "cache-control": null
+    },
+    "/api/share/zzzunknown": {
+      "status": 404,
+      "noindex": false,
+      "branded": false,
+      "title": null,
+      "bytes": 21,
+      "cache-control": null
+    }
+  },
+  "E_mcp": {
+    "initialize": {
+      "status": 200,
+      "ms": 34,
+      "result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "tools": {}
+        },
+        "serverInfo": {
+          "name": "domainhunter",
+          "version": "1.0.0"
+        },
+        "instructions": "DomainHunter MCP: check exact-domain availability in bulk (check_domains), fetch live TLD registration/renewal prices (tld_prices), and suggest+check prefix/suffix variants when a name is taken (suggest_variants). For AI-powered name hunting from a meaning description, use https://hunt.zalize.com directly."
+      }
+    },
+    "tools/list": {
+      "status": 200,
+      "ms": 38,
+      "tools": [
+        "check_domains",
+        "tld_prices",
+        "suggest_variants"
+      ]
+    },
+    "check_domains": {
+      "status": 200,
+      "ms": 1632,
+      "isError": false,
+      "parsed": {
+        "results": [
+          {
+            "domain": "zalize.com",
+            "status": "taken",
+            "expiresAt": "2027-07-06T17:17:23.000Z",
+            "expiringSoon": false
+          },
+          {
+            "domain": "zalize.cn",
+            "status": "taken",
+            "expiresAt": "2027-08-03T20:20:35.000Z",
+            "expiringSoon": false
+          },
+          {
+            "domain": "zalizeqa502x.com",
+            "status": "available"
+          },
+          {
+            "domain": "zalizeqa502x.cn",
+            "status": "available"
+          }
+        ]
+      }
+    },
+    "tld_prices": {
+      "status": 200,
+      "ms": 97,
+      "tldCount": 408,
+      "prices_len": 408,
+      "approx_count": 57,
+      "cn": {
+        "registration": 4.03,
+        "renewal": 5.42,
+        "approx": true
+      },
+      "com": {
+        "registration": 11.08,
+        "renewal": 11.08
+      },
+      "stale": null,
+      "keys": [
+        "currency",
+        "usdToCny",
+        "fetchedAt",
+        "tldCount",
+        "liveCount",
+        "staticCount"
+      ]
+    },
+    "suggest_variants": {
+      "status": 200,
+      "ms": 1797,
+      "parsed": {
+        "results": [
+          {
+            "domain": "zalizehq.cn",
+            "status": "available",
+            "firstYearPriceUSD": 4.03
+          },
+          {
+            "domain": "zalizeapp.cn",
+            "status": "available",
+            "firstYearPriceUSD": 4.03
+          },
+          {
+            "domain": "zalizelabs.cn",
+            "status": "available",
+            "firstYearPriceUSD": 4.03
+          },
+          {
+            "domain": "zalizeapp.com",
+            "status": "available",
+            "firstYearPriceUSD": 11.08
+          },
+          {
+            "domain": "zalizehq.com",
+            "status": "available",
+            "firstYearPriceUSD": 11.08
+          },
+          {
+            "domain": "zalizelabs.com",
+            "status": "available",
+            "firstYearPriceUSD": 11.08
+          }
+        ]
+      }
+    },
+    "suggest_variants_invalid": {
+      "status": 200,
+      "isError": false,
+      "text": "{\"results\":[{\"domain\":\"zalizecomhq.com\",\"status\":\"available\",\"firstYearPriceUSD\":11.08},{\"domain\":\"getzalizecomapp.com\",\"status\":\"available\",\"firstYearPriceUSD\":11.08},{\"domain\":\"zalizecomapp.com\",\"st",
+      "error": null
+    }
+  },
+  "F_prices": {
+    "status": 200,
+    "ms": 40,
+    "keys": [
+      "prices",
+      "currency",
+      "usdToCny",
+      "fetchedAt",
+      "tldCount"
+    ],
+    "stale": null,
+    "count": 351,
+    "fetchedAt": 1788523226530,
+    "cache-control": "public, max-age=600"
+  },
+  "G_share_get_before_revoke": {
+    "status": 200,
+    "items": 3
+  },
+  "G_share_page_ssr": {
+    "status": 200,
+    "title": "3 个可注册域名候选 | DomainHunter",
+    "noindex": false,
+    "og:image": "https://hunt.zalize.com/api/og/2v_F9ouT_X"
+  }
+}

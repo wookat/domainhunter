@@ -1,7 +1,10 @@
 import { useState } from "react";
 
+import { copyText } from "@/lib/clipboard";
+import { CSV_PRICE_COLUMNS, priceCsvCells } from "@/lib/csv";
 import { downloadText } from "@/lib/export";
-import { priceShort, type PriceMap } from "@/lib/prices";
+import { useI18n, type TFunc } from "@/lib/i18n";
+import { priceShort, usePrices, type PriceMap } from "@/lib/prices";
 import { totalScore, type Row } from "@/types";
 
 /** 结果 CSV 的最小行结构：结果页 Row 与分享页快照条目都能满足 */
@@ -13,13 +16,14 @@ export type ResultsCsvRow = Pick<Row, "domain" | "tld" | "meaning" | "theme" | "
   note?: string;
 };
 
-/** 可选附加列；不传时输出与原有结果 CSV 完全一致 */
+/** 可选附加列（追加在固定列之后）；不传时只输出固定列 */
 export interface ResultsCsvOptions {
   expiresAt?: boolean;
   note?: boolean;
 }
 
-const CSV_HEADER = "domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price";
+/** `first_year_price` 为带币种标签的可读字符串，R566 起作为兼容列保留一版；机器消费请用其后的数值价格列 */
+const CSV_HEADER = ["domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price", ...CSV_PRICE_COLUMNS].join(",");
 
 export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices: PriceMap | null, opts?: ResultsCsvOptions): string {
   const esc = (v: string) => `"${v.replace(/"/g, '""')}"`;
@@ -37,6 +41,7 @@ export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices
       s?.relevance ?? "",
       s?.brandability ?? "",
       r.status === "available" ? esc(priceShort(r.tld, lang, prices) ?? "") : "",
+      ...priceCsvCells(r.tld, r.status, prices),
     ];
     if (opts?.expiresAt) cells.push(esc(r.expiresAt ?? ""));
     if (opts?.note) cells.push(esc(r.note ?? ""));
@@ -51,13 +56,28 @@ export function exportResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", price
   downloadText(buildResultsCsv(rows, lang, prices, opts), `${filenamePrefix}-${ymd}.csv`, "text/csv;charset=utf-8");
 }
 
-/** 复制可注册域名列表（换行分隔），带 1.5s 已复制反馈 */
+export type CopyRow = Pick<Row, "domain"> & Partial<Pick<Row, "tld">>;
+
+/** 聊天友好的可注册清单：一行一个「域名 · 状态 · 首年价」，方便直接粘贴到微信群；statusText 传 "" 则不带状态（如旧分享快照无核验状态） */
+export function buildAvailableText(rows: CopyRow[], lang: "zh" | "en", prices: PriceMap | null, t: TFunc, statusText?: string): string {
+  const status = statusText ?? t("status.available");
+  return rows
+    .map((r) => {
+      const price = priceShort(r.tld ?? r.domain.slice(r.domain.indexOf(".") + 1), lang, prices);
+      return [r.domain, status, price].filter(Boolean).join(" · ");
+    })
+    .join("\n");
+}
+
+/** 复制可注册域名列表，带 1.5s 已复制/失败反馈；写剪贴板失败时不假报成功 */
 export function useCopyAvailable() {
-  const [copied, setCopied] = useState(false);
-  const copy = (domains: string[]) => {
-    void navigator.clipboard.writeText(domains.join("\n"));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+  const { lang, t } = useI18n();
+  const prices = usePrices();
+  const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
+  const copy = async (rows: CopyRow[], statusText?: string) => {
+    const ok = await copyText(buildAvailableText(rows, lang, prices, t, statusText));
+    setState(ok ? "copied" : "failed");
+    setTimeout(() => setState("idle"), ok ? 1500 : 2500);
   };
-  return { copied, copy };
+  return { copied: state === "copied", failed: state === "failed", copy };
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rhWlK999Ge",
+    "head": "HTTP/2 200 \ndate: Sat, 05 Sep 2026 15:37:11 GMT\ncontent-type: text/html; charset=utf-8\nvary: Accept-Language\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yE4qXXQa2GexBDHouBJbyV4IwnpF1ruykYNOC5A3mERb5QswBfGtkO9uvl6IhrlVlAqRTGYfm0jMtEVuvHioP8ZgHfrR3sv96814zvkbDzrcleYVRjC%2FR3nFmx8GTmL3ytQ%3D\"}]}\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\nserver: cloudflare\ncf-ray: a3665057ed52c62a-PDX\nalt-svc: h3=\":443\"; ma=86400\n\n",
+    "title": [
+      "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名"
+    ]
+  },
+  {
+    "id": "n15sBAuOSW",
+    "head": "HTTP/2 200 \ndate: Sat, 05 Sep 2026 15:37:11 GMT\ncontent-type: text/html; charset=utf-8\nvary: Accept-Language\nreport-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=iVCeKT%2FRpOmIPdSRzGVdACCI%2Bx0Kx9%2B6efs6M%2FTt9eFHxEZb98AQdqC4zYK7hdYr7m63xqpdcmhM8p7CCN3C9Zi0rn6xMP%2F1DL6uF8EufeYLhtZgYSjsZQwZG1L37vpyDOQ%3D\"}]}\nnel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\nserver: cloudflare\ncf-ray: a36650593b6e6192-PDX\nalt-svc: h3=\":443\"; ma=86400\n\n",
+    "title": [
+      "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名"
+    ]
+  }
+]

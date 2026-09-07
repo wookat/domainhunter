@@ -1,0 +1,2111 @@
+{
+ "rate": 7.2,
+ "rows": [
+  {
+   "tld": "my",
+   "staticUsd": 31,
+   "liveReg": 2.37,
+   "relDiff": 12.08
+  },
+  {
+   "tld": "tienda",
+   "staticUsd": 50,
+   "liveReg": 5.66,
+   "relDiff": 7.83
+  },
+  {
+   "tld": "tires",
+   "staticUsd": 69,
+   "liveReg": 8.24,
+   "relDiff": 7.37
+  },
+  {
+   "tld": "vin",
+   "staticUsd": 48,
+   "liveReg": 6.69,
+   "relDiff": 6.17
+  },
+  {
+   "tld": "me",
+   "staticUsd": 17,
+   "liveReg": 2.73,
+   "relDiff": 5.23
+  },
+  {
+   "tld": "theater",
+   "staticUsd": 55,
+   "liveReg": 10.81,
+   "relDiff": 4.09
+  },
+  {
+   "tld": "college",
+   "staticUsd": 52,
+   "liveReg": 10.3,
+   "relDiff": 4.05
+  },
+  {
+   "tld": "university",
+   "staticUsd": 50,
+   "liveReg": 10.81,
+   "relDiff": 3.63
+  },
+  {
+   "tld": "nyc",
+   "staticUsd": 26,
+   "liveReg": 5.66,
+   "relDiff": 3.59
+  },
+  {
+   "tld": "coupons",
+   "staticUsd": 11,
+   "liveReg": 2.57,
+   "relDiff": 3.28
+  },
+  {
+   "tld": "vision",
+   "staticUsd": 22,
+   "liveReg": 5.66,
+   "relDiff": 2.89
+  },
+  {
+   "tld": "accountants",
+   "staticUsd": 85,
+   "liveReg": 23.17,
+   "relDiff": 2.67
+  },
+  {
+   "tld": "design",
+   "staticUsd": 39,
+   "liveReg": 10.81,
+   "relDiff": 2.61
+  },
+  {
+   "tld": "auction",
+   "staticUsd": 11,
+   "liveReg": 3.09,
+   "relDiff": 2.56
+  },
+  {
+   "tld": "shopping",
+   "staticUsd": 29,
+   "liveReg": 8.24,
+   "relDiff": 2.52
+  },
+  {
+   "tld": "immo",
+   "staticUsd": 28,
+   "liveReg": 8.24,
+   "relDiff": 2.4
+  },
+  {
+   "tld": "art",
+   "staticUsd": 12,
+   "liveReg": 3.6,
+   "relDiff": 2.33
+  },
+  {
+   "tld": "vegas",
+   "staticUsd": 53,
+   "liveReg": 15.96,
+   "relDiff": 2.32
+  },
+  {
+   "tld": "domains",
+   "staticUsd": 35,
+   "liveReg": 10.81,
+   "relDiff": 2.24
+  },
+  {
+   "tld": "actor",
+   "staticUsd": 35,
+   "liveReg": 10.81,
+   "relDiff": 2.24
+  },
+  {
+   "tld": "engineer",
+   "staticUsd": 28,
+   "liveReg": 9.78,
+   "relDiff": 1.86
+  },
+  {
+   "tld": "de",
+   "staticUsd": 8,
+   "liveReg": 2.9,
+   "relDiff": 1.76
+  },
+  {
+   "tld": "media",
+   "staticUsd": 12,
+   "liveReg": 4.63,
+   "relDiff": 1.59
+  },
+  {
+   "tld": "deals",
+   "staticUsd": 9,
+   "liveReg": 3.6,
+   "relDiff": 1.5
+  },
+  {
+   "tld": "games",
+   "staticUsd": 18,
+   "liveReg": 8.24,
+   "relDiff": 1.18
+  },
+  {
+   "tld": "cloud",
+   "staticUsd": 8,
+   "liveReg": 3.88,
+   "relDiff": 1.06
+  },
+  {
+   "tld": "discount",
+   "staticUsd": 9,
+   "liveReg": 4.63,
+   "relDiff": 0.94
+  },
+  {
+   "tld": "camp",
+   "staticUsd": 12,
+   "liveReg": 6.69,
+   "relDiff": 0.79
+  },
+  {
+   "tld": "mx",
+   "staticUsd": 12,
+   "liveReg": 35.57,
+   "relDiff": 0.66
+  },
+  {
+   "tld": "am",
+   "staticUsd": 60,
+   "liveReg": 36.35,
+   "relDiff": 0.65
+  },
+  {
+   "tld": "zone",
+   "staticUsd": 3,
+   "liveReg": 8.24,
+   "relDiff": 0.64
+  },
+  {
+   "tld": "fun",
+   "staticUsd": 1,
+   "liveReg": 2.57,
+   "relDiff": 0.61
+  },
+  {
+   "tld": "app",
+   "staticUsd": 14,
+   "liveReg": 8.75,
+   "relDiff": 0.6
+  },
+  {
+   "tld": "surgery",
+   "staticUsd": 69,
+   "liveReg": 43.77,
+   "relDiff": 0.58
+  },
+  {
+   "tld": "id",
+   "staticUsd": 8,
+   "liveReg": 18.33,
+   "relDiff": 0.56
+  },
+  {
+   "tld": "tw",
+   "staticUsd": 28,
+   "liveReg": 17.99,
+   "relDiff": 0.56
+  },
+  {
+   "tld": "au",
+   "staticUsd": 12,
+   "liveReg": 7.91,
+   "relDiff": 0.52
+  },
+  {
+   "tld": "xyz",
+   "staticUsd": 1,
+   "liveReg": 2.04,
+   "relDiff": 0.51
+  },
+  {
+   "tld": "site",
+   "staticUsd": 1,
+   "liveReg": 1.96,
+   "relDiff": 0.49
+  },
+  {
+   "tld": "cc",
+   "staticUsd": 5,
+   "liveReg": 3.4,
+   "relDiff": 0.47
+  },
+  {
+   "tld": "ca",
+   "staticUsd": 13,
+   "liveReg": 8.92,
+   "relDiff": 0.46
+  },
+  {
+   "tld": "vip",
+   "staticUsd": 6,
+   "liveReg": 4.12,
+   "relDiff": 0.46
+  },
+  {
+   "tld": "club",
+   "staticUsd": 6,
+   "liveReg": 4.12,
+   "relDiff": 0.46
+  },
+  {
+   "tld": "agency",
+   "staticUsd": 2,
+   "liveReg": 3.6,
+   "relDiff": 0.44
+  },
+  {
+   "tld": "furniture",
+   "staticUsd": 12,
+   "liveReg": 21.11,
+   "relDiff": 0.43
+  },
+  {
+   "tld": "co",
+   "staticUsd": 9,
+   "liveReg": 15.76,
+   "relDiff": 0.43
+  },
+  {
+   "tld": "sh",
+   "staticUsd": 44,
+   "liveReg": 31.2,
+   "relDiff": 0.41
+  },
+  {
+   "tld": "uk",
+   "staticUsd": 6,
+   "liveReg": 4.32,
+   "relDiff": 0.39
+  },
+  {
+   "tld": "org",
+   "staticUsd": 11,
+   "liveReg": 7.98,
+   "relDiff": 0.38
+  },
+  {
+   "tld": "dev",
+   "staticUsd": 12,
+   "liveReg": 8.75,
+   "relDiff": 0.37
+  },
+  {
+   "tld": "eu",
+   "staticUsd": 8,
+   "liveReg": 5.88,
+   "relDiff": 0.36
+  },
+  {
+   "tld": "us",
+   "staticUsd": 6,
+   "liveReg": 4.43,
+   "relDiff": 0.35
+  },
+  {
+   "tld": "network",
+   "staticUsd": 3,
+   "liveReg": 4.63,
+   "relDiff": 0.35
+  },
+  {
+   "tld": "works",
+   "staticUsd": 3,
+   "liveReg": 4.63,
+   "relDiff": 0.35
+  },
+  {
+   "tld": "glass",
+   "staticUsd": 38,
+   "liveReg": 58.19,
+   "relDiff": 0.35
+  },
+  {
+   "tld": "nz",
+   "staticUsd": 20,
+   "liveReg": 14.98,
+   "relDiff": 0.34
+  },
+  {
+   "tld": "ph",
+   "staticUsd": 56,
+   "liveReg": 42.36,
+   "relDiff": 0.32
+  },
+  {
+   "tld": "la",
+   "staticUsd": 36,
+   "liveReg": 27.34,
+   "relDiff": 0.32
+  },
+  {
+   "tld": "click",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "lol",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "garden",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "beauty",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "help",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "baby",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "mom",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "surf",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "courses",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "study",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "forum",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "hair",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "skin",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "makeup",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "homes",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "boats",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "autos",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "beer",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "casa",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "quest",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "sbs",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "cyou",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "monster",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "pics",
+   "staticUsd": 2,
+   "liveReg": 1.54,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "link",
+   "staticUsd": 10,
+   "liveReg": 7.72,
+   "relDiff": 0.3
+  },
+  {
+   "tld": "gg",
+   "staticUsd": 67,
+   "liveReg": 51.8,
+   "relDiff": 0.29
+  },
+  {
+   "tld": "email",
+   "staticUsd": 4,
+   "liveReg": 5.66,
+   "relDiff": 0.29
+  },
+  {
+   "tld": "io",
+   "staticUsd": 36,
+   "liveReg": 28.12,
+   "relDiff": 0.28
+  },
+  {
+   "tld": "lighting",
+   "staticUsd": 6,
+   "liveReg": 8.24,
+   "relDiff": 0.27
+  },
+  {
+   "tld": "bond",
+   "staticUsd": 1,
+   "liveReg": 1.34,
+   "relDiff": 0.25
+  },
+  {
+   "tld": "top",
+   "staticUsd": 2,
+   "liveReg": 1.63,
+   "relDiff": 0.23
+  },
+  {
+   "tld": "store",
+   "staticUsd": 2,
+   "liveReg": 2.57,
+   "relDiff": 0.22
+  },
+  {
+   "tld": "icu",
+   "staticUsd": 2,
+   "liveReg": 2.56,
+   "relDiff": 0.22
+  },
+  {
+   "tld": "live",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "world",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "life",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "digital",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "company",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "blog",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "today",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "wtf",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "bar",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "boutique",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "guru",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "business",
+   "staticUsd": 3,
+   "liveReg": 2.57,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "center",
+   "staticUsd": 3,
+   "liveReg": 3.6,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "ai",
+   "staticUsd": 69,
+   "liveReg": 82.7,
+   "relDiff": 0.17
+  },
+  {
+   "tld": "best",
+   "staticUsd": 2,
+   "liveReg": 1.73,
+   "relDiff": 0.16
+  },
+  {
+   "tld": "diamonds",
+   "staticUsd": 50,
+   "liveReg": 43.77,
+   "relDiff": 0.14
+  },
+  {
+   "tld": "tech",
+   "staticUsd": 6,
+   "liveReg": 6.99,
+   "relDiff": 0.14
+  },
+  {
+   "tld": "nl",
+   "staticUsd": 9,
+   "liveReg": 7.92,
+   "relDiff": 0.14
+  },
+  {
+   "tld": "net",
+   "staticUsd": 11,
+   "liveReg": 12.52,
+   "relDiff": 0.12
+  },
+  {
+   "tld": "info",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "rocks",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "solutions",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "sale",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "dog",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "fans",
+   "staticUsd": 4,
+   "liveReg": 3.6,
+   "relDiff": 0.11
+  },
+  {
+   "tld": "graphics",
+   "staticUsd": 21,
+   "liveReg": 19.05,
+   "relDiff": 0.1
+  },
+  {
+   "tld": "camera",
+   "staticUsd": 13,
+   "liveReg": 11.84,
+   "relDiff": 0.1
+  },
+  {
+   "tld": "com",
+   "staticUsd": 10,
+   "liveReg": 11.08,
+   "relDiff": 0.1
+  },
+  {
+   "tld": "stream",
+   "staticUsd": 5,
+   "liveReg": 4.61,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "party",
+   "staticUsd": 5,
+   "liveReg": 4.61,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "win",
+   "staticUsd": 5,
+   "liveReg": 4.61,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "codes",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "team",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "host",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "cafe",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "city",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "directory",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "builders",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "reviews",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "golf",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "press",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "food",
+   "staticUsd": 5,
+   "liveReg": 4.63,
+   "relDiff": 0.08
+  },
+  {
+   "tld": "studio",
+   "staticUsd": 11,
+   "liveReg": 11.84,
+   "relDiff": 0.07
+  },
+  {
+   "tld": "tv",
+   "staticUsd": 28,
+   "liveReg": 26.26,
+   "relDiff": 0.07
+  },
+  {
+   "tld": "mn",
+   "staticUsd": 44,
+   "liveReg": 41.5,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "chat",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "bio",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "cool",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "gold",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "ninja",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "school",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "fitness",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "wine",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "photography",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "marketing",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "ventures",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "capital",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "tours",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "vacations",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "holiday",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "solar",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "family",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "ltd",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "fyi",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "legal",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "contractors",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "cheap",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "voyage",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "futbol",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "kids",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "town",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "kaufen",
+   "staticUsd": 6,
+   "liveReg": 5.66,
+   "relDiff": 0.06
+  },
+  {
+   "tld": "london",
+   "staticUsd": 15,
+   "liveReg": 14.24,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "finance",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "social",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "one",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "expert",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "support",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "rentals",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "green",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "engineering",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "biz",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "credit",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "recipes",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "church",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "fan",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "report",
+   "staticUsd": 7,
+   "liveReg": 6.69,
+   "relDiff": 0.05
+  },
+  {
+   "tld": "bet",
+   "staticUsd": 10,
+   "liveReg": 9.58,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "farm",
+   "staticUsd": 8,
+   "liveReg": 7.72,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "institute",
+   "staticUsd": 8,
+   "liveReg": 7.72,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "partners",
+   "staticUsd": 8,
+   "liveReg": 7.72,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "repair",
+   "staticUsd": 8,
+   "liveReg": 7.72,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "casino",
+   "staticUsd": 8,
+   "liveReg": 7.72,
+   "relDiff": 0.04
+  },
+  {
+   "tld": "delivery",
+   "staticUsd": 5,
+   "liveReg": 5.15,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "rent",
+   "staticUsd": 10,
+   "liveReg": 10.3,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "shop",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "run",
+   "staticUsd": 4,
+   "liveReg": 4.12,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "wiki",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "video",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "ink",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "red",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "estate",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "pink",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "doctor",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "photos",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "kitchen",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "tips",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "international",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "show",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "community",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "work",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "tax",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "bike",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "gifts",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "fit",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "hockey",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "pictures",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "productions",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "investments",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "mortgage",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "plumbing",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "florist",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "degree",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "management",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "limited",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "cruises",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "tattoo",
+   "staticUsd": 2,
+   "liveReg": 2.06,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "poker",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "fish",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "wang",
+   "staticUsd": 4,
+   "liveReg": 4.12,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "mobi",
+   "staticUsd": 4,
+   "liveReg": 4.12,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "rehab",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "immobilien",
+   "staticUsd": 8,
+   "liveReg": 8.24,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "style",
+   "staticUsd": 7,
+   "liveReg": 7.21,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "singles",
+   "staticUsd": 7,
+   "liveReg": 7.21,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "pro",
+   "staticUsd": 3,
+   "liveReg": 3.09,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "group",
+   "staticUsd": 6,
+   "liveReg": 6.18,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "exchange",
+   "staticUsd": 6,
+   "liveReg": 6.18,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "watch",
+   "staticUsd": 3,
+   "liveReg": 3.09,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "taxi",
+   "staticUsd": 6,
+   "liveReg": 6.18,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "properties",
+   "staticUsd": 6,
+   "liveReg": 6.18,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "guide",
+   "staticUsd": 6,
+   "liveReg": 6.18,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "express",
+   "staticUsd": 9,
+   "liveReg": 9.27,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "fund",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "land",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "services",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "love",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "construction",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "parts",
+   "staticUsd": 9,
+   "liveReg": 8.75,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "gift",
+   "staticUsd": 17,
+   "liveReg": 16.58,
+   "relDiff": 0.03
+  },
+  {
+   "tld": "buzz",
+   "staticUsd": 2,
+   "liveReg": 2.05,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "news",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "tools",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "cash",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "events",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "plus",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "technology",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "dance",
+   "staticUsd": 10,
+   "liveReg": 9.78,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "in",
+   "staticUsd": 8,
+   "liveReg": 7.83,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "online",
+   "staticUsd": 2,
+   "liveReg": 1.96,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "space",
+   "staticUsd": 2,
+   "liveReg": 1.96,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "website",
+   "staticUsd": 2,
+   "liveReg": 1.96,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "review",
+   "staticUsd": 11,
+   "liveReg": 10.79,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "spa",
+   "staticUsd": 22,
+   "liveReg": 21.61,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "page",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "pizza",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "money",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "pet",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "coach",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "clinic",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "salon",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "coffee",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "toys",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "apartments",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "dad",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "health",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "soccer",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "football",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "llc",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "promo",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "loans",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "jewelry",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "mba",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "equipment",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "villas",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "limo",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "clothing",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "organic",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "moda",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "day",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "meme",
+   "staticUsd": 11,
+   "liveReg": 10.81,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "tokyo",
+   "staticUsd": 14,
+   "liveReg": 13.76,
+   "relDiff": 0.02
+  },
+  {
+   "tld": "vet",
+   "staticUsd": 33,
+   "liveReg": 33.47,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "pub",
+   "staticUsd": 32,
+   "liveReg": 32.44,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "academy",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "care",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "systems",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "training",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "energy",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "associates",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "bargains",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "asia",
+   "staticUsd": 12,
+   "liveReg": 11.84,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "market",
+   "staticUsd": 36,
+   "liveReg": 35.53,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "global",
+   "staticUsd": 31,
+   "liveReg": 31.41,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "flights",
+   "staticUsd": 31,
+   "liveReg": 31.41,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "catering",
+   "staticUsd": 31,
+   "liveReg": 31.41,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "movie",
+   "staticUsd": 37,
+   "liveReg": 36.56,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "gmbh",
+   "staticUsd": 37,
+   "liveReg": 36.56,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "blue",
+   "staticUsd": 13,
+   "liveReg": 12.87,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "restaurant",
+   "staticUsd": 13,
+   "liveReg": 12.87,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "dating",
+   "staticUsd": 13,
+   "liveReg": 12.87,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "yoga",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "fashion",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "wedding",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "photo",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "cooking",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "fishing",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "horse",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "luxury",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "vodka",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "abogado",
+   "staticUsd": 26,
+   "liveReg": 26.26,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "gallery",
+   "staticUsd": 23,
+   "liveReg": 23.17,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "healthcare",
+   "staticUsd": 71,
+   "liveReg": 70.55,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "consulting",
+   "staticUsd": 21,
+   "liveReg": 21.11,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "education",
+   "staticUsd": 21,
+   "liveReg": 21.11,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "shoes",
+   "staticUsd": 21,
+   "liveReg": 21.11,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "supply",
+   "staticUsd": 21,
+   "liveReg": 21.11,
+   "relDiff": 0.01
+  },
+  {
+   "tld": "dental",
+   "staticUsd": 62,
+   "liveReg": 62.31,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "audio",
+   "staticUsd": 103,
+   "liveReg": 103.5,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "flowers",
+   "staticUsd": 103,
+   "liveReg": 103.5,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "house",
+   "staticUsd": 15,
+   "liveReg": 14.93,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "eco",
+   "staticUsd": 60,
+   "liveReg": 59.73,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "cricket",
+   "staticUsd": 21,
+   "liveReg": 21.09,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "cleaning",
+   "staticUsd": 60,
+   "liveReg": 60.25,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "supplies",
+   "staticUsd": 20,
+   "liveReg": 20.08,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "moe",
+   "staticUsd": 13,
+   "liveReg": 13.05,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "hospital",
+   "staticUsd": 46,
+   "liveReg": 45.83,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "condos",
+   "staticUsd": 47,
+   "liveReg": 46.86,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "basketball",
+   "staticUsd": 42,
+   "liveReg": 41.88,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "miami",
+   "staticUsd": 19,
+   "liveReg": 19.05,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "boston",
+   "staticUsd": 19,
+   "liveReg": 19.05,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "band",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "black",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "software",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "travel",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "earth",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "careers",
+   "staticUsd": 16,
+   "liveReg": 15.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "fm",
+   "staticUsd": 88,
+   "liveReg": 87.85,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "foundation",
+   "staticUsd": 6,
+   "liveReg": 5.99,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "menu",
+   "staticUsd": 27,
+   "liveReg": 26.96,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "law",
+   "staticUsd": 83,
+   "liveReg": 82.9,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "computer",
+   "staticUsd": 18,
+   "liveReg": 18.02,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "place",
+   "staticUsd": 18,
+   "liveReg": 18.02,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "lawyer",
+   "staticUsd": 50,
+   "liveReg": 49.95,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "attorney",
+   "staticUsd": 50,
+   "liveReg": 49.95,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "rugby",
+   "staticUsd": 42,
+   "liveReg": 41.98,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "tennis",
+   "staticUsd": 52,
+   "liveReg": 52.01,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "holdings",
+   "staticUsd": 52,
+   "liveReg": 52.01,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "dentist",
+   "staticUsd": 52,
+   "liveReg": 52.01,
+   "relDiff": 0.0
+  },
+  {
+   "tld": "tickets",
+   "staticUsd": 361,
+   "liveReg": 360.97,
+   "relDiff": 0.0
+  }
+ ]
+}

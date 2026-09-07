@@ -1,0 +1,55 @@
+Home
+About
+API
+Scan your site now
+
+
+ 
+ Hide results  Follow redirects
+Security Report Summary
+A
+Site:	https://hunt.zalize.com/
+IP Address:	172.67.208.162
+Report Time:	06 Sep 2026 15:25:27 UTC
+Headers:	
+Strict-Transport-Security Permissions-Policy Referrer-Policy X-Content-Type-Options X-Frame-Options Content-Security-Policy
+
+Advanced:	
+Great grade! Perform a deeper security analysis of your website and APIs:	
+Missing Headers
+Content-Security-Policy	Content Security Policy is an effective measure to protect your site from XSS attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets.
+Raw Headers
+HTTP/2	200
+date	Sun, 06 Sep 2026 15:25:26 GMT
+content-type	text/html; charset=utf-8
+cache-control	public, max-age=600
+strict-transport-security	max-age=31536000; includeSubDomains
+vary	Accept-Language
+content-security-policy-report-only	default-src 'self'; script-src 'self' 'nonce-n1OoiGLP7P4yEZM8+Zt/Jg=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report
+permissions-policy	accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+referrer-policy	strict-origin-when-cross-origin
+x-content-type-options	nosniff
+x-frame-options	DENY
+report-to	{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Jei9dRRhadnZS53CFyYCd32qYg%2Fnk9GmHGu1tnr6i6YsL%2FGkUbjI5ChlOw8mYBl4WMWkWspUbjoUIL6ifOhYU2UHWOkQgu1e9msu094CHY9XxCGvueMWDTQp%2BQbE09ve6aY%3D"}]}
+nel	{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-encoding	gzip
+server	cloudflare
+cf-ray	a36e7c802e8daf1c-DUB
+alt-svc	h3=":443"; ma=86400
+Upcoming Headers
+Cross-Origin-Embedder-Policy	Cross-Origin Embedder Policy allows a site to prevent assets being loaded that do not grant permission to load them via CORS or CORP.
+Cross-Origin-Opener-Policy	Cross-Origin Opener Policy allows a site to opt-in to Cross-Origin Isolation in the browser.
+Cross-Origin-Resource-Policy	Cross-Origin Resource Policy allows a resource owner to specify who can load the resource.
+Additional Information
+strict-transport-security	HTTP Strict Transport Security is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS.
+content-security-policy-report-only	Content Security Policy Report Only is used to test a Content Security Policy before making it live. The browser will report on actions that would have been taken based on the policy. Analyse this policy in more detail. You can sign up for a free account on Report URI to collect reports about problems on your site.
+permissions-policy	Permissions Policy is a new header that allows a site to control which features and APIs can be used in the browser.
+referrer-policy	Referrer Policy is a new header that allows a site to control how much information the browser includes with navigations away from a document and should be set by all sites.
+x-content-type-options	X-Content-Type-Options stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. The only valid value for this header is "X-Content-Type-Options: nosniff".
+x-frame-options	X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.
+report-to	Report-To enables the Reporting API. This allows a website to collect reports from the browser about various errors that may occur. You can sign up for a free account on Report URI to collect these reports.
+nel	Network Error Logging is a new header that instructs the browser to send reports during various network or application errors. You can sign up for a free account on Report URI to collect these reports.
+server	Server value has been changed. Typically you will see values like "Microsoft-IIS/8.0" or "nginx 1.7.2".
+A snyk.io project - CC-BY-SA 4.0
+Powered by Snyk
+  

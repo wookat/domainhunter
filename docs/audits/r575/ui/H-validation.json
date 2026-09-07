@@ -1,0 +1,10 @@
+{
+  "alert": [
+    "地址必须以 https:// 开头"
+  ],
+  "testDisabled": true,
+  "requests": [],
+  "englishAlerts": [
+    "URL must start with https://"
+  ]
+}

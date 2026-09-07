@@ -1,0 +1,674 @@
+[
+ [
+  "actor-vs-studio",
+  "en",
+  "actor",
+  "usd 35.0 vs table first=10.81 renew=35.53",
+  ".actor writes the performing profession into the address — sharpest for actor portfolios and casting profiles, about $35/yr flat"
+ ],
+ [
+  "actor-vs-studio",
+  "zh",
+  "actor",
+  "usd 35.0 vs table first=10.81 renew=35.53",
+  ".actor 把表演职业写进域名，演员个人官网与选角展示定位最准，注册约 $35/年续费同价"
+ ],
+ [
+  "at-vs-de",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is Europe's largest ccTLD (18 million names as of June 2026, per DENIC) at about $8/yr flat, the default for the German market."
+ ],
+ [
+  "at-vs-de",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是欧洲最大的 ccTLD（2026-06 突破 1,800 万，DENIC）、约 $8/年平续，德国市场标配。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "au-vs-com",
+  "en",
+  "au",
+  "usd 12.0 vs table first=7.91 renew=7.91",
+  ".au opened direct registration only in 2022 — fresh inventory on decades of trust at about $12/yr flat, gated by Australian presence rules"
+ ],
+ [
+  "au-vs-com",
+  "zh",
+  "au",
+  "usd 12.0 vs table first=7.91 renew=7.91",
+  ".au 2022 年才开放二级直注、库存新鲜且本地信任几十年，约 $12/年平续但需澳大利亚存在资格"
+ ],
+ [
+  "be-vs-nl",
+  "en",
+  "nl",
+  "usd [9.0, 10.0] vs first=7.92 renew=7.92",
+  ".nl is the world's third-largest ccTLD with top Dutch penetration at about $9 to register and $10/yr to renew."
+ ],
+ [
+  "be-vs-nl",
+  "zh",
+  "nl",
+  "usd [9.0, 10.0] vs first=7.92 renew=7.92",
+  ".nl 是全球第三大 ccTLD、荷兰渗透率极高、注册约 $9、续费约 $10/年。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "br-vs-mx",
+  "en",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx is Mexico's, open to anyone, at about $13 in year one but ~$50/yr renewal."
+ ],
+ [
+  "br-vs-mx",
+  "zh",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx 是墨西哥国家域名、任何人可注册、首年约 $13 但续费约 $50/年。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "ca-vs-us",
+  "en",
+  "ca",
+  "usd 13.0 vs table first=8.92 renew=9.18",
+  ".ca is gated by Canadian Presence Requirements with top local trust at about $13/yr flat"
+ ],
+ [
+  "ca-vs-us",
+  "zh",
+  "ca",
+  "usd 13.0 vs table first=8.92 renew=9.18",
+  ".ca 需满足加拿大存在要求、本地信任度极高且约 $13/年平续"
+ ],
+ [
+  "ch-vs-de",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is Europe's largest ccTLD (18 million names as of June 2026, per DENIC) at about $8/yr flat, the default for the German market."
+ ],
+ [
+  "ch-vs-de",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是欧洲最大的 ccTLD（2026-06 突破 1,800 万，DENIC）、约 $8/年平续，德国市场标配。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "cl-vs-mx",
+  "en",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx is Mexico's, open to anyone, at about $13 in year one but ~$50/yr renewal."
+ ],
+ [
+  "cl-vs-mx",
+  "zh",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx 是墨西哥国家域名、任何人可注册、首年约 $13 但续费约 $50/年。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "college-vs-academy",
+  "en",
+  "college",
+  "usd 52.0 vs table first=10.3 renew=52.01",
+  ".college names the institutional identity of a college — sharpest for vocational schools and test-prep brands, about $52/yr flat"
+ ],
+ [
+  "college-vs-academy",
+  "zh",
+  "college",
+  "usd 52.0 vs table first=10.3 renew=52.01",
+  ".college 说「学院」这个机构身份，职业院校与备考机构定位最准，注册约 $52/年续费同价"
+ ],
+ [
+  "de-vs-com",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is Europe's largest ccTLD (18 million names as of June 2026, per DENIC) with German local trust and local-SEO upside at about $8/yr flat"
+ ],
+ [
+  "de-vs-com",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是欧洲最大的 ccTLD（DENIC：2026 年 6 月突破 1,800 万）、德国本地信任与本地 SEO 双加成，注册约 $8/年平续"
+ ],
+ [
+  "de-vs-eu",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is the default signal for the German market at about $8/yr flat"
+ ],
+ [
+  "de-vs-eu",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是德国市场的默认信号、约 $8/年平续"
+ ],
+ [
+  "domains-vs-tools",
+  "en",
+  "domains",
+  "usd 35.0 vs table first=10.81 renew=34.5",
+  ".domains writes the domain industry into the address itself — sharpest for registrars and domain tools, about $35/yr flat"
+ ],
+ [
+  "domains-vs-tools",
+  "zh",
+  "domains",
+  "usd 35.0 vs table first=10.81 renew=34.5",
+  ".domains 把域名行业写进域名本身，注册商与域名工具定位最准，注册约 $35/年续费同价"
+ ],
+ [
+  "id-vs-me",
+  "en",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id is Indonesia's country domain that naturally reads as English \"ID/identity\", at about $8 in year one but ~$30/yr renewal"
+ ],
+ [
+  "id-vs-me",
+  "zh",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id 是印度尼西亚国家域名、天然读作英文 ID/身份、首年约 $8 但续费约 $30/年"
+ ],
+ [
+  "id-vs-sg",
+  "en",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id is Indonesia's country domain, open to anyone, at about $8 in year one but ~$30/yr renewal"
+ ],
+ [
+  "id-vs-sg",
+  "zh",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id 是印度尼西亚国家域名、任何人可注册、首年约 $8 但续费约 $30/年"
+ ],
+ [
+  "ie-vs-uk",
+  "en",
+  "uk",
+  "usd 6.0 vs table first=4.32 renew=5.66",
+  ".uk is the UK's at about $6/yr flat with tens of millions of registrations."
+ ],
+ [
+  "ie-vs-uk",
+  "zh",
+  "uk",
+  "usd 6.0 vs table first=4.32 renew=5.66",
+  ".uk 是英国国家域名、约 $6/年平续、上千万注册量。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "il-vs-com",
+  "en",
+  "il",
+  "usd [18.0, 25.0] vs first=25.0 renew=25.0",
+  ".il is Israel's country domain — .co.il ~$18/yr fully open, direct .il ~$25/yr opening in phases"
+ ],
+ [
+  "il-vs-com",
+  "en",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com is the global default at ~$10-15/yr but with good names nearly exhausted."
+ ],
+ [
+  "il-vs-com",
+  "zh",
+  "il",
+  "usd [18.0, 25.0] vs first=25.0 renew=25.0",
+  ".il 是以色列国家域名，.co.il 约 $18/年完全开放、顶级直注约 $25/年分阶段放开"
+ ],
+ [
+  "il-vs-com",
+  "zh",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com 是全球默认商业后缀、约 $10-15/年但好名字几乎注光。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "immo-vs-estate",
+  "en",
+  "immo",
+  "usd 28.0 vs table first=8.24 renew=28.32",
+  ".immo is the everyday French/German abbreviation for real estate — sharpest for continental-European agencies, about $28/yr flat"
+ ],
+ [
+  "immo-vs-estate",
+  "zh",
+  "immo",
+  "usd 28.0 vs table first=8.24 renew=28.32",
+  ".immo 是法语/德语不动产行业缩写，欧陆房产中介定位最准，注册约 $28/年续费同价"
+ ],
+ [
+  "immobilien-vs-immo",
+  "en",
+  "immo",
+  "usd 28.0 vs table first=8.24 renew=28.32",
+  ".immo is the four-letter abbreviation at about $28/yr flat."
+ ],
+ [
+  "immobilien-vs-immo",
+  "zh",
+  "immo",
+  "usd 28.0 vs table first=8.24 renew=28.32",
+  ".immo 是更短的缩写，注册约 $28/年续费同价。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "it-vs-de",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is Europe's largest ccTLD (18 million names as of June 2026, per DENIC) at about $8/yr flat."
+ ],
+ [
+  "it-vs-de",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是欧洲最大的 ccTLD（2026-06 突破 1,800 万，DENIC）、约 $8/年平续。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "ke-vs-ng",
+  "en",
+  "ke",
+  "usd [50.0, 10.0] vs first=50.0 renew=50.0",
+  ".ke is Kenya's country domain — direct registration ~$50/yr (.co.ke ~$10/yr), open to anyone"
+ ],
+ [
+  "ke-vs-ng",
+  "en",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng is Nigeria's — direct ~$36/yr (.com.ng ~$10/yr), equally open."
+ ],
+ [
+  "ke-vs-ng",
+  "zh",
+  "ke",
+  "usd [50.0, 10.0] vs first=50.0 renew=50.0",
+  ".ke 是肯尼亚国家域名、顶级直注约 $50/年（.co.ke 约 $10/年）、任何人可注册"
+ ],
+ [
+  "ke-vs-ng",
+  "zh",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、同样开放。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "lk-vs-my",
+  "en",
+  "my",
+  "usd 30.0 vs table first=2.37 renew=26.06",
+  ".my is Malaysia's at ~$30/yr, globally open and doubling as the English word \"my\"."
+ ],
+ [
+  "lk-vs-my",
+  "zh",
+  "my",
+  "usd 30.0 vs table first=2.37 renew=26.06",
+  ".my 是马来西亚国家域名、约 $30/年、向全球开放且可读作英文 my。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "london-vs-uk",
+  "en",
+  "uk",
+  "usd 6.0 vs table first=4.32 renew=5.66",
+  ".uk is the national suffix with default UK trust and local SEO, about $6/yr flat."
+ ],
+ [
+  "london-vs-uk",
+  "zh",
+  "uk",
+  "usd 6.0 vs table first=4.32 renew=5.66",
+  ".uk 是英国国家后缀，全国信任与本地 SEO 标配，注册约 $6/年续费同价。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "miami-vs-nyc",
+  "en",
+  "nyc",
+  "usd 26.0 vs table first=5.66 renew=26.26",
+  ".nyc is New York City's official suffix at about $26/yr flat but requires an NYC address."
+ ],
+ [
+  "miami-vs-nyc",
+  "zh",
+  "nyc",
+  "usd 26.0 vs table first=5.66 renew=26.26",
+  ".nyc 是纽约市官方后缀，注册约 $26/年续费同价但要求纽约地址。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "mx-vs-es",
+  "en",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx is Mexico's country domain, open to anyone, at about $13 in year one but ~$50/yr renewal"
+ ],
+ [
+  "mx-vs-es",
+  "zh",
+  "mx",
+  "usd [13.0, 50.0] vs first=35.57 renew=41.23",
+  ".mx 是墨西哥国家域名、任何人可注册，首年约 $13 但续费约 $50/年"
+ ],
+ [
+  "my-vs-sg",
+  "en",
+  "my",
+  "usd 30.0 vs table first=2.37 renew=26.06",
+  ".my is Malaysia's country domain at about $30/yr flat, open to anyone since 2018"
+ ],
+ [
+  "my-vs-sg",
+  "zh",
+  "my",
+  "usd 30.0 vs table first=2.37 renew=26.06",
+  ".my 是马来西亚国家域名、约 $30/年平续、2018 年起任何人可注册"
+ ],
+ [
+  "ng-vs-com",
+  "en",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng is Nigeria's country domain — direct registration at ~$36/yr (.com.ng ~$10/yr), open to anyone"
+ ],
+ [
+  "ng-vs-com",
+  "en",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com is the global default at ~$10-15/yr but with good names nearly exhausted."
+ ],
+ [
+  "ng-vs-com",
+  "zh",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、任何人可注册"
+ ],
+ [
+  "ng-vs-com",
+  "zh",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com 是全球默认商业后缀、约 $10-15/年但好名字几乎注光。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "nl-vs-de",
+  "en",
+  "nl",
+  "usd [9.0, 10.0] vs first=7.92 renew=7.92",
+  ".nl is the world's third-largest ccTLD with top per-capita penetration at about $9 to register and $10/yr to renew, open to anyone (Dutch contact address requir"
+ ],
+ [
+  "nl-vs-de",
+  "en",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de is Europe's largest ccTLD (18 million names as of June 2026, per DENIC) at about $8/yr flat."
+ ],
+ [
+  "nl-vs-de",
+  "zh",
+  "nl",
+  "usd [9.0, 10.0] vs first=7.92 renew=7.92",
+  ".nl 是全球第三大 ccTLD、荷兰渗透率极高，注册约 $9、续费约 $10/年，任何人可注册（需荷兰联系地址）"
+ ],
+ [
+  "nl-vs-de",
+  "zh",
+  "de",
+  "usd 8.0 vs table first=2.9 renew=4.07",
+  ".de 是欧洲最大的 ccTLD（2026-06 突破 1,800 万，DENIC）、约 $8/年平续。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "nyc-vs-us",
+  "en",
+  "nyc",
+  "usd 26.0 vs table first=5.66 renew=26.26",
+  ".nyc is New York City's official suffix — sharpest for local businesses and New Yorker content, about $26/yr flat with an NYC-address requirement"
+ ],
+ [
+  "nyc-vs-us",
+  "zh",
+  "nyc",
+  "usd 26.0 vs table first=5.66 renew=26.26",
+  ".nyc 是纽约市官方后缀，本地商家与纽约客内容定位最准，注册约 $26/年续费同价但要求纽约地址"
+ ],
+ [
+  "nz-vs-au",
+  "en",
+  "nz",
+  "usd 20.0 vs table first=14.98 renew=14.99",
+  ".nz is New Zealand's country domain at about $20/yr flat, open to anyone, with a pure-New-Zealand halo"
+ ],
+ [
+  "nz-vs-au",
+  "en",
+  "au",
+  "usd 12.0 vs table first=7.91 renew=7.91",
+  ".au is Australia's at about $12/yr flat, gated by Australian presence rules, with direct registration only since 2022."
+ ],
+ [
+  "nz-vs-au",
+  "zh",
+  "nz",
+  "usd 20.0 vs table first=14.98 renew=14.99",
+  ".nz 是新西兰国家域名、约 $20/年平续、任何人可注册，自带纯净新西兰联想"
+ ],
+ [
+  "nz-vs-au",
+  "zh",
+  "au",
+  "usd 12.0 vs table first=7.91 renew=7.91",
+  ".au 是澳大利亚国家域名、约 $12/年平续、需澳大利亚存在资格、2022 年才开放直注。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "ph-vs-sg",
+  "en",
+  "ph",
+  "usd 55.0 vs table first=42.36 renew=44.99",
+  ".ph is the Philippines' country domain, open to anyone at about $55/yr flat"
+ ],
+ [
+  "ph-vs-sg",
+  "zh",
+  "ph",
+  "usd 55.0 vs table first=42.36 renew=44.99",
+  ".ph 是菲律宾国家域名、任何人可注册、约 $55/年平续"
+ ],
+ [
+  "pk-vs-in",
+  "en",
+  "pk",
+  "usd 28.0 vs table first=14.0 renew=14.0",
+  ".pk is Pakistan's country domain at ~$28 per two years (≈¥100/yr), open to anyone"
+ ],
+ [
+  "pk-vs-in",
+  "en",
+  "in",
+  "usd 10.0 vs table first=7.83 renew=7.83",
+  ".in is India's at ~$10/yr, fully open and doubling as the English preposition \"in\"."
+ ],
+ [
+  "pk-vs-in",
+  "zh",
+  "pk",
+  "usd 28.0 vs table first=14.0 renew=14.0",
+  ".pk 是巴基斯坦国家域名、约 $28/两年（合每年约 ¥100）、任何人可注册"
+ ],
+ [
+  "pk-vs-in",
+  "zh",
+  "in",
+  "usd 10.0 vs table first=7.83 renew=7.83",
+  ".in 是印度国家域名、约 $10/年、完全开放且兼具介词 in 的语义梗。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "pl-vs-eu",
+  "en",
+  "eu",
+  "usd [8.0, 10.0] vs first=5.88 renew=5.88",
+  ".eu is the EU's official domain covering all of Europe but requiring EU/EEA eligibility, at about $8 to register and $10/yr to renew."
+ ],
+ [
+  "pl-vs-eu",
+  "zh",
+  "eu",
+  "usd [8.0, 10.0] vs first=5.88 renew=5.88",
+  ".eu 是欧盟官方域名、覆盖全欧但需欧盟/EEA 资格，注册约 $8、续费约 $10/年。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "se-vs-com",
+  "en",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com is the internet's default suffix at the $10-12/yr tier."
+ ],
+ [
+  "se-vs-com",
+  "zh",
+  "com",
+  "usd 10.0 vs table first=11.08 renew=11.08",
+  ".com 是全球认知度最高的默认后缀、$10-12/年档。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "th-vs-vn",
+  "en",
+  "th",
+  "usd [60.0, 25.0] vs first=63.0 renew=63.0",
+  ".th is Thailand's country domain — direct registration needs a matching Thai trademark at ~$60/yr (.co.th ~$25/yr)"
+ ],
+ [
+  "th-vs-vn",
+  "zh",
+  "th",
+  "usd [60.0, 25.0] vs first=63.0 renew=63.0",
+  ".th 是泰国国家域名、顶级直注需泰国商标且约 $60/年（.co.th 约 $25/年）"
+ ],
+ [
+  "tienda-vs-shop",
+  "en",
+  "tienda",
+  "usd 50.0 vs table first=5.66 renew=47.89",
+  ".tienda is Spanish for shop — sharpest for Spanish-speaking customers at about $50/yr flat"
+ ],
+ [
+  "tienda-vs-shop",
+  "zh",
+  "tienda",
+  "usd 50.0 vs table first=5.66 renew=47.89",
+  ".tienda 是西班牙语「商店」后缀，西语客群定位最准，注册约 $50/年续费同价"
+ ],
+ [
+  "tw-vs-hk",
+  "en",
+  "tw",
+  "usd 28.0 vs table first=17.99 renew=17.99",
+  ".tw is Taiwan's regional domain with a \"made in Taiwan\" tech halo at about $28/yr flat, open to anyone"
+ ],
+ [
+  "tw-vs-hk",
+  "zh",
+  "tw",
+  "usd 28.0 vs table first=17.99 renew=17.99",
+  ".tw 是台湾地区域名、自带「台湾制造」科技联想，约 $28/年平续、任何人可注册"
+ ],
+ [
+  "ua-vs-pl",
+  "en",
+  "ua",
+  "usd [18.0, 8.0] vs first=18.0 renew=18.0",
+  ".ua is Ukraine's country domain — direct registration needs a Ukrainian trademark at ~$18/yr (.com.ua ~$8/yr is open to all)"
+ ],
+ [
+  "ua-vs-pl",
+  "zh",
+  "ua",
+  "usd [18.0, 8.0] vs first=18.0 renew=18.0",
+  ".ua 是乌克兰国家域名、顶级直注需乌克兰商标且约 $18/年（.com.ua 约 $8/年开放注册）"
+ ],
+ [
+  "university-vs-education",
+  "en",
+  "university",
+  "usd 50.0 vs table first=10.81 renew=49.95",
+  ".university names the highest institutional tier — sharpest for corporate universities and admissions pages, about $50/yr flat"
+ ],
+ [
+  "university-vs-education",
+  "zh",
+  "university",
+  "usd 50.0 vs table first=10.81 renew=49.95",
+  ".university 说「大学」这个最高机构层级，企业大学与国际招生页定位最准，注册约 $50/年续费同价"
+ ],
+ [
+  "vegas-vs-casino",
+  "en",
+  "vegas",
+  "usd 53.0 vs table first=15.96 renew=43.39",
+  ".vegas is Las Vegas's city suffix — sharpest for local and tourism brands at about $53/yr flat"
+ ],
+ [
+  "vegas-vs-casino",
+  "zh",
+  "vegas",
+  "usd 53.0 vs table first=15.96 renew=43.39",
+  ".vegas 是拉斯维加斯的城市后缀，本地与旅游娱乐定位最准，注册约 $53/年续费同价"
+ ],
+ [
+  "vin-vs-wine",
+  "en",
+  "vin",
+  "usd 48.0 vs table first=6.69 renew=47.89",
+  ".vin is French for wine — sharpest for French estates and French-styled brands, about $48/yr flat"
+ ],
+ [
+  "vin-vs-wine",
+  "zh",
+  "vin",
+  "usd 48.0 vs table first=6.69 renew=47.89",
+  ".vin 是法语「葡萄酒」，法国酒庄与法式品牌定位最准，注册约 $48/年续费同价"
+ ],
+ [
+  "vn-vs-id",
+  "en",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id is Indonesia's, open to anyone, at about $8 in year one but ~$30/yr renewal."
+ ],
+ [
+  "vn-vs-id",
+  "zh",
+  "id",
+  "usd [8.0, 30.0] vs first=18.33 renew=18.33",
+  ".id 是印尼国家域名、任何人可注册、首年约 $8 但续费约 $30/年。完整结论见本页「怎么选」一节。"
+ ],
+ [
+  "za-vs-ng",
+  "en",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng is Nigeria's — direct ~$36/yr (.com.ng ~$10/yr), equally open."
+ ],
+ [
+  "za-vs-ng",
+  "zh",
+  "ng",
+  "usd [36.0, 10.0] vs first=36.0 renew=36.0",
+  ".ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、同样开放。完整结论见本页「怎么选」一节。"
+ ]
+]

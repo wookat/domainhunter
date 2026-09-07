@@ -1,0 +1,36 @@
+{
+  "first": {
+    "status": 200,
+    "body": {
+      "ok": true,
+      "delivered": true,
+      "status": 200
+    },
+    "ui": "已发送，对方返回 HTTP 200——去你的群/接收端看一下测试消息（event: test）"
+  },
+  "second": {
+    "status": 429,
+    "body": {
+      "ok": false,
+      "error": "rate_limited",
+      "retryAfter": 29
+    },
+    "retryAfter": "29",
+    "uiZh": "发送测试太频繁，29 秒后可再试",
+    "uiEn": "Too many test sends — try again in 29s"
+  },
+  "requests": [
+    {
+      "time": 1788785175.7559412,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/monitor/webhook-test",
+      "body": "{\"webhook\":\"https://webhook.site/90eb4ecc-…\"}"
+    },
+    {
+      "time": 1788785177.1532693,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/monitor/webhook-test",
+      "body": "{\"webhook\":\"https://webhook.site/90eb4ecc-…\"}"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+2026-09-06T17:40:31.221Z NEWPAGE https://hunt.zalize.com/404-r559-seed
+2026-09-06T17:40:31.221Z KEEPER_START
+2026-09-06T17:40:31.231Z VIEWPORT desktop
+2026-09-06T17:41:00.922Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T17:41:01.168Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T17:41:01.169Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:41:01.169Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:41:01.269Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:41:01.288Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T17:41:01.322Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:41:15.679Z REQ POST https://hunt.zalize.com/api/search '{"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}'
+2026-09-06T17:41:15.703Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:41:48.736Z REQ POST https://hunt.zalize.com/api/search '{"domains":["chaxiang.ai"]}'
+2026-09-06T17:41:48.754Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:42:19.041Z REQ POST https://hunt.zalize.com/api/search '{"roots":["chaxiang"],"prefixes":["get","my","try","use"],"suffixes":["app","hq","labs","hub"],"tlds":["com"]}'
+2026-09-06T17:42:19.080Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:42:33.457Z REQ POST https://hunt.zalize.com/api/search '{"roots":["chaxiang"],"tlds":["com.cn","org","xyz","cc","tv","tech","online","store","site","top","shop","cloud","pro","vip","club","link","live","space","fun","art","design","studio","info","sh","gg","so","us","in","world","life","agency","games","email","network","digital","media","group","center"'
+2026-09-06T17:42:33.616Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:47:27.519Z REQ POST https://hunt.zalize.com/api/monitor '{"domain":"chaxiang.cc","enabled":true,"status":"taken","webhook":""}'
+2026-09-06T17:47:27.934Z RESP 200 https://hunt.zalize.com/api/monitor
+2026-09-06T17:48:00.875Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T17:49:22.630Z REQ POST https://hunt.zalize.com/api/share '{"items":[{"domain":"chaxiang.com","status":"taken"},{"domain":"chaxiang.cn","status":"taken"},{"domain":"chaxiang.io","status":"available"},{"domain":"chaxiang.tech","status":"available"},{"domain":"chaxiang.cc","status":"taken"}]}'
+2026-09-06T17:49:22.868Z RESP 200 https://hunt.zalize.com/api/share
+2026-09-06T17:49:57.400Z REQ POST https://hunt.zalize.com/api/click ''
+2026-09-06T17:49:57.422Z REQ POST https://hunt.zalize.com/api/click ''
+2026-09-06T17:49:57.450Z RESP 204 https://hunt.zalize.com/api/click
+2026-09-06T17:49:57.451Z RESP 204 https://hunt.zalize.com/api/click
+2026-09-06T17:49:59.305Z NEWPAGE https://porkbun.com/checkout/search?q=chaxiang.tech
+2026-09-06T17:49:59.370Z NAV https://porkbun.com/checkout/search
+2026-09-06T17:49:59.459Z NEWPAGE https://porkbun.com/checkout/search?q=chaxiang.io
+2026-09-06T17:49:59.609Z NAV https://porkbun.com/checkout/search
+2026-09-06T17:50:25.165Z NAV https://hunt.zalize.com/tld/cn
+2026-09-06T17:50:25.385Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:50:25.396Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:50:25.404Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:50:25.407Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:50:46.859Z NAV https://hunt.zalize.com/guide/ecommerce?lang=zh
+2026-09-06T17:50:47.048Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:50:47.048Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:50:47.057Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:50:47.064Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:51:02.832Z NAV https://hunt.zalize.com/?lang=en
+2026-09-06T17:51:02.941Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T17:51:02.944Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:51:02.944Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:51:03.004Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:51:03.004Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:51:03.059Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T17:51:21.390Z REQ POST https://hunt.zalize.com/api/search '{"roots":["stackpilot"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}'
+2026-09-06T17:51:21.403Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:51:54.802Z NAV https://hunt.zalize.com/prices?lang=en
+2026-09-06T17:51:54.895Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:51:54.895Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:51:54.993Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:51:54.996Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:53:20.990Z NAV https://hunt.zalize.com/vs/com-vs-io?lang=en
+2026-09-06T17:53:21.125Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:53:21.125Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:53:21.126Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:53:21.139Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:54:31.374Z NAV https://hunt.zalize.com/tld/io?lang=en
+2026-09-06T17:54:31.506Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:54:31.511Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:54:31.519Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:54:31.522Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:54:35.166Z NAV https://hunt.zalize.com/tld/ai?lang=en
+2026-09-06T17:54:35.307Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:54:35.319Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:54:35.321Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:54:35.337Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:54:38.908Z NAV https://hunt.zalize.com/why?lang=en
+2026-09-06T17:54:39.006Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:54:39.017Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:55:20.046Z NAV https://hunt.zalize.com/advanced?lang=zh
+2026-09-06T17:55:20.168Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:55:20.171Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:55:20.180Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:55:20.188Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:55:52.543Z REQ POST https://hunt.zalize.com/api/search '{"domains":["lingxicha.com","lingxicha.cn","lingxicha.net","lingxicha.io","lingxicha.ai","yunqiji.com","yunqiji.cn","yunqiji.net","yunqiji.io","yunqiji.ai","shanhetea.com","shanhetea.cn","shanhetea.net","shanhetea.io","shanhetea.ai","mochamo.com","mochamo.cn","mochamo.net","mochamo.io","mochamo.ai",'
+2026-09-06T17:55:52.579Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T17:59:21.608Z REQ POST https://hunt.zalize.com/api/monitor '{"domain":"stackpilot.app","enabled":true,"status":"taken","webhook":""}'
+2026-09-06T17:59:22.122Z RESP 200 https://hunt.zalize.com/api/monitor
+2026-09-06T17:59:37.864Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T17:59:37.981Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T17:59:37.996Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T17:59:38.022Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T17:59:38.039Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T17:59:55.726Z REQ POST https://hunt.zalize.com/api/share '{"items":[{"domain":"chaxiang.com","status":"taken"},{"domain":"chaxiang.cn","status":"taken"},{"domain":"chaxiang.io","status":"available"},{"domain":"chaxiang.tech","status":"available"},{"domain":"chaxiang.cc","status":"taken"},{"domain":"lingxicha.com","status":"available"},{"domain":"yunqiji.co'
+2026-09-06T17:59:55.981Z RESP 200 https://hunt.zalize.com/api/share
+2026-09-06T17:59:58.268Z REQ POST https://hunt.zalize.com/api/sync '{"items":[{"domain":"chaxiang.com"},{"domain":"chaxiang.cn"},{"domain":"chaxiang.io"},{"domain":"chaxiang.tech"},{"domain":"chaxiang.cc"},{"domain":"lingxicha.com"},{"domain":"yunqiji.com"},{"domain":"mochamo.io"},{"domain":"stackpilot.app"}]}'
+2026-09-06T17:59:58.508Z RESP 200 https://hunt.zalize.com/api/sync
+2026-09-06T18:00:11.520Z NAV https://hunt.zalize.com/s/LYpSNRZ2gH
+2026-09-06T18:00:11.612Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:00:11.615Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:00:11.680Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:00:11.680Z REQ GET https://hunt.zalize.com/api/share/LYpSNRZ2gH ''
+2026-09-06T18:00:11.681Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:00:11.681Z RESP 200 https://hunt.zalize.com/api/share/LYpSNRZ2gH
+2026-09-06T18:00:27.053Z NAV https://hunt.zalize.com/monitors
+2026-09-06T18:00:27.175Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:00:27.175Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:00:27.184Z REQ POST https://hunt.zalize.com/api/monitor/list '{"domains":["chaxiang.cc","stackpilot.app"]}'
+2026-09-06T18:00:27.316Z RESP 200 https://hunt.zalize.com/api/monitor/list
+2026-09-06T18:01:02.678Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T18:01:02.787Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:01:02.788Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:01:02.858Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:01:02.989Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:01:23.419Z REQ GET https://hunt.zalize.com/api/monitor/changes ''
+2026-09-06T18:01:23.559Z RESP 200 https://hunt.zalize.com/api/monitor/changes
+2026-09-06T18:02:14.119Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T18:02:14.258Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T18:02:14.259Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:14.259Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:14.331Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:14.335Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:14.339Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T18:02:16.329Z NAV https://hunt.zalize.com/?q=chaxiang
+2026-09-06T18:02:16.481Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T18:02:16.482Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:16.483Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:16.529Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T18:02:16.529Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:16.538Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:17.278Z REQ POST https://hunt.zalize.com/api/search '{"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}'
+2026-09-06T18:02:17.303Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T18:02:24.480Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T18:02:24.617Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:24.625Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:24.649Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:24.650Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:26.628Z NAV https://hunt.zalize.com/s/LYpSNRZ2gH
+2026-09-06T18:02:26.738Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:26.739Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:26.743Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:26.744Z REQ GET https://hunt.zalize.com/api/share/LYpSNRZ2gH ''
+2026-09-06T18:02:26.744Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:26.757Z RESP 200 https://hunt.zalize.com/api/share/LYpSNRZ2gH
+2026-09-06T18:02:28.588Z NAV https://hunt.zalize.com/monitors
+2026-09-06T18:02:28.679Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:28.679Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:28.714Z REQ POST https://hunt.zalize.com/api/monitor/list '{"domains":["chaxiang.cc","stackpilot.app"]}'
+2026-09-06T18:02:28.844Z RESP 200 https://hunt.zalize.com/api/monitor/list
+2026-09-06T18:02:30.674Z NAV https://hunt.zalize.com/advanced
+2026-09-06T18:02:30.790Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:30.791Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:30.799Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:30.799Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:32.640Z NAV https://hunt.zalize.com/prices
+2026-09-06T18:02:32.801Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:32.804Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:32.864Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:32.871Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:34.713Z NAV https://hunt.zalize.com/vs/com-vs-io
+2026-09-06T18:02:34.922Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:34.923Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:34.923Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:34.924Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:36.799Z NAV https://hunt.zalize.com/tld/cn
+2026-09-06T18:02:36.962Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:36.963Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:36.964Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:36.970Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:38.817Z NAV https://hunt.zalize.com/why
+2026-09-06T18:02:38.938Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:38.942Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:46.397Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T18:02:46.571Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T18:02:46.573Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:46.573Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:46.611Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T18:02:46.611Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:46.612Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:49.260Z NAV https://hunt.zalize.com/?q=chaxiang
+2026-09-06T18:02:49.402Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T18:02:49.404Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:49.404Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:49.455Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T18:02:49.455Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:49.455Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:50.199Z REQ POST https://hunt.zalize.com/api/search '{"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}'
+2026-09-06T18:02:50.230Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T18:02:57.394Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T18:02:57.535Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:57.536Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:57.585Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:57.604Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:59.449Z NAV https://hunt.zalize.com/s/LYpSNRZ2gH
+2026-09-06T18:02:59.551Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:02:59.552Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:02:59.589Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:02:59.589Z REQ GET https://hunt.zalize.com/api/share/LYpSNRZ2gH ''
+2026-09-06T18:02:59.589Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:02:59.597Z RESP 200 https://hunt.zalize.com/api/share/LYpSNRZ2gH
+2026-09-06T18:03:01.440Z NAV https://hunt.zalize.com/monitors
+2026-09-06T18:03:01.540Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:01.540Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:03:01.573Z REQ POST https://hunt.zalize.com/api/monitor/list '{"domains":["chaxiang.cc","stackpilot.app"]}'
+2026-09-06T18:03:01.586Z RESP 200 https://hunt.zalize.com/api/monitor/list
+2026-09-06T18:03:03.392Z NAV https://hunt.zalize.com/advanced
+2026-09-06T18:03:03.526Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:03.526Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:03:03.526Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:03:03.531Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:03:05.341Z NAV https://hunt.zalize.com/prices
+2026-09-06T18:03:05.471Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:05.476Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:03:05.530Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:03:05.541Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:03:07.378Z NAV https://hunt.zalize.com/vs/com-vs-io
+2026-09-06T18:03:07.565Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:07.566Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:03:07.572Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:03:07.581Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:03:09.417Z NAV https://hunt.zalize.com/tld/cn
+2026-09-06T18:03:09.587Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:09.588Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:03:09.588Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:03:09.592Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:03:11.444Z NAV https://hunt.zalize.com/why
+2026-09-06T18:03:11.574Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:03:11.574Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:04:00.525Z NAV https://hunt.zalize.com/?q=stackpilot.app
+2026-09-06T18:04:00.716Z REQ GET https://hunt.zalize.com/api/stats ''
+2026-09-06T18:04:00.716Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:04:00.718Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:04:00.774Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:04:00.784Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:04:00.874Z RESP 200 https://hunt.zalize.com/api/stats
+2026-09-06T18:04:01.514Z REQ POST https://hunt.zalize.com/api/search '{"roots":["stackpilot"],"tlds":["app","com","cn","io","ai","dev","co","net","me"]}'
+2026-09-06T18:04:01.538Z RESP 200 https://hunt.zalize.com/api/search
+2026-09-06T18:05:05.995Z NAV https://hunt.zalize.com/monitors
+2026-09-06T18:05:06.139Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:05:06.152Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:05:06.178Z REQ POST https://hunt.zalize.com/api/monitor/list '{"domains":["chaxiang.cc","stackpilot.app"]}'
+2026-09-06T18:05:06.316Z RESP 200 https://hunt.zalize.com/api/monitor/list
+2026-09-06T18:05:09.517Z REQ POST https://hunt.zalize.com/api/monitor '{"domain":"chaxiang.cc","enabled":false,"webhook":""}'
+2026-09-06T18:05:09.785Z RESP 200 https://hunt.zalize.com/api/monitor
+2026-09-06T18:05:11.802Z REQ POST https://hunt.zalize.com/api/monitor '{"domain":"stackpilot.app","enabled":false,"webhook":""}'
+2026-09-06T18:05:12.062Z RESP 200 https://hunt.zalize.com/api/monitor
+2026-09-06T18:05:21.372Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T18:05:21.557Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:05:21.558Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:05:21.565Z REQ GET https://hunt.zalize.com/api/prices ''
+2026-09-06T18:05:21.580Z RESP 200 https://hunt.zalize.com/api/prices
+2026-09-06T18:05:26.154Z REQ DELETE https://hunt.zalize.com/api/share/LYpSNRZ2gH '{"token":"<redacted>"}'
+2026-09-06T18:05:26.545Z RESP 200 https://hunt.zalize.com/api/share/LYpSNRZ2gH
+2026-09-06T18:05:36.866Z REQ DELETE https://hunt.zalize.com/api/share/mPf73SyTHC '{"token":"<redacted>"}'
+2026-09-06T18:05:37.104Z RESP 200 https://hunt.zalize.com/api/share/mPf73SyTHC
+2026-09-06T18:06:32.797Z NAV https://hunt.zalize.com/404-r559-park
+2026-09-06T18:06:32.925Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:06:32.926Z RESP 200 https://hunt.zalize.com/api/registrars
+2026-09-06T18:06:34.423Z NEWPAGE about:blank
+2026-09-06T18:06:34.477Z NAV https://hunt.zalize.com/404-r559-restore
+2026-09-06T18:06:34.547Z REQ GET https://hunt.zalize.com/api/registrars ''
+2026-09-06T18:06:34.548Z RESP 200 https://hunt.zalize.com/api/registrars

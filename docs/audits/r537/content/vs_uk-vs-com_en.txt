@@ -1,0 +1,51 @@
+Home
+TLD comparisons
+.uk vs .com
+.uk vs .com: British Local Trust vs the Global Default
+Which to pick
+As with every ccTLD-versus-.com call, it comes down to where your users are. For a UK-focused business, .uk is near-mandatory: run by Nominet for over 25 years with registrations in the tens of millions, British consumers read .uk/.co.uk as the default signal of a local business — trust far beyond any new gTLD — and Google geo-associates .uk sites with the UK, a free local-SEO boost. Since 2014 you can register directly at the second level, and name.uk is shorter and more modern than name.co.uk; about $6 to register with the same renewal — honest ccTLD pricing. For a global audience, .com's recognition is irreplaceable — autocomplete reflex and the best long-term asset liquidity. Established UK brands with budget usually take both: .uk (plus .co.uk) as the local front door or defensively, .com as the international main site. Two .uk-specific cautions: Nominet requires a UK address for service, so overseas registrants must confirm their registrar proxies it; and if someone else holds the matching .co.uk, weigh the brand-confusion risk before committing. The test: users, logistics and compliance all in the UK → .uk delivers local trust .com can't; global market → .com remains the safety zone. The registries tell you how each behaves. .com is Verisign's zone, in the root since 1985 under an ICANN registry agreement most recently renewed in December 2024, with price terms fixed by amendment and no geographic meaning at all. .uk is the United Kingdom's country code, delegated in July 1985 — the same year — and managed by Nominet UK, an Oxford-based registry that runs it under UK policy rather than an ICANN gTLD contract; direct second-level .uk names sit alongside the long-established .co.uk and .org.uk third-level spaces, and the registry's rules, dispute service and pricing are set in Oxford, not California. For a business that matters in two ways. First, a .uk address is an unambiguous location signal to British customers and to search engines' country targeting, which a .com only achieves through explicit geotargeting settings. Second, because .uk is a ccTLD, changes in its policy or pricing follow Nominet's own processes and UK law, while .com's follow ICANN's — different kinds of predictability. Use-case split: a British retailer with UK-only delivery, a trades business serving one region, a UK charity, a professional practice regulated by a UK body, a brand whose customers will type .co.uk by reflex → .uk (or .co.uk); a company selling into the US or globally, a SaaS product with international pricing, a brand that will raise money from non-UK investors, an exporter → .com. Most UK companies of any size hold both and redirect one to the other.
+Pricing & 5-year cost of ownership
+.uk vs .com: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.uk$4.32¥31$5.66¥41$26.96¥194
+.com$11.08¥80$11.08¥80$55.4¥399
+Difference (.uk − .com)−$6.76−¥49−$5.42−¥39−$28.44−¥205
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.uk
+Porkbun live: $4.32 1st yr (≈¥31) · renews $5.66/yr (¥ est. at 7.2)
+.uk is among the earliest country codes delegated in the IANA root (24 July 1985); its manager, Nominet UK, is a non-profit company with its site at nominet.uk and RDAP at rdap.nominet.uk.
+Pick .uk when
+UK-facing e-commerce
+Local UK services & shops
+British media & content sites
+UK brand & institution sites
+Businesses whose customers type .co.uk by reflex
+.com
+Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)
+.com is the oldest and most recognized top-level domain — the one users type by reflex.
+Pick .com when
+Global audience or expansion plans
+Primary brand site and long-term asset
+Heavy word-of-mouth, autocomplete reflex
+Best resale liquidity
+Brands raising money from non-UK investors
+FAQ
+.uk vs .com: which should I choose?
+.uk is the UK's country domain with local trust and local-SEO upside; .com is the global default with empty shelves. See “Which to pick” on this page for the full verdict.
+When should I pick a .uk domain?
+The top case for .uk — UK-facing e-commerce. The other 4 .uk cases are listed under “Pick .uk when” on this page.
+When should I pick a .com domain?
+The top case for .com — Global audience or expansion plans. The other 4 .com cases are listed under “Pick .com when” on this page.
+Hunt names on .uk and .com at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+SaaS toolsE-commerceAI products
+Related comparisons
+.com vs .top.info vs .com.cc vs .com.tv vs .com.pizza vs .com.com vs .travel
+More TLD comparisons
+.com vs .cn.com vs .net.co vs .me.net vs .org.com vs .xyz.xyz vs .top.pro vs .co.link vs .cc.com vs .me.cn vs .top.us vs .com.in vs .com.info vs .org.com vs .org.com vs .co.info vs .net.click vs .link.icu vs .xyz.org vs .co.com vs .top.info vs .com.cc vs .com.one vs .me.wang vs .comView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

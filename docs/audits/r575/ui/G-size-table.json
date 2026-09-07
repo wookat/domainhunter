@@ -1,0 +1,829 @@
+{
+  "G-375-en-configured-dark": {
+    "badge": "Configured",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Edit",
+        "width": 72.96875,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Remove",
+        "width": 123.109375,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": null
+  },
+  "G-375-zh-unconfigured": {
+    "badge": "未配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "未配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 294,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": true
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": false
+  },
+  "G-1280-en-configured": {
+    "badge": "Configured",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 36,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Edit",
+        "width": 72.96875,
+        "height": 36,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Remove",
+        "width": 123.109375,
+        "height": 36,
+        "disabled": false
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": null
+  },
+  "G-375-en-unconfigured": {
+    "badge": "Not configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Not configured",
+        "width": 91.875,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 294,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": true
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": false
+  },
+  "G-1280-en-editing": {
+    "badge": "Configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 392.40625,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 40,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Cancel",
+        "width": 71.921875,
+        "height": 40,
+        "disabled": false
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": true
+  },
+  "G-1280-zh-configured": {
+    "badge": "已配置",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 36,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "修改",
+        "width": 76,
+        "height": 36,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "清除",
+        "width": 130.59375,
+        "height": 36,
+        "disabled": false
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": null
+  },
+  "G-375-en-editing": {
+    "badge": "Configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 294,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Cancel",
+        "width": 71.921875,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": true
+  },
+  "G-375-en-configured": {
+    "badge": "Configured",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Edit",
+        "width": 72.96875,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Remove",
+        "width": 123.109375,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": null
+  },
+  "G-375-zh-editing": {
+    "badge": "已配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 294,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "取消",
+        "width": 54,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": true
+  },
+  "G-true375-en-unconfigured": {
+    "badge": "Not configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Not configured",
+        "width": 91.875,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 309,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": true
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": false
+  },
+  "G-true375-zh-configured": {
+    "badge": "已配置",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "修改",
+        "width": 76,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "清除",
+        "width": 130.59375,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": null
+  },
+  "G-true375-en-editing": {
+    "badge": "Configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 309,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Cancel",
+        "width": 71.921875,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": true
+  },
+  "G-1280-zh-unconfigured": {
+    "badge": "未配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "未配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 484,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 40,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 40,
+        "disabled": true
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": false
+  },
+  "G-1280-zh-editing": {
+    "badge": "已配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 422,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 40,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "取消",
+        "width": 54,
+        "height": 40,
+        "disabled": false
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": true
+  },
+  "G-true375-zh-unconfigured": {
+    "badge": "未配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "未配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 309,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": true
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": false
+  },
+  "G-1280-en-unconfigured": {
+    "badge": "Not configured",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Not configured",
+        "width": 91.875,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 472.328125,
+        "height": 40,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save",
+        "width": 87.15625,
+        "height": 40,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 40,
+        "disabled": true
+      }
+    ],
+    "docW": 1280,
+    "innerWidth": 1280,
+    "prefilledMatches": false
+  },
+  "G-true375-zh-editing": {
+    "badge": "已配置",
+    "masked": null,
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "monitor-webhook-input",
+        "text": "",
+        "width": 309,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "保存",
+        "width": 82,
+        "height": 44,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "取消",
+        "width": 54,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": true
+  },
+  "G-true375-en-configured": {
+    "badge": "Configured",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "Configured",
+        "width": 71.859375,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send test",
+        "width": 110.515625,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Edit",
+        "width": 72.96875,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Remove",
+        "width": 123.109375,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 375,
+    "innerWidth": 375,
+    "prefilledMatches": null
+  },
+  "G-375-zh-configured": {
+    "badge": "已配置",
+    "masked": "https://webhook.site/…7d2a",
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "已配置",
+        "width": 45,
+        "height": 20.5,
+        "disabled": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "发送测试",
+        "width": 104,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "修改",
+        "width": 76,
+        "height": 44,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "清除",
+        "width": 130.59375,
+        "height": 44,
+        "disabled": false
+      }
+    ],
+    "docW": 360,
+    "innerWidth": 375,
+    "prefilledMatches": null
+  }
+}

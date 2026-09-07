@@ -13,7 +13,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-monorepo-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![MCP](https://img.shields.io/badge/MCP-Streamable_HTTP-000000)](https://hunt.zalize.com/mcp)
-[![GitHub stars](https://img.shields.io/github/stars/wookat/domainhunter?style=social)](https://github.com/wookat/domainhunter/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/wookat/domainhunter?style=social)](https://github.com/wookat/domainhunter)
 
 <img src="./docs/assets/home-zh.png" alt="DomainHunter 首页（中文 / 浅色）：说出寓意，猎到真正可注册的好域名" width="880" />
 
@@ -35,7 +35,7 @@
 
 | 功能 | 说明 | 入口 |
 |---|---|---|
-| **AI Agent 多轮猎名** | 自然语言寓意 → 候选（pinyin / word / coined / blend 四路）→ 实时核验 → 跨轮去重反思，最多 5 轮，NDJSON 流式返回；每 IP 20 次/小时 | 首页 · `POST /api/ai-search` |
+| **AI Agent 多轮猎名** | 自然语言寓意 → 候选（pinyin / word / coined / blend 四路）→ 实时核验 → 跨轮去重反思，最多 5 轮，NDJSON 流式返回；每 IP 20 次/小时；上游额度耗尽/限流时自动降级为规则生成 + 实时核验并提示重试 | 首页 · `POST /api/ai-search` |
 | **实时核验** | DoH 预筛 → RDAP（IANA bootstrap）→ WHOIS 43 端口兜底（`com/net/cn/com.cn/io/cc/tv/co/me/xyz/sh/gg/so/us`）；结果带 `expiresAt` | 全部核验路径 |
 | **精确核验 / 即输即查** | 输入完整域名直接查，不消耗 AI | 首页「精确核验」 |
 | **批量粘贴核验 + CSV 导出** | 一次 ≤200 个域名（换行/逗号/空格分隔），不带后缀按 TLD 展开；一键复制可注册、导出 CSV | [/advanced](https://hunt.zalize.com/advanced) · `POST /api/search` |
@@ -43,7 +43,7 @@
 | **监控释放 + Webhook** | 对已注册域名点「监控释放」，Cron 每 6 小时全量复查，状态变化推送到你配置的 https Webhook；支持手动实时复查（每 IP 60s） | [/monitors](https://hunt.zalize.com/monitors) · `/api/monitor*` |
 | **候选清单 + 分享 / 跨设备同步** | 本地收藏清单；生成只读分享页 `/s/:id`（30 天，可撤销）；8 位同步码免登录跨设备同步（90 天） | [/shortlist](https://hunt.zalize.com/shortlist) · `/api/share` · `/api/sync` |
 | **MCP 端点** | `POST /mcp`（JSON-RPC 2.0，Streamable HTTP，协议版 2025-03-26），工具：`check_domains`（≤50）、`tld_prices`、`suggest_variants` | [/mcp](https://hunt.zalize.com/mcp) |
-| **400+ 内容页** | TLD 指南 `/tld/:tld`（408）、行业命名指南 `/guide/:slug`（404）、TLD 对比 `/vs/:slug`（444），全部双语 + SSR meta/JSON-LD/hreflang + `sitemap.xml` + `llms.txt` | [/tld/cn](https://hunt.zalize.com/tld/cn) 等 |
+| **1,200+ 内容页** | TLD 指南 `/tld/:tld`（408）、行业与 .cn 合规指南 `/guide/:slug`（410）、TLD 对比 `/vs/:slug`（444），全部双语 + SSR meta/JSON-LD/hreflang + `sitemap.xml` + `llms.txt` | [/tld/cn](https://hunt.zalize.com/tld/cn) 等 |
 | **双语 · 双主题 · 移动端** | zh/en 全量词典（`apps/web/src/lib/i18n.tsx`）、浅色/深色（对比度 ≥4.5:1 为硬指标）、375px 起响应式、键盘可达 | 右上角切换 |
 
 <details>

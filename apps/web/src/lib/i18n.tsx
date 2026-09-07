@@ -1,11 +1,18 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { HOME_FAQ, HOME_HERO, HOME_META } from "@/content/home-copy";
+import { NOT_FOUND_META } from "@/content/not-found-copy";
+import { ADVANCED_META, WHY_META } from "@/content/page-meta";
 import { TLD_LIST } from "@/content/tld-list";
+import { applyLangMeta } from "@/lib/page-meta";
+import { shareSsrTitle, type ShareItem, type ShareShellState } from "@/share-items";
 
 const TLD_COUNT = TLD_LIST.length;
 
 const LANG_KEY = "domainhunter:lang";
+
+/** 水合/切语言后 document.title 回落为首页 title 的路径（首页/候选清单/三个 hub）；其余顶层路径视为未知路由 */
+const HOME_TITLE_PATHS: ReadonlySet<string> = new Set(["/", "/shortlist", "/tld", "/guide", "/vs"]);
 
 export type Lang = "zh" | "en";
 
@@ -19,12 +26,13 @@ const zh = {
   "common.register": "去注册",
   "registrar.openTitle": "在 {registrar} 注册 {domain}（新窗口打开）",
   "registrar.disclosure": "返佣声明：部分注册商链接为推广链接，经由它们注册本站可能获得佣金，不影响你支付的价格。",
+  "registrar.hint.dynadot": "中文 · 支付宝",
   "common.remove": "移除",
   "common.unlimited": "不限",
   "common.themeToggle": "切换浅色/暗色",
   // Header
   "header.shortlist": "候选清单",
-  "header.advanced": "高级模式",
+  "header.advanced": "批量核验",
   "header.running": "第 {round} 轮进行中 · 已核验",
   "header.runningChecked": "个 · 可注册",
   "header.runningUnit": "个",
@@ -35,6 +43,8 @@ const zh = {
   "status.checking": "检测中",
   "expiry.on": "{date} 到期",
   "expiry.soonTitle": "90 天内到期，可关注释放",
+  "expiry.unknownChip": "到期日待查",
+  "expiry.unknownChipTip": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
   // 评分维度
   "score.length": "长度",
   "score.readability": "读感",
@@ -55,6 +65,8 @@ const zh = {
   "home.mode.exact": "精确核验",
   "home.mode.bulk": "批量核验",
   "home.placeholderExact": "输入现成的名字或域名，如 acme 或 acme.com，立即核验可注册性…",
+  "home.descriptionAria": "描述你的品牌或项目",
+  "home.descriptionAriaExact": "输入要核验的名字或域名",
   "home.exactCheck": "立即核验",
   "home.customTld": "自定义 TLD",
   "home.trustChecked": "已实时核验",
@@ -113,23 +125,48 @@ const zh = {
   "home.quickReservedTip": "注册局保留域：该域名由注册局保留，通常无法公开注册",
   "home.quickRetryTitle": "重新核验 {domain}",
   "status.reserved": "注册局保留",
+  "unknown.reason.rate-limited": "注册局限流，稍后重试",
+  "unknown.reason.recheck-limited": "重新核验太频繁，这一小时已达上限",
+  "unknown.reason.timeout": "注册局查询超时",
+  "unknown.reason.registry-error": "注册局接口异常",
+  "unknown.reason.no-rdap": "该后缀暂无 RDAP/WHOIS 通道",
+  "unknown.reason.reserved": "注册局保留，通常不可公开注册",
+  "unknown.reason.unparsed": "WHOIS 响应无法解析",
+  "unknown.reason.network": "查询网络错误",
+  "unknown.reason.generic": "暂时无法确认",
+  "row.recheck": "重新核验",
+  "row.rechecking": "核验中…",
+  "row.recheckTitle": "重新核验 {domain}（穿透缓存直查注册局，不调用 AI）",
+  "row.monitorCta": "开监控",
   "quick.renewTip": "续费 {price}/年；带 ↑ 表示续费达首年价 3 倍以上",
   "home.quickVariantsProgress": "变体核验 {checked}/{total} · 可注册 {n} 个（不消耗 AI 次数）",
   "home.quickDoneStatus": "核验完成：共 {total} 个，{available} 个可注册",
   "home.mode.aria": "搜索模式",
   // 高级模式
-  "adv.title": "高级模式",
-  "adv.subtitle": "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态",
+  "adv.title": "批量核验",
+  "adv.subtitle": "粘贴现成名单，逐个实时核验可注册状态；也可用词根 × 前后缀 × TLD 组合生成后核验，不消耗 AI 次数",
+  "adv.comboTitle": "组合生成（高级）",
+  "adv.comboHint": "填词根，可选前缀/后缀，按 TLD 展开成候选后逐个核验；TLD 同时决定上方粘贴名单里裸名字的展开方式",
   "adv.roots": "词根（roots）",
   "adv.prefixes": "前缀（prefixes）",
   "adv.suffixes": "后缀（suffixes）",
+  "adv.rootsAria": "词根，多个用逗号分隔",
+  "adv.prefixesAria": "前缀，多个用逗号分隔",
+  "adv.suffixesAria": "后缀，多个用逗号分隔",
+  "adv.tldsAria": "顶级域（TLD），多个用逗号分隔",
   "adv.running": "检索中…",
   "adv.start": "开始检索",
   "adv.bulkTitle": "批量粘贴核验",
-  "adv.bulkHint": "把现成名单粘进来（换行/逗号/空格分隔）：带后缀的直接核验，不带后缀的按上方 TLD 展开，一次最多 {n} 个，不消耗 AI 次数",
+  "adv.bulkHint": "把现成名单粘进来（换行/逗号/空格分隔）：带后缀的直接核验，不带后缀的按 TLD（当前 {tlds}）展开，一次最多 {n} 个，不消耗 AI 次数",
   "adv.bulkPlaceholder": "mybrand\ncoolname.io\nfoo, bar",
+  "adv.bulkAria": "粘贴要批量核验的名字或域名",
   "adv.bulkStart": "核验 {n} 个域名",
   "adv.bulkCount": "已识别 {n} 个域名",
+  "adv.progress": "核验中 {done}/{total}",
+  "adv.progressOpen": "已核验 {done} 个",
+  "adv.progressDone": "已完成 {done}/{total}",
+  "adv.progressDoneOpen": "已完成，共核验 {done} 个",
+  "adv.progressAria": "批量核验进度",
   "home.recent": "最近搜过",
   "home.recentClear": "清除最近搜索",
   "adv.available": "可注册（{n}）",
@@ -178,6 +215,7 @@ const zh = {
   "results.stat.elapsed": "{s} 秒",
   "results.copyAvailBtn": "复制 {n} 个可注册",
   "results.copiedAvail": "已复制",
+  "results.copyFailed": "复制失败，请长按选择",
   "results.starAllBtn": "收藏全部可注册",
   "results.starAllDone": "已收藏 {n} 个",
   "results.starAllAll": "已全部收藏",
@@ -265,6 +303,12 @@ const zh = {
   "shortlist.clear": "清空",
   "shortlist.clearConfirm": "确认清空？",
   "shortlist.batchRegister": "批量去注册（{n}）",
+  "shortlist.batchRegisterTitle": "只打开可注册域名的注册商页面；已注册 / 未知状态不计入",
+  "shortlist.takenNoPrice": "已注册域名不显示注册价：转让 / 二级市场价以注册商为准",
+  "shortlist.unknownNoPrice": "状态未确认，重新核验后再显示参考价",
+  "shortlist.monitorCta": "开监控",
+  "shortlist.monitorCtaTitle": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+  "shortlist.recheckOneTitle": "只重新核验 {domain}",
   "shortlist.empty": "还没有候选。搜索结果里点收藏，就会汇总到这里，随时对比与导出。",
   "shortlist.startHunt": "开始猎取",
   "shortlist.domain": "域名",
@@ -328,6 +372,7 @@ const zh = {
   "sync.codeLabel": "我的同步码（90 天有效，可反复推送更新）：",
   "sync.codeHint": "在其他设备的清单页输入这个码，即可把清单合并过去",
   "sync.importPlaceholder": "输入 8 位同步码",
+  "sync.importAria": "要导入的同步码",
   "sync.import": "导入",
   "sync.importing": "导入中…",
   "sync.importDone": "已导入 {n} 个新域名（重复的已自动跳过）",
@@ -338,11 +383,16 @@ const zh = {
   // 分享页
   "share.title": "候选域名清单",
   "share.subtitle": "由 DomainHunter 用户分享 · 快照生成于 {time} · 状态以实时核验为准",
+  "share.copyAllBtn": "复制 {n} 个域名",
+  "share.noStatus": "此快照未记录核验状态，注册前请重新查询",
+  "share.noteLabel": "备注：",
   "share.cta": "我也要猎名",
   "share.ctaDesc": "说出你的想法，AI 批量构思并实时核验，只给你能注册的好域名。",
   "share.loading": "加载中…",
   "share.notFound": "分享链接不存在或已过期（快照保留 30 天）",
   "share.revoked": "链接已失效：分享者已删除这份清单",
+  "share.docTitle.revoked": "分享已撤销 | DomainHunter",
+  "share.docTitle.notFound": "分享不存在或已过期 | DomainHunter",
   "share.errCtaDesc": "你也可以用 DomainHunter 创建并分享自己的候选清单。",
   "share.errCta": "去创建自己的候选清单",
   // TLD 指南页
@@ -379,10 +429,14 @@ const zh = {
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
   "guide.related": "相关行业指南",
+  "guide.relatedTlds": "相关后缀指南",
+  "guide.notes": "注意事项",
+  "guide.sources": "官方依据",
+  "guide.relatedCompliance": "相关合规与流程指南",
   "vs.related": "相关对比",
   // 404 页
-  "nf.title": "页面不存在",
-  "nf.desc": "你访问的链接不存在或已被移除，请检查网址是否正确。",
+  "nf.title": NOT_FOUND_META.zh.title,
+  "nf.desc": NOT_FOUND_META.zh.desc,
   "nf.home": "回到首页",
   "nf.explore": "或者从这些入口继续浏览",
   "footer.tldGuides": "TLD 注册指南",
@@ -395,9 +449,34 @@ const zh = {
   "footer.prices": "价格总览",
   "footer.why": "为什么选 DomainHunter",
   "footer.mcp": "MCP 接入",
+  "footer.advanced": "批量核验",
   "footer.monitors": "监控管理",
   "monitors.title": "监控管理",
-  "monitors.hint": "开了监控的域名每 6 小时自动复查，掉落/被注册会记录在监控动态并推送 webhook 通知",
+  "monitors.hint": "开了监控的域名每 6 小时自动复查，掉落/被注册会记录在监控动态，并推送到下方「通知方式」里填的 webhook",
+  "monitors.notify.title": "通知方式",
+  "monitors.notify.stateOn": "已配置",
+  "monitors.notify.stateOff": "未配置",
+  "monitors.notify.desc": "每 6 小时核验一次（服务端定时任务 0 */6 * * *），监控域名释放或被注册时向这个地址 POST 一条 JSON（飞书/钉钉/Slack/自建服务均可）；不填则只在本页和监控动态里记录，不主动通知。",
+  "monitors.notify.inputLabel": "Webhook 地址",
+  "monitors.notify.rules": "仅支持 https:// 地址，最长 {max} 字符；保存后自动应用到你已监控的全部域名，可先点「发送测试」确认能收到",
+  "monitors.notify.rulesEdit": "仅支持 https:// 地址，最长 {max} 字符；清空后保存 = 清除通知；Esc 放弃修改",
+  "monitors.notify.save": "保存",
+  "monitors.notify.saved": "已保存，已同步到你监控中的域名",
+  "monitors.notify.cleared": "已清除通知地址，监控继续但不再推送",
+  "monitors.notify.clear": "清除",
+  "monitors.notify.edit": "修改",
+  "monitors.notify.cancelEdit": "取消",
+  "monitors.notify.test": "发送测试",
+  "monitors.notify.testing": "发送中…",
+  "monitors.notify.maskedTitle": "已隐藏路径（webhook 地址相当于密钥），点「修改」查看完整地址",
+  "monitors.notify.err.scheme": "地址必须以 https:// 开头",
+  "monitors.notify.err.length": "地址超长，最多 {max} 字符",
+  "monitors.notify.err.syntax": "不是合法的 URL，请直接粘贴机器人给的完整地址",
+  "monitors.notify.test.delivered": "已发送，对方返回 HTTP {status}——去你的群/接收端看一下测试消息（event: test）",
+  "monitors.notify.test.rejected": "对方返回 HTTP {status}，消息未被接受；请核对地址或机器人安全设置",
+  "monitors.notify.test.unreachable": "连不上该地址（5 秒内无响应或域名无法解析），请检查地址是否可公网访问",
+  "monitors.notify.test.rateLimited": "发送测试太频繁，{s} 秒后可再试",
+  "monitors.notify.test.failed": "发送失败，请稍后重试",
   "monitors.quota": "全局监控名额",
   "monitors.mine": "我的监控 {n} 个",
   "monitors.domain": "域名",
@@ -406,7 +485,7 @@ const zh = {
   "monitors.never": "尚未检查",
   "monitors.cancel": "取消监控",
   "monitors.cancelConfirm": "确认取消？",
-  "monitors.empty": "还没有监控任何域名。在搜索结果或候选清单里给已注册域名打开「监控」开关，域名释放时第一时间知道。",
+  "monitors.empty": "还没有监控任何域名。在上方直接输入一个已注册域名，或在搜索结果 / 候选清单里打开「监控」开关，域名释放时第一时间知道。",
   "monitors.goShortlist": "去候选清单",
   "monitors.loadFailed": "监控清单加载失败，请稍后重试",
   "monitors.manage": "管理监控",
@@ -421,6 +500,23 @@ const zh = {
   "monitors.checkAvailability": "查可用性",
   "monitors.quotaFull": "全局监控名额已满（{limit} 个），暂时无法新增监控；取消一个现有监控后即可再添加。",
   "monitors.confirmCountdown": "{s} 秒内点击生效",
+  "monitors.add.label": "直接添加监控",
+  "monitors.add.hint": "输入一个已被注册的域名，提交时会实时核验一次状态与到期日，已注册的才会进入监控",
+  "monitors.add.placeholder": "例如 example.com",
+  "monitors.add.submit": "核验并监控",
+  "monitors.add.submitting": "核验中…",
+  "monitors.add.clear": "清空输入",
+  "monitors.add.err.empty": "请输入域名",
+  "monitors.add.err.syntax": "域名格式不对：请输入形如 example.com 的完整域名（字母、数字、连字符）",
+  "monitors.add.err.tld": "暂不支持 .{tld} 后缀，目前只能监控本站追踪的 {count} 个后缀",
+  "monitors.add.err.duplicate": "{domain} 已在你的监控清单里",
+  "monitors.add.err.check": "核验失败（注册局查询暂不可用），请稍后重试",
+  "monitors.add.err.network": "添加失败，请检查网络后重试",
+  "monitors.add.err.full": "全局监控名额已满（{limit} 个），取消一个现有监控后再添加",
+  "monitors.add.available": "{domain} 现在就可以注册，不需要监控——直接去注册吧",
+  "monitors.add.added": "已加入监控：{domain}（已注册）",
+  "monitors.add.addedExpiry": "已加入监控：{domain}（已注册，{date} 到期）",
+  "monitors.add.addedUnknown": "已加入监控：{domain}（本次未能确认状态，下一轮自动复查会补上）",
   "footer.industryGuides": "行业命名指南",
   "footer.compares": "后缀对比",
   "footer.analyticsNotice": "本站使用 Cloudflare Web Analytics 统计归总访问量：不用 Cookie、不识别个人、不跟踪你在其他网站的行为。",
@@ -494,11 +590,12 @@ const en: Record<I18nKey, string> = {
   "common.register": "Register",
   "registrar.openTitle": "Register {domain} at {registrar} (opens in a new tab)",
   "registrar.disclosure": "Affiliate disclosure: some registrar links are affiliate links — we may earn a commission when you register through them, at no extra cost to you.",
+  "registrar.hint.dynadot": "CNY · Alipay",
   "common.remove": "Remove",
   "common.unlimited": "Any",
   "common.themeToggle": "Toggle light/dark",
   "header.shortlist": "Shortlist",
-  "header.advanced": "Advanced",
+  "header.advanced": "Bulk check",
   "header.running": "Round {round} · checked",
   "header.runningChecked": "· available",
   "header.runningUnit": "",
@@ -508,6 +605,8 @@ const en: Record<I18nKey, string> = {
   "status.checking": "Checking",
   "expiry.on": "expires {date}",
   "expiry.soonTitle": "Expires within 90 days — worth monitoring",
+  "expiry.unknownChip": "expiry pending",
+  "expiry.unknownChipTip": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
   "score.length": "Length",
   "score.readability": "Readability",
   "score.relevance": "Relevance",
@@ -526,6 +625,8 @@ const en: Record<I18nKey, string> = {
   "home.mode.exact": "Exact check",
   "home.mode.bulk": "Bulk check",
   "home.placeholderExact": "Type an exact name or domain, e.g. acme or acme.com, to check availability instantly…",
+  "home.descriptionAria": "Describe your brand or project",
+  "home.descriptionAriaExact": "Name or domain to check",
   "home.exactCheck": "Check now",
   "home.customTld": "Custom TLD",
   "home.trustChecked": "Verified",
@@ -583,23 +684,48 @@ const en: Record<I18nKey, string> = {
   "home.quickReservedTip": "Registry-reserved domain — held by the registry and usually not open for registration",
   "home.quickRetryTitle": "Recheck {domain}",
   "status.reserved": "Reserved",
+  "unknown.reason.rate-limited": "Registry rate-limited — retry shortly",
+  "unknown.reason.recheck-limited": "Too many rechecks — hourly limit reached",
+  "unknown.reason.timeout": "Registry lookup timed out",
+  "unknown.reason.registry-error": "Registry endpoint error",
+  "unknown.reason.no-rdap": "No RDAP/WHOIS channel for this suffix yet",
+  "unknown.reason.reserved": "Registry-reserved, usually not open for registration",
+  "unknown.reason.unparsed": "WHOIS response could not be parsed",
+  "unknown.reason.network": "Network error during lookup",
+  "unknown.reason.generic": "Couldn't confirm yet",
+  "row.recheck": "Re-check",
+  "row.rechecking": "Checking…",
+  "row.recheckTitle": "Re-check {domain} (bypasses cache, queries the registry, no AI call)",
+  "row.monitorCta": "Monitor",
   "home.quickCopied": "Copied",
   "quick.renewTip": "Renews at {price}/yr; ↑ marks renewal 3×+ the first-year price",
   "home.quickVariantsProgress": "Variants checked {checked}/{total} · {n} available (no AI quota used)",
   "home.quickDoneStatus": "Check complete: {available} of {total} available",
   "home.mode.aria": "Search mode",
-  "adv.title": "Advanced mode",
-  "adv.subtitle": "Batch-generate roots × affixes × TLDs and verify availability one by one",
+  "adv.title": "Bulk check",
+  "adv.subtitle": "Paste an existing list and verify availability live, one by one; or generate roots × affixes × TLDs and check them — no AI quota used",
+  "adv.comboTitle": "Combination generator (advanced)",
+  "adv.comboHint": "Enter roots, optional prefixes/suffixes; candidates are expanded per TLD and checked one by one. The TLDs also drive how bare names in the pasted list above are expanded",
   "adv.roots": "Roots",
   "adv.prefixes": "Prefixes",
   "adv.suffixes": "Suffixes",
+  "adv.rootsAria": "Roots, comma-separated",
+  "adv.prefixesAria": "Prefixes, comma-separated",
+  "adv.suffixesAria": "Suffixes, comma-separated",
+  "adv.tldsAria": "Top-level domains (TLDs), comma-separated",
   "adv.running": "Checking…",
   "adv.start": "Start search",
   "adv.bulkTitle": "Bulk paste check",
-  "adv.bulkHint": "Paste an existing list (newline/comma/space separated): entries with a suffix are checked as-is, bare names are expanded with the TLDs above — up to {n} at once, no AI quota used",
+  "adv.bulkHint": "Paste an existing list (newline/comma/space separated): entries with a suffix are checked as-is, bare names are expanded per TLD (currently {tlds}) — up to {n} at once, no AI quota used",
   "adv.bulkPlaceholder": "mybrand\ncoolname.io\nfoo, bar",
+  "adv.bulkAria": "Paste names or domains to bulk check",
   "adv.bulkStart": "Check {n} domains",
   "adv.bulkCount": "{n} domains recognized",
+  "adv.progress": "Checking {done}/{total}",
+  "adv.progressOpen": "{done} checked",
+  "adv.progressDone": "Done {done}/{total}",
+  "adv.progressDoneOpen": "Done, {done} checked",
+  "adv.progressAria": "Bulk check progress",
   "home.recent": "Recent",
   "home.recentClear": "Clear recent searches",
   "adv.available": "Available ({n})",
@@ -646,6 +772,7 @@ const en: Record<I18nKey, string> = {
   "results.stat.elapsed": "{s}s",
   "results.copyAvailBtn": "Copy {n} available",
   "results.copiedAvail": "Copied",
+  "results.copyFailed": "Copy failed — select manually",
   "results.starAllBtn": "Star all available",
   "results.starAllDone": "Starred {n}",
   "results.starAllAll": "All starred",
@@ -730,6 +857,12 @@ const en: Record<I18nKey, string> = {
   "shortlist.clear": "Clear",
   "shortlist.clearConfirm": "Confirm clear?",
   "shortlist.batchRegister": "Register all ({n})",
+  "shortlist.batchRegisterTitle": "Opens registrar pages for available domains only — taken / unknown are excluded",
+  "shortlist.takenNoPrice": "No registration price for taken domains — transfer / aftermarket pricing is set by the registrar",
+  "shortlist.unknownNoPrice": "Status unconfirmed — re-check to see the reference price",
+  "shortlist.monitorCta": "Monitor",
+  "shortlist.monitorCtaTitle": "Start monitoring: re-checked every 6 hours, you get notified when it becomes available",
+  "shortlist.recheckOneTitle": "Re-check {domain} only",
   "shortlist.empty": "Nothing here yet. Star names in your results and they'll collect here, ready to compare and export.",
   "shortlist.startHunt": "Start hunting",
   "shortlist.domain": "Domain",
@@ -793,6 +926,7 @@ const en: Record<I18nKey, string> = {
   "sync.codeLabel": "My sync code (valid 90 days, push updates anytime):",
   "sync.codeHint": "Enter this code on your other device's shortlist page to merge this list over",
   "sync.importPlaceholder": "Enter 8-character sync code",
+  "sync.importAria": "Sync code to import",
   "sync.import": "Import",
   "sync.importing": "Importing…",
   "sync.importDone": "Imported {n} new domains (duplicates skipped)",
@@ -802,11 +936,16 @@ const en: Record<I18nKey, string> = {
   "meta.title": HOME_META.en.title,
   "share.title": "Shared domain shortlist",
   "share.subtitle": "Shared by a DomainHunter user · snapshot from {time} · re-check availability before registering",
+  "share.copyAllBtn": "Copy {n} domains",
+  "share.noStatus": "This snapshot has no availability status recorded — re-check before registering",
+  "share.noteLabel": "Note:",
   "share.cta": "Hunt my own domains",
   "share.ctaDesc": "Describe your idea — AI brainstorms names and verifies them live, showing only what you can register.",
   "share.loading": "Loading…",
   "share.notFound": "This share link doesn't exist or has expired (snapshots last 30 days)",
   "share.revoked": "This link is no longer active — the owner deleted this shortlist",
+  "share.docTitle.revoked": "This share has been revoked | DomainHunter",
+  "share.docTitle.notFound": "Share not found or expired | DomainHunter",
   "share.errCtaDesc": "You can create and share your own shortlist with DomainHunter.",
   "share.errCta": "Create your own shortlist",
   "tld.notFound": "No guide for this TLD",
@@ -840,10 +979,14 @@ const en: Record<I18nKey, string> = {
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
   "guide.related": "Related industry guides",
+  "guide.relatedTlds": "Related TLD guides",
+  "guide.notes": "Things to watch",
+  "guide.sources": "Official sources",
+  "guide.relatedCompliance": "Related compliance guides",
   "vs.related": "Related comparisons",
   // 404 page
-  "nf.title": "Page not found",
-  "nf.desc": "The page you're looking for doesn't exist or has been removed. Please check the URL.",
+  "nf.title": NOT_FOUND_META.en.title,
+  "nf.desc": NOT_FOUND_META.en.desc,
   "nf.home": "Back to home",
   "nf.explore": "Or keep exploring from here",
   "footer.tldGuides": "TLD registration guides",
@@ -856,9 +999,34 @@ const en: Record<I18nKey, string> = {
   "footer.prices": "Price overview",
   "footer.why": "Why DomainHunter",
   "footer.mcp": "MCP server",
+  "footer.advanced": "Bulk check",
   "footer.monitors": "Monitors",
   "monitors.title": "Monitors",
-  "monitors.hint": "Monitored domains are re-checked every 6 hours — drops and registrations are recorded in Monitor updates and pushed to your webhook",
+  "monitors.hint": "Monitored domains are re-checked every 6 hours — drops and registrations are recorded in Monitor updates and pushed to the webhook you set under “Notification method” below",
+  "monitors.notify.title": "Notification method",
+  "monitors.notify.stateOn": "Configured",
+  "monitors.notify.stateOff": "Not configured",
+  "monitors.notify.desc": "Checked every 6 hours (server cron 0 */6 * * *). When a monitored domain drops or gets registered we POST one JSON message to this URL (Feishu/DingTalk/Slack/your own service). Leave empty and changes are only recorded here and in Monitor updates.",
+  "monitors.notify.inputLabel": "Webhook URL",
+  "monitors.notify.rules": "https:// only, up to {max} characters. Saving applies it to every domain you monitor — hit “Send test” first to confirm it arrives",
+  "monitors.notify.rulesEdit": "https:// only, up to {max} characters. Save an empty field to remove notifications; Esc discards changes",
+  "monitors.notify.save": "Save",
+  "monitors.notify.saved": "Saved and synced to your monitored domains",
+  "monitors.notify.cleared": "Webhook removed — monitoring continues without push notifications",
+  "monitors.notify.clear": "Remove",
+  "monitors.notify.edit": "Edit",
+  "monitors.notify.cancelEdit": "Cancel",
+  "monitors.notify.test": "Send test",
+  "monitors.notify.testing": "Sending…",
+  "monitors.notify.maskedTitle": "Path hidden (a webhook URL is effectively a secret) — click Edit to see the full URL",
+  "monitors.notify.err.scheme": "URL must start with https://",
+  "monitors.notify.err.length": "URL too long — max {max} characters",
+  "monitors.notify.err.syntax": "Not a valid URL — paste the full address your bot gave you",
+  "monitors.notify.test.delivered": "Sent — the endpoint answered HTTP {status}. Check your channel/receiver for the test message (event: test)",
+  "monitors.notify.test.rejected": "The endpoint answered HTTP {status} and did not accept the message — check the URL or the bot's security settings",
+  "monitors.notify.test.unreachable": "Could not reach that URL (no response within 5s or DNS failed) — make sure it is publicly reachable",
+  "monitors.notify.test.rateLimited": "Too many test sends — try again in {s}s",
+  "monitors.notify.test.failed": "Send failed, please try again later",
   "monitors.quota": "Global monitoring capacity",
   "monitors.mine": "My monitors: {n}",
   "monitors.domain": "Domain",
@@ -867,7 +1035,7 @@ const en: Record<I18nKey, string> = {
   "monitors.never": "Not checked yet",
   "monitors.cancel": "Stop monitoring",
   "monitors.cancelConfirm": "Confirm?",
-  "monitors.empty": "No monitored domains yet. Flip the Monitor switch on a taken domain in your results or shortlist, and we'll tell you the moment it drops.",
+  "monitors.empty": "No monitored domains yet. Enter a taken domain above, or flip the Monitor switch on one in your results or shortlist, and we'll tell you the moment it drops.",
   "monitors.goShortlist": "Go to shortlist",
   "monitors.loadFailed": "Couldn't load your monitors — please try again",
   "monitors.manage": "Manage monitors",
@@ -882,6 +1050,23 @@ const en: Record<I18nKey, string> = {
   "monitors.checkAvailability": "Check availability",
   "monitors.quotaFull": "Global monitoring capacity is full ({limit}). New monitors can't be added right now — cancel an existing one to free a slot.",
   "monitors.confirmCountdown": "click within {s}s",
+  "monitors.add.label": "Add a domain to monitor",
+  "monitors.add.hint": "Enter a domain that's already registered. We check its status and expiry date once on submit; only taken domains are added.",
+  "monitors.add.placeholder": "e.g. example.com",
+  "monitors.add.submit": "Check & monitor",
+  "monitors.add.submitting": "Checking…",
+  "monitors.add.clear": "Clear input",
+  "monitors.add.err.empty": "Enter a domain",
+  "monitors.add.err.syntax": "That doesn't look like a domain — enter a full name like example.com (letters, digits, hyphens)",
+  "monitors.add.err.tld": ".{tld} isn't supported yet — monitoring covers the {count} TLDs tracked on this site",
+  "monitors.add.err.duplicate": "{domain} is already on your monitor list",
+  "monitors.add.err.check": "Check failed (registry lookup unavailable) — please try again shortly",
+  "monitors.add.err.network": "Couldn't add — check your connection and try again",
+  "monitors.add.err.full": "Global monitoring capacity is full ({limit}) — cancel an existing monitor to add this one",
+  "monitors.add.available": "{domain} is available right now — no need to monitor it, just register it",
+  "monitors.add.added": "Now monitoring {domain} (taken)",
+  "monitors.add.addedExpiry": "Now monitoring {domain} (taken, expires {date})",
+  "monitors.add.addedUnknown": "Now monitoring {domain} (status couldn't be confirmed this time; the next automatic re-check will fill it in)",
   "footer.industryGuides": "Industry naming guides",
   "footer.compares": "TLD comparisons",
   "footer.analyticsNotice": "This site uses Cloudflare Web Analytics for aggregate traffic stats only: no cookies, no personal identification, no cross-site tracking.",
@@ -942,6 +1127,11 @@ const en: Record<I18nKey, string> = {
 
 const dicts: Record<Lang, Record<I18nKey, string>> = { zh, en };
 
+/** 只读词表（测试/非 React 上下文校验双语文案用） */
+export function dictionary(lang: Lang): Readonly<Record<I18nKey, string>> {
+  return dicts[lang];
+}
+
 export type TFunc = (key: I18nKey, vars?: Record<string, string | number>) => string;
 
 interface I18nValue {
@@ -977,6 +1167,16 @@ function loadLang(): Lang {
   return "zh";
 }
 
+/**
+ * /s/:id 水合后的 document.title：与 worker SSR 壳（shareGoneMeta / shareSsrTitle）同一份文案，
+ * 但按 SPA 解析出的语言（?lang → 存储 → navigator.language）重算——SSR 壳只看 Accept-Language，
+ * 两者不一致时壳 title 会留在另一种语言，正文却已是 SPA 语言。
+ */
+export function shareDocTitle(state: ShareShellState, lang: Lang, items: readonly Pick<ShareItem, "status">[] = []): string {
+  if (state === "ready") return shareSsrTitle(items, lang);
+  return dicts[lang][state === "revoked" ? "share.docTitle.revoked" : "share.docTitle.notFound"];
+}
+
 export function interpolate(template: string, vars?: Record<string, string | number>): string {
   if (!vars) return template;
   return template.replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m));
@@ -989,13 +1189,24 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(LANG_KEY, lang);
     } catch { /* ignore */ }
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    applyLangMeta(document, lang);
+    try {
+      // URL 上显式 ?lang= 与当前语言不一致时同步之，否则刷新会以 URL 为准覆盖切换结果
+      const url = new URL(window.location.href);
+      const q = url.searchParams.get("lang");
+      if ((q === "en" || q === "zh") && q !== lang) {
+        url.searchParams.set("lang", lang);
+        window.history.replaceState(window.history.state, "", url);
+      }
+    } catch { /* ignore */ }
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
-    else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
-    else if (path === "/advanced") document.title = `${dicts[lang]["adv.title"]} | DomainHunter`;
+    else if (path === "/why") document.title = `${WHY_META[lang].title} | DomainHunter`;
+    else if (path === "/advanced") document.title = `${ADVANCED_META[lang].title} | DomainHunter`;
     else if (path === "/monitors") document.title = `${dicts[lang]["monitors.title"]} | DomainHunter`;
-    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = dicts[lang]["meta.title"];
+    else if (HOME_TITLE_PATHS.has(path)) document.title = dicts[lang]["meta.title"];
+    // 其余顶层路径 = 未知路由（worker 已回 404 壳）：切语言后 title 也保持「页面不存在」，不回落成首页 title
+    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = `${dicts[lang]["nf.title"]} | DomainHunter`;
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);

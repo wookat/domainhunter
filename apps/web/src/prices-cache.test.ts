@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PricesKv } from "./prices-fetch";
 import {
   loadPricesPayload,
+  peekPricesPayload,
   PRICES_RETRY_COOLDOWN_MS,
   PRICES_STALE_KEY,
   refreshPricesIfStale,
@@ -165,5 +166,30 @@ describe("refreshPricesIfStale", () => {
     await loadPricesPayload(kv, c);
     await refreshPricesIfStale(kv, c);
     expect(okFetch).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("peekPricesPayload（SSR 只读快照）", () => {
+  it("返回 /api/prices 写入的同一份版本 key 缓存（字节一致）", async () => {
+    const kv = memKv();
+    const okFetch = vi.fn(async () => upstreamOk());
+    const c = cfg({ fetchDeps: { fetchFn: okFetch, backoff: noBackoff }, now: () => 10_000 });
+    const api = await loadPricesPayload(kv, c);
+    expect(await peekPricesPayload(kv, c)).toBe(api);
+  });
+
+  it("版本 key 缺失时回退 stale 兜底并标 stale:true，全空返回 null；全程不请求上游也不写 KV", async () => {
+    const fetchFn = vi.fn(async () => upstreamOk());
+    const c = cfg({ fetchDeps: { fetchFn, backoff: noBackoff } });
+    const empty = memKv();
+    expect(await peekPricesPayload(empty, c)).toBeNull();
+    expect(await peekPricesPayload(undefined, c)).toBeNull();
+    const kv = memKv();
+    seedOldSnapshot(kv, 1000);
+    kv.store.delete(`prices:v2:${OLD_TLDS.length}`);
+    const peeked = await peekPricesPayload(kv, c);
+    expect(JSON.parse(peeked!)).toMatchObject({ stale: true, fetchedAt: 1000 });
+    expect(kv.store.has(c.key)).toBe(false);
+    expect(fetchFn).not.toHaveBeenCalled();
   });
 });

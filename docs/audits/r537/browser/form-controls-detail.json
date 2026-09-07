@@ -1,0 +1,99 @@
+{
+ "/advanced?lang=en": [
+  {
+   "tag": "input",
+   "type": "text",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "tizhi, gwy",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Roots / Prefixes / Suffixes"
+  },
+  {
+   "tag": "input",
+   "type": "text",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "get, my",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Roots / Prefixes / Suffixes"
+  },
+  {
+   "tag": "input",
+   "type": "text",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "job, jobs",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Roots / Prefixes / Suffixes"
+  },
+  {
+   "tag": "input",
+   "type": "text",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "com, cn",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Roots / Prefixes / Suffixes"
+  },
+  {
+   "tag": "textarea",
+   "type": "textarea",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "mybrand\ncoolname.io\nfoo, bar",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Advanced mode /  / Batch-generate roots × affixes × TLDs and verify availability one by one"
+  }
+ ],
+ "/shortlist?lang=en": [
+  {
+   "tag": "input",
+   "type": "text",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "Enter 8-character sync code",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "Sync across devices (no account needed) /  / Import"
+  }
+ ],
+ "/?lang=en": [
+  {
+   "tag": "textarea",
+   "type": "textarea",
+   "id": "",
+   "name": "",
+   "aria": null,
+   "labelledby": null,
+   "title": "",
+   "placeholder": "e.g. A cross-border e-commerce brand selling Chine",
+   "wrappedInLabel": false,
+   "parentTag": "div",
+   "context": "For Chinese founders · Live RDAP + WHOIS checks / Name it in Chinese or English, hunt .cn / .com domains you can actuall"
+  }
+ ]
+}

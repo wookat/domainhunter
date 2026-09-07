@@ -1,30 +1,42 @@
-import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-react";
+import { AlertTriangle, ExternalLink, FileText, HelpCircle, Landmark, Lightbulb, Quote, SearchCheck, Sparkles } from "lucide-react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { relatedGuideSlugs } from "@/content/guide-groups";
-import { buildGuideFaq } from "@/content/guide-faq";
+import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "@/content/guide-faq";
+import { VIEW_ALL_LABEL, guideGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
+import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceShort, usePrices } from "@/lib/prices";
+import { pickPrices, priceShort, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
 import { cn } from "@/lib/utils";
 
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
-  const prices = usePrices();
+  const fetched = usePrices();
   const content = readInjectedContent("guide", slug);
   const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
   if (!content || !guide) return <NotFoundPage />;
 
+  const prices = pickPrices(content.prices, fetched);
   const loc = guide[lang];
+  const compliance = guide.kind === "compliance";
   const faq = buildGuideFaq(guide, lang);
   const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((s) => s.split("-vs-").includes(rec.tld))))].slice(0, 4);
-  const relatedIndustry = relatedGuideSlugs(slug).map((s) => GUIDE_LABELS.find((g) => g.slug === s)).filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
+  const toLabel = (s: string) => GUIDE_LABELS.find((g) => g.slug === s);
+  const isLabel = (g: (typeof GUIDE_LABELS)[number] | undefined): g is (typeof GUIDE_LABELS)[number] => g !== undefined;
+  const relatedIndustry = relatedGuideSlugs(slug).map(toLabel).filter(isLabel);
+  const others = guideGroupChips(slug);
+  const otherGuides = others.chips.map(toLabel).filter(isLabel);
+  const cta = loc.cta ?? { title: t("guide.ctaTitle"), desc: t("guide.ctaDesc"), button: t("guide.ctaButton") };
+  const ctaHref = compliance ? `/?mode=exact&lang=${lang}` : `/?tpl=${slug}`;
+  const CtaIcon = compliance ? SearchCheck : Sparkles;
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -33,36 +45,65 @@ export function GuidePage({ slug }: { slug: string }) {
 
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{loc.intro}</p>
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
-        <Lightbulb className="h-4 w-4 text-gold" />
-        {t("guide.ideas")}
-      </h2>
-      <ul className="mt-3 space-y-2">
-        {loc.namingIdeas.map((idea) => (
-          <li key={idea} className="flex gap-2 text-sm leading-relaxed text-txt1">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand" />
-            {idea}
-          </li>
-        ))}
-      </ul>
+      {compliance ? (
+        /* 合规/流程指南：分节正文（小标题 + 段落 + 要点） */
+        (loc.sections ?? []).map((sec) => (
+          <section key={sec.heading}>
+            <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+              <FileText className="h-4 w-4 shrink-0 text-brand" />
+              {sec.heading}
+            </h2>
+            {sec.paragraphs.map((p) => (
+              <p key={p} className="mt-3 text-sm leading-relaxed text-txt1">
+                {p}
+              </p>
+            ))}
+            {sec.bullets && (
+              <ul className="mt-3 space-y-2">
+                {sec.bullets.map((b) => (
+                  <li key={b} className="flex gap-2 text-sm leading-relaxed text-txt1">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+      ) : (
+        <>
+          <h2 id={GUIDE_IDEAS_ANCHOR} className="mt-8 flex items-center gap-2 text-base font-bold scroll-mt-20">
+            <Lightbulb className="h-4 w-4 text-gold" />
+            {t("guide.ideas")}
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {loc.namingIdeas.map((idea) => (
+              <li key={idea} className="flex gap-2 text-sm leading-relaxed text-txt1">
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand" />
+                {idea}
+              </li>
+            ))}
+          </ul>
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
-        <Quote className="h-4 w-4 text-brand" />
-        {t("guide.cases")}
-      </h2>
-      <div className="mt-3 space-y-2.5">
-        {loc.cases.map((c) => (
-          <div key={c.name} className="rounded-lg border border-line bg-bg1 px-3.5 py-2.5">
-            <p className="font-mono text-sm font-semibold text-txt0">{c.name}</p>
-            <p className="mt-1 text-sm leading-relaxed text-txt1">{c.takeaway}</p>
+          <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+            <Quote className="h-4 w-4 text-brand" />
+            {t("guide.cases")}
+          </h2>
+          <div className="mt-3 space-y-2.5">
+            {loc.cases.map((c) => (
+              <div key={c.name} className="rounded-lg border border-line bg-bg1 px-3.5 py-2.5">
+                <p className="font-mono text-sm font-semibold text-txt0">{c.name}</p>
+                <p className="mt-1 text-sm leading-relaxed text-txt1">{c.takeaway}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
 
-      {/* 推荐 TLD：链接到对应 /tld/ 指南页 */}
+      {/* 推荐/相关 TLD：链接到对应 /tld/ 指南页 */}
       <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
         <Sparkles className="h-4 w-4 text-brand" />
-        {t("guide.tlds")}
+        {t(compliance ? "guide.relatedTlds" : "guide.tlds")}
       </h2>
       <div className="mt-3 grid gap-2 sm:grid-cols-3">
         {guide.tlds.map((rec) => (
@@ -98,9 +139,9 @@ export function GuidePage({ slug }: { slug: string }) {
         </div>
       )}
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+      <h2 id={compliance ? undefined : GUIDE_PITFALLS_ANCHOR} className={cn("mt-8 flex items-center gap-2 text-base font-bold", !compliance && "scroll-mt-20")}>
         <AlertTriangle className="h-4 w-4 text-destructive" />
-        {t("guide.pitfalls")}
+        {t(compliance ? "guide.notes" : "guide.pitfalls")}
       </h2>
       <ul className="mt-3 space-y-2">
         {loc.pitfalls.map((p) => (
@@ -119,50 +160,80 @@ export function GuidePage({ slug }: { slug: string }) {
       <div className="mt-3 space-y-2">
         {faq.map((item) => (
           <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
-            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+            <summary className="tap-target flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>
 
-      {/* CTA：预填该行业模板的猎名入口 */}
+      {/* 官方依据：合规指南的一手文档外链 */}
+      {loc.sources && loc.sources.length > 0 && (
+        <>
+          <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+            <Landmark className="h-4 w-4 text-brand" />
+            {t("guide.sources")}
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {loc.sources.map((s) => (
+              <li key={s.url}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] items-center gap-1.5 text-sm leading-relaxed text-txt1 underline decoration-line underline-offset-4 transition-colors hover:text-brand hover:decoration-brand"
+                >
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0 text-txt2" />
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {/* CTA：行业指南预填模板猎名；合规指南直达精确核验（零 AI） */}
       <div className="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center">
-        <h2 className="text-lg font-bold">{t("guide.ctaTitle")}</h2>
-        <p className="mx-auto mt-1.5 max-w-md text-sm text-txt1">{t("guide.ctaDesc")}</p>
+        <h2 className="text-lg font-bold">{cta.title}</h2>
+        <p className="mx-auto mt-1.5 max-w-md text-sm text-txt1">{cta.desc}</p>
         <a
-          href={`/?tpl=${slug}`}
+          href={ctaHref}
           className="mt-4 inline-flex h-11 items-center gap-1.5 rounded-xl bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
         >
-          <Sparkles className="h-4 w-4" />
-          {t("guide.ctaButton")}
+          <CtaIcon className="h-4 w-4" />
+          {cta.button}
         </a>
       </div>
 
-      {/* 其他行业指南互链 */}
+      {/* 其他行业指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts） */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("guide.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {content.guideLinks.map((other) => (
+          {otherGuides.map((other) => (
             <a
               key={other.slug}
               href={`/guide/${other.slug}?lang=${lang}`}
-              className={cn(
-                "flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors",
-                other.slug === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
-              )}
+              className="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors border-line text-txt1 hover:border-brand-line hover:text-brand"
             >
               {other[lang]}
             </a>
           ))}
+          <a
+            href={viewAllHref("guide", others.anchor, lang)}
+            className="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim"
+          >
+            {VIEW_ALL_LABEL.guide[lang]}
+          </a>
         </div>
       </div>
 
-      {/* 同组相关行业指南互链 */}
+      {/* 同组相关指南互链 */}
       {relatedIndustry.length > 0 && (
         <div className="mt-6">
-          <h2 className="text-sm font-semibold text-txt1">{t("guide.related")}</h2>
+          <h2 className="text-sm font-semibold text-txt1">{t(compliance ? "guide.relatedCompliance" : "guide.related")}</h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {relatedIndustry.map((g) => (
               <a
@@ -176,6 +247,7 @@ export function GuidePage({ slug }: { slug: string }) {
           </div>
         </div>
       )}
+      <SiteLinks />
     </main>
   );
 }

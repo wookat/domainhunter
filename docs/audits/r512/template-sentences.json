@@ -1,0 +1,404 @@
+{
+  "tld.zh": [
+    {
+      "sentence": "Ⓣ 域名注册指南：适合谁、多少钱、怎么起名",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "静态参考价：首年 Ⓝ · 续费 Ⓝ /年 · 非实时报价",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "适合什么",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "命名建议",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "常见问题",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "Ⓣ 域名适合谁？",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "如何注册 Ⓣ 域名？",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "可注册的名字直接跳转注册商，页面同时展示首年价与续费价，避免「首年便宜续费贵」的坑。",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "Ⓣ 域名怎么起名？",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "马上猎一个 Ⓣ 好域名",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "其他 TLD 指南",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "相关 TLD",
+      "pages": 408,
+      "share": 1
+    },
+    {
+      "sentence": "描述你的想法，AI 批量构思并实时核验 Ⓣ 下的可注册好名字。",
+      "pages": 407,
+      "share": 0.998
+    },
+    {
+      "sentence": "在 DomainHunter 描述你的想法，AI 批量构思并通过 RDAP/DNS/WHOIS 实时核验 Ⓣ 可注册状态；",
+      "pages": 403,
+      "share": 0.988
+    },
+    {
+      "sentence": "相关后缀对比",
+      "pages": 400,
+      "share": 0.98
+    },
+    {
+      "sentence": "相关行业命名指南",
+      "pages": 198,
+      "share": 0.485
+    }
+  ],
+  "tld.en": [
+    {
+      "sentence": "How do I pick a good Ⓣ name?",
+      "pages": 406,
+      "share": 0.995
+    },
+    {
+      "sentence": "Related TLDs",
+      "pages": 406,
+      "share": 0.995
+    },
+    {
+      "sentence": "Static reference: ≈ Ⓝ ( Ⓝ ) Ⓝ st yr · Ⓝ /yr renewal · not a live quote",
+      "pages": 405,
+      "share": 0.993
+    },
+    {
+      "sentence": "Best for",
+      "pages": 405,
+      "share": 0.993
+    },
+    {
+      "sentence": "Naming tips",
+      "pages": 404,
+      "share": 0.99
+    },
+    {
+      "sentence": "Who is a Ⓣ domain for?",
+      "pages": 404,
+      "share": 0.99
+    },
+    {
+      "sentence": "More TLD guides",
+      "pages": 404,
+      "share": 0.99
+    },
+    {
+      "sentence": "How do I register a Ⓣ domain?",
+      "pages": 403,
+      "share": 0.988
+    },
+    {
+      "sentence": "Hunt a great Ⓣ domain right now",
+      "pages": 401,
+      "share": 0.983
+    },
+    {
+      "sentence": "Ⓣ Domain Guide: Who It's For, Pricing & Naming Tips",
+      "pages": 398,
+      "share": 0.975
+    },
+    {
+      "sentence": "Describe your idea — AI brainstorms names in bulk and checks Ⓣ availability live.",
+      "pages": 393,
+      "share": 0.963
+    },
+    {
+      "sentence": "Related TLD comparisons",
+      "pages": 393,
+      "share": 0.963
+    },
+    {
+      "sentence": "Describe your idea on DomainHunter — the AI brainstorms names and verifies Ⓣ availability live via RDAP/DNS/WHOIS.",
+      "pages": 389,
+      "share": 0.953
+    },
+    {
+      "sentence": "Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.",
+      "pages": 384,
+      "share": 0.941
+    },
+    {
+      "sentence": "Related industry naming guides",
+      "pages": 197,
+      "share": 0.483
+    }
+  ],
+  "guide.zh": [
+    {
+      "sentence": "相关后缀对比",
+      "pages": 410,
+      "share": 1
+    },
+    {
+      "sentence": "常见问题",
+      "pages": 410,
+      "share": 1
+    },
+    {
+      "sentence": "其他行业命名指南",
+      "pages": 410,
+      "share": 1
+    },
+    {
+      "sentence": "命名思路",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "好名字拆解",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "推荐 TLD",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "常见误区",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "推荐后缀： Ⓣ 、 Ⓣ 、 Ⓣ 。",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "相关行业指南",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "用 AI 按这个行业猎名",
+      "pages": 401,
+      "share": 0.978
+    },
+    {
+      "sentence": "一键填入该行业模板，AI 批量构思并实时核验可注册的好域名。",
+      "pages": 401,
+      "share": 0.978
+    },
+    {
+      "sentence": "Ⓥ 品牌怎么起名？",
+      "pages": 394,
+      "share": 0.961
+    },
+    {
+      "sentence": "Ⓥ 适合用什么域名后缀？",
+      "pages": 394,
+      "share": 0.961
+    },
+    {
+      "sentence": "Ⓥ 起名有哪些常见误区？",
+      "pages": 394,
+      "share": 0.961
+    },
+    {
+      "sentence": "Ⓥ 怎么起名：命名思路、好名字拆解与域名选择",
+      "pages": 137,
+      "share": 0.334
+    }
+  ],
+  "guide.en": [
+    {
+      "sentence": "Related TLD comparisons",
+      "pages": 410,
+      "share": 1
+    },
+    {
+      "sentence": "More industry naming guides",
+      "pages": 410,
+      "share": 1
+    },
+    {
+      "sentence": "Naming strategies",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "Great names, deconstructed",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "Recommended TLDs",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "Common mistakes",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "Related industry guides",
+      "pages": 404,
+      "share": 0.985
+    },
+    {
+      "sentence": "Hunt names for this industry with AI",
+      "pages": 401,
+      "share": 0.978
+    },
+    {
+      "sentence": "Prefill the industry template — AI brainstorms in bulk and verifies availability live.",
+      "pages": 401,
+      "share": 0.978
+    },
+    {
+      "sentence": "How do I choose a brand name for Ⓥ Ⓥ ?",
+      "pages": 234,
+      "share": 0.571
+    },
+    {
+      "sentence": "What naming mistakes should I avoid for Ⓥ Ⓥ ?",
+      "pages": 234,
+      "share": 0.571
+    },
+    {
+      "sentence": "Which domain extension is best for Ⓥ Ⓥ ?",
+      "pages": 232,
+      "share": 0.566
+    }
+  ],
+  "vs.zh": [
+    {
+      "sentence": "静态参考价：首年 Ⓝ · 续费 Ⓝ /年 · 非实时报价",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "适合选 Ⓣ 的情况",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "常见问题",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "Ⓣ 和 Ⓣ 怎么选？",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "什么时候选 Ⓣ ？",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "其他后缀对比",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "相关对比",
+      "pages": 443,
+      "share": 0.998
+    },
+    {
+      "sentence": "让 AI 同时在 Ⓣ 和 Ⓣ 下猎名",
+      "pages": 439,
+      "share": 0.989
+    },
+    {
+      "sentence": "描述你的想法，AI 批量构思并实时核验两个后缀下的可注册好名字，直接对比。",
+      "pages": 439,
+      "share": 0.989
+    },
+    {
+      "sentence": "相关行业命名指南",
+      "pages": 362,
+      "share": 0.815
+    }
+  ],
+  "vs.en": [
+    {
+      "sentence": "Pick Ⓣ when",
+      "pages": 444,
+      "share": 1
+    },
+    {
+      "sentence": "Which to pick",
+      "pages": 443,
+      "share": 0.998
+    },
+    {
+      "sentence": "Ⓣ vs Ⓣ : which should I choose?",
+      "pages": 438,
+      "share": 0.986
+    },
+    {
+      "sentence": "Static reference: ≈ Ⓝ ( Ⓝ ) Ⓝ st yr · Ⓝ /yr renewal · not a live quote",
+      "pages": 437,
+      "share": 0.984
+    },
+    {
+      "sentence": "When should I pick a Ⓣ domain?",
+      "pages": 434,
+      "share": 0.977
+    },
+    {
+      "sentence": "Hunt names on Ⓣ and Ⓣ at once",
+      "pages": 429,
+      "share": 0.966
+    },
+    {
+      "sentence": "Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.",
+      "pages": 402,
+      "share": 0.905
+    },
+    {
+      "sentence": "More TLD comparisons",
+      "pages": 393,
+      "share": 0.885
+    },
+    {
+      "sentence": "Related comparisons",
+      "pages": 391,
+      "share": 0.881
+    },
+    {
+      "sentence": "Related industry naming guides",
+      "pages": 356,
+      "share": 0.802
+    }
+  ]
+}

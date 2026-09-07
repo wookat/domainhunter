@@ -1,0 +1,352 @@
+{
+ "tld_de_price_counts": {
+  "innerText_290": 2,
+  "textContent_290": 3,
+  "innerText_407": 3,
+  "textContent_407": 4,
+  "details_open": [
+   false,
+   false,
+   false
+  ]
+ },
+ "overflow_vs_clinic-vs-care_zh": {
+  "innerWidth": 489,
+  "scrollWidth": 489,
+  "clientWidth": 375,
+  "bodyScrollWidth": 489,
+  "table": {
+   "w": 395,
+   "right": 412,
+   "cls": "w-full min-w-[320px] text-sm",
+   "parentCls": "mt-3 overflow-x-auto rounded-xl border border-line bg-bg1",
+   "parentW": 343,
+   "parentOverflowX": "auto",
+   "caption": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算）"
+  },
+  "cells": [
+   {
+    "tag": "TH",
+    "w": 158,
+    "text": "后缀",
+    "cls": "px-4 py-2 text-left font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 82,
+    "text": "续费/年",
+    "cls": "px-3 py-2 text-right font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 82,
+    "text": "5 年持有成本",
+    "cls": "px-3 py-2 text-right font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 158,
+    "text": ".clinic",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$52.01\n¥374",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$218.85\n¥1576",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TH",
+    "w": 158,
+    "text": ".care",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$35.53\n¥256",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$153.96\n¥1109",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TH",
+    "w": 158,
+    "text": "差额（.clinic − .care）",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left text-xs font-semibold text-txt1"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "+$16.48\n+¥118",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "+$64.89\n+¥467",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   }
+  ]
+ },
+ "overflow_vs_clinic-vs-care_en": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "table": {
+   "w": 420,
+   "right": 437,
+   "cls": "w-full min-w-[320px] text-sm",
+   "parentCls": "mt-3 overflow-x-auto rounded-xl border border-line bg-bg1",
+   "parentW": 343,
+   "parentOverflowX": "auto",
+   "caption": ".clinic vs .care: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)"
+  },
+  "cells": [
+   {
+    "tag": "TH",
+    "w": 182,
+    "text": "TLD",
+    "cls": "px-4 py-2 text-left font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 82,
+    "text": "Renew / yr",
+    "cls": "px-3 py-2 text-right font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 82,
+    "text": "5-yr total cost",
+    "cls": "px-3 py-2 text-right font-medium"
+   },
+   {
+    "tag": "TH",
+    "w": 182,
+    "text": ".clinic",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$52.01\n¥374",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$218.85\n¥1576",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TH",
+    "w": 182,
+    "text": ".care",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$35.53\n¥256",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "$153.96\n¥1109",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TH",
+    "w": 182,
+    "text": "Difference (.clinic − .care)",
+    "cls": "whitespace-nowrap px-4 py-2.5 text-left text-xs font-semibold text-txt1"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "+$16.48\n+¥118",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   },
+   {
+    "tag": "TD",
+    "w": 82,
+    "text": "+$64.89\n+¥467",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right"
+   }
+  ]
+ },
+ "sample_prices_related_vs_40px": [
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 95,
+   "text": ".com vs .cn",
+   "href": "/vs/com-vs-cn?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 95,
+   "text": ".com vs .io",
+   "href": "/vs/com-vs-io?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 102,
+   "text": ".com vs .net",
+   "href": "/vs/com-vs-net?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 88,
+   "text": ".io vs .ai",
+   "href": "/vs/io-vs-ai?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 102,
+   "text": ".app vs .dev",
+   "href": "/vs/app-vs-dev?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 40,
+   "w": 88,
+   "text": ".co vs .me",
+   "href": "/vs/co-vs-me?lang=en",
+   "cls": "inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+  }
+ ],
+ "sample_vs_hub_chips_36px": [
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 91,
+   "text": ".abogado\n1",
+   "href": "#hub-g-abogado",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 93,
+   "text": ".academy\n2",
+   "href": "#hub-g-academy",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 111,
+   "text": ".accountants\n1",
+   "href": "#hub-g-accountants",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 71,
+   "text": ".actor\n1",
+   "href": "#hub-g-actor",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 83,
+   "text": ".agency\n1",
+   "href": "#hub-g-agency",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 51,
+   "text": ".ai\n3",
+   "href": "#hub-g-ai",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  }
+ ],
+ "sample_tld_hub_chips_36px": [
+  {
+   "tag": "A",
+   "h": 24,
+   "w": 104,
+   "text": "price overview",
+   "href": "/prices?lang=en",
+   "cls": "tap-target inline-block text-brand hover:underline"
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 169,
+   "text": "General & mainstream\n22",
+   "href": "#hub-g-general",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 149,
+   "text": "Tech & developers\n24",
+   "href": "#hub-g-tech",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 144,
+   "text": "Creative & design\n28",
+   "href": "#hub-g-creative",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 138,
+   "text": "Content & media\n28",
+   "href": "#hub-g-media",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  },
+  {
+   "tag": "A",
+   "h": 36,
+   "w": 170,
+   "text": "Business & commerce\n63",
+   "href": "#hub-g-commerce",
+   "cls": "flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 "
+  }
+ ],
+ "sample_shortlist_empty_cta_40px": [
+  {
+   "tag": "BUTTON",
+   "h": 40,
+   "w": 150,
+   "text": "Start hunting",
+   "href": null,
+   "cls": "mt-5 inline-flex h-10 items-center gap-1.5 rounded-lg bg-brand px-5 text-sm font-semibold text-brand-ink transition-opac"
+  }
+ ],
+ "ai_calls": []
+}

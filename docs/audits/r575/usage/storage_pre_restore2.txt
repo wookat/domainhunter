@@ -1,0 +1,7 @@
+identical to backup: False
+{
+ "domainhunter:lang": "zh",
+ "domainhunter:shortlist": "[]",
+ "domainhunter:theme": "light"
+}
+session: {}

@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, BadgeCheck, BellRing, CalendarClock, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, RotateCw, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
+import { ArrowRight, BadgeCheck, BellRing, CalendarClock, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ExpiryNote, WatchCta } from "@/components/domain-row";
+import { ExpiryNote, RecheckButton, WatchCta } from "@/components/domain-row";
 import { RegistrarAnchor } from "@/components/registrar-link";
+import { isRetryableUnknown, recheckDomains, recheckFailureDetail, unknownReason, unknownReasonKey } from "@/lib/check-client";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
+import { isExactQueryLanding, landingSearchMode } from "@/lib/q-landing";
 import { useI18n, type I18nKey } from "@/lib/i18n";
+import { useCopyAvailable } from "@/lib/results-export";
 import { hasSavedSearch, isAiQuotaDown } from "@/lib/persist";
 import { toUsd, usePrices } from "@/lib/prices";
 import { primaryRegistrar } from "@/lib/registrars";
@@ -74,6 +77,12 @@ function parseQuickCheck(input: string): { label: string; tld?: string } | { uns
   return null;
 }
 
+/** 输入是否可直接走精确核验（现成名字 ≥ 3 字符或带已支持后缀的域名）；/?q= 落地选模式与自动核验共用同一判据 */
+export function looksExactQuery(input: string): boolean {
+  const p = parseQuickCheck(input);
+  return p !== null && "label" in p && p.label.length >= 3;
+}
+
 // 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口。
 // 标签清单（TEMPLATE_LABELS）进主 bundle；模板全文按需动态加载（home-template-texts.ts），空闲时预取保证点击零等待
 let templateTextsPromise: Promise<Record<string, { zh: string; en: string }>> | null = null;
@@ -95,9 +104,9 @@ function descriptionFromQuery(): string {
   return new URLSearchParams(window.location.search).get("q")?.trim().slice(0, MAX_LEN) ?? "";
 }
 
-/** /?mode=exact 预选精确核验模式（AI 不可用时的降级入口） */
+/** /?mode=exact 显式预选精确核验；/?q= 本身像现成名字/域名时也落到精确核验（结果页【复制搜索链接】、/tld /guide【去核验】入口） */
 function modeFromQuery(): "ai" | "exact" {
-  return new URLSearchParams(window.location.search).get("mode") === "exact" ? "exact" : "ai";
+  return landingSearchMode(window.location.search, looksExactQuery);
 }
 
 /** /?style= 与 /?len= 预填风格/长度偏好（分享搜索链接入口）；对不上选项忽略 */
@@ -175,9 +184,9 @@ function ChipPrice({ domain }: { domain: string }) {
   const trap = p !== undefined && renew !== undefined && renew >= p.registration * 3;
   const tip = renew !== undefined ? t("quick.renewTip").replace("{price}", `${p ? "" : "≈"}$${renew}`) : undefined;
   return (
-    <i title={tip} className="not-italic font-sans text-[10px] opacity-75">
+    <i title={tip} className="not-italic font-sans text-[10px]">
       {text}
-      {trap && <span className="text-amber-500">↑</span>}
+      {trap && <span className="text-amber2">↑</span>}
     </i>
   );
 }
@@ -269,9 +278,17 @@ export function HomePage({
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   // quick-check 图例过滤（IDS 式）：按状态筛 chips
   const [quickFilter, setQuickFilter] = useState<"all" | "available" | "taken" | "unknown">("all");
-  const [quickCopied, setQuickCopied] = useState(false);
-  const [variantCopied, setVariantCopied] = useState(false);
+  const { copied: quickCopied, failed: quickCopyFailed, copy: copyQuick } = useCopyAvailable();
+  const { copied: variantCopied, failed: variantCopyFailed, copy: copyVariant } = useCopyAvailable();
   const quickAbortRef = useRef<AbortController | null>(null);
+  // 基础核验去重：记录本轮输入已发出（进行中或已成功完成）的「label + 后缀集合」身份；800ms 自动核验与 Enter/按钮显式核验共用，
+  // 身份相同不重发；输入变化清空，后缀集合变化则身份不同自然重发。「查更多」与单域重试不走此判断
+  const quickIssuedKeyRef = useRef<string | null>(null);
+  const quickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // /?q=<现成名字> 落地：省去 800ms 停顿立即核验，首批 chip 出现时把结果区滚入视口（仅一次）
+  const exactLandingRef = useRef(isExactQueryLanding(window.location.search, looksExactQuery));
+  const quickPanelRef = useRef<HTMLDivElement>(null);
+  const [recheckingQuick, setRecheckingQuick] = useState<Set<string>>(() => new Set());
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
   const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
@@ -292,11 +309,29 @@ export function HomePage({
     setVariantChecked(0);
     setVariantTotal(0);
     setVariantRunning(false);
+    quickIssuedKeyRef.current = null;
     if (!quick || quick.label.length < 3) return;
-    const id = setTimeout(() => void runQuickCheck(), 800);
-    return () => clearTimeout(id);
+    const id = setTimeout(
+      () => {
+        quickTimerRef.current = null;
+        void runQuickCheck();
+      },
+      exactLandingRef.current ? 0 : 800,
+    );
+    quickTimerRef.current = id;
+    return () => {
+      clearTimeout(id);
+      if (quickTimerRef.current === id) quickTimerRef.current = null;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [description]);
+
+  useEffect(() => {
+    if (!exactLandingRef.current || quickRows.length === 0) return;
+    exactLandingRef.current = false;
+    const el = quickPanelRef.current;
+    if (el && typeof el.scrollIntoView === "function") el.scrollIntoView({ block: "start", behavior: "smooth" });
+  }, [quickRows.length]);
 
   async function runQuickCheck(more = false) {
     if (!quick) return;
@@ -304,6 +339,16 @@ export function HomePage({
     // 与「查更多后缀 +{n}」按钮计数同口径：排除已有 chip 的后缀
     const checkTlds = more ? QUICK_MORE_TLDS.filter((t) => !quickRows.some((r) => r.domain === `${quick.label}.${t}`)) : baseTlds;
     if (checkTlds.length === 0) return;
+    const issueKey = more ? null : `${quick.label}|${[...baseTlds].sort().join(",")}`;
+    if (issueKey) {
+      // 显式核验落在 800ms 窗口内：取消挂起的自动核验，本次即为唯一一次请求
+      if (quickTimerRef.current) {
+        clearTimeout(quickTimerRef.current);
+        quickTimerRef.current = null;
+      }
+      if (quickIssuedKeyRef.current === issueKey) return;
+      quickIssuedKeyRef.current = issueKey;
+    }
     quickAbortRef.current?.abort();
     const ac = new AbortController();
     quickAbortRef.current = ac;
@@ -331,7 +376,10 @@ export function HomePage({
         body: JSON.stringify({ roots: [quick.label], tlds: checkTlds }),
         signal: ac.signal,
       });
-      if (!res.ok || !res.body) return;
+      if (!res.ok || !res.body) {
+        if (issueKey && quickIssuedKeyRef.current === issueKey) quickIssuedKeyRef.current = null;
+        return;
+      }
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -354,7 +402,8 @@ export function HomePage({
         }
       }
     } catch {
-      /* 中断/网络错误：保留已有结果 */
+      // 中断/网络错误：保留已有结果；网络错误（非主动中断）放开去重，允许再次显式核验
+      if (!ac.signal.aborted && issueKey && quickIssuedKeyRef.current === issueKey) quickIssuedKeyRef.current = null;
     } finally {
       if (!ac.signal.aborted) {
         setQuickRunning(false);
@@ -364,31 +413,25 @@ export function HomePage({
     }
   }
 
-  // 单域重试：只重查一个 unknown 域名，复用 /api/search 的显式域名清单通道，不影响其余 chips
+  // 单域重新核验：unknown / taken chip 走 POST /api/check?refresh=1 穿透缓存重查，不影响其余 chips；失败保留原状态与原因
   async function retryQuickDomain(domain: string) {
-    setQuickRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: "checking", detail: undefined } : row)));
-    let next: { status: "available" | "taken" | "unknown"; expiresAt?: string; detail?: string } = { status: "unknown" };
+    if (recheckingQuick.has(domain)) return;
+    setRecheckingQuick((prev) => new Set(prev).add(domain));
     try {
-      const res = await fetch("/api/search", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ domains: [domain] }),
+      await recheckDomains([domain], (r) => {
+        if (r.domain !== domain) return;
+        setQuickRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: r.status, expiresAt: r.expiresAt, detail: r.detail } : row)));
       });
-      if (res.ok) {
-        for (const line of (await res.text()).split("\n")) {
-          if (!line) continue;
-          try {
-            const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; detail?: string; type?: string };
-            if (!r.type && r.domain === domain && r.status) next = { status: r.status, expiresAt: r.expiresAt, detail: r.detail };
-          } catch {
-            /* 单行损坏忽略 */
-          }
-        }
-      }
-    } catch {
-      /* 网络错误：回落未知 */
+    } catch (err) {
+      // 本站限频 429 写入可读原因；其它失败保留原 chip 状态与原因
+      setQuickRows((prev) => prev.map((row) => (row.domain === domain && row.status === "unknown" ? { ...row, detail: recheckFailureDetail(err, row.detail) } : row)));
+    } finally {
+      setRecheckingQuick((prev) => {
+        const next = new Set(prev);
+        next.delete(domain);
+        return next;
+      });
     }
-    setQuickRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, ...next } : row)));
   }
 
   async function runVariantCheck() {
@@ -580,8 +623,11 @@ export function HomePage({
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
           <textarea
+            id="home-description"
+            name="description"
             rows={3}
             className="w-full resize-none bg-transparent px-5 pb-2 pt-4 text-[15px] leading-relaxed outline-none"
+            aria-label={t(searchMode === "exact" ? "home.descriptionAriaExact" : "home.descriptionAria")}
             placeholder={t(searchMode === "exact" ? "home.placeholderExact" : "home.placeholder")}
             value={description}
             maxLength={MAX_LEN}
@@ -604,7 +650,7 @@ export function HomePage({
                     onClick={() => toggleTld(t)}
                     aria-pressed={active}
                     className={cn(
-                      "flex min-h-[44px] shrink-0 items-center rounded-md px-2.5 font-mono text-xs sm:min-h-0 sm:px-2 sm:py-1",
+                      "flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md px-2.5 font-mono text-xs sm:min-h-0 sm:min-w-0 sm:px-2 sm:py-1",
                       active ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
                     )}
                   >
@@ -692,7 +738,7 @@ export function HomePage({
 
         {/* 输入像现成名字/域名：提供免 AI 额度的直接核验 */}
         {quick && (
-          <div className="mt-3 rounded-xl border border-line bg-bg1 px-4 py-3">
+          <div ref={quickPanelRef} data-quick-check className="mt-3 scroll-mt-4 rounded-xl border border-line bg-bg1 px-4 py-3">
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs text-txt1">{t("home.quickCheckHint")}</span>
               <button
@@ -758,37 +804,43 @@ export function HomePage({
                         onClick={() => shortlist.toggle(domainToRow(row.domain))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
-                        className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
+                        className="inline-flex min-w-[44px] items-center justify-center border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:min-w-0 sm:px-2"
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
                     </span>
                   ) : row.status === "taken" ? (
                     <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
-                      <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                      <span className="inline-flex min-h-[44px] min-w-0 flex-wrap items-center gap-x-1.5 px-2.5 py-1.5 sm:min-h-0">
                         <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
-                        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
+                        {row.expiresAt ? (
+                          <ExpiryNote iso={row.expiresAt} className="font-sans" />
+                        ) : (
+                          <i title={t("expiry.unknownChipTip")} className="not-italic font-sans text-[10px] text-txt2" data-expiry="unknown">
+                            {t("expiry.unknownChip")}
+                          </i>
+                        )}
                       </span>
                       <button
                         onClick={() => shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
-                        className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                        className={cn("inline-flex min-w-[44px] items-center justify-center border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
-                      {row.expiresAt && (
-                        <WatchCta
-                          domain={row.domain}
-                          expiresAt={row.expiresAt}
-                          variant="chip"
-                          onAddShortlist={() => {
-                            if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt));
-                          }}
-                        />
-                      )}
+                      <WatchCta
+                        domain={row.domain}
+                        expiresAt={row.expiresAt}
+                        variant="chip"
+                        always
+                        onAddShortlist={() => {
+                          if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt));
+                        }}
+                      />
+                      <RecheckButton domain={row.domain} variant="chip" rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
                     </span>
                   ) : (
                     <span
@@ -800,20 +852,18 @@ export function HomePage({
                         row.status === "checking" && "border-line text-txt2",
                       )}
                     >
-                      <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                      <span className="inline-flex min-h-[44px] min-w-0 flex-wrap items-center gap-x-1.5 px-2.5 py-1.5 sm:min-h-0">
                         <span title={row.status === "checking" ? row.domain : undefined} className="min-w-0 truncate">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px]">{t(row.status === "unknown" && row.detail === "reserved" ? "status.reserved" : (`status.${row.status}` as I18nKey))}</i>
                         {row.status === "checking" && <Loader2 className="h-3 w-3 animate-spin" />}
+                        {row.status === "unknown" && (
+                          <i data-unknown-reason={unknownReason(row.detail)} className="not-italic font-sans text-[10px] text-txt2">
+                            {t(unknownReasonKey(row.detail))}
+                          </i>
+                        )}
                       </span>
-                      {row.status === "unknown" && row.detail !== "reserved" && (
-                        <button
-                          onClick={() => void retryQuickDomain(row.domain)}
-                          title={t("home.quickRetryTitle", { domain: row.domain })}
-                          aria-label={t("home.quickRetryTitle", { domain: row.domain })}
-                          className="flex min-w-[44px] items-center justify-center border-l border-line/70 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2"
-                        >
-                          <RotateCw className="h-3.5 w-3.5" />
-                        </button>
+                      {row.status === "unknown" && isRetryableUnknown(row.detail) && (
+                        <RecheckButton domain={row.domain} variant="chip" rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
                       )}
                     </span>
                   ),
@@ -829,19 +879,15 @@ export function HomePage({
                 )}
                 {!quickRunning && quickRows.filter((r) => r.status === "available").length >= 2 && (
                   <button
-                    onClick={() => {
-                      void navigator.clipboard.writeText(
-                        quickRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
-                      );
-                      setQuickCopied(true);
-                      setTimeout(() => setQuickCopied(false), 1500);
-                    }}
+                    onClick={() => void copyQuick(quickRows.filter((r) => r.status === "available"))}
                     className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
                   >
                     {quickCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
                     {quickCopied
                       ? t("home.quickCopied")
-                      : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
+                      : quickCopyFailed
+                        ? t("results.copyFailed")
+                        : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
                   </button>
                 )}
                 {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字（与 chips 同行，展开更多后缀后也可见） */}
@@ -895,7 +941,7 @@ export function HomePage({
                             onClick={() => shortlist.toggle(domainToRow(row.domain))}
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
-                            className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
+                            className="inline-flex min-w-[44px] items-center justify-center border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:min-w-0 sm:px-2"
                           >
                             <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                           </button>
@@ -903,19 +949,15 @@ export function HomePage({
                       ))}
                     {!variantRunning && variantRows.filter((r) => r.status === "available").length >= 2 && (
                       <button
-                        onClick={() => {
-                          void navigator.clipboard.writeText(
-                            variantRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
-                          );
-                          setVariantCopied(true);
-                          setTimeout(() => setVariantCopied(false), 1500);
-                        }}
+                        onClick={() => void copyVariant(variantRows.filter((r) => r.status === "available"))}
                         className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
                       >
                         {variantCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
                         {variantCopied
                           ? t("home.quickCopied")
-                          : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
+                          : variantCopyFailed
+                            ? t("results.copyFailed")
+                            : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
                       </button>
                     )}
                   </div>
@@ -936,7 +978,7 @@ export function HomePage({
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
-                            className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                            className={cn("inline-flex min-w-[44px] items-center justify-center border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
                           >
                             <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                           </button>
@@ -1060,7 +1102,7 @@ export function HomePage({
           <div className="mt-5 space-y-2">
             {([1, 2, 3, 4, 5, 6] as const).map((i) => (
               <details key={i} className="group rounded-xl border border-line bg-bg1 px-5 py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-txt1 [&::-webkit-details-marker]:hidden">
+                <summary className="tap-target flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-txt1 [&::-webkit-details-marker]:hidden">
                   {t(`home.faq.q${i}` as I18nKey)}
                   <ChevronDown className="h-4 w-4 shrink-0 text-txt2 transition-transform group-open:rotate-180" />
                 </summary>

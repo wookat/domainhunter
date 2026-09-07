@@ -1,12 +1,27 @@
 /**
  * 行业命名指南页内容（/guide/:slug）。纯数据常量：前端页面与 worker（SSR meta / sitemap）共用。
  * slug 与首页 TEMPLATES 的 tpl 值一一对应（CTA /?tpl=<slug> 预填行业模板）。
+ * kind = "compliance" 的条目（guides-cn-compliance.ts）为 .cn 合规/流程指南：正文走 sections，CTA 指向精确核验 /?mode=exact。
  */
+import { CN_COMPLIANCE_GUIDES } from "./guides-cn-compliance";
 
 /** 好名字案例：品牌名 + 拆解要点 */
 export interface GuideCase {
   name: string;
   takeaway: string;
+}
+
+/** 合规/流程指南分节正文：小标题 + 段落 + 可选要点 */
+export interface GuideSection {
+  heading: string;
+  paragraphs: string[];
+  bullets?: string[];
+}
+
+/** 官方依据外链 */
+export interface GuideSource {
+  label: string;
+  url: string;
 }
 
 export interface IndustryGuideLocale {
@@ -24,10 +39,22 @@ export interface IndustryGuideLocale {
   cases: GuideCase[];
   /** 常见误区 */
   pitfalls: string[];
+  /** 分节正文（kind = "compliance" 时取代 namingIdeas/cases 渲染） */
+  sections?: GuideSection[];
+  /** 显式 FAQ（存在时 buildGuideFaq 直接取用，不再程序化生成） */
+  faq?: { q: string; a: string }[];
+  /** 官方依据（外链列表） */
+  sources?: GuideSource[];
+  /** 自定义 CTA 文案（缺省用 i18n guide.cta*） */
+  cta?: { title: string; desc: string; button: string };
 }
 
 export interface IndustryGuide {
   slug: string;
+  /** 指南类型：缺省为行业命名指南；"compliance" 为 .cn 合规/流程指南 */
+  kind?: "compliance";
+  /** 内容最近更新日（YYYY-MM-DD），用于 sitemap <lastmod>；缺省沿用全站 CONTENT_LASTMOD */
+  updatedAt?: string;
   /** hub 即时过滤的同义搜索词（zh/en 混排，如 日料餐厅→寿司）；仅参与 /guide hub 过滤匹配，不渲染 */
   keywords?: string[];
   /** 推荐 TLD（链接到 /tld/:tld），reason 按语言 */
@@ -25172,6 +25199,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  ...CN_COMPLIANCE_GUIDES,
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

@@ -21,6 +21,8 @@ export interface Row {
   round: number;
   /** 到期时间（ISO 字符串），仅 taken 且数据可得时存在 */
   expiresAt?: string;
+  /** 后端核验短码（如 http-429 / reserved / no-rdap-server），unknown 时用于显示原因 */
+  detail?: string;
 }
 
 export interface RoundInfo {
@@ -46,9 +48,15 @@ export interface GuardMeta {
   wordSupplement: boolean;
   /** 补发轮发起次数（R243，旧快照无此字段） */
   supplementAttempts?: number;
+  /** 补发判定命中原因（R498：zero=word 为 0，low=word 低于 max(2,⌈候选×15%⌉)；未命中/旧快照无此字段） */
+  wordSupplementReason?: "zero" | "low";
+  /** 判定命中但本次搜索补发预算耗尽而跳过（R498） */
+  wordSupplementSkipped?: "budget";
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
   supplementDropped?: Record<string, number>;
   retries: number;
+  /** R500：审计专用被丢弃候选样本，仅请求体 debugDropped:true 时服务端附带；前端不渲染、不入 dh:lastSearch 快照 */
+  droppedSamples?: { reason: string; label: string; meaning: string; theme: string; supplement?: true }[];
 }
 
 export interface StreamEvent {
@@ -112,55 +120,62 @@ export interface TldPrice {
   renew: number;
 }
 
+// 参考价基准：Porkbun $ 报价 × 7.2 四舍五入，抓取日期 2026-09-06（R531 刷新了 38 个首年偏差 >50% 的 TLD；
+// R538 刷新 19 个首年偏差 >30% 的 TLD：site cc ca vip club furniture co sh uk org dev eu us network works glass nz ph la，
+// 含续费 >50% 的 vip/eu/us；校验：node scripts/check-static-prices.mjs --live）
 const TLD_PRICES: Record<string, TldPrice> = {
   com: { first: 69, renew: 85 },
   net: { first: 79, renew: 99 },
-  org: { first: 79, renew: 99 },
+  org: { first: 57, renew: 85 },
   info: { first: 28, renew: 130 },
   io: { first: 259, renew: 419 },
   ai: { first: 499, renew: 620 },
-  cn: { first: 29, renew: 39 },
-  cc: { first: 38, renew: 58 },
+  // cn / com.cn 取腾讯云/阿里云官网标准价中较低者（2026-09-05 抓取，两个后缀两家报价相同）：
+  //   腾讯云 https://buy.cloud.tencent.com/domain/price?type=overview 注册 33（标价 39 划线）/ 续费 38
+  //   阿里云 https://wanwang.aliyun.com/help/price.html 注册 38 / 续费 42
+  cn: { first: 33, renew: 38 },
+  "com.cn": { first: 33, renew: 38 },
+  cc: { first: 24, renew: 62 },
   tv: { first: 199, renew: 268 },
-  app: { first: 99, renew: 118 },
-  dev: { first: 88, renew: 108 },
-  xyz: { first: 8, renew: 79 },
-  co: { first: 65, renew: 199 },
-  me: { first: 120, renew: 150 },
+  app: { first: 63, renew: 107 },
+  dev: { first: 63, renew: 93 },
+  xyz: { first: 15, renew: 102 },
+  co: { first: 113, renew: 225 },
+  me: { first: 20, renew: 124 },
   tech: { first: 45, renew: 360 },
   online: { first: 15, renew: 260 },
   store: { first: 15, renew: 380 },
-  site: { first: 10, renew: 220 },
+  site: { first: 14, renew: 208 },
   top: { first: 12, renew: 28 },
   shop: { first: 12, renew: 260 },
-  cloud: { first: 60, renew: 160 },
+  cloud: { first: 28, renew: 152 },
   pro: { first: 25, renew: 130 },
-  vip: { first: 40, renew: 60 },
-  club: { first: 40, renew: 120 },
+  vip: { first: 30, renew: 37 },
+  club: { first: 30, renew: 115 },
   link: { first: 70, renew: 80 },
   live: { first: 20, renew: 180 },
   space: { first: 12, renew: 170 },
-  fun: { first: 10, renew: 150 },
-  art: { first: 90, renew: 110 },
-  design: { first: 280, renew: 380 },
+  fun: { first: 19, renew: 226 },
+  art: { first: 26, renew: 152 },
+  design: { first: 78, renew: 337 },
   studio: { first: 80, renew: 220 },
-  sh: { first: 320, renew: 380 },
+  sh: { first: 225, renew: 336 },
   gg: { first: 480, renew: 520 },
   so: { first: 480, renew: 520 },
-  us: { first: 45, renew: 80 },
+  us: { first: 32, renew: 50 },
   in: { first: 60, renew: 75 },
   world: { first: 25, renew: 220 },
   life: { first: 20, renew: 220 },
   agency: { first: 18, renew: 170 },
-  games: { first: 130, renew: 170 },
+  games: { first: 59, renew: 196 },
   email: { first: 30, renew: 180 },
-  network: { first: 20, renew: 160 },
+  network: { first: 33, renew: 204 },
   digital: { first: 25, renew: 260 },
-  media: { first: 90, renew: 280 },
+  media: { first: 33, renew: 263 },
   group: { first: 45, renew: 130 },
   center: { first: 20, renew: 160 },
-  works: { first: 25, renew: 240 },
-  zone: { first: 25, renew: 240 },
+  works: { first: 33, renew: 226 },
+  zone: { first: 59, renew: 226 },
   news: { first: 70, renew: 190 },
   tools: { first: 70, renew: 210 },
   run: { first: 30, renew: 160 },
@@ -184,7 +199,7 @@ const TLD_PRICES: Record<string, TldPrice> = {
   ink: { first: 15, renew: 189 },
   moe: { first: 94, renew: 94 },
   lol: { first: 11, renew: 189 },
-  uk: { first: 41, renew: 41 },
+  uk: { first: 31, renew: 41 },
   fm: { first: 632, renew: 632 },
   one: { first: 48, renew: 145 },
   cool: { first: 41, renew: 263 },
@@ -353,11 +368,11 @@ const TLD_PRICES: Record<string, TldPrice> = {
   equipment: { first: 78, renew: 167 },
   supply: { first: 152, renew: 152 },
   parts: { first: 63, renew: 241 },
-  auction: { first: 78, renew: 204 },
-  deals: { first: 63, renew: 204 },
-  coupons: { first: 78, renew: 366 },
-  discount: { first: 63, renew: 204 },
-  furniture: { first: 88, renew: 700 },
+  auction: { first: 22, renew: 211 },
+  deals: { first: 26, renew: 226 },
+  coupons: { first: 19, renew: 315 },
+  discount: { first: 33, renew: 174 },
+  furniture: { first: 152, renew: 597 },
   lighting: { first: 41, renew: 143 },
   business: { first: 19, renew: 115 },
   limited: { first: 59, renew: 211 },
@@ -365,12 +380,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   cheap: { first: 41, renew: 211 },
   bargains: { first: 85, renew: 174 },
   supplies: { first: 145, renew: 145 },
-  camp: { first: 88, renew: 398 },
+  camp: { first: 48, renew: 360 },
   camera: { first: 94, renew: 374 },
   diamonds: { first: 360, renew: 374 },
-  theater: { first: 396, renew: 430 },
-  accountants: { first: 612, renew: 648 },
-  engineer: { first: 202, renew: 216 },
+  theater: { first: 78, renew: 374 },
+  accountants: { first: 167, renew: 671 },
+  engineer: { first: 70, renew: 226 },
   villas: { first: 78, renew: 345 },
   cruises: { first: 59, renew: 323 },
   voyage: { first: 41, renew: 337 },
@@ -425,23 +440,23 @@ const TLD_PRICES: Record<string, TldPrice> = {
   place: { first: 130, renew: 130 },
   report: { first: 48, renew: 145 },
   town: { first: 41, renew: 211 },
-  shopping: { first: 210, renew: 210 },
+  shopping: { first: 59, renew: 174 },
   graphics: { first: 150, renew: 150 },
-  glass: { first: 270, renew: 270 },
-  vision: { first: 160, renew: 160 },
-  tires: { first: 500, renew: 500 },
-  surgery: { first: 500, renew: 500 },
-  domains: { first: 250, renew: 250 },
-  college: { first: 375, renew: 375 },
-  actor: { first: 255, renew: 255 },
-  immo: { first: 205, renew: 205 },
-  vin: { first: 345, renew: 345 },
-  university: { first: 360, renew: 360 },
+  glass: { first: 419, renew: 419 },
+  vision: { first: 41, renew: 263 },
+  tires: { first: 59, renew: 523 },
+  surgery: { first: 315, renew: 315 },
+  domains: { first: 78, renew: 248 },
+  college: { first: 74, renew: 374 },
+  actor: { first: 78, renew: 256 },
+  immo: { first: 59, renew: 204 },
+  vin: { first: 48, renew: 345 },
+  university: { first: 78, renew: 360 },
   hospital: { first: 330, renew: 330 },
   gmbh: { first: 265, renew: 265 },
   condos: { first: 340, renew: 340 },
   rehab: { first: 60, renew: 210 },
-  nyc: { first: 190, renew: 190 },
+  nyc: { first: 41, renew: 189 },
   london: { first: 105, renew: 200 },
   tokyo: { first: 100, renew: 100 },
   miami: { first: 140, renew: 140 },
@@ -452,13 +467,13 @@ const TLD_PRICES: Record<string, TldPrice> = {
   berlin: { first: 300, renew: 300 },
   paris: { first: 350, renew: 350 },
   amsterdam: { first: 280, renew: 280 },
-  vegas: { first: 380, renew: 380 },
+  vegas: { first: 115, renew: 312 },
   immobilien: { first: 60, renew: 220 },
-  tienda: { first: 360, renew: 360 },
-  de: { first: 58, renew: 58 },
-  eu: { first: 55, renew: 72 },
-  ca: { first: 95, renew: 95 },
-  au: { first: 85, renew: 85 },
+  tienda: { first: 41, renew: 345 },
+  de: { first: 21, renew: 29 },
+  eu: { first: 42, renew: 42 },
+  ca: { first: 64, renew: 66 },
+  au: { first: 57, renew: 57 },
   jp: { first: 290, renew: 290 },
   sg: { first: 280, renew: 280 },
   fr: { first: 65, renew: 72 },
@@ -472,26 +487,26 @@ const TLD_PRICES: Record<string, TldPrice> = {
   be: { first: 65, renew: 72 },
   se: { first: 110, renew: 110 },
   pl: { first: 45, renew: 180 },
-  tw: { first: 200, renew: 200 },
+  tw: { first: 130, renew: 130 },
   dk: { first: 85, renew: 85 },
   fi: { first: 72, renew: 72 },
   no: { first: 110, renew: 110 },
   ie: { first: 180, renew: 180 },
-  nz: { first: 145, renew: 145 },
-  mx: { first: 90, renew: 360 },
+  nz: { first: 108, renew: 108 },
+  mx: { first: 256, renew: 297 },
   br: { first: 60, renew: 60 },
   pt: { first: 110, renew: 110 },
   cz: { first: 75, renew: 75 },
   tr: { first: 110, renew: 110 },
   ae: { first: 250, renew: 250 },
-  id: { first: 60, renew: 220 },
+  id: { first: 132, renew: 132 },
   vn: { first: 290, renew: 290 },
-  ph: { first: 400, renew: 400 },
+  ph: { first: 305, renew: 324 },
   gr: { first: 100, renew: 100 },
   ro: { first: 95, renew: 95 },
   hu: { first: 145, renew: 145 },
   cl: { first: 130, renew: 130 },
-  my: { first: 220, renew: 220 },
+  my: { first: 17, renew: 188 },
   th: { first: 450, renew: 450 },
   sk: { first: 100, renew: 100 },
   ua: { first: 130, renew: 130 },
@@ -516,14 +531,19 @@ const TLD_PRICES: Record<string, TldPrice> = {
   ge: { first: 220, renew: 220 },
   uy: { first: 380, renew: 380 },
   lu: { first: 180, renew: 180 },
-  la: { first: 260, renew: 260 },
+  la: { first: 197, renew: 201 },
   md: { first: 940, renew: 940 },
-  am: { first: 430, renew: 430 },
+  am: { first: 262, renew: 262 },
   mn: { first: 320, renew: 320 },
   uz: { first: 220, renew: 220 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
   return TLD_PRICES[tld];
+}
+
+/** 全部有静态参考价的 TLD（scripts/check-static-prices.mjs 审计用） */
+export function staticPriceTlds(): string[] {
+  return Object.keys(TLD_PRICES);
 }
 

@@ -1,0 +1,65 @@
+$ vite build
+vite v5.4.21 building for production...
+transforming...
+✓ 1963 modules transformed.
+rendering chunks...
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /home/ubuntu/repos/domainhunter/apps/web/src/components/home-page-loader.ts is dynamically imported by /home/ubuntu/repos/domainhunter/apps/web/src/main.tsx but also statically imported by /home/ubuntu/repos/domainhunter/apps/web/src/App.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                                   4.14 kB │ gzip:     2.22 kB
+dist/manifest.json                               14.22 kB │ gzip:     1.77 kB
+dist/assets/index-Cy7PEpsA.css                   41.47 kB │ gzip:     8.58 kB
+dist/assets/use-page-title-CChRkcqr.js            0.14 kB │ gzip:     0.14 kB
+dist/assets/check-BFsBa-Vq.js                     0.29 kB │ gzip:     0.24 kB
+dist/assets/chevron-right-O0fqDGb1.js             0.30 kB │ gzip:     0.25 kB
+dist/assets/x-D_d-KuXj.js                         0.33 kB │ gzip:     0.26 kB
+dist/assets/search-D_4k1Lc_.js                    0.34 kB │ gzip:     0.27 kB
+dist/assets/circle-check-CZxMe1O-.js              0.35 kB │ gzip:     0.27 kB
+dist/assets/rotate-cw-S6IKCMOk.js                 0.37 kB │ gzip:     0.29 kB
+dist/assets/search-check-C5D3ygwV.js              0.39 kB │ gzip:     0.29 kB
+dist/assets/copy-UDf544yg.js                      0.40 kB │ gzip:     0.31 kB
+dist/assets/download-DLZoHDkv.js                  0.40 kB │ gzip:     0.30 kB
+dist/assets/rotate-ccw-clock-Bx0vqGeI.js          0.41 kB │ gzip:     0.30 kB
+dist/assets/link-2-Bnjw5Zuz.js                    0.41 kB │ gzip:     0.31 kB
+dist/assets/circle-question-mark-DMvgZklw.js      0.42 kB │ gzip:     0.31 kB
+dist/assets/external-link-CPsqc8tu.js             0.42 kB │ gzip:     0.30 kB
+dist/assets/lightbulb-NSCznVgP.js                 0.45 kB │ gzip:     0.32 kB
+dist/assets/tag-Dmb1-rLH.js                       0.49 kB │ gzip:     0.35 kB
+dist/assets/sparkles-U8Vbi93S.js                  0.67 kB │ gzip:     0.39 kB
+dist/assets/price-text-DYpuFJB_.js                0.75 kB │ gzip:     0.45 kB
+dist/assets/arrow-up-CkxyaIE3.js                  0.99 kB │ gzip:     0.39 kB
+dist/assets/results-export-C6S8BZEa.js            2.20 kB │ gzip:     1.03 kB
+dist/assets/not-found-page-CiGZJjAY.js            3.32 kB │ gzip:     1.30 kB
+dist/assets/hub-nav-D9U0oRIS.js                   3.63 kB │ gzip:     1.79 kB
+dist/assets/tld-groups-B50icMZ7.js                3.83 kB │ gzip:     1.99 kB
+dist/assets/site-links-D52nz7j0.js                3.89 kB │ gzip:     1.83 kB
+dist/assets/guide-groups-C9vnxAkG.js              4.75 kB │ gzip:     2.44 kB
+dist/assets/monitors-page-BlT4OJUs.js             7.09 kB │ gzip:     2.52 kB
+dist/assets/tld-page-C2rpH8LN.js                  7.40 kB │ gzip:     2.75 kB
+dist/assets/prices-page-C4rIrwUw.js               7.61 kB │ gzip:     3.33 kB
+dist/assets/share-page-b9aLLjYs.js                7.63 kB │ gzip:     2.51 kB
+dist/assets/mcp-page-CE2yklLY.js                  7.71 kB │ gzip:     3.82 kB
+dist/assets/advanced-page-DH36DoVS.js             9.32 kB │ gzip:     3.59 kB
+dist/assets/agent-page-DdfmSG10.js                9.99 kB │ gzip:     2.83 kB
+dist/assets/guide-page-CFRX8IhR.js               10.62 kB │ gzip:     3.52 kB
+dist/assets/why-page-0ufJzvoJ.js                 11.02 kB │ gzip:     5.56 kB
+dist/assets/compare-page-IE2ZlKu7.js             12.08 kB │ gzip:     4.62 kB
+dist/assets/prices-BCkF3WGt.js                   12.17 kB │ gzip:     3.72 kB
+dist/assets/results-page-zOWeyq_w.js             27.67 kB │ gzip:     7.56 kB
+dist/assets/shortlist-page-DkEUWm1t.js           31.41 kB │ gzip:     9.00 kB
+dist/assets/home-page-DghgOFwc.js                61.34 kB │ gzip:    20.69 kB
+dist/assets/compare-hub-page-BBfDAhDy.js         69.90 kB │ gzip:    27.11 kB
+dist/assets/guide-hub-page-CSLP523S.js           92.16 kB │ gzip:    40.53 kB
+dist/assets/tld-hub-page-X3S89HPA.js             98.81 kB │ gzip:    46.39 kB
+dist/assets/domain-row-DquxG9UI.js              110.97 kB │ gzip:    37.67 kB
+dist/assets/home-template-texts-BorhM1A_.js     166.56 kB │ gzip:    90.35 kB
+dist/assets/index-2iV2dw8a.js                   302.70 kB │ gzip:   105.74 kB
+dist/assets/injected-build-BjhWvORG.js        5,277.88 kB │ gzip: 2,536.96 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.76s
+exit=0

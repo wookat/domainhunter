@@ -1,0 +1,118 @@
+[
+ {
+  "page": "home_desktop",
+  "url": "https://hunt.zalize.com/",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:48:59.400Z",
+  "performance": 100,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "home_mobile",
+  "url": "https://hunt.zalize.com/",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:48:46.426Z",
+  "performance": 92,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "monitors_desktop",
+  "url": "https://hunt.zalize.com/monitors",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:49:23.415Z",
+  "performance": 99,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 66,
+  "failed_a11y": [],
+  "failed_seo": [
+   "is-crawlable"
+  ],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "monitors_mobile",
+  "url": "https://hunt.zalize.com/monitors",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:49:12.495Z",
+  "performance": 89,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 66,
+  "failed_a11y": [],
+  "failed_seo": [
+   "is-crawlable"
+  ],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "prices_desktop",
+  "url": "https://hunt.zalize.com/prices",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:50:10.560Z",
+  "performance": 100,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "prices_mobile",
+  "url": "https://hunt.zalize.com/prices",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:49:55.913Z",
+  "performance": 92,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "vs-de-vs-com_desktop",
+  "url": "https://hunt.zalize.com/vs/de-vs-com",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:49:44.912Z",
+  "performance": 100,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ },
+ {
+  "page": "vs-de-vs-com_mobile",
+  "url": "https://hunt.zalize.com/vs/de-vs-com",
+  "lhVersion": "13.4.1",
+  "fetchTime": "2026-09-07T12:49:33.964Z",
+  "performance": 96,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "failed_a11y": [],
+  "failed_seo": [],
+  "failed_bp": [],
+  "runWarnings": []
+ }
+]

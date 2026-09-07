@@ -12,6 +12,15 @@ export const hubAnchorId = (id: string) => `hub-g-${id}`;
 
 export type HubNavItem = { id: string; label: string; count: number };
 
+/** 带 #hub-g-<id> 落地时挂载后滚到对应分组（懒路由重绘会丢掉浏览器原生锚点定位） */
+export function useHubHashScroll() {
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id.startsWith("hub-g-")) return;
+    document.getElementById(id)?.scrollIntoView();
+  }, []);
+}
+
 /**
  * hub 索引页分组锚点导航：sticky chips 横向滚动条。
  * 调用方传入过滤后的分组列表，空组随过滤自动隐藏；锚点为原生 <a>，可 Tab 聚焦。

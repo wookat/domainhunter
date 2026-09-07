@@ -1,0 +1,1472 @@
+{
+ "mobile=True /vs/clinic-vs-care": {
+  "innerWidth": 489,
+  "scrollWidth": 489,
+  "clientWidth": 375,
+  "bodyScrollWidth": 489,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "后缀\t注册/首年\t续费/年\t5 年持有成本"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "后缀\t注册/首年\t续费/年\t5 年持有成本"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "5 年持有成本"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "$218.85\n¥1576"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".care\t\n$11.84\n¥85\n\t\n$35.53\n¥256\n\t\n$153.96\n¥1109"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "$153.96\n¥1109"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "差额（.clinic − .care）\t\n−$1.03\n−¥7\n\t\n+$16.48\n+¥118\n\t\n"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "+$64.89\n+¥467"
+   }
+  ]
+ },
+ "mobile=True /vs/clinic-vs-care?lang=en": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic vs .care: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic vs .care: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "$218.85\n¥1576"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".care\t\n$11.84\n¥85\n\t\n$35.53\n¥256\n\t\n$153.96\n¥1109"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "$153.96\n¥1109"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "Difference (.clinic − .care)\t\n−$1.03\n−¥7\n\t\n+$16.48"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "+$64.89\n+¥467"
+   }
+  ]
+ },
+ "mobile=True /vs/golf-vs-travel": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf vs .travel: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf vs .travel: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf\t\n$4.63\n¥33\n\t\n$52.01\n¥374\n\t\n$212.67\n¥1531\n\n.t"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf\t\n$4.63\n¥33\n\t\n$52.01\n¥374\n\t\n$212.67\n¥1531"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "$212.67\n¥1531"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".travel\t\n$15.96\n¥115\n\t\n$118.95\n¥856\n\t\n$491.76\n¥354"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "$491.76\n¥3541"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "Difference (.golf − .travel)\t\n−$11.33\n−¥82\n\t\n−$66."
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "−$279.09\n−¥2010"
+   }
+  ]
+ },
+ "mobile=True /vs/uk-vs-com": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk vs .com: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk vs .com: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk\t\n$4.32\n¥31\n\t\n$5.66\n¥41\n\t\n$26.96\n¥194\n\n.com\t\n$1"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk\t\n$4.32\n¥31\n\t\n$5.66\n¥41\n\t\n$26.96\n¥194"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "$26.96\n¥194"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".com\t\n$11.08\n¥80\n\t\n$11.08\n¥80\n\t\n$55.4\n¥399"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "$55.4\n¥399"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "Difference (.uk − .com)\t\n−$6.76\n−¥49\n\t\n−$5.42\n−¥39"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "−$28.44\n−¥205"
+   }
+  ]
+ },
+ "mobile=True /vs/page-vs-com": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page vs .com: first-year, renewal and 5-year tota"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page vs .com: first-year, renewal and 5-year tota"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page\t\n$10.81\n¥78\n\t\n$10.81\n¥78\n\t\n$54.05\n¥389\n\n.com"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page\t\n$10.81\n¥78\n\t\n$10.81\n¥78\n\t\n$54.05\n¥389"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "$54.05\n¥389"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".com\t\n$11.08\n¥80\n\t\n$11.08\n¥80\n\t\n$55.4\n¥399"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "$55.4\n¥399"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "Difference (.page − .com)\t\n−$0.27\n−¥2\n\t\n−$0.27\n−¥2"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "−$1.35\n−¥10"
+   }
+  ]
+ },
+ "mobile=True /vs/shoes-vs-store": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes vs .store: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes vs .store: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes\t\n$21.11\n¥152\n\t\n$52.01\n¥374\n\t\n$229.15\n¥1650\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes\t\n$21.11\n¥152\n\t\n$52.01\n¥374\n\t\n$229.15\n¥1650"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "$229.15\n¥1650"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".store\t\n$2.57\n¥19\n\t\n$43.77\n¥315\n\t\n$177.65\n¥1279"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "$177.65\n¥1279"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "Difference (.shoes − .store)\t\n+$18.54\n+¥133\n\t\n+$8."
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "+$51.5\n+¥371"
+   }
+  ]
+ },
+ "mobile=True /vs/one-vs-me": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one vs .me: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one vs .me: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one\t\n$6.69\n¥48\n\t\n$20.08\n¥145\n\t\n$87.01\n¥626\n\n.me\t\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one\t\n$6.69\n¥48\n\t\n$20.08\n¥145\n\t\n$87.01\n¥626"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "$87.01\n¥626"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".me\t\n$2.73\n¥20\n\t\n$17.27\n¥124\n\t\n$71.81\n¥517"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "$71.81\n¥517"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "Difference (.one − .me)\t\n+$3.96\n+¥28\n\t\n+$2.81\n+¥21"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "+$15.2\n+¥109"
+   }
+  ]
+ },
+ "mobile=False /vs/clinic-vs-care": {
+  "innerWidth": 375,
+  "scrollWidth": 489,
+  "clientWidth": 375,
+  "bodyScrollWidth": 489,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "后缀\t注册/首年\t续费/年\t5 年持有成本"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "后缀\t注册/首年\t续费/年\t5 年持有成本"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "5 年持有成本"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "$218.85\n¥1576"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": ".care\t\n$11.84\n¥85\n\t\n$35.53\n¥256\n\t\n$153.96\n¥1109"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "$153.96\n¥1109"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 395,
+    "right": 412,
+    "sw": 395,
+    "text": "差额（.clinic − .care）\t\n−$1.03\n−¥7\n\t\n+$16.48\n+¥118\n\t\n"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 412,
+    "sw": 82,
+    "text": "+$64.89\n+¥467"
+   }
+  ]
+ },
+ "mobile=False /vs/clinic-vs-care?lang=en": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic vs .care: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic vs .care: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".clinic\t\n$10.81\n¥78\n\t\n$52.01\n¥374\n\t\n$218.85\n¥1576"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "$218.85\n¥1576"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": ".care\t\n$11.84\n¥85\n\t\n$35.53\n¥256\n\t\n$153.96\n¥1109"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "$153.96\n¥1109"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 420,
+    "right": 437,
+    "sw": 420,
+    "text": "Difference (.clinic − .care)\t\n−$1.03\n−¥7\n\t\n+$16.48"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 437,
+    "sw": 82,
+    "text": "+$64.89\n+¥467"
+   }
+  ]
+ },
+ "mobile=False /vs/golf-vs-travel": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf vs .travel: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf vs .travel: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf\t\n$4.63\n¥33\n\t\n$52.01\n¥374\n\t\n$212.67\n¥1531\n\n.t"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".golf\t\n$4.63\n¥33\n\t\n$52.01\n¥374\n\t\n$212.67\n¥1531"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "$212.67\n¥1531"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": ".travel\t\n$15.96\n¥115\n\t\n$118.95\n¥856\n\t\n$491.76\n¥354"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "$491.76\n¥3541"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 437,
+    "right": 454,
+    "sw": 437,
+    "text": "Difference (.golf − .travel)\t\n−$11.33\n−¥82\n\t\n−$66."
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 91,
+    "right": 454,
+    "sw": 91,
+    "text": "−$279.09\n−¥2010"
+   }
+  ]
+ },
+ "mobile=False /vs/uk-vs-com": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk vs .com: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk vs .com: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk\t\n$4.32\n¥31\n\t\n$5.66\n¥41\n\t\n$26.96\n¥194\n\n.com\t\n$1"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".uk\t\n$4.32\n¥31\n\t\n$5.66\n¥41\n\t\n$26.96\n¥194"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "$26.96\n¥194"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": ".com\t\n$11.08\n¥80\n\t\n$11.08\n¥80\n\t\n$55.4\n¥399"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "$55.4\n¥399"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 394,
+    "right": 411,
+    "sw": 394,
+    "text": "Difference (.uk − .com)\t\n−$6.76\n−¥49\n\t\n−$5.42\n−¥39"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 411,
+    "sw": 82,
+    "text": "−$28.44\n−¥205"
+   }
+  ]
+ },
+ "mobile=False /vs/page-vs-com": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page vs .com: first-year, renewal and 5-year tota"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page vs .com: first-year, renewal and 5-year tota"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page\t\n$10.81\n¥78\n\t\n$10.81\n¥78\n\t\n$54.05\n¥389\n\n.com"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".page\t\n$10.81\n¥78\n\t\n$10.81\n¥78\n\t\n$54.05\n¥389"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "$54.05\n¥389"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": ".com\t\n$11.08\n¥80\n\t\n$11.08\n¥80\n\t\n$55.4\n¥399"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "$55.4\n¥399"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 400,
+    "right": 417,
+    "sw": 400,
+    "text": "Difference (.page − .com)\t\n−$0.27\n−¥2\n\t\n−$0.27\n−¥2"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 417,
+    "sw": 73,
+    "text": "−$1.35\n−¥10"
+   }
+  ]
+ },
+ "mobile=False /vs/shoes-vs-store": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes vs .store: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes vs .store: first-year, renewal and 5-year t"
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes\t\n$21.11\n¥152\n\t\n$52.01\n¥374\n\t\n$229.15\n¥1650\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".shoes\t\n$21.11\n¥152\n\t\n$52.01\n¥374\n\t\n$229.15\n¥1650"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "$229.15\n¥1650"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": ".store\t\n$2.57\n¥19\n\t\n$43.77\n¥315\n\t\n$177.65\n¥1279"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "$177.65\n¥1279"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 428,
+    "right": 445,
+    "sw": 428,
+    "text": "Difference (.shoes − .store)\t\n+$18.54\n+¥133\n\t\n+$8."
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 82,
+    "right": 445,
+    "sw": 82,
+    "text": "+$51.5\n+¥371"
+   }
+  ]
+ },
+ "mobile=False /vs/one-vs-me": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375,
+  "vv": 375,
+  "wide": [
+   {
+    "tag": "TABLE",
+    "cls": "w-full min-w-[320px] text-sm",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one vs .me: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "CAPTION",
+    "cls": "px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one vs .me: first-year, renewal and 5-year total "
+   },
+   {
+    "tag": "THEAD",
+    "cls": "",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line text-xs text-txt2",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "TLD\tRegister / 1st yr\tRenew / yr\t5-yr total cost"
+   },
+   {
+    "tag": "TH",
+    "cls": "px-3 py-2 text-right font-medium",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "5-yr total cost"
+   },
+   {
+    "tag": "TBODY",
+    "cls": "",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one\t\n$6.69\n¥48\n\t\n$20.08\n¥145\n\t\n$87.01\n¥626\n\n.me\t\n"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".one\t\n$6.69\n¥48\n\t\n$20.08\n¥145\n\t\n$87.01\n¥626"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "$87.01\n¥626"
+   },
+   {
+    "tag": "TR",
+    "cls": "border-b border-line",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": ".me\t\n$2.73\n¥20\n\t\n$17.27\n¥124\n\t\n$71.81\n¥517"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "$71.81\n¥517"
+   },
+   {
+    "tag": "TR",
+    "cls": "bg-bg2/40",
+    "w": 385,
+    "right": 402,
+    "sw": 385,
+    "text": "Difference (.one − .me)\t\n+$3.96\n+¥28\n\t\n+$2.81\n+¥21"
+   },
+   {
+    "tag": "TD",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "w": 73,
+    "right": 402,
+    "sw": 73,
+    "text": "+$15.2\n+¥109"
+   }
+  ]
+ }
+}

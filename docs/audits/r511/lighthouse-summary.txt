@@ -1,0 +1,16 @@
+home desktop perf=100 a11y=100 bp=100 seo=100
+home mobile perf=93 a11y=100 bp=100 seo=100
+tld_cn desktop perf=100 a11y=100 bp=100 seo=100
+tld_cn mobile perf=97 a11y=100 bp=100 seo=100
+tld_cn_lang_en desktop perf=100 a11y=100 bp=100 seo=100
+tld_cn_lang_en mobile perf=97 a11y=100 bp=100 seo=100
+prices desktop perf=100 a11y=100 bp=100 seo=100
+prices mobile perf=90 a11y=100 bp=100 seo=100
+home-desktop.json LCP=0.7 s CLS=0 TBT=0 ms lhv=13.4.1
+home-mobile.json LCP=2.6 s CLS=0 TBT=60 ms lhv=13.4.1
+prices-desktop.json LCP=0.7 s CLS=0 TBT=0 ms lhv=13.4.1
+prices-mobile.json LCP=3.3 s CLS=0 TBT=110 ms lhv=13.4.1
+tld_cn-desktop.json LCP=0.6 s CLS=0 TBT=0 ms lhv=13.4.1
+tld_cn-mobile.json LCP=2.3 s CLS=0 TBT=20 ms lhv=13.4.1
+tld_cn_lang_en-desktop.json LCP=0.6 s CLS=0 TBT=0 ms lhv=13.4.1
+tld_cn_lang_en-mobile.json LCP=2.4 s CLS=0 TBT=0 ms lhv=13.4.1

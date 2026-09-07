@@ -1,0 +1,56 @@
+[
+  {
+    "at": "2026-09-06T18:01:35.442603+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "body": "{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"google.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2027-03-17T12:48:36.000Z\",\"cached\":true}\n{\"domain\":\"google.io\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2027-09-30T01:00:00.000Z\",\"cached\":true}\n{\"domain\":\"google.ai\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-09-25T05:37:20.000Z\",\"cached\":true}\n{\"domain\":\"google.app\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-03-29T16:02:13.209Z\",\"cached\":true}\n{\"domain\":\"google.dev\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-06-13T22:30:20.594Z\",\"cached\":true}\n{\"domain\":\"google.co\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2027-02-24T23:59:59.000Z\",\"cached\":true}\n{\"domain\":\"google.net\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-03-15T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"google.me\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2027-06-13T17:17:40.000Z\",\"cached\":true}\n"
+  },
+  {
+    "at": "2026-09-06T18:01:50.978074+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "body": "{\"domain\":\"r558qa7k3x.io\",\"status\":\"available\",\"method\":\"whois\"}\n{\"domain\":\"r558qa7k3x.cn\",\"status\":\"available\",\"method\":\"whois\"}\n{\"domain\":\"r558qa7k3x.com\",\"status\":\"available\",\"method\":\"rdap\"}\n{\"domain\":\"r558qa7k3x.co\",\"status\":\"available\",\"method\":\"whois\"}\n{\"domain\":\"r558qa7k3x.me\",\"status\":\"available\",\"method\":\"whois\"}\n{\"domain\":\"r558qa7k3x.net\",\"status\":\"available\",\"method\":\"rdap\"}\n{\"domain\":\"r558qa7k3x.dev\",\"status\":\"available\",\"method\":\"rdap\"}\n{\"domain\":\"r558qa7k3x.app\",\"status\":\"available\",\"method\":\"rdap\"}\n{\"domain\":\"r558qa7k3x.ai\",\"status\":\"unknown\",\"method\":\"rdap\",\"detail\":\"http-429\"}\n"
+  },
+  {
+    "at": "2026-09-06T18:04:54.401797+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "body": "{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"baidu.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2029-03-17T12:48:36.000Z\",\"cached\":true}\n{\"domain\":\"r558qa7k3x.com\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r558qa7k3x.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r558zz9q1.net\",\"status\":\"available\",\"method\":\"rdap\"}\n"
+  },
+  {
+    "at": "2026-09-06T18:07:01.986692+00:00",
+    "url": "https://hunt.zalize.com/api/check?refresh=1",
+    "status": 200,
+    "body": "{\"domain\":\"r558qa7k3x.ai\",\"status\":\"unknown\",\"method\":\"rdap\",\"detail\":\"http-429\"}\n"
+  },
+  {
+    "at": "2026-09-06T18:07:33.029162+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "body": "{\"domain\":\"r558qa7k3x.ai\",\"status\":\"unknown\",\"method\":\"rdap\",\"detail\":\"http-429\"}\n"
+  },
+  {
+    "at": "2026-09-06T18:07:56.367849+00:00",
+    "url": "https://hunt.zalize.com/api/monitor/list",
+    "status": 200,
+    "body": "{\"entries\":[],\"monitored\":2,\"limit\":500}"
+  },
+  {
+    "at": "2026-09-06T18:08:02.359445+00:00",
+    "url": "https://hunt.zalize.com/api/monitor",
+    "status": 200,
+    "body": "{\"ok\":true,\"enabled\":true,\"monitored\":3}"
+  },
+  {
+    "at": "2026-09-06T18:08:03.313258+00:00",
+    "url": "https://hunt.zalize.com/api/monitor/list",
+    "status": 200,
+    "body": "{\"entries\":[{\"domain\":\"google.com\",\"status\":\"taken\",\"lastChecked\":0}],\"monitored\":3,\"limit\":500}"
+  },
+  {
+    "at": "2026-09-06T18:08:11.509486+00:00",
+    "url": "https://hunt.zalize.com/api/monitor",
+    "status": 200,
+    "body": "{\"ok\":true,\"enabled\":false,\"monitored\":2}"
+  }
+]

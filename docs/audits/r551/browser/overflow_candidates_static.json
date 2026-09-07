@@ -1,0 +1,75 @@
+{
+ "/tld/es|en": [
+  "dominios.es/es/sobre-dominios/estadisticas"
+ ],
+ "/tld/es|zh": [
+  "dominios.es/es/sobre-dominios/estadisticas"
+ ],
+ "/tld/nz|zh": [
+  ".co.nz、.org.nz、.net.nz、.geek.nz、.gen.nz、.kiwi.nz、.maori.nz、.school.nz、.ac.nz"
+ ],
+ "/tld/sa|zh": [
+  ".sa、.com.sa、.net.sa、.gov.sa、.org.sa、.sch.sa、.edu.sa、.med.sa、.pub.sa"
+ ],
+ "/vs/apartments-vs-house|zh": [
+  ".forsale、.land、.lease、.mortgage、.properties、.rentals"
+ ],
+ "/vs/art-vs-studio|zh": [
+  ".camera、.gallery、.photography、.photos、.pictures"
+ ],
+ "/vs/bio-vs-me|zh": [
+  ".agency、.chat、.contact、.email、.marketing"
+ ],
+ "/vs/clinic-vs-care|zh": [
+  ".dental、.dentist、.doctor、.healthcare、.hospital、.vet、.vision"
+ ],
+ "/vs/education-vs-academy|zh": [
+  ".degree、.institute、.mba、.school、.schule、.shiksha、.university"
+ ],
+ "/vs/express-vs-store|zh": [
+  ".deals、.delivery、.gifts、.market、.promo、.sale"
+ ],
+ "/vs/farm-vs-cafe|zh": [
+  ".coffee、.kitchen、.pizza、.pub、.restaurant、.wine"
+ ],
+ "/vs/flights-vs-travel|zh": [
+  ".cruises、.guide、.tours、.vacations、.world"
+ ],
+ "/vs/gifts-vs-shop|zh": [
+  ".auction、.deals、.delivery、.express、.market、.promo、.sale"
+ ],
+ "/vs/group-vs-agency|en": [
+  "Facebook-community-turned-organisation,"
+ ],
+ "/vs/info-vs-net|zh": [
+  ".directory、.fyi、.news、.report、.reviews、.tips、.today"
+ ],
+ "/vs/kitchen-vs-restaurant|zh": [
+  ".cafe、.coffee、.delivery、.pizza、.pub、.wine"
+ ],
+ "/vs/menu-vs-restaurant|zh": [
+  ".cafe、.coffee、.kitchen、.pizza、.pub、.wine"
+ ],
+ "/vs/repair-vs-services|zh": [
+  ".builders、.contractors、.parts、.supply、.tools、.works"
+ ],
+ "/vs/salon-vs-studio|zh": [
+  ".camera、.gallery、.photography、.photos、.pictures",
+  ".boutique、.clothing、.style、.jewelry、.shoes"
+ ],
+ "/vs/software-vs-app|zh": [
+  ".codes、.digital、.support、.systems、.technology"
+ ],
+ "/vs/technology-vs-tech|zh": [
+  ".codes、.digital、.software、.support、.systems"
+ ],
+ "/vs/tools-vs-app|zh": [
+  ".builders、.contractors、.parts、.repair、.supply、.works"
+ ],
+ "/vs/travel-vs-tours|zh": [
+  ".cruises、.flights、.guide、.vacations、.world"
+ ],
+ "/vs/wine-vs-bar|zh": [
+  ".cafe、.coffee、.kitchen、.pizza、.pub、.restaurant"
+ ]
+}

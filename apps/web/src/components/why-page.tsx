@@ -3,6 +3,7 @@ import { Check, Crosshair, Minus, Sparkles, X } from "lucide-react";
 import { COMPARE_SLUGS } from "@/content/compare-slugs";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { TLD_LIST } from "@/content/tld-list";
+import { WHY_COPY } from "@/content/why-copy";
 import { useI18n } from "@/lib/i18n";
 
 const N_TLD = TLD_LIST.length;
@@ -22,6 +23,8 @@ interface WhyCopy {
   caps: { title: string; desc: string }[];
   tableTitle: string;
   tableNote: string;
+  /** 首列（对比项）的屏幕阅读器列头 */
+  tableFeatureCol: string;
   cols: string[];
   rows: { feature: string; cells: ("yes" | "no" | "partial")[] }[];
   cta: string;
@@ -30,10 +33,7 @@ interface WhyCopy {
 
 const COPY: Record<"zh" | "en", WhyCopy> = {
   zh: {
-    kicker: "为什么选 DomainHunter",
-    title: "中文创业者的域名猎手：用中文说寓意，猎到真正可注册的 .cn / .com",
-    intro:
-      "英文通用场景里，Instant Domain Search、Namelix 这类工具已经很好用——我们不在那里争。DomainHunter 专注一件事：中文创业者、独立开发者与出海团队用中文描述寓意，AI 沿拼音、英文、拼音英文混搭多路构思，每个候选实时核验 .cn / .com.cn / .com 等后缀的注册状态，附到期日与价格，只给你能立刻注册的。",
+    ...WHY_COPY.zh,
     painTitle: "为什么中文创业者找域名格外难",
     pains: [
       "英文域名工具按关键词与英文词表拼接，不会把中文寓意翻成拼音或英文去想名字",
@@ -59,6 +59,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ],
     tableTitle: "和其他找名字的方式比：我们强在哪、弱在哪",
     tableNote: "对比对象为常见工具类型的典型能力，具体产品各有差异；英文通用起名不是我们的主场，如实标出。",
+    tableFeatureCol: "对比项",
     cols: ["英文域名搜索工具", "AI 起名工具", "直接问 ChatGPT", "DomainHunter"],
     rows: [
       { feature: "理解中文寓意，沿拼音 / 混搭构思", cells: ["no", "partial", "partial", "yes"] },
@@ -74,10 +75,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ctaDesc: "免费、开源、无需登录；AI 搜索每小时限次，即输即查与批量核验不限量。",
   },
   en: {
-    kicker: "Why DomainHunter",
-    title: "A domain hunter for Chinese founders: name it in Chinese, register it in .cn / .com",
-    intro:
-      "For generic English naming, tools like Instant Domain Search and Namelix are already excellent — we don't compete there. DomainHunter does one thing: Chinese founders, indie developers and teams going global describe the meaning in Chinese (or English), AI brainstorms pinyin, English and pinyin-English blends, and every candidate is verified live across .cn / .com.cn / .com and more, with expiry dates and prices — only names you can register right now.",
+    ...WHY_COPY.en,
     painTitle: "Why finding a domain is extra hard for Chinese founders",
     pains: [
       "English domain tools combine keywords and English word lists — they don't turn Chinese meaning into pinyin or English names",
@@ -103,6 +101,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ],
     tableTitle: "Compared with other ways to find a name — where we're stronger and weaker",
     tableNote: "Comparison reflects typical capabilities of each tool category; individual products vary. Generic English naming is not our home turf, and we say so.",
+    tableFeatureCol: "Capability",
     cols: ["English domain search", "AI name generators", "Asking ChatGPT", "DomainHunter"],
     rows: [
       { feature: "Understands Chinese meaning; pinyin / blend routes", cells: ["no", "partial", "partial", "yes"] },
@@ -177,9 +176,11 @@ export function WhyPage() {
         <table className="w-full min-w-[560px] text-sm">
           <thead>
             <tr className="border-b border-line bg-bg1 text-left">
-              <th className="px-3 py-2.5 text-xs font-semibold text-txt1"></th>
+              <th scope="col" className="px-3 py-2.5 text-xs font-semibold text-txt1">
+                <span className="sr-only">{c.tableFeatureCol}</span>
+              </th>
               {c.cols.map((col, i) => (
-                <th key={col} className={`whitespace-nowrap px-3 py-2.5 text-center text-xs font-semibold ${i === c.cols.length - 1 ? "text-brand" : "text-txt1"}`}>
+                <th key={col} scope="col" className={`whitespace-nowrap px-3 py-2.5 text-center text-xs font-semibold ${i === c.cols.length - 1 ? "text-brand" : "text-txt1"}`}>
                   {col}
                 </th>
               ))}
@@ -188,7 +189,7 @@ export function WhyPage() {
           <tbody>
             {c.rows.map((r) => (
               <tr key={r.feature} className="border-b border-line/60 last:border-0">
-                <td className="px-3 py-2.5 text-[13px] text-txt1">{r.feature}</td>
+                <th scope="row" className="px-3 py-2.5 text-left text-[13px] font-normal text-txt1">{r.feature}</th>
                 {r.cells.map((v, i) => (
                   <td key={i} className={`px-3 py-2.5 text-center ${i === r.cells.length - 1 ? "bg-brand-dim/20" : ""}`}>
                     <Cell v={v} />

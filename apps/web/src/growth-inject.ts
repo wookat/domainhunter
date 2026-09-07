@@ -5,11 +5,12 @@
 export interface GrowthVars {
   GSC_VERIFICATION?: string;
   BING_VERIFICATION?: string;
+  BAIDU_VERIFICATION?: string;
   ANALYTICS_PROVIDER?: string;
   ANALYTICS_TOKEN?: string;
 }
 
-/** Google/Bing 验证值：base64url/hex 风格的短 token */
+/** Google/Bing/百度 验证值：base64url/hex 风格的短 token（百度形如 codeva-xxxxxxxx，含连字符） */
 const VERIFICATION_TOKEN_RE = /^[A-Za-z0-9_-]{8,128}$/;
 /** Cloudflare Web Analytics site token：32 位 hex */
 const CF_BEACON_TOKEN_RE = /^[a-f0-9]{32}$/i;
@@ -42,6 +43,8 @@ export function buildHeadInjection(vars: GrowthVars): string {
   if (VERIFICATION_TOKEN_RE.test(gsc)) parts.push(`<meta name="google-site-verification" content="${gsc}" />`);
   const bing = clean(vars.BING_VERIFICATION);
   if (VERIFICATION_TOKEN_RE.test(bing)) parts.push(`<meta name="msvalidate.01" content="${bing}" />`);
+  const baidu = clean(vars.BAIDU_VERIFICATION);
+  if (VERIFICATION_TOKEN_RE.test(baidu)) parts.push(`<meta name="baidu-site-verification" content="${baidu}" />`);
   const analytics = resolveAnalytics(vars);
   if (analytics) parts.push(cloudflareBeaconTag(analytics.token));
   return parts.join("");

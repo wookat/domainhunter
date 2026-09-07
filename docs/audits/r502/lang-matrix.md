@@ -1,0 +1,30 @@
+origin: https://hunt.zalize.com  (2026-09-04T23:39:38Z)
+| path | mode | status | html lang | canonical | hreflang | Vary | title lang |
+|---|---|---|---|---|---|---|---|
+| / | bare | 200 | zh-CN | / | zh=https://hunt.zalize.com/ en=https://hunt.zalize.com/?lang=en x-default=https://hunt.zalize.com/ | Accept-Language | zh |
+| / | al | 200 | en | /?lang=en | zh=https://hunt.zalize.com/ en=https://hunt.zalize.com/?lang=en x-default=https://hunt.zalize.com/ | Accept-Language | en |
+| / | q | 200 | en | /?lang=en | zh=https://hunt.zalize.com/ en=https://hunt.zalize.com/?lang=en x-default=https://hunt.zalize.com/ | Accept-Language | en |
+| /tld/cn | bare | 200 | zh-CN | /tld/cn | zh=https://hunt.zalize.com/tld/cn en=https://hunt.zalize.com/tld/cn?lang=en x-default=https://hunt.zalize.com/tld/cn | Accept-Language | zh |
+| /tld/cn | al | 200 | en | /tld/cn?lang=en | zh=https://hunt.zalize.com/tld/cn en=https://hunt.zalize.com/tld/cn?lang=en x-default=https://hunt.zalize.com/tld/cn | Accept-Language | en |
+| /tld/cn | q | 200 | en | /tld/cn?lang=en | zh=https://hunt.zalize.com/tld/cn en=https://hunt.zalize.com/tld/cn?lang=en x-default=https://hunt.zalize.com/tld/cn | Accept-Language | en |
+| /guide/animation | bare | 200 | zh-CN | /guide/animation | zh=https://hunt.zalize.com/guide/animation en=https://hunt.zalize.com/guide/animation?lang=en x-default=https://hunt.zalize.com/guide/animation | Accept-Language | zh |
+| /guide/animation | al | 200 | en | /guide/animation?lang=en | zh=https://hunt.zalize.com/guide/animation en=https://hunt.zalize.com/guide/animation?lang=en x-default=https://hunt.zalize.com/guide/animation | Accept-Language | en |
+| /guide/animation | q | 200 | en | /guide/animation?lang=en | zh=https://hunt.zalize.com/guide/animation en=https://hunt.zalize.com/guide/animation?lang=en x-default=https://hunt.zalize.com/guide/animation | Accept-Language | en |
+| /vs/com-vs-cn | bare | 200 | zh-CN | /vs/com-vs-cn | zh=https://hunt.zalize.com/vs/com-vs-cn en=https://hunt.zalize.com/vs/com-vs-cn?lang=en x-default=https://hunt.zalize.com/vs/com-vs-cn | Accept-Language | zh |
+| /vs/com-vs-cn | al | 200 | en | /vs/com-vs-cn?lang=en | zh=https://hunt.zalize.com/vs/com-vs-cn en=https://hunt.zalize.com/vs/com-vs-cn?lang=en x-default=https://hunt.zalize.com/vs/com-vs-cn | Accept-Language | en |
+| /vs/com-vs-cn | q | 200 | en | /vs/com-vs-cn?lang=en | zh=https://hunt.zalize.com/vs/com-vs-cn en=https://hunt.zalize.com/vs/com-vs-cn?lang=en x-default=https://hunt.zalize.com/vs/com-vs-cn | Accept-Language | en |
+| /prices | bare | 200 | zh-CN | /prices | zh=https://hunt.zalize.com/prices en=https://hunt.zalize.com/prices?lang=en x-default=https://hunt.zalize.com/prices | Accept-Language | zh |
+| /prices | al | 200 | en | /prices?lang=en | zh=https://hunt.zalize.com/prices en=https://hunt.zalize.com/prices?lang=en x-default=https://hunt.zalize.com/prices | Accept-Language | en |
+| /prices | q | 200 | en | /prices?lang=en | zh=https://hunt.zalize.com/prices en=https://hunt.zalize.com/prices?lang=en x-default=https://hunt.zalize.com/prices | Accept-Language | en |
+| /why | bare | 200 | zh-CN | /why | zh=https://hunt.zalize.com/why en=https://hunt.zalize.com/why?lang=en x-default=https://hunt.zalize.com/why | Accept-Language | zh |
+| /why | al | 200 | en | /why?lang=en | zh=https://hunt.zalize.com/why en=https://hunt.zalize.com/why?lang=en x-default=https://hunt.zalize.com/why | Accept-Language | en |
+| /why | q | 200 | en | /why?lang=en | zh=https://hunt.zalize.com/why en=https://hunt.zalize.com/why?lang=en x-default=https://hunt.zalize.com/why | Accept-Language | en |
+| /mcp | bare | 200 | zh-CN | /mcp | zh=https://hunt.zalize.com/mcp en=https://hunt.zalize.com/mcp?lang=en x-default=https://hunt.zalize.com/mcp | Accept-Language | zh |
+| /mcp | al | 200 | en | /mcp?lang=en | zh=https://hunt.zalize.com/mcp en=https://hunt.zalize.com/mcp?lang=en x-default=https://hunt.zalize.com/mcp | Accept-Language | en |
+| /mcp | q | 200 | en | /mcp?lang=en | zh=https://hunt.zalize.com/mcp en=https://hunt.zalize.com/mcp?lang=en x-default=https://hunt.zalize.com/mcp | Accept-Language | en |
+| /advanced | bare | 200 | zh-CN | /advanced | zh=https://hunt.zalize.com/advanced en=https://hunt.zalize.com/advanced?lang=en x-default=https://hunt.zalize.com/advanced | Accept-Language | zh |
+| /advanced | al | 200 | en | /advanced?lang=en | zh=https://hunt.zalize.com/advanced en=https://hunt.zalize.com/advanced?lang=en x-default=https://hunt.zalize.com/advanced | Accept-Language | en |
+| /advanced | q | 200 | en | /advanced?lang=en | zh=https://hunt.zalize.com/advanced en=https://hunt.zalize.com/advanced?lang=en x-default=https://hunt.zalize.com/advanced | Accept-Language | en |
+| /tld | bare | 200 | zh-CN | /tld | zh=https://hunt.zalize.com/tld en=https://hunt.zalize.com/tld?lang=en x-default=https://hunt.zalize.com/tld | Accept-Language | zh |
+| /tld | al | 200 | en | /tld?lang=en | zh=https://hunt.zalize.com/tld en=https://hunt.zalize.com/tld?lang=en x-default=https://hunt.zalize.com/tld | Accept-Language | en |
+| /tld | q | 200 | en | /tld?lang=en | zh=https://hunt.zalize.com/tld en=https://hunt.zalize.com/tld?lang=en x-default=https://hunt.zalize.com/tld | Accept-Language | en |

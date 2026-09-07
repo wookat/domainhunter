@@ -1,17 +1,36 @@
 import { useEffect, useState } from "react";
 import { Check, Copy, Crosshair, Download, Loader2, Sparkles } from "lucide-react";
 
-import { RegisterMenu } from "@/components/domain-row";
+import { ExpiryNote, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
-import { useI18n } from "@/lib/i18n";
+import { shareDocTitle, useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { createdAgoLabel } from "@/lib/relative-time";
 import type { ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, formatExpiry } from "@/lib/utils";
 
-type SharedItem = Pick<ShortlistItem, "domain" | "label" | "tld" | "meaning" | "scores">;
+/** 快照可能没有 status（旧快照 / 分享时仍在核验）；缺省不得视为「可注册」。expiresAt/note 仅新快照有 */
+type SharedItem = Pick<ShortlistItem, "domain" | "label" | "tld" | "meaning" | "scores" | "expiresAt" | "note"> & {
+  status?: "available" | "taken" | "unknown";
+};
+
+function SharedNote({ note }: { note: string }) {
+  const { t } = useI18n();
+  return (
+    <p className="mt-1 flex min-w-0 items-start gap-1 text-xs text-txt2">
+      <span className="shrink-0">{t("share.noteLabel")}</span>
+      <span className="min-w-0 break-words text-txt1">{note}</span>
+    </p>
+  );
+}
+
+function StatusBadge({ status, t }: { status: NonNullable<SharedItem["status"]>; t: (k: "status.available" | "status.taken" | "status.unknown") => string }) {
+  const cls =
+    status === "available" ? "bg-brand-dim text-brand" : status === "taken" ? "bg-taken-dim text-taken" : "bg-amber2-dim text-amber2";
+  return <span className={cn("shrink-0 rounded px-1.5 py-0.5 text-[11px] font-semibold", cls)}>{t(`status.${status}`)}</span>;
+}
 
 interface ShareSnapshot {
   items: SharedItem[];
@@ -24,7 +43,7 @@ export function SharePage({ id }: { id: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const [state, setState] = useState<LoadState>({ kind: "loading" });
-  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const { copied: availCopied, failed: availCopyFailed, copy: copyAvailable } = useCopyAvailable();
 
   useEffect(() => {
     let cancelled = false;
@@ -46,6 +65,11 @@ export function SharePage({ id }: { id: string }) {
       cancelled = true;
     };
   }, [id]);
+
+  useEffect(() => {
+    if (state.kind === "loading") return;
+    document.title = shareDocTitle(state.kind, lang, state.kind === "ready" ? state.data.items : []);
+  }, [state, lang]);
 
   if (state.kind === "loading") {
     return (
@@ -78,7 +102,20 @@ export function SharePage({ id }: { id: string }) {
   }
 
   const { items, createdAt } = state.data;
-  const csvRows = items.map((it) => ({ ...it, status: "available" as const }));
+  // 有 status 的快照：只复制/统计 available；旧快照无 status：复制全部且不带「可注册」字样
+  const hasStatus = items.some((it) => it.status !== undefined);
+  const copyRows = hasStatus ? items.filter((it) => it.status === "available") : items;
+  // 与 /shortlist 口径一致：普通注册价与去注册只给 available；taken（二级市场）/ unknown 不显示价也不给 CTA；
+  // 旧快照全无 status 时维持原行为（顶部已有「未含可用性状态」提示）
+  const registrable = (it: SharedItem) => (hasStatus ? it.status === "available" : true);
+  const noPriceTitle = (it: SharedItem) => t(it.status === "taken" ? "shortlist.takenNoPrice" : "shortlist.unknownNoPrice");
+  const hasExpiry = items.some((it) => it.status === "taken" && it.expiresAt);
+  const hasNote = items.some((it) => it.note);
+  const csvRows = items.map((it) => ({
+    ...it,
+    status: it.status,
+    expiresAt: it.status === "taken" && it.expiresAt ? formatExpiry(it.expiresAt) ?? undefined : undefined,
+  }));
   const timeStr = new Date(createdAt).toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", {
     year: "numeric",
     month: "short",
@@ -92,20 +129,27 @@ export function SharePage({ id }: { id: string }) {
         {t("share.subtitle", { time: timeStr })}
         {createdAt > 0 && <> · {createdAgoLabel(createdAt, lang)}</>}
       </p>
+      {items.length > 0 && !hasStatus && <p className="mt-1 text-xs text-amber2">{t("share.noStatus")}</p>}
 
       {items.length > 0 && (
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          {items.length >= 2 && (
+          {items.length >= 2 && copyRows.length >= 1 && (
             <button
-              onClick={() => copyAvailable(items.map((it) => it.domain))}
+              onClick={() => void copyAvailable(copyRows, hasStatus ? undefined : "")}
               className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
             >
               {availCopied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
-              {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: items.length })}
+              {availCopied
+                ? t("results.copiedAvail")
+                : availCopyFailed
+                  ? t("results.copyFailed")
+                  : hasStatus
+                    ? t("results.copyAvailBtn", { n: copyRows.length })
+                    : t("share.copyAllBtn", { n: copyRows.length })}
             </button>
           )}
           <button
-            onClick={() => exportResultsCsv(csvRows, lang, prices)}
+            onClick={() => exportResultsCsv(csvRows, lang, prices, "domainhunter-results", { expiresAt: hasExpiry, note: hasNote })}
             className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
           >
             <Download className="h-3.5 w-3.5" />
@@ -131,26 +175,39 @@ export function SharePage({ id }: { id: string }) {
               return (
                 <tr key={it.domain}>
                   <td className="px-4 py-3.5">
-                    <div className="font-mono text-[15px] font-semibold">
-                      {it.label}
-                      <span className="text-txt2">.{it.tld}</span>
+                    <div className="flex items-center gap-2">
+                      <span className={cn("font-mono text-[15px] font-semibold", it.status === "taken" && "text-taken line-through")}>
+                        {it.label}
+                        <span className="text-txt2">.{it.tld}</span>
+                      </span>
+                      {it.status && <StatusBadge status={it.status} t={t} />}
+                      {it.status === "taken" && it.expiresAt && <ExpiryNote iso={it.expiresAt} />}
                     </div>
                     {it.meaning && <div className="mt-0.5 max-w-md truncate text-xs text-txt1">{it.meaning}</div>}
+                    {it.note && <SharedNote note={it.note} />}
                   </td>
                   <td className="px-3 text-center">
                     <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-xs font-bold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
                       {score ?? "—"}
                     </span>
                   </td>
-                  <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">
-                    {priceShort(it.tld, lang, prices) ?? "—"}
-                  </td>
+                  {registrable(it) ? (
+                    <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">
+                      {priceShort(it.tld, lang, prices) ?? "—"}
+                    </td>
+                  ) : (
+                    <td title={noPriceTitle(it)} className="cursor-help px-3 text-right font-mono text-xs text-txt2">
+                      —
+                    </td>
+                  )}
                   <td className="whitespace-nowrap px-4 text-right">
-                    <RegisterMenu domain={it.domain}>
-                      <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">
-                        {t("common.register")}
-                      </button>
-                    </RegisterMenu>
+                    {registrable(it) && (
+                      <RegisterMenu domain={it.domain}>
+                        <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">
+                          {t("common.register")}
+                        </button>
+                      </RegisterMenu>
+                    )}
                   </td>
                 </tr>
               );
@@ -166,23 +223,38 @@ export function SharePage({ id }: { id: string }) {
           return (
             <div key={it.domain} className="rounded-xl border border-line bg-bg1 p-4">
               <div className="flex items-center justify-between gap-2">
-                <span title={it.domain} className="min-w-0 truncate font-mono text-[15px] font-semibold">
+                <span title={it.domain} className={cn("min-w-0 truncate font-mono text-[15px] font-semibold", it.status === "taken" && "text-taken line-through")}>
                   {it.label}
                   <span className="text-txt2">.{it.tld}</span>
                 </span>
+                {it.status && <StatusBadge status={it.status} t={t} />}
                 {score !== undefined && (
                   <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
                 )}
               </div>
+              {it.status === "taken" && it.expiresAt && (
+                <div className="mt-1">
+                  <ExpiryNote iso={it.expiresAt} className="text-[11px]" />
+                </div>
+              )}
               {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
+              {it.note && <SharedNote note={it.note} />}
               {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
               <div className="mt-3 flex items-center gap-2">
-                <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">
-                  {priceShort(it.tld, lang, prices) ?? ""}
-                </span>
-                <RegisterMenu domain={it.domain}>
-                  <button className="h-11 rounded-md bg-brand px-4 text-xs font-semibold text-brand-ink">{t("common.register")}</button>
-                </RegisterMenu>
+                {registrable(it) ? (
+                  <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">
+                    {priceShort(it.tld, lang, prices) ?? ""}
+                  </span>
+                ) : (
+                  <span title={noPriceTitle(it)} className="flex-1 font-mono text-xs text-txt2">
+                    —
+                  </span>
+                )}
+                {registrable(it) && (
+                  <RegisterMenu domain={it.domain}>
+                    <button className="h-11 rounded-md bg-brand px-4 text-xs font-semibold text-brand-ink">{t("common.register")}</button>
+                  </RegisterMenu>
+                )}
               </div>
             </div>
           );

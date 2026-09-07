@@ -1,0 +1,86 @@
+[
+  {
+    "tag": "BUTTON",
+    "text": "",
+    "aria": "关闭引导",
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": "AI 猎名",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": "精确核验",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": "批量核验",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "TEXTAREA",
+    "text": "",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgba(0, 0, 0, 0) solid 2px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".com",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".cn",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".io",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".ai",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".app",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": ".dev",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  },
+  {
+    "tag": "BUTTON",
+    "text": "",
+    "aria": null,
+    "shadow": "none",
+    "outline": "rgb(16, 16, 16) auto 1px"
+  }
+]

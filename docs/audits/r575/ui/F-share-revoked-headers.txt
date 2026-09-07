@@ -1,0 +1,12 @@
+HTTP/2 410 
+date: Mon, 07 Sep 2026 12:45:13 GMT
+content-type: application/json
+content-length: 19
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=6jncgVd9veygIMIeylc1fFNyDnmKtl9ccTpsmkWkE32FmHEhqgadZx5OBEb4zh6MTnm3wfjClHe6K0yrdWyDz7sohgHfPhXEzoW3Z4wN77sCHG2Wd%2FT5cVTMVJAvOD8GE6E%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a375cf2e5ae9dab7-PDX
+alt-svc: h3=":443"; ma=86400
+

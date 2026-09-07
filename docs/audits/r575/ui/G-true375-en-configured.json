@@ -1,0 +1,41 @@
+{
+  "badge": "Configured",
+  "masked": "https://webhook.site/…7d2a",
+  "controls": [
+    {
+      "tag": "SPAN",
+      "id": "",
+      "text": "Configured",
+      "width": 71.859375,
+      "height": 20.5,
+      "disabled": null
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Send test",
+      "width": 110.515625,
+      "height": 44,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Edit",
+      "width": 72.96875,
+      "height": 44,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Remove",
+      "width": 123.109375,
+      "height": 44,
+      "disabled": false
+    }
+  ],
+  "docW": 375,
+  "innerWidth": 375,
+  "prefilledMatches": null
+}

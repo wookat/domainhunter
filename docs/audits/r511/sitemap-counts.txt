@@ -1,0 +1,9 @@
+loc=1270
+lastmod={'2026-08-10': 1264, '2026-09-04': 6}
+newest(2026-09-04)=
+https://hunt.zalize.com/guide/cn-realname
+https://hunt.zalize.com/guide/cn-serverhold
+https://hunt.zalize.com/guide/cn-icp-beian
+https://hunt.zalize.com/guide/cn-dns-inland-vs-overseas
+https://hunt.zalize.com/guide/cn-vs-comcn-registrar
+https://hunt.zalize.com/guide/cn-expiry-redemption

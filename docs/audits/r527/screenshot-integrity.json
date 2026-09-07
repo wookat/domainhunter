@@ -1,0 +1,3614 @@
+[
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/15_advanced_all_six_statuses.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.216059156893273,
+      26.816790307495904,
+      22.342777073866568
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.35673293157918,
+      46.04465819593444,
+      44.40039343210987
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_at-vs-de_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.7581460947737,
+      25.67662819245578,
+      25.27354775445582
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_com_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.07666200466046,
+      24.267821913410522,
+      23.551818650155784
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.198515382142325,
+      28.939806351791265,
+      29.572430779242776
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.19559337383235,
+      27.513687434492436,
+      27.216272267918278
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/06_quick_check_results.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      39.6171051220084,
+      42.717150171042604,
+      40.97982213514306
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      41.24890162872255,
+      40.32876161605425,
+      39.63407914920337
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      41.50720722270182,
+      42.009793750046924,
+      41.515149694999856
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      48.9267726499966,
+      48.68294119538794,
+      46.773388800309036
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/18_home_footer_en_dark.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      16.557052762313774,
+      17.60317650297986,
+      18.556113841504878
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_tld_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.21518574443576,
+      27.956466375188818,
+      28.04683956129601
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/08_share_created.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      15.330284361072227,
+      22.514034028267012,
+      18.22603639342032
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.96749971545379,
+      29.90274501924125,
+      29.492063568677743
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.13941455496403,
+      31.963091491652573,
+      30.747178401502612
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.554275673267234,
+      45.573764631272965,
+      46.25194452477213
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.381289800553024,
+      32.206800718002434,
+      32.92296416756922
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.93204687795633,
+      33.67225719275193,
+      32.574422722469464
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      16.223082946309578,
+      17.608207917106018,
+      17.618920346089432
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/17_vs_horizontal_after_375_dark.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      28.763439866235164,
+      29.982522570164765,
+      30.75516496369389
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.65119542878871,
+      47.99157870752753,
+      49.10518305426493
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.001934213696764,
+      32.9141491531203,
+      33.70171613700733
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.92998708014808,
+      15.00762378819469,
+      16.228994277182576
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.20570088067331,
+      29.986484072282583,
+      29.041215367523318
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_de-vs-com_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.452487758876135,
+      24.886815677144643,
+      24.41923331197014
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.562448132612175,
+      25.507770621247474,
+      27.807839730073557
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      49.66202738787804,
+      49.36308573281601,
+      47.82822120712116
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      8.9870093554419,
+      17.997670462956012,
+      11.941735774562048
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_saas_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.4683566524101,
+      26.82161016107703,
+      26.769297359949523
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      19.671824067683474,
+      32.248843883191675,
+      24.2569330294247
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      22.274374044843732,
+      15.686287174626479,
+      17.088533938292887
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_pets_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.716526506649814,
+      26.84322056205169,
+      26.016921364681043
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.68277321794841,
+      33.440164386878436,
+      32.30884787806098
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      35.92590284531501,
+      35.62122183757916,
+      34.208982833389896
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.44587745574969,
+      31.39799047417563,
+      32.23260184504795
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.857143750453655,
+      31.812813319340304,
+      32.677421380051584
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.05849680928362,
+      46.26443884197191,
+      47.202603771191775
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/10_share_revoked_410.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      9.130335776818995,
+      19.454100255085475,
+      12.513232926767216
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.02781215939294,
+      51.521060562408735,
+      51.35429635986664
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.77140285269708,
+      32.12568877555612,
+      31.64442899912562
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.463716550679273,
+      13.46899891868238,
+      15.106014799153256
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.12736257859335,
+      40.306400294381035,
+      39.53249126674394
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      9.31073232998033,
+      19.546103812613403,
+      12.670139404349229
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.377154027303384,
+      26.977622488486013,
+      26.96313426158079
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.8712678603103,
+      34.64973993944046,
+      33.46785140444597
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_de_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      24.522107390605733,
+      23.813701086953376,
+      23.094091405453906
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.90800969806292,
+      34.71484780499496,
+      33.560541958230566
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      51.76108884732403,
+      51.48926278160472,
+      49.648545289788274
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      33.54698800855881,
+      24.43487933618958,
+      26.12991139006151
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.76703034275013,
+      31.68294981917322,
+      32.43417277994824
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.93740672154333,
+      44.77443449955809,
+      44.4656556913001
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.907269944849627,
+      32.293396254064035,
+      31.465728587505936
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.38019617372589,
+      39.391524257002274,
+      38.392481032898964
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.352409135444333,
+      32.194940478460275,
+      32.943839876238314
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.97375326521869,
+      50.679435885401475,
+      48.860033611025166
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.60097530591822,
+      44.869763176763875,
+      46.28065014482487
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      25.93034972922271,
+      28.72371177077998,
+      27.615476674907224
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.799819687055674,
+      46.98343408702499,
+      47.932012144489484
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.382471802143165,
+      46.14576000133775,
+      44.53410159046546
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.74873792353278,
+      47.83009237758295,
+      48.77694414923267
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.662606033081694,
+      45.33914528019082,
+      43.928491125025985
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      19.563118226309157,
+      14.541670504667419,
+      15.486819150504372
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      51.348744706655,
+      50.98504142908251,
+      49.23059216801167
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.27514431325499,
+      22.849761368210853,
+      26.10841444145067
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.30222961832488,
+      32.11805049685111,
+      30.92971204054856
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.97592915145019,
+      35.96001422062849,
+      36.67816392582548
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.856108726258046,
+      27.197393045853893,
+      27.34648772937368
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_saas_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.760437218961332,
+      26.78880506228927,
+      25.99451321048786
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.16645120150903,
+      43.21965340205277,
+      43.930009077878076
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.61780794227133,
+      45.56024890838177,
+      44.59869723932302
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.46391307435923,
+      36.00852835831613,
+      34.997292298296514
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.473996615204186,
+      43.480828633241806,
+      44.519437930275515
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/09_share_active.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      13.893545112505997,
+      22.828993002243433,
+      16.843509256706174
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_io-vs-ai_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.281977312379343,
+      24.91163614181435,
+      24.337257446477075
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.868059645599473,
+      29.17972279699149,
+      28.43218673649307
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.99309370887034,
+      50.472953202984286,
+      48.52543506708517
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_saas_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.08428151254036,
+      25.297895241091123,
+      24.457654729917934
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      18.078858236779723,
+      31.921718815691445,
+      22.861065704288645
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.598112446699265,
+      19.70092817528245,
+      14.283565259141458
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/16_vs_horizontal_before_375_dark.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      28.170501359565968,
+      29.593501269671428,
+      30.228112557989604
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      47.82394174791689,
+      49.15312393204036,
+      50.26685129232091
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      53.336910808089684,
+      52.76517586195156,
+      51.355770544220704
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_guide_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      23.813126404959842,
+      24.844000042555706,
+      24.874321639902806
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_de-vs-com_en_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      33.195548341562905,
+      32.54916266045521,
+      31.24613562036688
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      29.855573176564143,
+      27.848045173758717,
+      27.65367544428284
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_com-vs-cn_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.560196778329484,
+      24.59422779420556,
+      23.842104663596782
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      37.626242776416184,
+      37.334389523343184,
+      36.25508027380052
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.50047180071188,
+      43.44318850368601,
+      42.377202364939485
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      17.385728775337032,
+      16.560231635924847,
+      16.32465441826579
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      52.285311653361596,
+      51.881799008486496,
+      50.216335807711665
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      18.911850720929557,
+      34.46352663603754,
+      24.069451873455364
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.186169331658423,
+      31.012242133943452,
+      29.988361171127906
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.115923295480755,
+      45.8741860092145,
+      44.295711845814076
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.89783059474953,
+      42.0075346578165,
+      43.054213883670656
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.776849875425004,
+      28.542146878109012,
+      29.220121284554136
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_com_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.03713891817023,
+      25.387561170208592,
+      25.7268235360693
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      8.876960129124516,
+      17.941231761473666,
+      11.844069010067003
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_ecommerce_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.845547894080564,
+      26.79199745732552,
+      26.02608565753794
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      39.991402820626455,
+      24.89133383424961,
+      28.64290577859478
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.30998700448416,
+      27.479537433998672,
+      26.796110111824014
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_io-vs-ai_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.279086390278653,
+      27.20114109313961,
+      27.292803840274882
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      39.54674096595673,
+      39.30265690978913,
+      38.26447992093461
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.159601685609495,
+      28.909481720906367,
+      28.573533723893668
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_cn_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      24.37752275983238,
+      23.54622686953561,
+      22.875453971578693
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.12088410868052,
+      30.941410575454903,
+      29.9978323460936
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      19.903301235358917,
+      30.205931264280522,
+      23.714793423161204
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      47.302462867509476,
+      46.992848556296906,
+      45.47047178941547
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.662993861236824,
+      30.06101613469178,
+      29.797427332234385
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.186512103624,
+      44.82709668269647,
+      43.31465024696731
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_coffee_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.70356983604816,
+      25.933183670646873,
+      25.04912845793974
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      13.157705301198844,
+      31.348747215688178,
+      19.32986925778222
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      49.51545193721055,
+      49.181844582899394,
+      47.511032597029946
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      14.254062496264265,
+      34.47248538045522,
+      21.112264889409435
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.49212845159718,
+      34.244881434972804,
+      33.06086289851514
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.54758416512787,
+      41.70796648162222,
+      42.54269600133474
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.394631685435538,
+      30.68021085995752,
+      30.71586063769234
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/13_advanced_bulk_results_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      21.131513064136545,
+      26.33436809977393,
+      22.90366030855259
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      18.0597332090183,
+      31.33005803803589,
+      22.481564132845374
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.794266331865312,
+      31.673200764633528,
+      32.34132874336897
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      13.989876132068407,
+      34.362537124009215,
+      20.900476170629926
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      35.58492247877353,
+      24.87220595625468,
+      27.158216254635818
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_coffee_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.902832253092807,
+      25.847845367401355,
+      25.0915774548999
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_at-vs-de_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.972150245454053,
+      25.665688101983807,
+      25.642266487891646
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.507832801915526,
+      31.25364381382494,
+      32.05401946414348
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.348253501120666,
+      49.97221295610486,
+      48.15692735981772
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.14467691222412,
+      44.12547918474408,
+      45.14079749043097
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.68974997645294,
+      34.47369329881095,
+      33.23127505723277
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      35.613329709596265,
+      35.40416144685491,
+      34.18383200964606
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_com-vs-cn_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.344215294212184,
+      27.24405592617184,
+      27.376858487251052
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.66970733955164,
+      43.6222927515767,
+      44.3899273113049
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.6819026644216,
+      33.54233226473234,
+      34.24548626956991
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/03_home_en_light_desktop.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      41.24452388099796,
+      40.32734418973486,
+      39.6320799208692
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_de-vs-com_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.79355200836673,
+      24.44915012137687,
+      23.90816132709661
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_de_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.245510422283697,
+      24.76847684826325,
+      25.07825135037886
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_cn_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.57450525020606,
+      23.991456215778367,
+      24.393524366133672
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_coffee_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.83863635000739,
+      26.967727677489137,
+      26.13497379758098
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.84629340090189,
+      33.59619264947809,
+      32.35660165801966
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.5524350172292,
+      48.078711259613726,
+      49.34979057461018
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_vs_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      23.858315870735243,
+      24.494777501678673,
+      24.591152995455552
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.770509640583533,
+      15.53205343520506,
+      16.42895799994346
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      22.428154872773593,
+      23.09405058771034,
+      23.34975020898589
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      53.50105292632068,
+      53.06598078506764,
+      51.56980200499753
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_de_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.14080868354323,
+      23.896004286913932,
+      23.294854097766127
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_tld_com_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      24.506371506831307,
+      23.407484827928794,
+      22.73488750301939
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      47.03791868085643,
+      48.38644577383071,
+      49.61082807107137
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_com-vs-cn_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.587236582524916,
+      25.192419699313227,
+      24.633608137789537
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_guide_saas_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.77720727351542,
+      25.218801257175016,
+      25.188002888202522
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.28832312986891,
+      44.826587856742485,
+      44.08931660688591
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_at_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.966665862815898,
+      25.93713438388535,
+      26.382091552139947
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      37.85997573862724,
+      38.606026689532314,
+      39.172406217629955
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      9.188234545820563,
+      19.484462618408926,
+      12.559990101122498
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.190236774886515,
+      32.06696806064939,
+      32.786767945062856
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.59895503540827,
+      44.24454780828806,
+      42.83899591721521
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.6483349905022,
+      33.384294469403706,
+      32.27322464856658
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/02_home_keyboard_focus.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      36.60163426566754,
+      35.17944662556848,
+      34.68374007498347
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.60011848512192,
+      45.84788241990926,
+      46.851422670301844
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_saas_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.775433053711005,
+      25.69746859980392,
+      24.94180562707736
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/11_monitor_invalid_webhook.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      15.805614262137931,
+      21.904136586821892,
+      18.03457351925997
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/07_shortlist_one_item.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      13.933543306234524,
+      20.04245130728035,
+      16.345405791457434
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      29.096485365277143,
+      27.22054086140537,
+      26.952772073229497
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      48.4926733569697,
+      48.10625694989079,
+      46.476185524606485
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.075821783918784,
+      44.44655517473806,
+      44.52636259391308
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.18304364087134,
+      34.023212967574494,
+      34.80370500502491
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_io-vs-ai_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.3779368621059,
+      26.04203186415023,
+      25.352695610646652
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      19.388975291165355,
+      15.082663418889634,
+      15.702868583459505
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      16.192452322943375,
+      17.7930441257246,
+      17.65967463979608
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_ecommerce_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.240670046775556,
+      25.46243285526879,
+      24.610460693398355
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      13.391277701725059,
+      31.45362598893222,
+      19.526631319108095
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.4577447985146,
+      31.23128984662775,
+      32.06772605670487
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.80508392761856,
+      50.51702138516907,
+      48.63753784661049
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_guide_saas_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.55004240386436,
+      22.74524081076142,
+      22.969308221869525
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.998175103562154,
+      32.86489982573145,
+      33.62538398095828
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.070798992905104,
+      44.789360886592874,
+      43.89196910554905
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_tld_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      22.433027161077753,
+      23.26112284241122,
+      23.3439804153699
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_at_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.031168925560568,
+      23.898493687116137,
+      23.243234369952933
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      39.87387874663073,
+      24.68967043537209,
+      28.48780002610507
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      12.054325411068547,
+      17.360036492633895,
+      14.037903315291597
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      49.24146462455348,
+      50.412158208817,
+      51.30613011094396
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_pets_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.58613966424691,
+      25.814566746856922,
+      24.93551502336827
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      41.66611806948082,
+      42.74669494656859,
+      43.44079413599302
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      18.363696532501525,
+      29.64267457500757,
+      22.302626507359957
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.530120523491654,
+      13.566525110274414,
+      15.182441109630526
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.13928711501994,
+      46.25605891413679,
+      46.161179516024944
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.63665833475865,
+      46.39707022813018,
+      44.84142275279181
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.733195266772285,
+      42.60661790036572,
+      41.390143269022644
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.039962737256936,
+      32.95117555369843,
+      33.73941199678199
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.343395566175877,
+      17.476615995640238,
+      13.543194819714573
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_tld_at_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.00582987889614,
+      26.715837959078062,
+      25.9084470311131
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.65377568345947,
+      43.686212035482285,
+      44.74277564595423
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/01_home_zh_light_desktop.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      36.20146445037188,
+      34.855802653763966,
+      34.39240787236426
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.42787500244094,
+      30.291013190996527,
+      31.161844730611584
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_at_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.07754273918505,
+      24.378187465186443,
+      23.60911075798652
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.206353433387733,
+      28.501349082317734,
+      28.664988004467602
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_io-vs-ai_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.734741500388427,
+      24.87792015997777,
+      24.054215942289172
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.166497407234107,
+      14.609742074245064,
+      15.713611526133349
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_vs_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      20.424519389329113,
+      21.0682246221631,
+      21.218644813803927
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_vs_com-vs-cn_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      14.253314798139145,
+      14.150936290463285,
+      13.74173504786175
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      39.46171401226084,
+      27.00133520790069,
+      29.759228321956215
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_cn_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.582405814694642,
+      24.062383634752134,
+      24.43791420698087
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.393650638285372,
+      26.061648608495748,
+      26.258196107644142
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_tld_at_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.20395837918771,
+      25.923893849347117,
+      25.125611115285498
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.67061957964793,
+      43.96903176170409,
+      43.1589558599145
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.78549924755664,
+      31.127058612170355,
+      30.42904324679379
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.01270277107148,
+      32.86547434982209,
+      31.659521340666412
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.75578254511924,
+      33.846240705343725,
+      34.77854488529112
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_at-vs-de_en_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      32.57413701062182,
+      31.962646818658868,
+      30.66767278220743
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.53951316186667,
+      33.386336201125204,
+      34.115710304154355
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.2563681955028,
+      45.910289328105364,
+      45.86271303295831
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.194105859183155,
+      18.490160861467267,
+      13.770751395857468
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_coffee_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.589310183796922,
+      26.978473281347817,
+      26.919195516959146
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      36.3929367451228,
+      35.02900336460879,
+      34.5176209696859
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.32860909776299,
+      34.16337775551494,
+      34.94454839730645
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.109279668189906,
+      49.82958550554404,
+      47.91504867621829
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      34.558326604850485,
+      35.48290415770929,
+      35.90078761475475
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.234268681223796,
+      41.98706833178916,
+      41.50571523938402
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.905030481673954,
+      32.73261352675138,
+      31.591491346697904
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/05_quick_check_en_dark.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      39.60859837639525,
+      42.28152683124824,
+      40.87914566484403
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      49.804772011595304,
+      49.47934499664375,
+      47.817728234603
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.35692188963626,
+      42.11281657867277,
+      42.16775166652134
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      36.00366295438286,
+      36.81525361070525,
+      37.34653348232703
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      33.97382906381721,
+      25.68059173888023,
+      26.964721864611256
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      47.06790429276569,
+      46.36632882630523,
+      45.4736999291156
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_at-vs-de_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      25.022453966396053,
+      23.810729170557913,
+      23.16011140725166
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.169656349726324,
+      25.956285730117866,
+      25.320545483722114
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.964360647426155,
+      52.09815326764194,
+      52.80940299517087
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.509598385799066,
+      44.7804367051136,
+      45.819636356551726
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      51.47094260459532,
+      51.081795902107395,
+      49.165117133010675
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.668413821371615,
+      30.486679647438276,
+      31.346762457490417
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.9940895697763,
+      52.189591061691715,
+      52.75073668401447
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_com-vs-cn_en_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      32.144388405002104,
+      31.432426879479348,
+      30.208011354072358
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_at_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.025910001605585,
+      24.6720755873336,
+      24.93723918976116
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      37.54271807146578,
+      37.232479953393124,
+      35.98165054408433
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_tld_com_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.96599394643652,
+      25.298925150654505,
+      25.650894568516016
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_ecommerce_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.899376786909464,
+      27.326784189114974,
+      27.245014166616393
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.55821172269966,
+      27.819289825744644,
+      27.051697511930907
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.873601315118044,
+      34.61700949407962,
+      33.47878133496506
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.381088587213924,
+      38.05571591998468,
+      38.1130624633705
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      45.16718578696915,
+      46.34964918306874,
+      47.316303774408446
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.37402457587088,
+      47.477229920947885,
+      48.43736282034078
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      22.381455331686237,
+      14.447317772220563,
+      16.36308913638489
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.413450794375574,
+      32.31722208159407,
+      33.06340947265263
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_vs_com-vs-cn_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      14.33796885249017,
+      14.23538345637719,
+      13.818909211504184
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      42.795447212754986,
+      43.83238372202953,
+      43.776902174107526
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      35.75152082389014,
+      35.53559462888153,
+      34.312239542260365
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_guide_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      28.731089049357177,
+      29.72918766268452,
+      29.685430148374596
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.93590752861943,
+      50.58955050770594,
+      48.70707378874747
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_de_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.821630088397967,
+      25.660946526783547,
+      26.17559385379279
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/04_home_en_dark_desktop.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      39.71656459769998,
+      40.99006063663699,
+      40.82446594702838
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      50.01884235342451,
+      49.704797716804165,
+      48.0769953490102
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/12_shortlist_removed_empty.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.607792635913297,
+      19.561935525374174,
+      14.395308060142373
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_at-vs-de_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.24348193219609,
+      24.725775633884734,
+      24.215492649142238
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      39.73348270487003,
+      41.02857247926726,
+      40.8483841039873
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.892860027543183,
+      29.691707637114472,
+      28.71200582836905
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      52.16519120149668,
+      51.11180988051493,
+      50.140986943892685
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.196399745714647,
+      17.986789483526323,
+      13.453524767587451
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.94779086416058,
+      39.46529896181783,
+      38.88869491948025
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      11.903485962864975,
+      18.394568605259845,
+      14.279181085918207
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      47.49446043018126,
+      48.87896805341835,
+      50.07428672143987
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_de-vs-com_zh_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      31.604405819825544,
+      30.7749120136822,
+      29.702846303820838
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.71441574375703,
+      26.644751778273143,
+      28.46956084809668
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_cn-realname_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.122938077550103,
+      26.074484206771793,
+      24.928648249581787
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.100380734621904,
+      29.813960235900705,
+      30.497906149599167
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.40001435873989,
+      36.22401688996718,
+      35.66665167552355
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.59067799218187,
+      34.388171654305424,
+      33.168075418815846
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.35907416964433,
+      45.5227503768756,
+      44.513063538586046
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_vs_com-vs-cn_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.470669338209667,
+      25.93501775627539,
+      25.36359564369298
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      23.236984910118565,
+      23.03042810098164,
+      22.409006234944584
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.81667911028886,
+      33.600898748975354,
+      32.41915926437818
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.81795190026747,
+      46.48515825007734,
+      44.974447320045755
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      36.1606482904279,
+      22.657807475664235,
+      25.96259875739612
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      33.70475238101274,
+      33.47409376631603,
+      32.34859603052666
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      34.127553518189835,
+      33.8915105072493,
+      32.6721198903269
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_landing_tld_com_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      24.529843207749998,
+      23.266590409653457,
+      22.684758716606627
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      38.78774300605532,
+      39.74377464129166,
+      40.02669125623632
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_com_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      31.345490946459137,
+      25.90866920883125,
+      26.497987195197595
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.359852238982402,
+      27.350276284214214,
+      27.018426573965023
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      25.035582274084803,
+      27.73615932746392,
+      26.74397228948913
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_tld_cn_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.332529217990487,
+      25.028903252790567,
+      25.624289367668002
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      32.51688784732136,
+      33.33603699807792,
+      34.09003913821727
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      46.983926869526215,
+      48.07179879317783,
+      49.03709374595795
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.57781337199099,
+      40.12880364121062,
+      39.13556042066263
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      43.294998344581145,
+      44.85943959505452,
+      44.7575859528372
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_pets_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.14866989020996,
+      26.122415446378554,
+      25.351371401613882
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_com-vs-cn_zh_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      33.362928324842166,
+      32.54716701854735,
+      31.323246007381737
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      35.6415562193713,
+      35.392047327523855,
+      34.226385633854086
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      39.02492747564925,
+      40.92920834879527,
+      41.12078958543121
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/14_advanced_bulk_results_375_dark.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      30.983581466738073,
+      37.55641849573315,
+      32.69104995696248
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      44.30624926677133,
+      45.59794759834724,
+      46.964611318443005
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_at-vs-de_zh_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      30.91097818314234,
+      30.108176574367274,
+      29.03644290970275
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_de-vs-com_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.13481220950578,
+      25.810579942681823,
+      25.818716450549662
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_landed_guide_pets_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      30.804995910698793,
+      27.23728616394746,
+      27.156411732647594
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_io-vs-ai_en_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      33.451685398248635,
+      32.87811124437121,
+      31.550038313569782
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_guide_ecommerce_zh.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.160452917246275,
+      26.405071048057145,
+      25.5337289237471
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      17.74873488605761,
+      16.777622826250393,
+      16.56694028516799
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_light_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      22.449444582970575,
+      14.552560263720494,
+      16.445176465200106
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_io-vs-ai_zh_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      35.034057549913406,
+      34.42400549504787,
+      33.050683541469226
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/faq_vs_de-vs-com_en.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      27.535514495930578,
+      25.498474225488312,
+      25.100711244334214
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      26.10971593714691,
+      29.211382265296262,
+      28.07206175996498
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_dark_1280.png",
+    "size": [
+      1280,
+      900
+    ],
+    "stddev": [
+      29.248379854691468,
+      29.92895918855304,
+      30.55017040962887
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_dark_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      40.865925989217615,
+      41.9090650493152,
+      42.7604703001461
+    ]
+  },
+  {
+    "path": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_light_375.png",
+    "size": [
+      375,
+      900
+    ],
+    "stddev": [
+      48.47767246429369,
+      48.180060889012104,
+      46.285481617204915
+    ]
+  }
+]
