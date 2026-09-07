@@ -709,7 +709,7 @@ export default function App() {
   const headerRight =
     mode === "home" ? (
       <button
-        className="flex h-11 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9"
+        className="flex h-11 min-w-11 items-center justify-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9 sm:min-w-0"
         onClick={openAdvanced}
         aria-label={t("header.advanced")}
         title={t("header.advanced")}

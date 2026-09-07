@@ -149,6 +149,35 @@ describe("DomainRow taken 行 R574：桌面「重新核验」带文字 + 缺到�
     for (const cls of ["flex-wrap", "min-h-12", "sm:h-12", "sm:flex-nowrap"]) expect(rowCls).toContain(cls);
   });
 
+  it("375 布局（R580 P3）：unknown 行原因文本换到第二行（order-last basis-full pl-10，≥sm 回行内），行容器可换行；available 行不换行", () => {
+    const html = render(row("chaxiang.ai", "unknown", { detail: "http-429" }));
+    const meta = html.match(/<span data-unknown-meta="" class="([^"]*)"/);
+    expect(meta).not.toBeNull();
+    for (const cls of ["order-last", "basis-full", "pl-10", "sm:contents"]) expect(meta![1].split(" ")).toContain(cls);
+    // 原因文本与重新核验同在第二行容器内；重新核验 order-last（≥sm contents 时仍落在行尾）
+    const inner = html.slice(html.indexOf("data-unknown-meta"));
+    expect(inner).toMatch(/data-unknown-reason="rate-limited" class="[^"]*\btruncate\b/);
+    expect(inner.indexOf('data-recheck="chaxiang.ai"')).toBeGreaterThan(inner.indexOf('data-unknown-reason'));
+    expect(html).toMatch(/data-recheck="chaxiang\.ai"[^>]*class="[^"]*\bmin-w-11\b[^"]*\border-last\b/);
+    // flex-wrap 下 item 先换行再收缩：域名 basis-0（flex-1，≥sm flex-none）才会在首行截断，而不是把收藏挤到第三行
+    expect(html).toMatch(/<span title="chaxiang\.ai" class="[^"]*\bflex-1\b[^"]*\bsm:flex-none\b/);
+    expect(render(row("nic.cn", "taken"))).toMatch(/<span title="nic\.cn" class="[^"]*\bflex-1\b[^"]*\bsm:flex-none\b/);
+    // 行容器：<sm 换行、≥sm 48px 单行
+    const rowDiv = html.match(/<div data-domain="chaxiang\.ai" class="[^"]*"><div class="([^"]*)"/);
+    expect(rowDiv).not.toBeNull();
+    for (const cls of ["flex-wrap", "min-h-12", "sm:h-12", "sm:flex-nowrap"]) expect(rowDiv![1].split(" ")).toContain(cls);
+    // 开监控 watch CTA 与 favorite 一样 <sm 有 min-w-11
+    const ok = render(row("chaxiang.com", "available"));
+    const okRow = ok.match(/<div data-domain="chaxiang\.com" class="[^"]*"><div class="([^"]*)"/)![1].split(" ");
+    expect(okRow).toContain("h-12");
+    expect(okRow).not.toContain("flex-wrap");
+  });
+
+  it("R580：taken 行开监控按钮 <sm 触点 min-w-11（非 chip 变体）", () => {
+    const html = render(row("nic.cn", "taken"));
+    expect(html).toMatch(/<button[^>]*aria-label="[^"]*"[^>]*class="[^"]*\bmin-w-11\b[^"]*\bsm:min-w-0\b[^"]*"[^>]*>(?:(?!<\/button>).)*lucide-bell\b/s);
+  });
+
   it("英文：expiry pending + Re-check 文字", () => {
     setLang("en");
     const html = render(row("nic.cn", "taken"));
