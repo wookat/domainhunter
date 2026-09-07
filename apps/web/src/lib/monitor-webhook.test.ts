@@ -2,6 +2,7 @@
  * R565：/monitors「通知方式」卡片的纯函数与请求封装。
  * URL 校验（仅 https、≤500）、脱敏展示、「发送测试」对 /api/monitor/webhook-test 各响应的映射，以及到期日 zh/en 文案格式。
  */
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import { formatExpiry } from "./utils";
@@ -116,5 +117,18 @@ describe("到期日格式化 zh/en", () => {
     expect(zh["monitors.notify.desc"]).toContain("0 */6 * * *");
     expect(en["monitors.notify.desc"]).toContain("6 hours");
     expect(en["monitors.notify.desc"]).toContain("0 */6 * * *");
+  });
+});
+
+describe("webhook 输入框 375px 触控高度（R570 P2）", () => {
+  it("移动端不用 flex-1（flex-basis 0 会把 h-11 压成内容高），且带 min-h-11 兜底", () => {
+    const src = readFileSync(new URL("../components/monitors-page.tsx", import.meta.url), "utf8");
+    const m = src.match(/id="monitor-webhook-input"[\s\S]*?className=\{cn\("([^"]+)"/);
+    if (!m) throw new Error("monitor-webhook-input className not found");
+    const classes = m[1].split(/\s+/);
+    expect(classes).toContain("h-11");
+    expect(classes).toContain("min-h-11");
+    expect(classes).not.toContain("flex-1");
+    expect(classes).toContain("sm:flex-1");
   });
 });
