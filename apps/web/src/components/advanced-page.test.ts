@@ -3,7 +3,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
-import { AdvancedPage, bulkProgressLabel } from "./advanced-page";
+import { AdvancedPage, advanceBulkProgress, bulkProgressLabel, finishBulkProgress, startBulkProgress, type BulkProgress } from "./advanced-page";
 import { I18nProvider, interpolate, type TFunc } from "@/lib/i18n";
 
 const noop = () => undefined;
@@ -81,5 +81,58 @@ describe("bulkProgressLabel（P3-3）", () => {
   it("未知 total（组合器路径）：只报已核验数，不伪造分母", () => {
     expect(bulkProgressLabel({ done: 7 }, true, t)).toBe("已核验 7 个");
     expect(bulkProgressLabel({ done: 7 }, false, t)).toBe("已完成，共核验 7 个");
+  });
+});
+
+describe("批量进度末帧单一状态源（R570 P3-3：不再出现「核验中 N/N」再变「已完成 N/N」）", () => {
+  const dict: Record<string, string> = {
+    "adv.progress": "核验中 {done}/{total}",
+    "adv.progressOpen": "已核验 {done} 个",
+    "adv.progressDone": "已完成 {done}/{total}",
+    "adv.progressDoneOpen": "已完成，共核验 {done} 个",
+  };
+  const t: TFunc = (key, vars) => interpolate(dict[key] ?? key, vars);
+  const label = (p: BulkProgress) => bulkProgressLabel(p, !p.finished, t);
+
+  it("已知 total：逐 chunk 推进，凑齐 total 的那次更新即 finished，文案直接「已完成 20/20」", () => {
+    let p: BulkProgress | null = startBulkProgress(20);
+    expect(p).toEqual({ done: 0, total: 20, finished: false });
+    const seen: string[] = [label(p)];
+    for (const chunk of [3, 1, 1, 1, 5, 4, 3, 2]) {
+      p = advanceBulkProgress(p, chunk);
+      seen.push(label(p));
+    }
+    expect(p).toEqual({ done: 20, total: 20, finished: true });
+    expect(seen.at(-1)).toBe("已完成 20/20");
+    expect(seen).not.toContain("核验中 20/20");
+    expect(seen.filter((s) => s.startsWith("已完成"))).toHaveLength(1);
+  });
+
+  it("流结束时 finishBulkProgress 对已完成进度返回同一引用（不触发多余 render），未完成的补置 finished", () => {
+    const done = advanceBulkProgress(startBulkProgress(2), 2);
+    expect(finishBulkProgress(done)).toBe(done);
+    const partial = advanceBulkProgress(startBulkProgress(5), 3);
+    expect(finishBulkProgress(partial)).toEqual({ done: 3, total: 5, finished: true });
+    expect(label(finishBulkProgress(partial)!)).toBe("已完成 3/5");
+    expect(finishBulkProgress(null)).toBeNull();
+  });
+
+  it("未知 total（组合器路径）：chunk 到达不置 finished，只在流结束时置位", () => {
+    let p = startBulkProgress(undefined);
+    p = advanceBulkProgress(p, 4);
+    p = advanceBulkProgress(p, 3);
+    expect(p.finished).toBe(false);
+    expect(label(p)).toBe("已核验 7 个");
+    const end = finishBulkProgress(p)!;
+    expect(end.finished).toBe(true);
+    expect(label(end)).toBe("已完成，共核验 7 个");
+  });
+
+  it("组件进度区只读 progress.finished：源码里 spinner/文案不再由 running 分叉", () => {
+    const src = readFileSync(new URL("./advanced-page.tsx", import.meta.url), "utf8");
+    const block = src.slice(src.indexOf('data-testid="bulk-progress"'), src.indexOf("role=\"progressbar\""));
+    expect(block).toContain("progress.finished");
+    expect(block).toContain("bulkProgressLabel(progress, !progress.finished, t)");
+    expect(block).not.toMatch(/\{running \?/);
   });
 });

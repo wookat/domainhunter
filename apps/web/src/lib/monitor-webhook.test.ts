@@ -132,3 +132,23 @@ describe("webhook 输入框 375px 触控高度（R570 P2）", () => {
     expect(classes).toContain("sm:flex-1");
   });
 });
+
+describe("通知卡片按钮桌面高度一致（R571 P3-4：只读态与编辑态同为 sm:h-10 / 40px）", () => {
+  const src = readFileSync(new URL("../components/monitors-page.tsx", import.meta.url), "utf8");
+  const card = src.slice(src.indexOf("const BTN_SECONDARY"), src.indexOf("export function MonitorsPage"));
+
+  it("BTN_SECONDARY（发送测试/修改/取消）移动 h-11、桌面 sm:h-10，且不再需要调用处叠加 sm:h-10", () => {
+    const m = card.match(/const BTN_SECONDARY =\s*"([^"]+)"/);
+    if (!m) throw new Error("BTN_SECONDARY not found");
+    const classes = m[1].split(/\s+/);
+    expect(classes).toContain("h-11");
+    expect(classes).toContain("sm:h-10");
+    expect(classes).not.toContain("sm:h-9");
+    expect(card).not.toContain('cn(BTN_SECONDARY, "sm:h-10")');
+  });
+
+  it("「清除」按钮与其他次级按钮同高；整张通知卡片内不再有 sm:h-9", () => {
+    expect(card).toMatch(/relative flex h-11 items-center gap-1\.5 overflow-hidden rounded-lg border px-3 text-sm sm:h-10/);
+    expect(card).not.toContain("sm:h-9");
+  });
+});

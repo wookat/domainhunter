@@ -51,6 +51,16 @@ export function ExpiryNote({ iso, className }: { iso: string; className?: string
   );
 }
 
+/** taken 域名缺到期日（DNS-only 结果，注册局 RDAP 未返回）时的「到期日待查」chip；首页 quick-check、Results、/advanced 同源 */
+export function ExpiryUnknownChip({ className }: { className?: string }) {
+  const { t } = useI18n();
+  return (
+    <i title={t("expiry.unknownChipTip")} className={cn("not-italic font-sans text-[10px] text-txt2", className)} data-expiry="unknown">
+      {t("expiry.unknownChip")}
+    </i>
+  );
+}
+
 const WATCH_CONFIRM_TIMEOUT_MS = 5000;
 
 /**
@@ -345,7 +355,7 @@ export function DomainRow({
         <span className={cn("tnum shrink-0 rounded-md bg-taken-dim text-center font-mono text-taken", badgeCls)}>—</span>
         <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "text-[15px]")}>{row.domain}</span>
         <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
-        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="shrink truncate" />}
+        {row.expiresAt ? <ExpiryNote iso={row.expiresAt} className="shrink truncate" /> : <ExpiryUnknownChip className="min-w-0 shrink truncate whitespace-nowrap" />}
         {onToggleFavorite && (
           <WatchCta
             domain={row.domain}
@@ -357,7 +367,7 @@ export function DomainRow({
             }}
           />
         )}
-        {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} withLabel={false} />}
+        {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />}
         {onToggleFavorite && (
           <button
             title={favorite ? t("results.favRemove") : t("results.favAdd")}

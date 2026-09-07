@@ -33,8 +33,9 @@ function statusBadgeClass(status: string): string {
   return "bg-bg3 text-txt1";
 }
 
+/** 通知卡片次级按钮：移动 44px；桌面 40px，与同卡片编辑态的输入框/保存按钮（sm:h-10）等高，展示态↔编辑态切换不跳高 */
 const BTN_SECONDARY =
-  "flex h-11 items-center justify-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9";
+  "flex h-11 items-center justify-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-10";
 
 type WebhookTestState = { kind: "idle" } | { kind: "sending" } | { kind: "done"; result: WebhookTestResult };
 
@@ -249,12 +250,12 @@ function NotifyCard({ webhook, onSave }: { webhook: string; onSave: (url: string
                 {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <CheckCircle className="h-4 w-4" />}
                 {configured && trimmed === "" ? t("monitors.notify.clear") : t("monitors.notify.save")}
               </button>
-              <button type="button" className={cn(BTN_SECONDARY, "sm:h-10")} disabled={!canTest} onClick={() => void runTest()}>
+              <button type="button" className={BTN_SECONDARY} disabled={!canTest} onClick={() => void runTest()}>
                 {test.kind === "sending" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
                 {test.kind === "sending" ? t("monitors.notify.testing") : t("monitors.notify.test")}
               </button>
               {configured && (
-                <button type="button" className={cn(BTN_SECONDARY, "sm:h-10")} onClick={cancelEdit} disabled={saving}>
+                <button type="button" className={BTN_SECONDARY} onClick={cancelEdit} disabled={saving}>
                   {t("monitors.notify.cancelEdit")}
                 </button>
               )}
@@ -300,7 +301,7 @@ function NotifyCard({ webhook, onSave }: { webhook: string; onSave: (url: string
             <button
               type="button"
               className={cn(
-                "relative flex h-11 items-center gap-1.5 overflow-hidden rounded-lg border px-3 text-sm sm:h-9",
+                "relative flex h-11 items-center gap-1.5 overflow-hidden rounded-lg border px-3 text-sm sm:h-10",
                 clearConfirm ? "border-destructive bg-destructive/10 text-destructive" : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
               )}
               disabled={saving}

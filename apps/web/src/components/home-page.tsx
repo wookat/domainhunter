@@ -840,7 +840,7 @@ export function HomePage({
                           if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt));
                         }}
                       />
-                      <RecheckButton domain={row.domain} variant="chip" withLabel={false} rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
+                      <RecheckButton domain={row.domain} variant="chip" rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
                     </span>
                   ) : (
                     <span
@@ -863,7 +863,7 @@ export function HomePage({
                         )}
                       </span>
                       {row.status === "unknown" && isRetryableUnknown(row.detail) && (
-                        <RecheckButton domain={row.domain} variant="chip" withLabel={false} rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
+                        <RecheckButton domain={row.domain} variant="chip" rechecking={recheckingQuick.has(row.domain)} onRecheck={(d) => void retryQuickDomain(d)} />
                       )}
                     </span>
                   ),
