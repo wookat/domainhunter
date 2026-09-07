@@ -1,0 +1,36 @@
+{
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=zh",
+  "scrollY": 910,
+  "innerWidth": 375,
+  "innerHeight": 812,
+  "docW": 360,
+  "clientW": 360,
+  "chipTop": 177.8125,
+  "quickTop": 15.8125,
+  "requests": [
+    {
+      "time": 1788785357.1220703,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/stats",
+      "body": ""
+    },
+    {
+      "time": 1788785357.1284592,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/prices",
+      "body": ""
+    },
+    {
+      "time": 1788785357.1289732,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/registrars",
+      "body": ""
+    },
+    {
+      "time": 1788785357.141814,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/search",
+      "body": "{\"roots\":[\"chaxiang\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+    }
+  ]
+}

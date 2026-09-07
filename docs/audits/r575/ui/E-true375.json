@@ -1,0 +1,58 @@
+[
+  {
+    "lang": "en",
+    "q": "cn",
+    "geometry": {
+      "url": "https://hunt.zalize.com/prices?lang=en",
+      "scrollY": 0,
+      "innerWidth": 375,
+      "innerHeight": 812,
+      "docW": 375,
+      "clientW": 375,
+      "chipTop": null,
+      "quickTop": null
+    }
+  },
+  {
+    "lang": "en",
+    "q": "com.cn",
+    "geometry": {
+      "url": "https://hunt.zalize.com/prices?lang=en",
+      "scrollY": 0,
+      "innerWidth": 375,
+      "innerHeight": 812,
+      "docW": 375,
+      "clientW": 375,
+      "chipTop": null,
+      "quickTop": null
+    }
+  },
+  {
+    "lang": "zh",
+    "q": "cn",
+    "geometry": {
+      "url": "https://hunt.zalize.com/prices?lang=zh",
+      "scrollY": 0,
+      "innerWidth": 375,
+      "innerHeight": 812,
+      "docW": 375,
+      "clientW": 375,
+      "chipTop": null,
+      "quickTop": null
+    }
+  },
+  {
+    "lang": "zh",
+    "q": "com.cn",
+    "geometry": {
+      "url": "https://hunt.zalize.com/prices?lang=zh",
+      "scrollY": 0,
+      "innerWidth": 375,
+      "innerHeight": 812,
+      "docW": 375,
+      "clientW": 375,
+      "chipTop": null,
+      "quickTop": null
+    }
+  }
+]

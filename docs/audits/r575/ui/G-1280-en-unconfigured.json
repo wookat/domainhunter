@@ -1,0 +1,41 @@
+{
+  "badge": "Not configured",
+  "masked": null,
+  "controls": [
+    {
+      "tag": "SPAN",
+      "id": "",
+      "text": "Not configured",
+      "width": 91.875,
+      "height": 20.5,
+      "disabled": null
+    },
+    {
+      "tag": "INPUT",
+      "id": "monitor-webhook-input",
+      "text": "",
+      "width": 472.328125,
+      "height": 40,
+      "disabled": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Save",
+      "width": 87.15625,
+      "height": 40,
+      "disabled": true
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Send test",
+      "width": 110.515625,
+      "height": 40,
+      "disabled": true
+    }
+  ],
+  "docW": 1280,
+  "innerWidth": 1280,
+  "prefilledMatches": false
+}

@@ -1,0 +1,2958 @@
+[
+ {
+  "route": "/",
+  "lang": "zh",
+  "visible_interactive": 1313,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "button",
+    "w": 40,
+    "h": 44,
+    "hitH": 44,
+    "text": "批量核验",
+    "inline": false,
+    "tap": false
+   }
+  ]
+ },
+ {
+  "route": "/",
+  "lang": "en",
+  "visible_interactive": 1313,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "button",
+    "w": 40,
+    "h": 44,
+    "hitH": 44,
+    "text": "Bulk check",
+    "inline": false,
+    "tap": false
+   }
+  ]
+ },
+ {
+  "route": "/?q=chaxiang",
+  "lang": "zh",
+  "visible_interactive": 1340,
+  "under44_any": 14,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "button",
+    "w": 40,
+    "h": 44,
+    "hitH": 44,
+    "text": "批量核验",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "收藏到候选清单",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "收藏到候选清单",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "收藏到候选清单",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   }
+  ]
+ },
+ {
+  "route": "/?q=chaxiang",
+  "lang": "en",
+  "visible_interactive": 1340,
+  "under44_any": 14,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "button",
+    "w": 40,
+    "h": 44,
+    "hitH": 44,
+    "text": "Bulk check",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Add to shortlist",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Start monitoring: re-checked every 6 hou",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Add to shortlist",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Start monitoring: re-checked every 6 hou",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Add to shortlist",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "Start monitoring: re-checked every 6 hou",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "button",
+    "w": 39,
+    "h": 44,
+    "hitH": 44,
+    "text": "border-l border-brand-line/50 px-3 trans",
+    "inline": false,
+    "tap": false
+   }
+  ]
+ },
+ {
+  "route": "/advanced",
+  "lang": "zh",
+  "visible_interactive": 12,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/advanced",
+  "lang": "en",
+  "visible_interactive": 12,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/shortlist",
+  "lang": "zh",
+  "visible_interactive": 8,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "button",
+    "w": 118,
+    "h": 40,
+    "hitH": 40,
+    "text": "开始猎取",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/shortlist",
+  "lang": "en",
+  "visible_interactive": 8,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "button",
+    "w": 150,
+    "h": 40,
+    "hitH": 40,
+    "text": "Start hunting",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/monitors",
+  "lang": "zh",
+  "visible_interactive": 12,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/monitors",
+  "lang": "en",
+  "visible_interactive": 12,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/prices",
+  "lang": "zh",
+  "visible_interactive": 1272,
+  "under44_any": 444,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .cn",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .io",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .net",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .ai",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".app vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".co vs .me",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .ai",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".net vs .org",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .xyz",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .co",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".ai vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".xyz vs .top",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".shop vs .store",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cloud vs .tech",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".pro vs .co",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".vip vs .club",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".link vs .cc",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".shop vs .com",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .me",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .tech",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 131,
+    "h": 40,
+    "hitH": 40,
+    "text": ".online vs .site",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 40,
+    "hitH": 40,
+    "text": ".store vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cc vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cn vs .top",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".art vs .design",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 146,
+    "h": 40,
+    "hitH": 40,
+    "text": ".studio vs .design",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".live vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".fun vs .club",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".space vs .site",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 131,
+    "h": 40,
+    "hitH": 40,
+    "text": ".live vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .app",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".ai vs .app",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".pro vs .vip",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cloud vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".sh vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".gg vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".so vs .io",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".us vs .com",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/prices",
+  "lang": "en",
+  "visible_interactive": 1272,
+  "under44_any": 444,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .cn",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .io",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .net",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .ai",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".app vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".co vs .me",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .ai",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".net vs .org",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .xyz",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .co",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".ai vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".xyz vs .top",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".shop vs .store",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cloud vs .tech",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".pro vs .co",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".vip vs .club",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".link vs .cc",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".shop vs .com",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .me",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .tech",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 131,
+    "h": 40,
+    "hitH": 40,
+    "text": ".online vs .site",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 40,
+    "hitH": 40,
+    "text": ".store vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cc vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cn vs .top",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".art vs .design",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 146,
+    "h": 40,
+    "hitH": 40,
+    "text": ".studio vs .design",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".live vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 40,
+    "hitH": 40,
+    "text": ".fun vs .club",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 124,
+    "h": 40,
+    "hitH": 40,
+    "text": ".space vs .site",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 131,
+    "h": 40,
+    "hitH": 40,
+    "text": ".live vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .app",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".com vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".io vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".ai vs .app",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 40,
+    "hitH": 40,
+    "text": ".pro vs .vip",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 40,
+    "hitH": 40,
+    "text": ".cloud vs .online",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".sh vs .dev",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".gg vs .tv",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 40,
+    "hitH": 40,
+    "text": ".so vs .io",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 95,
+    "h": 40,
+    "hitH": 40,
+    "text": ".us vs .com",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/why",
+  "lang": "zh",
+  "visible_interactive": 5,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/why",
+  "lang": "en",
+  "visible_interactive": 5,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/mcp",
+  "lang": "zh",
+  "visible_interactive": 8,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/mcp",
+  "lang": "en",
+  "visible_interactive": 8,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/tld",
+  "lang": "zh",
+  "visible_interactive": 423,
+  "under44_any": 9,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 92,
+    "h": 36,
+    "hitH": 36,
+    "text": "通用主流 22",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "科技与开发 24",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "创意与设计 28",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "内容与媒体 28",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "商业与电商 63",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "金融与资产 24",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 110,
+    "h": 36,
+    "hitH": 36,
+    "text": "生活与行业 127",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "国别与地域 14",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 92,
+    "h": 36,
+    "hitH": 36,
+    "text": "更多后缀 78",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/tld",
+  "lang": "en",
+  "visible_interactive": 423,
+  "under44_any": 9,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 169,
+    "h": 36,
+    "hitH": 36,
+    "text": "General & mainstream 22",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 149,
+    "h": 36,
+    "hitH": 36,
+    "text": "Tech & developers 24",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 144,
+    "h": 36,
+    "hitH": 36,
+    "text": "Creative & design 28",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 36,
+    "hitH": 36,
+    "text": "Content & media 28",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 170,
+    "h": 36,
+    "hitH": 36,
+    "text": "Business & commerce 63",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 140,
+    "h": 36,
+    "hitH": 36,
+    "text": "Finance & assets 24",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 168,
+    "h": 36,
+    "hitH": 36,
+    "text": "Lifestyle & industries 127",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 150,
+    "h": 36,
+    "hitH": 36,
+    "text": "Country & regional 14",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 106,
+    "h": 36,
+    "hitH": 36,
+    "text": "More TLDs 78",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/guide",
+  "lang": "zh",
+  "visible_interactive": 426,
+  "under44_any": 11,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 116,
+    "h": 36,
+    "hitH": 36,
+    "text": "科技与互联网 18",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "电商与零售 41",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "餐饮与食品 30",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "内容与创作 31",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "教育与知识 18",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "健康与运动 61",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 104,
+    "h": 36,
+    "hitH": 36,
+    "text": "旅行与出行 23",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 92,
+    "h": 36,
+    "hitH": 36,
+    "text": "生活服务 55",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 128,
+    "h": 36,
+    "hitH": 36,
+    "text": "商业与专业服务 31",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 98,
+    "h": 36,
+    "hitH": 36,
+    "text": "合规与流程 6",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 92,
+    "h": 36,
+    "hitH": 36,
+    "text": "更多行业 96",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/guide",
+  "lang": "en",
+  "visible_interactive": 426,
+  "under44_any": 11,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 130,
+    "h": 36,
+    "hitH": 36,
+    "text": "Tech & internet 18",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 159,
+    "h": 36,
+    "hitH": 36,
+    "text": "E-commerce & retail 41",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 140,
+    "h": 36,
+    "hitH": 36,
+    "text": "Food & beverage 30",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 150,
+    "h": 36,
+    "hitH": 36,
+    "text": "Content & creators 31",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 177,
+    "h": 36,
+    "hitH": 36,
+    "text": "Education & knowledge 18",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 133,
+    "h": 36,
+    "hitH": 36,
+    "text": "Health & fitness 61",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 138,
+    "h": 36,
+    "hitH": 36,
+    "text": "Travel & mobility 23",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 126,
+    "h": 36,
+    "hitH": 36,
+    "text": "Local services 55",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 179,
+    "h": 36,
+    "hitH": 36,
+    "text": "Business & professional 31",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 165,
+    "h": 36,
+    "hitH": 36,
+    "text": "Compliance & process 6",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 132,
+    "h": 36,
+    "hitH": 36,
+    "text": "More industries 96",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/vs",
+  "lang": "zh",
+  "visible_interactive": 830,
+  "under44_any": 381,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 91,
+    "h": 36,
+    "hitH": 36,
+    "text": ".abogado 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 93,
+    "h": 36,
+    "hitH": 36,
+    "text": ".academy 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 111,
+    "h": 36,
+    "hitH": 36,
+    "text": ".accountants 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 71,
+    "h": 36,
+    "hitH": 36,
+    "text": ".actor 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 83,
+    "h": 36,
+    "hitH": 36,
+    "text": ".agency 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 51,
+    "h": 36,
+    "hitH": 36,
+    "text": ".ai 3",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 105,
+    "h": 36,
+    "hitH": 36,
+    "text": ".amsterdam 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 106,
+    "h": 36,
+    "hitH": 36,
+    "text": ".apartments 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 63,
+    "h": 36,
+    "hitH": 36,
+    "text": ".app 3",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 53,
+    "h": 36,
+    "hitH": 36,
+    "text": ".ar 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 57,
+    "h": 36,
+    "hitH": 36,
+    "text": ".art 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 64,
+    "h": 36,
+    "hitH": 36,
+    "text": ".asia 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 36,
+    "hitH": 36,
+    "text": ".associates 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 52,
+    "h": 36,
+    "hitH": 36,
+    "text": ".at 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 36,
+    "hitH": 36,
+    "text": ".attorney 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 55,
+    "h": 36,
+    "hitH": 36,
+    "text": ".au 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 83,
+    "h": 36,
+    "hitH": 36,
+    "text": ".auction 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".audio 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".autos 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".baby 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".band 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 60,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bar 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 90,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bargains 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 99,
+    "h": 36,
+    "hitH": 36,
+    "text": ".basketball 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 56,
+    "h": 36,
+    "hitH": 36,
+    "text": ".be 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 81,
+    "h": 36,
+    "hitH": 36,
+    "text": ".beauty 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 67,
+    "h": 36,
+    "hitH": 36,
+    "text": ".beer 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".berlin 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 60,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bet 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 65,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bike 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 59,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bio 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 58,
+    "h": 36,
+    "hitH": 36,
+    "text": ".biz 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 72,
+    "h": 36,
+    "hitH": 36,
+    "text": ".black 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 66,
+    "h": 36,
+    "hitH": 36,
+    "text": ".blog 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 66,
+    "h": 36,
+    "hitH": 36,
+    "text": ".blue 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boats 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bond 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 80,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boston 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 91,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boutique 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 53,
+    "h": 36,
+    "hitH": 36,
+    "text": ".br 2",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/vs",
+  "lang": "en",
+  "visible_interactive": 830,
+  "under44_any": 381,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 91,
+    "h": 36,
+    "hitH": 36,
+    "text": ".abogado 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 93,
+    "h": 36,
+    "hitH": 36,
+    "text": ".academy 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 111,
+    "h": 36,
+    "hitH": 36,
+    "text": ".accountants 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 71,
+    "h": 36,
+    "hitH": 36,
+    "text": ".actor 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 83,
+    "h": 36,
+    "hitH": 36,
+    "text": ".agency 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 51,
+    "h": 36,
+    "hitH": 36,
+    "text": ".ai 3",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 105,
+    "h": 36,
+    "hitH": 36,
+    "text": ".amsterdam 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 106,
+    "h": 36,
+    "hitH": 36,
+    "text": ".apartments 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 63,
+    "h": 36,
+    "hitH": 36,
+    "text": ".app 3",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 53,
+    "h": 36,
+    "hitH": 36,
+    "text": ".ar 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 57,
+    "h": 36,
+    "hitH": 36,
+    "text": ".art 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 64,
+    "h": 36,
+    "hitH": 36,
+    "text": ".asia 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 102,
+    "h": 36,
+    "hitH": 36,
+    "text": ".associates 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 52,
+    "h": 36,
+    "hitH": 36,
+    "text": ".at 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 88,
+    "h": 36,
+    "hitH": 36,
+    "text": ".attorney 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 55,
+    "h": 36,
+    "hitH": 36,
+    "text": ".au 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 83,
+    "h": 36,
+    "hitH": 36,
+    "text": ".auction 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".audio 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".autos 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".baby 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".band 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 60,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bar 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 90,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bargains 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 99,
+    "h": 36,
+    "hitH": 36,
+    "text": ".basketball 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 56,
+    "h": 36,
+    "hitH": 36,
+    "text": ".be 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 81,
+    "h": 36,
+    "hitH": 36,
+    "text": ".beauty 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 67,
+    "h": 36,
+    "hitH": 36,
+    "text": ".beer 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".berlin 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 60,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bet 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 65,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bike 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 59,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bio 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 58,
+    "h": 36,
+    "hitH": 36,
+    "text": ".biz 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 72,
+    "h": 36,
+    "hitH": 36,
+    "text": ".black 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 66,
+    "h": 36,
+    "hitH": 36,
+    "text": ".blog 2",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 66,
+    "h": 36,
+    "hitH": 36,
+    "text": ".blue 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 73,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boats 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 70,
+    "h": 36,
+    "hitH": 36,
+    "text": ".bond 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 80,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boston 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 91,
+    "h": 36,
+    "hitH": 36,
+    "text": ".boutique 1",
+    "inline": false,
+    "tap": false
+   },
+   {
+    "tag": "a",
+    "w": 53,
+    "h": 36,
+    "hitH": 36,
+    "text": ".br 2",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "zh",
+  "visible_interactive": 47,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "en",
+  "visible_interactive": 47,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/tld/de",
+  "lang": "zh",
+  "visible_interactive": 63,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/tld/de",
+  "lang": "en",
+  "visible_interactive": 63,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/tld/ai",
+  "lang": "zh",
+  "visible_interactive": 58,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/tld/ai",
+  "lang": "en",
+  "visible_interactive": 58,
+  "under44_any": 2,
+  "under44_inline_text_links": 1,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "zh",
+  "visible_interactive": 51,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "en",
+  "visible_interactive": 51,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/ecommerce",
+  "lang": "zh",
+  "visible_interactive": 64,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/ecommerce",
+  "lang": "en",
+  "visible_interactive": 64,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/legal",
+  "lang": "zh",
+  "visible_interactive": 64,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/guide/legal",
+  "lang": "en",
+  "visible_interactive": 64,
+  "under44_any": 3,
+  "under44_inline_text_links": 2,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/de-vs-com",
+  "lang": "zh",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".de",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/de-vs-com",
+  "lang": "en",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".de",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/mx-vs-es",
+  "lang": "zh",
+  "visible_interactive": 52,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".mx",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".es",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/mx-vs-es",
+  "lang": "en",
+  "visible_interactive": 52,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".mx",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".es",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/com-vs-io",
+  "lang": "zh",
+  "visible_interactive": 59,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".io",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/com-vs-io",
+  "lang": "en",
+  "visible_interactive": 59,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".io",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/shop-vs-store",
+  "lang": "zh",
+  "visible_interactive": 59,
+  "under44_any": 4,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/shop-vs-store",
+  "lang": "en",
+  "visible_interactive": 59,
+  "under44_any": 4,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/net-vs-org",
+  "lang": "zh",
+  "visible_interactive": 53,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".net",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".org",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/net-vs-org",
+  "lang": "en",
+  "visible_interactive": 53,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".net",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".org",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/nope-r575-browser",
+  "lang": "zh",
+  "visible_interactive": 9,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/nope-r575-browser",
+  "lang": "en",
+  "visible_interactive": 9,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/86mKLJRJmB",
+  "lang": "zh",
+  "visible_interactive": 7,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/86mKLJRJmB",
+  "lang": "en",
+  "visible_interactive": 7,
+  "under44_any": 0,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/u5QFymuLnu",
+  "lang": "zh",
+  "visible_interactive": 5,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 202,
+    "h": 40,
+    "hitH": 40,
+    "text": "去创建自己的候选清单",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/u5QFymuLnu",
+  "lang": "en",
+  "visible_interactive": 5,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 232,
+    "h": 40,
+    "hitH": 40,
+    "text": "Create your own shortlist",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/unknownr575",
+  "lang": "zh",
+  "visible_interactive": 5,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 202,
+    "h": 40,
+    "hitH": 40,
+    "text": "去创建自己的候选清单",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ },
+ {
+  "route": "/s/unknownr575",
+  "lang": "en",
+  "visible_interactive": 5,
+  "under44_any": 1,
+  "under44_inline_text_links": 0,
+  "under44_controls_h": [
+   {
+    "tag": "a",
+    "w": 232,
+    "h": 40,
+    "hitH": 40,
+    "text": "Create your own shortlist",
+    "inline": false,
+    "tap": false
+   }
+  ],
+  "under44_controls_w_only": []
+ }
+]

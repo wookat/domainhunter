@@ -1,0 +1,102 @@
+[
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/fr-vs-com?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/fr-vs-com?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/au-vs-com?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/au-vs-com?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ }
+]

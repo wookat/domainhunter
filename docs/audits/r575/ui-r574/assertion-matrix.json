@@ -1,0 +1,939 @@
+{
+  "labels": [
+    {
+      "surface": "1-home",
+      "lang": "zh",
+      "width": 1280,
+      "utc": "2026-09-07T13:01:50.196Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 79,
+          "height": 28,
+          "span": "block",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "chaxiang.cn",
+          "width": 79,
+          "height": 28,
+          "span": "block",
+          "aria": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "chaxiang.net",
+          "width": 79,
+          "height": 28,
+          "span": "block",
+          "aria": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "1-home",
+      "lang": "zh",
+      "width": 375,
+      "utc": "2026-09-07T13:01:50.646Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "chaxiang.cn",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "chaxiang.net",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "1-home",
+      "lang": "en",
+      "width": 1280,
+      "utc": "2026-09-07T13:01:51.329Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 85.453125,
+          "height": 28,
+          "span": "block",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "chaxiang.cn",
+          "width": 85.453125,
+          "height": 28,
+          "span": "block",
+          "aria": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "chaxiang.net",
+          "width": 85.453125,
+          "height": 28,
+          "span": "block",
+          "aria": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    },
+    {
+      "surface": "1-home",
+      "lang": "en",
+      "width": 375,
+      "utc": "2026-09-07T13:01:51.765Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "chaxiang.cn",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "chaxiang.net",
+          "width": 44,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "width": 1280,
+      "utc": "2026-09-07T13:02:22.430Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.de",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.com",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "width": 375,
+      "utc": "2026-09-07T13:02:22.762Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.de",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "width": 1280,
+      "utc": "2026-09-07T13:02:23.329Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.de",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.com",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "width": 375,
+      "utc": "2026-09-07T13:02:23.643Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.de",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:13.020Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.de",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.com",
+          "width": 78,
+          "height": 32,
+          "span": "block",
+          "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "width": 375,
+      "utc": "2026-09-07T13:05:13.420Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.de",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）"
+        },
+        {
+          "domain": "google.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）"
+        }
+      ]
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:14.003Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.de",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.com",
+          "width": 84.453125,
+          "height": 32,
+          "span": "block",
+          "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "width": 375,
+      "utc": "2026-09-07T13:05:14.370Z",
+      "pass": true,
+      "rects": [
+        {
+          "domain": "chaxiang.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "nic.cn",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.de",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)"
+        },
+        {
+          "domain": "google.com",
+          "width": 30,
+          "height": 44,
+          "span": "none",
+          "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)"
+        }
+      ]
+    }
+  ],
+  "expiry": [
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "viewport": 1280,
+      "domain": "nic.cn",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 338.5,
+        "y": 740,
+        "width": 50,
+        "height": 15,
+        "top": 740,
+        "right": 388.5,
+        "bottom": 755,
+        "left": 338.5
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "viewport": 1280,
+      "domain": "google.de",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 355.515625,
+        "y": 788,
+        "width": 50,
+        "height": 15,
+        "top": 788,
+        "right": 405.515625,
+        "bottom": 803,
+        "left": 355.515625
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "viewport": 375,
+      "domain": "nic.cn",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 210,
+        "y": 652,
+        "width": 0,
+        "height": 15,
+        "top": 652,
+        "right": 210,
+        "bottom": 667,
+        "left": 210
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "zh",
+      "viewport": 375,
+      "domain": "google.de",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 210,
+        "y": 700,
+        "width": 0,
+        "height": 15,
+        "top": 700,
+        "right": 210,
+        "bottom": 715,
+        "left": 210
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "viewport": 1280,
+      "domain": "nic.cn",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 336.6875,
+        "y": 740,
+        "width": 70.421875,
+        "height": 15,
+        "top": 740,
+        "right": 407.109375,
+        "bottom": 755,
+        "left": 336.6875
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "viewport": 1280,
+      "domain": "google.de",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 353.703125,
+        "y": 788,
+        "width": 70.421875,
+        "height": 15,
+        "top": 788,
+        "right": 424.125,
+        "bottom": 803,
+        "left": 353.703125
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "viewport": 375,
+      "domain": "nic.cn",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 208.1875,
+        "y": 652,
+        "width": 0,
+        "height": 15,
+        "top": 652,
+        "right": 208.1875,
+        "bottom": 667,
+        "left": 208.1875
+      }
+    },
+    {
+      "surface": "12-advanced",
+      "lang": "en",
+      "viewport": 375,
+      "domain": "google.de",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 208.1875,
+        "y": 700,
+        "width": 0,
+        "height": 15,
+        "top": 700,
+        "right": 208.1875,
+        "bottom": 715,
+        "left": 208.1875
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "viewport": 1280,
+      "domain": "nic.cn",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 274.5,
+        "y": 397.5,
+        "width": 50,
+        "height": 15,
+        "top": 397.5,
+        "right": 324.5,
+        "bottom": 412.5,
+        "left": 274.5
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "viewport": 1280,
+      "domain": "google.de",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 291.515625,
+        "y": 445.5,
+        "width": 50,
+        "height": 15,
+        "top": 445.5,
+        "right": 341.515625,
+        "bottom": 460.5,
+        "left": 291.515625
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "viewport": 375,
+      "domain": "nic.cn",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 210,
+        "y": 446,
+        "width": 0,
+        "height": 15,
+        "top": 446,
+        "right": 210,
+        "bottom": 461,
+        "left": 210
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "zh",
+      "viewport": 375,
+      "domain": "google.de",
+      "text": "到期日待查",
+      "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+      "display": "block",
+      "rect": {
+        "x": 210,
+        "y": 494,
+        "width": 0,
+        "height": 15,
+        "top": 494,
+        "right": 210,
+        "bottom": 509,
+        "left": 210
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "viewport": 1280,
+      "domain": "nic.cn",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 272.6875,
+        "y": 397.5,
+        "width": 70.421875,
+        "height": 15,
+        "top": 397.5,
+        "right": 343.109375,
+        "bottom": 412.5,
+        "left": 272.6875
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "viewport": 1280,
+      "domain": "google.de",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 289.703125,
+        "y": 445.5,
+        "width": 70.421875,
+        "height": 15,
+        "top": 445.5,
+        "right": 360.125,
+        "bottom": 460.5,
+        "left": 289.703125
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "viewport": 375,
+      "domain": "nic.cn",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 208.1875,
+        "y": 446,
+        "width": 0,
+        "height": 15,
+        "top": 446,
+        "right": 208.1875,
+        "bottom": 461,
+        "left": 208.1875
+      }
+    },
+    {
+      "surface": "12-results-replayed",
+      "lang": "en",
+      "viewport": 375,
+      "domain": "google.de",
+      "text": "expiry pending",
+      "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+      "display": "block",
+      "rect": {
+        "x": 208.1875,
+        "y": 494,
+        "width": 0,
+        "height": 15,
+        "top": 494,
+        "right": 208.1875,
+        "bottom": 509,
+        "left": 208.1875
+      }
+    }
+  ],
+  "progress": {
+    "zh": {
+      "observedValues": [
+        0,
+        20,
+        20,
+        20
+      ],
+      "monotonic": true,
+      "final": {
+        "utc": "2026-09-07T13:03:23.153Z",
+        "ms": 67757,
+        "kind": "raf",
+        "lang": "zh-CN",
+        "width": 1280,
+        "text": "已完成 20/20",
+        "now": "20",
+        "spinner": false
+      },
+      "first20": {
+        "utc": "2026-09-07T13:03:07.785Z",
+        "ms": 52388.59999999986,
+        "kind": "mutation",
+        "lang": "zh-CN",
+        "width": 1280,
+        "text": "已完成 20/20",
+        "now": "20",
+        "spinner": false
+      },
+      "forbiddenFrames": [],
+      "note": "Both real responses coalesced: only0 and20 observed;19 boundary not exercised. Full files retain previous-run completed precondition."
+    },
+    "en": {
+      "observedValues": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        20
+      ],
+      "monotonic": true,
+      "final": {
+        "utc": "2026-09-07T13:04:33.548Z",
+        "ms": 138151.6000000001,
+        "kind": "raf",
+        "lang": "en",
+        "width": 375,
+        "text": "Done 20/20",
+        "now": "20",
+        "spinner": false
+      },
+      "first20": {
+        "utc": "2026-09-07T13:04:33.349Z",
+        "ms": 137953.3999999999,
+        "kind": "mutation",
+        "lang": "en",
+        "width": 1280,
+        "text": "Done 20/20",
+        "now": "20",
+        "spinner": false
+      },
+      "forbiddenFrames": [],
+      "note": "Both real responses coalesced: only0 and20 observed;19 boundary not exercised. Full files retain previous-run completed precondition."
+    }
+  },
+  "notify": [
+    {
+      "state": "configured",
+      "lang": "zh",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:43.558Z",
+      "heights": [
+        40,
+        40,
+        40
+      ],
+      "computed": [
+        "40px",
+        "40px",
+        "40px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "configured",
+      "lang": "zh",
+      "width": 375,
+      "utc": "2026-09-07T13:05:44.021Z",
+      "heights": [
+        44,
+        44,
+        44
+      ],
+      "computed": [
+        "44px",
+        "44px",
+        "44px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "configured",
+      "lang": "en",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:44.744Z",
+      "heights": [
+        40,
+        40,
+        40
+      ],
+      "computed": [
+        "40px",
+        "40px",
+        "40px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "configured",
+      "lang": "en",
+      "width": 375,
+      "utc": "2026-09-07T13:05:45.325Z",
+      "heights": [
+        44,
+        44,
+        44
+      ],
+      "computed": [
+        "44px",
+        "44px",
+        "44px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "editing",
+      "lang": "zh",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:43.693Z",
+      "heights": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "computed": [
+        "40px",
+        "40px",
+        "40px",
+        "40px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "editing",
+      "lang": "zh",
+      "width": 375,
+      "utc": "2026-09-07T13:05:44.141Z",
+      "heights": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "computed": [
+        "44px",
+        "44px",
+        "44px",
+        "44px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "editing",
+      "lang": "en",
+      "width": 1280,
+      "utc": "2026-09-07T13:05:44.906Z",
+      "heights": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "computed": [
+        "40px",
+        "40px",
+        "40px",
+        "40px"
+      ],
+      "pass": true
+    },
+    {
+      "state": "editing",
+      "lang": "en",
+      "width": 375,
+      "utc": "2026-09-07T13:05:45.670Z",
+      "heights": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "computed": [
+        "44px",
+        "44px",
+        "44px",
+        "44px"
+      ],
+      "pass": true
+    }
+  ]
+}

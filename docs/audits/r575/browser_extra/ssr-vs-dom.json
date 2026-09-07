@@ -1,0 +1,130 @@
+[
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比 | DomainHunter",
+  "dom_title": ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比 | DomainHunter",
+  "title_equal": true,
+  "ssr_h1": [
+   ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比"
+  ],
+  "dom_h1": [
+   ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比"
+  ],
+  "h1_equal": true,
+  "ssr_chunks40": 58,
+  "dom_chars": 2221,
+  "ssr_chunks_found_in_dom": 55,
+  "ssr_chunk_coverage": 0.9483,
+  "ssr_price_n": 29,
+  "dom_price_n": 27,
+  "ssr_prices_missing_in_dom": [
+   "65 元",
+   "72 元"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "html_bytes": 92016,
+  "braces": {
+   "ssr_html": 12,
+   "dom_text": 0,
+   "dom_html": 12
+  }
+ },
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".fr vs .com: French Local Trust vs the Global Default | DomainHunter",
+  "dom_title": ".fr vs .com: French Local Trust vs the Global Default | DomainHunter",
+  "title_equal": true,
+  "ssr_h1": [
+   ".fr vs .com: French Local Trust vs the Global Default"
+  ],
+  "dom_h1": [
+   ".fr vs .com: French Local Trust vs the Global Default"
+  ],
+  "h1_equal": true,
+  "ssr_chunks40": 136,
+  "dom_chars": 5344,
+  "ssr_chunks_found_in_dom": 134,
+  "ssr_chunk_coverage": 0.9853,
+  "ssr_price_n": 30,
+  "dom_price_n": 28,
+  "ssr_prices_missing_in_dom": [
+   "$10",
+   "$9"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "html_bytes": 93267,
+  "braces": {
+   "ssr_html": 12,
+   "dom_text": 0,
+   "dom_html": 12
+  }
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比 | DomainHunter",
+  "dom_title": ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比 | DomainHunter",
+  "title_equal": true,
+  "ssr_h1": [
+   ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比"
+  ],
+  "dom_h1": [
+   ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比"
+  ],
+  "h1_equal": true,
+  "ssr_chunks40": 61,
+  "dom_chars": 2352,
+  "ssr_chunks_found_in_dom": 58,
+  "ssr_chunk_coverage": 0.9508,
+  "ssr_price_n": 28,
+  "dom_price_n": 26,
+  "ssr_prices_missing_in_dom": [
+   "57 元",
+   "57 元"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "html_bytes": 91697,
+  "braces": {
+   "ssr_html": 8,
+   "dom_text": 0,
+   "dom_html": 8
+  }
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".au vs .com: Australian Local Trust vs the Global Default | DomainHunter",
+  "dom_title": ".au vs .com: Australian Local Trust vs the Global Default | DomainHunter",
+  "title_equal": true,
+  "ssr_h1": [
+   ".au vs .com: Australian Local Trust vs the Global Default"
+  ],
+  "dom_h1": [
+   ".au vs .com: Australian Local Trust vs the Global Default"
+  ],
+  "h1_equal": true,
+  "ssr_chunks40": 136,
+  "dom_chars": 5318,
+  "ssr_chunks_found_in_dom": 134,
+  "ssr_chunk_coverage": 0.9853,
+  "ssr_price_n": 28,
+  "dom_price_n": 26,
+  "ssr_prices_missing_in_dom": [
+   "$8",
+   "$8"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "html_bytes": 92710,
+  "braces": {
+   "ssr_html": 8,
+   "dom_text": 0,
+   "dom_html": 8
+  }
+ }
+]

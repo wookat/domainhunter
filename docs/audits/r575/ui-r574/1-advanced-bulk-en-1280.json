@@ -1,0 +1,179 @@
+{
+  "utc": "2026-09-07T13:04:35.067Z",
+  "url": "https://hunt.zalize.com/advanced?lang=en&cb=r574-followup",
+  "lang": "en",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\nTaken\nexpires 2028-09-14\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 569.3125,
+        "y": 957,
+        "width": 84.453125,
+        "height": 32,
+        "top": 957,
+        "right": 653.765625,
+        "bottom": 989,
+        "left": 569.3125
+      },
+      "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 595.3125,
+          "y": 964.75,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 964.75,
+          "right": 645.765625,
+          "bottom": 981.25,
+          "left": 595.3125
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "baidu.cn",
+      "rowText": "—\nbaidu.cn\nTaken\nexpires 2029-03-17\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 551.3125,
+        "y": 1005.5,
+        "width": 84.453125,
+        "height": 32,
+        "top": 1005.5,
+        "right": 635.765625,
+        "bottom": 1037.5,
+        "left": 551.3125
+      },
+      "aria": "Re-check baidu.cn (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check baidu.cn (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 577.3125,
+          "y": 1013.25,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 1013.25,
+          "right": 627.765625,
+          "bottom": 1029.75,
+          "left": 577.3125
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "example.org",
+      "rowText": "—\nexample.org\nTaken\nexpires 2027-08-30\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 578.3125,
+        "y": 1053.5,
+        "width": 84.453125,
+        "height": 32,
+        "top": 1053.5,
+        "right": 662.765625,
+        "bottom": 1085.5,
+        "left": 578.3125
+      },
+      "aria": "Re-check example.org (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check example.org (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 604.3125,
+          "y": 1061.25,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 1061.25,
+          "right": 654.765625,
+          "bottom": 1077.75,
+          "left": 604.3125
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "wikipedia.org",
+      "rowText": "—\nwikipedia.org\nTaken\nexpires 2027-01-13\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 596.3125,
+        "y": 1101.5,
+        "width": 84.453125,
+        "height": 32,
+        "top": 1101.5,
+        "right": 680.765625,
+        "bottom": 1133.5,
+        "left": 596.3125
+      },
+      "aria": "Re-check wikipedia.org (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check wikipedia.org (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 622.3125,
+          "y": 1109.25,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 1109.25,
+          "right": 672.765625,
+          "bottom": 1125.75,
+          "left": 622.3125
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "github.com",
+      "rowText": "—\ngithub.com\nTaken\nexpires 2028-10-09\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 569.3125,
+        "y": 1149.5,
+        "width": 84.453125,
+        "height": 32,
+        "top": 1149.5,
+        "right": 653.765625,
+        "bottom": 1181.5,
+        "left": 569.3125
+      },
+      "aria": "Re-check github.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check github.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 595.3125,
+          "y": 1157.25,
+          "width": 50.453125,
+          "height": 16.5,
+          "top": 1157.25,
+          "right": 645.765625,
+          "bottom": 1173.75,
+          "left": 595.3125
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

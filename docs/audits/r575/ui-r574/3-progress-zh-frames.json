@@ -1,0 +1,116 @@
+{
+  "frames": [
+    {
+      "utc": "2026-09-07T13:02:51.107Z",
+      "ms": 35711.299999999814,
+      "kind": "raf",
+      "lang": "zh-CN",
+      "width": 1280,
+      "text": "已完成 4/4",
+      "now": "4",
+      "spinner": false
+    },
+    {
+      "utc": "2026-09-07T13:02:51.130Z",
+      "ms": 35734.299999999814,
+      "kind": "mutation",
+      "lang": "zh-CN",
+      "width": 1280,
+      "text": "核验中 0/20",
+      "now": "0",
+      "spinner": true
+    },
+    {
+      "utc": "2026-09-07T13:03:07.785Z",
+      "ms": 52388.59999999986,
+      "kind": "mutation",
+      "lang": "zh-CN",
+      "width": 1280,
+      "text": "已完成 20/20",
+      "now": "20",
+      "spinner": false
+    },
+    {
+      "utc": "2026-09-07T13:03:07.959Z",
+      "ms": 52562.5,
+      "kind": "raf",
+      "lang": "zh-CN",
+      "width": 375,
+      "text": "已完成 20/20",
+      "now": "20",
+      "spinner": false
+    },
+    {
+      "utc": "2026-09-07T13:03:23.153Z",
+      "ms": 67757,
+      "kind": "raf",
+      "lang": "zh-CN",
+      "width": 1280,
+      "text": "已完成 20/20",
+      "now": "20",
+      "spinner": false
+    }
+  ],
+  "mutations": [
+    {
+      "utc": "2026-09-07T13:02:51.130Z",
+      "ms": 35734.299999999814,
+      "changes": [
+        {
+          "type": "childList",
+          "attribute": null,
+          "old": null,
+          "text": "核验中 0/20"
+        },
+        {
+          "type": "childList",
+          "attribute": null,
+          "old": null,
+          "text": "核验中 0/20"
+        },
+        {
+          "type": "characterData",
+          "attribute": null,
+          "old": "已完成 4/4",
+          "text": "核验中 0/20"
+        },
+        {
+          "type": "attributes",
+          "attribute": "aria-valuenow",
+          "old": "4",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-07T13:03:07.785Z",
+      "ms": 52388.59999999986,
+      "changes": [
+        {
+          "type": "childList",
+          "attribute": null,
+          "old": null,
+          "text": "已完成 20/20"
+        },
+        {
+          "type": "childList",
+          "attribute": null,
+          "old": null,
+          "text": "已完成 20/20"
+        },
+        {
+          "type": "characterData",
+          "attribute": null,
+          "old": "核验中 0/20",
+          "text": "已完成 20/20"
+        },
+        {
+          "type": "attributes",
+          "attribute": "aria-valuenow",
+          "old": "0",
+          "text": ""
+        }
+      ]
+    }
+  ]
+}

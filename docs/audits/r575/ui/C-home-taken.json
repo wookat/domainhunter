@@ -1,0 +1,71 @@
+[
+  {
+    "domain": "chaxiang.com",
+    "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+    "text": "chaxiang.com\n已注册\n2027-05-13 到期\n开监控",
+    "buttons": [
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      },
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "chaxiang.cn",
+    "aria": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）",
+    "text": "chaxiang.cn\n已注册\n2026-12-11 到期\n开监控",
+    "buttons": [
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      },
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "chaxiang.net",
+    "aria": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）",
+    "text": "chaxiang.net\n已注册\n2027-09-04 到期\n开监控",
+    "buttons": [
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      },
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）"
+      }
+    ],
+    "links": []
+  }
+]

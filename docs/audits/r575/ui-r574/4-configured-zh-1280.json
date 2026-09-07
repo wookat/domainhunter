@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-07T13:05:43.558Z",
+  "url": "https://hunt.zalize.com/monitors?lang=zh&cb=r574-followup",
+  "lang": "zh-CN",
+  "innerWidth": 1280,
+  "docW": 1280,
+  "badge": "已配置",
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "text": "发送测试",
+      "id": "",
+      "rect": {
+        "x": 656.40625,
+        "y": 226.5,
+        "width": 104,
+        "height": 40,
+        "top": 226.5,
+        "right": 760.40625,
+        "bottom": 266.5,
+        "left": 656.40625
+      },
+      "computedHeight": "40px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "修改",
+      "id": "",
+      "rect": {
+        "x": 768.40625,
+        "y": 226.5,
+        "width": 76,
+        "height": 40,
+        "top": 226.5,
+        "right": 844.40625,
+        "bottom": 266.5,
+        "left": 768.40625
+      },
+      "computedHeight": "40px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "清除",
+      "id": "",
+      "rect": {
+        "x": 852.40625,
+        "y": 226.5,
+        "width": 130.59375,
+        "height": 40,
+        "top": 226.5,
+        "right": 983,
+        "bottom": 266.5,
+        "left": 852.40625
+      },
+      "computedHeight": "40px"
+    }
+  ],
+  "masked": "https://example.invalid/r575"
+}

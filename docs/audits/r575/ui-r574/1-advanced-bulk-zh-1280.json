@@ -1,0 +1,179 @@
+{
+  "utc": "2026-09-07T13:04:34.374Z",
+  "url": "https://hunt.zalize.com/advanced?lang=zh&cb=r574-followup",
+  "lang": "zh-CN",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\n已注册\n2028-09-14 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 541.515625,
+        "y": 1021,
+        "width": 78,
+        "height": 32,
+        "top": 1021,
+        "right": 619.515625,
+        "bottom": 1053,
+        "left": 541.515625
+      },
+      "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 567.515625,
+          "y": 1028.75,
+          "width": 44,
+          "height": 16.5,
+          "top": 1028.75,
+          "right": 611.515625,
+          "bottom": 1045.25,
+          "left": 567.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "baidu.cn",
+      "rowText": "—\nbaidu.cn\n已注册\n2029-03-17 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 523.515625,
+        "y": 1069.5,
+        "width": 78,
+        "height": 32,
+        "top": 1069.5,
+        "right": 601.515625,
+        "bottom": 1101.5,
+        "left": 523.515625
+      },
+      "aria": "重新核验 baidu.cn（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 baidu.cn（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 549.515625,
+          "y": 1077.25,
+          "width": 44,
+          "height": 16.5,
+          "top": 1077.25,
+          "right": 593.515625,
+          "bottom": 1093.75,
+          "left": 549.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "example.org",
+      "rowText": "—\nexample.org\n已注册\n2027-08-30 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 550.515625,
+        "y": 1117.5,
+        "width": 78,
+        "height": 32,
+        "top": 1117.5,
+        "right": 628.515625,
+        "bottom": 1149.5,
+        "left": 550.515625
+      },
+      "aria": "重新核验 example.org（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 example.org（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 576.515625,
+          "y": 1125.25,
+          "width": 44,
+          "height": 16.5,
+          "top": 1125.25,
+          "right": 620.515625,
+          "bottom": 1141.75,
+          "left": 576.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "wikipedia.org",
+      "rowText": "—\nwikipedia.org\n已注册\n2027-01-13 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 568.515625,
+        "y": 1165.5,
+        "width": 78,
+        "height": 32,
+        "top": 1165.5,
+        "right": 646.515625,
+        "bottom": 1197.5,
+        "left": 568.515625
+      },
+      "aria": "重新核验 wikipedia.org（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 wikipedia.org（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 594.515625,
+          "y": 1173.25,
+          "width": 44,
+          "height": 16.5,
+          "top": 1173.25,
+          "right": 638.515625,
+          "bottom": 1189.75,
+          "left": 594.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "github.com",
+      "rowText": "—\ngithub.com\n已注册\n2028-10-09 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 541.515625,
+        "y": 1213.5,
+        "width": 78,
+        "height": 32,
+        "top": 1213.5,
+        "right": 619.515625,
+        "bottom": 1245.5,
+        "left": 541.515625
+      },
+      "aria": "重新核验 github.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 github.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 567.515625,
+          "y": 1221.25,
+          "width": 44,
+          "height": 16.5,
+          "top": 1221.25,
+          "right": 611.515625,
+          "bottom": 1237.75,
+          "left": 567.515625
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

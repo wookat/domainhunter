@@ -1,0 +1,75 @@
+{
+  "utc": "2026-09-07T13:05:43.693Z",
+  "url": "https://hunt.zalize.com/monitors?lang=zh&cb=r574-followup",
+  "lang": "zh-CN",
+  "innerWidth": 1280,
+  "docW": 1280,
+  "badge": "已配置",
+  "controls": [
+    {
+      "tag": "INPUT",
+      "text": "",
+      "id": "monitor-webhook-input",
+      "rect": {
+        "x": 297,
+        "y": 226.5,
+        "width": 422,
+        "height": 40,
+        "top": 226.5,
+        "right": 719,
+        "bottom": 266.5,
+        "left": 297
+      },
+      "computedHeight": "40px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "保存",
+      "id": "",
+      "rect": {
+        "x": 727,
+        "y": 226.5,
+        "width": 82,
+        "height": 40,
+        "top": 226.5,
+        "right": 809,
+        "bottom": 266.5,
+        "left": 727
+      },
+      "computedHeight": "40px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "发送测试",
+      "id": "",
+      "rect": {
+        "x": 817,
+        "y": 226.5,
+        "width": 104,
+        "height": 40,
+        "top": 226.5,
+        "right": 921,
+        "bottom": 266.5,
+        "left": 817
+      },
+      "computedHeight": "40px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "取消",
+      "id": "",
+      "rect": {
+        "x": 929,
+        "y": 226.5,
+        "width": 54,
+        "height": 40,
+        "top": 226.5,
+        "right": 983,
+        "bottom": 266.5,
+        "left": 929
+      },
+      "computedHeight": "40px"
+    }
+  ],
+  "masked": null
+}

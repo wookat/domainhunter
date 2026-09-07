@@ -1,0 +1,1302 @@
+[
+ {
+  "route": "/",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/stats",
+   "GET /api/prices",
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/stats",
+   "GET /api/prices",
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/?q=chaxiang",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/stats",
+   "GET /api/prices",
+   "GET /api/registrars",
+   "POST /api/search"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 796,
+   "quickPanelTop": 113.703125,
+   "chips": 3
+  }
+ },
+ {
+  "route": "/?q=chaxiang",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/stats",
+   "GET /api/prices",
+   "GET /api/registrars",
+   "POST /api/search"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 836,
+   "quickPanelTop": 113.703125,
+   "chips": 3
+  }
+ },
+ {
+  "route": "/advanced",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/advanced?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/advanced",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/advanced?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/shortlist",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/shortlist?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/shortlist",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/shortlist?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/monitors",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/monitors?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "POST /api/monitor/list"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/monitors",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/monitors?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "POST /api/monitor/list"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/prices",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/prices?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/prices",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/prices?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/why",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/why?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/why",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/why?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/mcp",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/mcp?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/mcp",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/mcp?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/tld?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/tld?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/guide?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/guide?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/tld/cn?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/tld/cn?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/de",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/tld/de?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/de",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/tld/de?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/ai",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/tld/ai?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/tld/ai",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/tld/ai?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/guide/saas?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/guide/saas?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/ecommerce",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/guide/ecommerce?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/ecommerce",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/guide/ecommerce?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/legal",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/guide/legal?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/guide/legal",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/guide/legal?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/de-vs-com",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/de-vs-com?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/de-vs-com",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/de-vs-com?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/mx-vs-es",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/mx-vs-es?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/mx-vs-es",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/mx-vs-es?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/com-vs-io",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/com-vs-io?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/com-vs-io",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/com-vs-io?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/shop-vs-store",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/shop-vs-store?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/shop-vs-store",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/shop-vs-store?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/net-vs-org",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/vs/net-vs-org?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/vs/net-vs-org",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/vs/net-vs-org?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/nope-r575-browser",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/nope-r575-browser?lang=zh",
+  "status": 404,
+  "expected": 404,
+  "console_real": [],
+  "console_expected_noise": 1,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 1,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/nope-r575-browser",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/nope-r575-browser?lang=en",
+  "status": 404,
+  "expected": 404,
+  "console_real": [],
+  "console_expected_noise": 1,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 1,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/86mKLJRJmB",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/s/86mKLJRJmB?lang=zh",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/86mKLJRJmB"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/86mKLJRJmB",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/s/86mKLJRJmB?lang=en",
+  "status": 200,
+  "expected": 200,
+  "console_real": [],
+  "console_expected_noise": 0,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 0,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/86mKLJRJmB"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/u5QFymuLnu",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/s/u5QFymuLnu?lang=zh",
+  "status": 410,
+  "expected": 410,
+  "console_real": [],
+  "console_expected_noise": 2,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 2,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/u5QFymuLnu"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/u5QFymuLnu",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/s/u5QFymuLnu?lang=en",
+  "status": 410,
+  "expected": 410,
+  "console_real": [],
+  "console_expected_noise": 2,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 2,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/u5QFymuLnu"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/unknownr575",
+  "lang": "zh",
+  "url": "https://hunt.zalize.com/s/unknownr575?lang=zh",
+  "status": 404,
+  "expected": 404,
+  "console_real": [],
+  "console_expected_noise": 2,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 2,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/unknownr575"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ },
+ {
+  "route": "/s/unknownr575",
+  "lang": "en",
+  "url": "https://hunt.zalize.com/s/unknownr575?lang=en",
+  "status": 404,
+  "expected": 404,
+  "console_real": [],
+  "console_expected_noise": 2,
+  "pageerror": [],
+  "requestfailed": [],
+  "responses4xx_real": [],
+  "responses4xx_expected_noise": 2,
+  "csp_violations": [],
+  "ai_search_requests": [],
+  "api_requests": [
+   "GET /api/registrars",
+   "GET /api/prices",
+   "GET /api/share/unknownr575"
+  ],
+  "unknown_reasons": [],
+  "landing": {
+   "scrollY": 0,
+   "quickPanelTop": null,
+   "chips": 0
+  }
+ }
+]

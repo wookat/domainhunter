@@ -1,0 +1,80 @@
+$ vitest run
+
+ RUN  v2.1.9 /home/ubuntu/repos/domainhunter/apps/web
+
+ ✓ src/content/compare-price-placeholders.test.ts (26 tests) 212ms
+ ✓ src/security-headers.test.ts (14 tests) 2260ms
+   ✓ POST /api/csp-report（R533） > 两种上报格式都计入当日 usage.cspReports 并写去重样本；/api/usage 透出 cspSamples；不存 UA/IP/页面 URL 2214ms
+ ✓ src/indexnow.test.ts (23 tests) 20ms
+ ✓ src/content/faq.test.ts (36 tests) 2788ms
+   ✓ 页内句子复读率（thin-analyze 口径）< 5% > 全部 /tld /vs /guide × zh/en（2524 页）每页 < 5% 2537ms
+stderr | src/ai-word-supplement.test.ts > generateAiCandidates 补发触发（mock LLM，0 生产调用） > 补发轮全灭 → R243 二次加硬重试；仍 0 不阻塞主结果（无预算对象时仅受单轮上限约束）
+llm-upstream candidates status=500 retry-after=- body=upstream down
+llm-upstream candidates status=500 retry-after=- body=upstream down
+
+stderr | src/ai-word-supplement.test.ts > 跨轮补发预算（R498，每次搜索共享） > 已补发过一次（预算剩 1）：第 2 轮命中仍补发 1 次并耗尽；第 3 轮命中只记 reason + skipped=budget，不再调用
+llm-upstream candidates status=500 retry-after=- body=upstream down
+
+stderr | src/ai-word-supplement.test.ts > 跨轮补发预算（R498，每次搜索共享） > 单轮内二次重试同样消耗预算：首轮全灭+重试用满 2 → 后续轮跳过
+llm-upstream candidates status=500 retry-after=- body=upstream down
+
+ ✓ src/ai-word-supplement.test.ts (21 tests) 38ms
+ ✓ src/usage-counter.test.ts (14 tests) 50ms
+ ✓ src/ai-en-incoherent-r508.test.ts (21 tests) 19ms
+ ✓ src/ai-dropped-samples.test.ts (8 tests) 16ms
+ ✓ src/pageviews.test.ts (16 tests) 9ms
+ ✓ src/content/tld-price-parity.test.ts (19 tests) 93ms
+ ✓ src/baidu-push.test.ts (12 tests) 11ms
+ ✓ src/rate-limit-route.test.ts (7 tests) 28ms
+ ✓ src/ssr-lang.test.ts (22 tests) 14ms
+ ✓ src/content/compare-prices.test.ts (15 tests) 20ms
+ ✓ src/components/shortlist-page.test.ts (11 tests) 38ms
+ ✓ src/ai.test.ts (12 tests) 9ms
+ ✓ src/lib/monitor-webhook.test.ts (15 tests) 10ms
+ ✓ src/content/group-chips.test.ts (15 tests) 611ms
+ ✓ src/prices-cache.test.ts (8 tests) 10ms
+ ✓ src/lib/registrars.test.ts (16 tests) 10ms
+ ✓ src/ai-guards-r497.test.ts (20 tests) 14ms
+ ✓ src/lib/monitor-add.test.ts (14 tests) 16ms
+ ✓ src/monitor-add-route.test.ts (8 tests) 16ms
+ ✓ src/share-shell.test.ts (7 tests) 24ms
+ ✓ src/not-found-shell.test.ts (21 tests) 26ms
+ ✓ src/components/advanced-page.test.ts (11 tests) 22ms
+ ✓ src/components/domain-row-recheck.test.ts (14 tests) 27ms
+ ✓ src/monitor-webhook-test-route.test.ts (6 tests) 17ms
+ ✓ src/lib/check-client.test.ts (9 tests) 7ms
+ ✓ src/lib/rate-limit.test.ts (9 tests) 7ms
+ ✓ src/lib/csv.test.ts (9 tests) 5ms
+ ✓ src/content/ssr-html.test.ts (9 tests) 21ms
+ ✓ src/content/compare-verdict-shared.test.ts (5 tests) 501ms
+   ✓ /vs verdict 跨页共用连续片段守门 > zh: 全站任意两页共享 ≥24 字片段的 pair 数 ≤ 1274（棘轮，只降不升） 315ms
+ ✓ src/zh-meaning-incoherent.test.ts (9 tests) 6ms
+ ✓ src/growth-inject.test.ts (10 tests) 5ms
+ ✓ src/personal-shell.test.ts (6 tests) 17ms
+ ✓ src/prices-fetch.test.ts (5 tests) 7ms
+ ✓ src/share-items.test.ts (8 tests) 4ms
+ ✓ src/share-write.test.ts (7 tests) 3ms
+ ✓ src/content/group-chips-parity.test.ts (6 tests) 38ms
+ ✓ src/lib/page-meta.test.ts (5 tests) 4ms
+ ✓ src/hub-filter.test.ts (5 tests) 3ms
+ ✓ src/lib/q-landing.test.ts (6 tests) 4ms
+ ✓ src/lib/share-doc-title.test.ts (6 tests) 3ms
+ ✓ src/font-preload.test.ts (2 tests) 3ms
+ ✓ src/content/site-links.test.ts (5 tests) 4ms
+ ✓ src/lib/my-shares.test.ts (5 tests) 3ms
+ ✓ src/sitemap-lastmod.test.ts (4 tests) 14ms
+ ✓ src/components/prices-page.test.ts (5 tests) 3ms
+ ✓ src/lib/results-export.test.ts (4 tests) 3ms
+ ✓ src/docs-no-share-tokens.test.ts (1 test) 941ms
+   ✓ docs artifacts carry no share revoke tokens > scans docs/audits and docs/qa 940ms
+ ✓ src/lib/relative-time.test.ts (5 tests) 2ms
+ ✓ src/content/compare-verdict-opening.test.ts (2 tests) 42ms
+ ✓ src/mcp-args.test.ts (3 tests) 3ms
+ ✓ src/components/mcp-page.test.ts (1 test) 7ms
+
+ Test Files  55 passed (55)
+      Tests  583 passed (583)
+   Start at  13:01:43
+   Duration  23.99s (transform 2.78s, setup 0ms, collect 8.54s, tests 8.09s, environment 7ms, prepare 2.14s)
+
+test exit=0

@@ -1,0 +1,400 @@
+{
+ "de-vs-com_zh": {
+  "url": "https://hunt.zalize.com/vs/de-vs-com",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "21 元",
+    "29 元"
+   ],
+   "og": [
+    "21 元",
+    "29 元"
+   ],
+   "article": [
+    "21 元",
+    "29 元"
+   ],
+   "faq_ld": [
+    "21 元",
+    "29 元"
+   ],
+   "faq_vis": [
+    "21 元",
+    "29 元"
+   ]
+  },
+  "table_cells": [
+   "$11.08",
+   "$19.18",
+   "$2.9",
+   "$36.22",
+   "$4.07",
+   "$55.4",
+   "$7.01",
+   "$8.18",
+   "¥138",
+   "¥21",
+   "¥261",
+   "¥29",
+   "¥399",
+   "¥51",
+   "¥59",
+   "¥80"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 134
+ },
+ "de-vs-com_en": {
+  "url": "https://hunt.zalize.com/vs/de-vs-com?lang=en",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "$3",
+    "$4"
+   ],
+   "og": [
+    "$3",
+    "$4"
+   ],
+   "article": [
+    "$3",
+    "$4"
+   ],
+   "faq_ld": [
+    "$3",
+    "$4"
+   ],
+   "faq_vis": [
+    "$3",
+    "$4"
+   ]
+  },
+  "table_cells": [
+   "$11.08",
+   "$19.18",
+   "$2.9",
+   "$36.22",
+   "$4.07",
+   "$55.4",
+   "$7.01",
+   "$8.18",
+   "¥138",
+   "¥21",
+   "¥261",
+   "¥29",
+   "¥399",
+   "¥51",
+   "¥59",
+   "¥80"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 286
+ },
+ "mx-vs-es_zh": {
+  "url": "https://hunt.zalize.com/vs/mx-vs-es",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "256 元",
+    "297 元",
+    "≈55 元",
+    "≈72 元"
+   ],
+   "og": [
+    "256 元",
+    "297 元",
+    "≈55 元",
+    "≈72 元"
+   ],
+   "article": [
+    "256 元",
+    "297 元",
+    "≈55 元",
+    "≈72 元"
+   ],
+   "faq_ld": [
+    "256 元",
+    "297 元",
+    "≈55 元",
+    "≈72 元"
+   ],
+   "faq_vis": [
+    "256 元",
+    "297 元",
+    "≈55 元",
+    "≈72 元"
+   ]
+  },
+  "table_cells": [
+   "$152.49",
+   "$200.49",
+   "$27.57",
+   "$31.23",
+   "$35.57",
+   "$41.23",
+   "¥1101",
+   "¥1444",
+   "¥201",
+   "¥225",
+   "¥256",
+   "¥297",
+   "¥343",
+   "¥55",
+   "¥72",
+   "≈$10",
+   "≈$48",
+   "≈$8"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 113
+ },
+ "mx-vs-es_en": {
+  "url": "https://hunt.zalize.com/vs/mx-vs-es?lang=en",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "$36",
+    "$41",
+    "≈$10",
+    "≈$8"
+   ],
+   "og": [
+    "$36",
+    "$41",
+    "≈$10",
+    "≈$8"
+   ],
+   "article": [
+    "$36",
+    "$41",
+    "≈$10",
+    "≈$8"
+   ],
+   "faq_ld": [
+    "$36",
+    "$41",
+    "≈$10",
+    "≈$8"
+   ],
+   "faq_vis": [
+    "$36",
+    "$41",
+    "≈$10",
+    "≈$8"
+   ]
+  },
+  "table_cells": [
+   "$152.49",
+   "$200.49",
+   "$27.57",
+   "$31.23",
+   "$35.57",
+   "$41.23",
+   "¥1101",
+   "¥1444",
+   "¥201",
+   "¥225",
+   "¥256",
+   "¥297",
+   "¥343",
+   "¥55",
+   "¥72",
+   "≈$10",
+   "≈$48",
+   "≈$8"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 252
+ },
+ "fr-vs-com_zh": {
+  "url": "https://hunt.zalize.com/vs/fr-vs-com",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "≈65 元",
+    "≈72 元"
+   ],
+   "og": [
+    "≈65 元",
+    "≈72 元"
+   ],
+   "article": [
+    "≈65 元",
+    "≈72 元"
+   ],
+   "faq_ld": [
+    "≈65 元",
+    "≈72 元"
+   ],
+   "faq_vis": [
+    "≈65 元",
+    "≈72 元"
+   ]
+  },
+  "table_cells": [
+   "$1.08",
+   "$11.08",
+   "$2.08",
+   "$55.4",
+   "$6.4",
+   "¥15",
+   "¥353",
+   "¥399",
+   "¥46",
+   "¥65",
+   "¥72",
+   "¥8",
+   "¥80",
+   "≈$10",
+   "≈$49",
+   "≈$9"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 112
+ },
+ "fr-vs-com_en": {
+  "url": "https://hunt.zalize.com/vs/fr-vs-com?lang=en",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "≈$10",
+    "≈$9"
+   ],
+   "og": [
+    "≈$10",
+    "≈$9"
+   ],
+   "article": [
+    "≈$10",
+    "≈$9"
+   ],
+   "faq_ld": [
+    "≈$10",
+    "≈$9"
+   ],
+   "faq_vis": [
+    "≈$10",
+    "≈$9"
+   ]
+  },
+  "table_cells": [
+   "$1.08",
+   "$11.08",
+   "$2.08",
+   "$55.4",
+   "$6.4",
+   "¥15",
+   "¥353",
+   "¥399",
+   "¥46",
+   "¥65",
+   "¥72",
+   "¥8",
+   "¥80",
+   "≈$10",
+   "≈$49",
+   "≈$9"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 274
+ },
+ "au-vs-com_zh": {
+  "url": "https://hunt.zalize.com/vs/au-vs-com",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "57 元"
+   ],
+   "og": [
+    "57 元"
+   ],
+   "article": [
+    "57 元"
+   ],
+   "faq_ld": [
+    "57 元"
+   ],
+   "faq_vis": [
+    "57 元"
+   ]
+  },
+  "table_cells": [
+   "$11.08",
+   "$15.85",
+   "$3.17",
+   "$39.55",
+   "$55.4",
+   "$7.91",
+   "¥114",
+   "¥23",
+   "¥285",
+   "¥399",
+   "¥57",
+   "¥80"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 108
+ },
+ "au-vs-com_en": {
+  "url": "https://hunt.zalize.com/vs/au-vs-com?lang=en",
+  "braces_outside_script": 0,
+  "braces_ld": 0,
+  "sets": {
+   "meta": [
+    "$8"
+   ],
+   "og": [
+    "$8"
+   ],
+   "article": [
+    "$8"
+   ],
+   "faq_ld": [
+    "$8"
+   ],
+   "faq_vis": [
+    "$8"
+   ]
+  },
+  "table_cells": [
+   "$11.08",
+   "$15.85",
+   "$3.17",
+   "$39.55",
+   "$55.4",
+   "$7.91",
+   "¥114",
+   "¥23",
+   "¥285",
+   "¥399",
+   "¥57",
+   "¥80"
+  ],
+  "meta_eq_og": true,
+  "faq_ld_eq_vis": true,
+  "not_in_table": [],
+  "meta_len": 277
+ }
+}

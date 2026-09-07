@@ -1,0 +1,34 @@
+{
+  ".days.2026-09-07.pageviews.home": {
+    "before": 34,
+    "after": 39
+  },
+  ".days.2026-09-07.pageviews.prices": {
+    "before": 8,
+    "after": 13
+  },
+  ".days.2026-09-07.pageviews.tld": {
+    "before": 22,
+    "after": 23
+  },
+  ".days.2026-09-07.pageviews.vs": {
+    "before": 25,
+    "after": 48
+  },
+  ".days.2026-09-07.pageviews.other": {
+    "before": 71,
+    "after": 83
+  },
+  ".days.2026-09-07.bots": {
+    "before": 1001,
+    "after": 1004
+  },
+  ".days.2026-09-07.botsBy.ai": {
+    "before": 310,
+    "after": 311
+  },
+  ".days.2026-09-07.botsBy.other": {
+    "before": 689,
+    "after": 691
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "url": "https://hunt.zalize.com/?q=chaxiang",
+  "scrollY": 796,
+  "innerWidth": 1280,
+  "innerHeight": 900,
+  "docW": 1265,
+  "clientW": 1265,
+  "chipTop": 113.703125,
+  "quickTop": 15.703125,
+  "requests": [
+    {
+      "time": 1788784824.039507,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/stats",
+      "body": ""
+    },
+    {
+      "time": 1788784824.043471,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/prices",
+      "body": ""
+    },
+    {
+      "time": 1788784824.0462384,
+      "method": "GET",
+      "url": "https://hunt.zalize.com/api/registrars",
+      "body": ""
+    },
+    {
+      "time": 1788784824.0673995,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/search",
+      "body": "{\"roots\":[\"chaxiang\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+    }
+  ],
+  "chipDomains": [
+    "chaxiang.com",
+    "chaxiang.cn",
+    "chaxiang.net"
+  ]
+}

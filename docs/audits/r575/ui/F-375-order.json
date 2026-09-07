@@ -1,0 +1,36 @@
+{
+  "sort": {
+    "text": "排序：\n添加时间\n域名\n首年价\n到期日",
+    "top": 273,
+    "index": 34
+  },
+  "cards": [
+    {
+      "text": "chaxiang.com\n已注册\n\n2027-05-13 到期\n\n加备注\n—\n监控\n开监控",
+      "top": 325,
+      "index": 202
+    },
+    {
+      "text": "chaxiang.cn\n已注册\n\n2026-12-11 到期\n\n加备注\n—\n监控\n开监控",
+      "top": 516.5,
+      "index": 231
+    },
+    {
+      "text": "chaxiang.net\n已注册\n\n2027-09-04 到期\n\n加备注\n—\n监控\n开监控",
+      "top": 708,
+      "index": 260
+    }
+  ],
+  "monitor": {
+    "text": "监控动态",
+    "top": 912.5,
+    "index": 291
+  },
+  "sync": {
+    "text": "跨设备同步（免登录）\n\n同步到其他设备\n导入",
+    "top": 973.5,
+    "index": 297
+  },
+  "shareHistoryPresent": false,
+  "docW": 360
+}

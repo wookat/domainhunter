@@ -1,0 +1,111 @@
+{
+  "utc": "2026-09-07T13:01:51.765Z",
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=en&cb=r574-followup",
+  "lang": "en",
+  "innerWidth": 375,
+  "docW": 375,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "chaxiang.com\nTaken\nexpires 2027-05-13",
+      "reason": null,
+      "rect": {
+        "x": 297,
+        "y": 302.4375,
+        "width": 44,
+        "height": 44,
+        "top": 302.4375,
+        "right": 341,
+        "bottom": 346.4375,
+        "left": 297
+      },
+      "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.cn",
+      "rowText": "chaxiang.cn\nTaken\nexpires 2026-12-11",
+      "reason": null,
+      "rect": {
+        "x": 297,
+        "y": 356.4375,
+        "width": 44,
+        "height": 44,
+        "top": 356.4375,
+        "right": 341,
+        "bottom": 400.4375,
+        "left": 297
+      },
+      "aria": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.net",
+      "rowText": "chaxiang.net\nTaken\nexpires 2027-09-04",
+      "reason": null,
+      "rect": {
+        "x": 297,
+        "y": 680.4375,
+        "width": 44,
+        "height": 44,
+        "top": 680.4375,
+        "right": 341,
+        "bottom": 724.4375,
+        "left": 297
+      },
+      "aria": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    }
+  ]
+}
