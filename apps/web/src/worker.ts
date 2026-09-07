@@ -40,6 +40,7 @@ import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./u
 import { INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_FALLBACK_ENDPOINTS, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, countRetries, fallbackHosts, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 import { injectHreflang, resolveLang, resolveSsrLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
+import { aiRateLimitMessage, checkRateLimitMessage, consumeRateLimit, type RateLimitResult } from "./lib/rate-limit";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
@@ -102,7 +103,6 @@ app.use("*", async (c, next) => {
   c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
 });
 
-const RATE_LIMIT_PER_HOUR = 20;
 const CACHE_TTL_TAKEN = 24 * 3600; // 已注册结果缓存 24h
 const CACHE_TTL_AVAILABLE = 3600; // available 缓存 1h，防抢注误导
 const SHARE_TTL = 30 * 24 * 3600; // 分享快照保留 30 天
@@ -168,19 +168,22 @@ async function tripLlmBreaker(kv: KVNamespace | undefined): Promise<void> {
   } catch { /* 熔断写失败退化为每请求各自撞上游（原行为） */ }
 }
 
-/** 按 IP 简单限流（KV 计数，按小时桶）；无 KV 绑定时不限流 */
-async function checkRateLimit(kv: KVNamespace | undefined, ip: string): Promise<boolean> {
-  if (!kv) return true;
-  const key = `rl:${ip}:${Math.floor(Date.now() / 3600_000)}`;
-  try {
-    const n = Number((await kv.get(key)) ?? "0");
-    if (n >= RATE_LIMIT_PER_HOUR) return false;
-    await kv.put(key, String(n + 1), { expirationTtl: 3700 });
-  } catch {
-    return true;
-  }
-  return true;
+const clientIp = (c: Context<{ Bindings: Bindings }>): string =>
+  c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+
+/** check 桶 429：`{error, scope, limit, retryAfter, message}` + `Retry-After` 到下一整点 */
+function checkRateLimited(c: Context<{ Bindings: Bindings }>, rl: Extract<RateLimitResult, { ok: false }>) {
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  return c.json(
+    { error: "rate_limited", scope: rl.scope, limit: rl.limit, retryAfter: rl.retryAfter, message: checkRateLimitMessage(lang, rl.limit) },
+    429,
+    { "Retry-After": String(rl.retryAfter) },
+  );
 }
+
+/** MCP 工具的限频文本（英文，与 MCP 其他错误文本同口径）：check 桶按域名个数计 */
+const mcpRateLimitedText = (rl: Extract<RateLimitResult, { ok: false }>): string =>
+  `rate limited (${rl.scope}): max ${rl.limit} domains per hour, retry in ${rl.retryAfter}s`;
 
 type CachedCheck = Pick<CheckResult, "domain" | "status" | "method" | "expiresAt">;
 
@@ -290,13 +293,13 @@ app.post("/api/ai-search", async (c) => {
   if (!(body.description ?? "").trim()) return c.json({ error: "description required" }, 400);
   if (description.length > 620) return c.json({ error: "description too long" }, 400);
 
-  const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
-  if (!(await checkRateLimit(c.env.CACHE, ip))) {
-    const msg =
-      lang === "en"
-        ? `You've been hunting hard today — AI hunts are capped at ${RATE_LIMIT_PER_HOUR} per hour, come back in a bit`
-        : `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧`;
-    return c.json({ error: "rate_limited", message: msg }, 429);
+  const rl = await consumeRateLimit(c.env.CACHE, clientIp(c), "ai");
+  if (!rl.ok) {
+    return c.json(
+      { error: "rate_limited", scope: rl.scope, limit: rl.limit, retryAfter: rl.retryAfter, message: aiRateLimitMessage(lang, rl.limit) },
+      429,
+      { "Retry-After": String(rl.retryAfter) },
+    );
   }
 
   const usage = usageCounterFor(c.env.CACHE);
@@ -927,10 +930,9 @@ app.post("/api/check", async (c) => {
   if (domains.length === 0) return c.json({ error: "domains required" }, 400);
   const refresh = body?.refresh === true || c.req.query("refresh") === "1";
 
-  const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
-  if (!(await checkRateLimit(c.env.CACHE, ip))) {
-    return c.json({ error: "rate_limited", message: `请求太频繁：每小时最多 ${RATE_LIMIT_PER_HOUR} 次，休息一会儿再来吧` }, 429);
-  }
+  // R573：独立 check 桶，按域名个数计权（一次批量 ≤ MAX_RECHECK_DOMAINS），不再消耗 AI 猎名额度
+  const rl = await consumeRateLimit(c.env.CACHE, clientIp(c), "check", domains.length);
+  if (!rl.ok) return checkRateLimited(c, rl);
 
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
@@ -1093,10 +1095,8 @@ app.post("/mcp", async (c) => {
       ),
     ].slice(0, 50);
     if (domains.length === 0) return mcpText(id, "no valid domains given: pass full domain names like acme.com", true);
-    const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
-    if (!(await checkRateLimit(c.env.CACHE, ip))) {
-      return mcpText(id, `rate limited: max ${RATE_LIMIT_PER_HOUR} requests per hour, try again later`, true);
-    }
+    const rl = await consumeRateLimit(c.env.CACHE, clientIp(c), "check", domains.length);
+    if (!rl.ok) return mcpText(id, mcpRateLimitedText(rl), true);
     const results: { domain: string; status: string; expiresAt?: string; expiringSoon?: boolean }[] = [];
     await checkDomainsCached(c.env.CACHE, domains, async (r) => {
       const item: { domain: string; status: string; expiresAt?: string; expiringSoon?: boolean } = { domain: r.domain, status: r.status };
@@ -1125,16 +1125,15 @@ app.post("/mcp", async (c) => {
     }
     const rawLimit = Number(args.limit ?? 24);
     const limit = Number.isFinite(rawLimit) ? Math.min(Math.max(Math.floor(rawLimit), 1), 48) : 24;
-    const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
-    if (!(await checkRateLimit(c.env.CACHE, ip))) {
-      return mcpText(id, `rate limited: max ${RATE_LIMIT_PER_HOUR} requests per hour, try again later`, true);
-    }
     // 与首页「变体核验」同一套规则：前后缀组合，去掉裸 root（调用方通常已核验过）
     const bare = new Set(tlds.map((t) => `${name}.${t}`));
     const domains = generateCandidates({ roots: [name], prefixes: VARIANT_PREFIXES, suffixes: VARIANT_SUFFIXES, tlds, maxCandidates: 200 })
       .filter((d) => !bare.has(d))
       .slice(0, limit);
     if (domains.length === 0) return mcpText(id, "no variants could be generated for this name", true);
+    // 不调 LLM，只做规则组合 + 核验 → 归 check 桶，按实际核验域名数计权
+    const rl = await consumeRateLimit(c.env.CACHE, clientIp(c), "check", domains.length);
+    if (!rl.ok) return mcpText(id, mcpRateLimitedText(rl), true);
     // 首年注册价（美元）：实时价优先，静态参考价兜底（与 tld_prices 同口径）
     const priceByTld: Record<string, number> = {};
     try {
